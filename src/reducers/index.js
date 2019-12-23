@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
 // Reducers
-import test from './test.reducer';
+import graph from './graph.reducer';
 
-export default combineReducers({ test });
+export default combineReducers({ graph });

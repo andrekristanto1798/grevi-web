@@ -1,0 +1,33 @@
+@import 'base.scss';
+
+.graphFileContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.graphFilename {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+:global {
+  :local(.graphFilename) {
+    &.ui.input>input {
+      outline: 0;
+      border: 0;
+      font-size: $font-extra-big;
+      padding: 8px 0;
+    }
+  }
+}
+
+.graphFileMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+}

@@ -1,38 +1,30 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-// Actions
-import * as actions from '../../actions/test.action';
+import React from 'react';
 // Components
-import Counter from '../../components/Counter';
-// Selectors
-import { selectCounterJS } from '../../selectors/test.selector';
-// Utils
-import { valueType } from '../../components/UtilPropTypes';
+import WindowSizeListener from '../../components/WindowSizeListener';
+import GraphFileSection from './GraphFileSection';
+// Styles
+import styles from './styles.scss';
 
-class Home extends PureComponent {
-  static propTypes = {
-    // State
-    counter: valueType.isRequired,
-    // Actions
-    addCounter: PropTypes.func.isRequired,
-    minusCounter: PropTypes.func.isRequired,
-  };
-
-  render() {
-    const { counter, addCounter, minusCounter } = this.props;
-    return (
-      <Counter counter={counter} onAdd={addCounter} onMinus={minusCounter} />
-    );
-  }
-}
-
-const mapStateToProps = state => {
-  const counter = selectCounterJS(state);
-  return { counter };
+const Home = () => {
+  return (
+    <div className={styles.homeContainer}>
+      <WindowSizeListener>
+        {({ windowWidth, windowHeight }) => {
+          const graphWidth = windowWidth - 600;
+          return (
+            <>
+              <div className={styles.leftPanelContainer}>
+                <GraphFileSection />
+              </div>
+              <div className={styles.rightPanelContainer}>
+                Size: ({graphWidth}, {windowHeight})
+              </div>
+            </>
+          );
+        }}
+      </WindowSizeListener>
+    </div>
+  );
 };
 
-export default connect(
-  mapStateToProps,
-  actions,
-)(Home);
+export default Home;
