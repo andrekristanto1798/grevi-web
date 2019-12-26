@@ -1,6 +1,12 @@
 import { createSelector } from 'reselect';
+import { ADD_LINK_MODE } from '../components/EditingTools';
 
 const selectGraphData = state => state.graph.data;
+
+export const selectGraphDataJS = createSelector(
+  selectGraphData,
+  data => data,
+);
 
 export const selectGraphNodes = createSelector(
   selectGraphData,
@@ -20,4 +26,19 @@ export const selectGraphFocusedNodeId = createSelector(
 export const selectGraphFilename = createSelector(
   state => state.graph.filename,
   filename => filename,
+);
+
+export const selectGraphMode = createSelector(
+  state => state.graph.mode,
+  mode => mode,
+);
+
+export const selectIsAddLinkMode = createSelector(
+  selectGraphMode,
+  mode => mode === ADD_LINK_MODE,
+);
+
+export const selectClickedNodeId = createSelector(
+  state => state.graph.clickedNodeId,
+  clickedNodeId => clickedNodeId,
 );

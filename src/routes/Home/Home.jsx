@@ -4,12 +4,14 @@ import WindowSizeListener from '../../components/WindowSizeListener';
 import GraphFileSection from './GraphFileSection';
 // Styles
 import styles from './styles.scss';
+import GraphSection from './GraphSection';
 
 const Home = () => {
   return (
     <div className={styles.homeContainer}>
       <WindowSizeListener>
         {({ windowWidth, windowHeight }) => {
+          if (!windowWidth && !windowHeight) return null;
           const graphWidth = windowWidth - 600;
           return (
             <>
@@ -17,7 +19,7 @@ const Home = () => {
                 <GraphFileSection />
               </div>
               <div className={styles.rightPanelContainer}>
-                Size: ({graphWidth}, {windowHeight})
+                <GraphSection width={graphWidth} height={windowHeight} />
               </div>
             </>
           );
