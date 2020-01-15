@@ -10,6 +10,8 @@ const initialState = {
   filename: 'Untitled Graph',
   mode: SELECT_MODE,
   clickedNodeId: null,
+  hoveredNodeId: [],
+  hoveredLinkId: null,
 };
 
 export default function reducer(state = initialState, action) {

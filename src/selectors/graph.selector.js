@@ -42,3 +42,13 @@ export const selectClickedNodeId = createSelector(
   state => state.graph.clickedNodeId,
   clickedNodeId => clickedNodeId,
 );
+
+export const selectHoveredNodeId = createSelector(
+  state => state.graph.hoveredNodeId,
+  hoveredNodeId => hoveredNodeId,
+);
+
+export const selectHoveredLinkId = createSelector(
+  state => state.graph.hoveredLinkId,
+  hoveredLinkId => hoveredLinkId,
+);

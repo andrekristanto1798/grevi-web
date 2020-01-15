@@ -65,3 +65,12 @@ export const clickNode = ({ id: nodeId }) => (dispatch, getState) => {
     dispatch(set('clickedNodeId', nodeId));
   }
 };
+
+export const hoverNode = node => dispatch => {
+  dispatch(set('hoveredNodeId', node ? [node] : []));
+};
+
+export const hoverLink = link => dispatch => {
+  dispatch(set('hoveredLinkId', link));
+  dispatch(set('hoveredNodeId', link ? [link.source, link.target] : []));
+};

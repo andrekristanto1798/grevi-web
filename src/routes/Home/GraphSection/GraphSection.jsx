@@ -12,6 +12,8 @@ import {
   selectGraphMode,
   selectIsAddLinkMode,
   selectClickedNodeId,
+  selectHoveredNodeId,
+  selectHoveredLinkId,
 } from '../../../selectors/graph.selector';
 // Utils
 import {
@@ -19,8 +21,11 @@ import {
   modeShape,
   valueType,
 } from '../../../components/UtilPropTypes';
+import { COLORS } from '../../../utils/color';
 // Styles
 import styles from './styles.scss';
+
+const NODE_R = 8;
 
 const GraphSection = ({
   mode,
@@ -31,7 +36,40 @@ const GraphSection = ({
   clickedNodeId,
   setMode,
   clickNode,
+  hoverNode,
+  hoverLink,
+  hoveredNodeId,
+  hoveredLinkId,
 }) => {
+  const nodeCanvasObjectModeCb = React.useCallback(() => 'after', []);
+  const nodeCanvasDrawCb = React.useCallback(
+    (node, ctx, globalScale) => {
+      if (hoveredNodeId.indexOf(node) !== -1) {
+        // The highlight circle
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, NODE_R * 1.2, 0, 2 * Math.PI, false);
+        ctx.fillStyle = COLORS.redNormal;
+        ctx.fill();
+        // The inside circle
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, NODE_R, 0, 2 * Math.PI, false);
+        ctx.fillStyle = COLORS.blueNormal;
+        ctx.fill();
+      }
+      // // Text
+      const fontSize = 14 / globalScale;
+      ctx.font = `${fontSize}px Sans-Serif`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillStyle = 'black';
+      ctx.fillText(node.id, node.x, node.y);
+    },
+    [hoveredNodeId],
+  );
+  const nodeLabelCb = React.useCallback(node => {
+    const children = `<pre>${JSON.stringify(node, null, 4)}</pre>`;
+    return children;
+  }, []);
   return (
     <div className={styles.graphContainer}>
       <div className={styles.editingToolsContainer}>
@@ -48,21 +86,17 @@ const GraphSection = ({
         graphData={data}
         width={width}
         height={height}
-        nodeLabel={node => {
-          const children = `<pre>${JSON.stringify(node, null, 4)}</pre>`;
-          return children;
-        }}
-        nodeCanvasObjectMode={() => 'after'}
-        nodeCanvasObject={(node, ctx, globalScale) => {
-          const { id } = node;
-          const fontSize = 14 / globalScale;
-          ctx.font = `${fontSize}px Sans-Serif`;
-          ctx.textAlign = 'center';
-          ctx.textBaseline = 'middle';
-          ctx.fillStyle = 'black';
-          ctx.fillText(id, node.x, node.y);
-        }}
+        nodeColor={() => COLORS.blueNormal}
+        nodeRelSize={NODE_R}
+        nodeLabel={nodeLabelCb}
+        nodeCanvasObjectMode={nodeCanvasObjectModeCb}
+        nodeCanvasObject={nodeCanvasDrawCb}
+        linkWidth={link => (link === hoveredLinkId ? 5 : 1)}
+        linkDirectionalParticles={4}
+        linkDirectionalParticleWidth={link => (link === hoveredLinkId ? 4 : 0)}
         onNodeClick={clickNode}
+        onNodeHover={hoverNode}
+        onLinkHover={hoverLink}
       />
     </div>
   );
@@ -75,9 +109,13 @@ GraphSection.propTypes = {
   width: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
   clickedNodeId: valueType,
+  hoveredNodeId: PropTypes.arrayOf(valueType),
+  hoveredLinkId: valueType,
   // Redux actions
   setMode: PropTypes.func.isRequired,
   clickNode: PropTypes.func.isRequired,
+  hoverNode: PropTypes.func.isRequired,
+  hoverLink: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => {
@@ -85,12 +123,23 @@ const mapStateToProps = state => {
   const isAddLinkMode = selectIsAddLinkMode(state);
   const data = selectGraphDataJS(state);
   const clickedNodeId = selectClickedNodeId(state);
-  return { isAddLinkMode, mode, data, clickedNodeId };
+  const hoveredNodeId = selectHoveredNodeId(state);
+  const hoveredLinkId = selectHoveredLinkId(state);
+  return {
+    isAddLinkMode,
+    mode,
+    data,
+    clickedNodeId,
+    hoveredNodeId,
+    hoveredLinkId,
+  };
 };
 
 const actions = {
   setMode: graphAction.setMode,
   clickNode: graphAction.clickNode,
+  hoverNode: graphAction.hoverNode,
+  hoverLink: graphAction.hoverLink,
 };
 
 export default connect(

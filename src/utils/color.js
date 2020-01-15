@@ -31,3 +31,10 @@ export function invertColor(hex, bw) {
   // pad each with zeros and return
   return '#' + padZero(r) + padZero(g) + padZero(b);
 }
+
+export const COLORS = {
+  blueNormal: '#2185d0',
+  blueHighlight: '#0d71bb',
+  redNormal: '#db2828',
+  grayNormal: '#cacbcd',
+};
