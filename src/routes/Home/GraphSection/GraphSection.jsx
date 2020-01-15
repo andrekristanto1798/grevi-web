@@ -15,6 +15,7 @@ import {
   selectHoveredNodeId,
   selectHoveredLinkId,
 } from '../../../selectors/graph.selector';
+import { selectGetColor } from '../../../selectors/coloring.selector';
 // Utils
 import {
   graphDataShape,
@@ -24,10 +25,6 @@ import {
 import { COLORS } from '../../../utils/color';
 // Styles
 import styles from './styles.scss';
-import {
-  selectColorMap,
-  selectSelectedKey,
-} from '../../../selectors/coloring.selector';
 
 const NODE_R = 8;
 
@@ -44,16 +41,8 @@ const GraphSection = ({
   hoverLink,
   hoveredNodeId,
   hoveredLinkId,
-  selectedColorKey,
-  colorMap,
+  getColor,
 }) => {
-  const getColor = React.useCallback(
-    node => {
-      if (selectedColorKey) return colorMap[node[selectedColorKey]];
-      return COLORS.blueNormal;
-    },
-    [colorMap, selectedColorKey],
-  );
   const nodeCanvasObjectModeCb = React.useCallback(() => 'after', []);
   const nodeCanvasDrawCb = React.useCallback(
     (node, ctx, globalScale) => {
@@ -126,11 +115,9 @@ GraphSection.propTypes = {
   clickedNodeId: valueType,
   hoveredNodeId: PropTypes.arrayOf(valueType),
   hoveredLinkId: valueType,
-  // Coloring
-  selectedColorKey: PropTypes.string,
-  colorMap: PropTypes.objectOf(PropTypes.string),
   // Redux actions
   setMode: PropTypes.func.isRequired,
+  getColor: PropTypes.func.isRequired,
   clickNode: PropTypes.func.isRequired,
   hoverNode: PropTypes.func.isRequired,
   hoverLink: PropTypes.func.isRequired,
@@ -143,8 +130,7 @@ const mapStateToProps = state => {
   const clickedNodeId = selectClickedNodeId(state);
   const hoveredNodeId = selectHoveredNodeId(state);
   const hoveredLinkId = selectHoveredLinkId(state);
-  const selectedColorKey = selectSelectedKey(state);
-  const colorMap = selectColorMap(state);
+  const getColor = selectGetColor(state);
   return {
     isAddLinkMode,
     mode,
@@ -152,8 +138,7 @@ const mapStateToProps = state => {
     clickedNodeId,
     hoveredNodeId,
     hoveredLinkId,
-    selectedColorKey,
-    colorMap,
+    getColor,
   };
 };
 

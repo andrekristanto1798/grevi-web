@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Dropdown } from 'semantic-ui-react';
+import { Button, Dropdown } from 'semantic-ui-react';
 // Actions
 import * as coloringActions from '../../../actions/coloring.action';
 // Selectors
@@ -44,14 +44,24 @@ const ColoringByProperty = ({
   );
   return (
     <div className={styles.coloringByProperty__container}>
-      <Dropdown
-        placeholder="Select Node Attributes"
-        fluid
-        selection
-        value={selectedKey}
-        options={nodeKeys.map(toOption)}
-        onChange={handleChangeKey}
-      />
+      <div className={styles.coloringByProperty__inputContainer}>
+        <Dropdown
+          placeholder="Select Node Attributes"
+          fluid
+          selection
+          value={selectedKey}
+          options={nodeKeys.map(toOption)}
+          onChange={handleChangeKey}
+        />
+        {selectedKey && (
+          <Button
+            positive
+            size="mini"
+            icon="refresh"
+            onClick={() => selectKey(selectedKey)}
+          />
+        )}
+      </div>
       {selectedKey && typeSelectedKey === QUANTATIVE_TYPE && (
         // TODO: start and end rangeValues using color
         <input type="range" min={1} max={100} />
