@@ -3,9 +3,10 @@ import React from 'react';
 import LoadingIndicator from '../../components/LoadingIndicator';
 import WindowSizeListener from '../../components/WindowSizeListener';
 import GraphFileSection from './GraphFileSection';
+import GraphSection from './GraphSection';
+import ColoringByProperty from './ColoringByProperty';
 // Styles
 import styles from './styles.scss';
-import GraphSection from './GraphSection';
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
             <>
               <div className={styles.leftPanelContainer}>
                 <GraphFileSection />
+                <ColoringByProperty />
               </div>
               <div className={styles.rightPanelContainer}>
                 <GraphSection width={graphWidth} height={windowHeight} />

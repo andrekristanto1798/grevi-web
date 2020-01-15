@@ -24,6 +24,10 @@ import {
 import { COLORS } from '../../../utils/color';
 // Styles
 import styles from './styles.scss';
+import {
+  selectColorMap,
+  selectSelectedKey,
+} from '../../../selectors/coloring.selector';
 
 const NODE_R = 8;
 
@@ -40,11 +44,20 @@ const GraphSection = ({
   hoverLink,
   hoveredNodeId,
   hoveredLinkId,
+  selectedColorKey,
+  colorMap,
 }) => {
+  const getColor = React.useCallback(
+    node => {
+      if (selectedColorKey) return colorMap[node[selectedColorKey]];
+      return COLORS.blueNormal;
+    },
+    [colorMap, selectedColorKey],
+  );
   const nodeCanvasObjectModeCb = React.useCallback(() => 'after', []);
   const nodeCanvasDrawCb = React.useCallback(
     (node, ctx, globalScale) => {
-      if (hoveredNodeId.indexOf(node) !== -1) {
+      if (hoveredNodeId.indexOf(node.id) !== -1) {
         // The highlight circle
         ctx.beginPath();
         ctx.arc(node.x, node.y, NODE_R * 1.2, 0, 2 * Math.PI, false);
@@ -86,14 +99,16 @@ const GraphSection = ({
         graphData={data}
         width={width}
         height={height}
-        nodeColor={() => COLORS.blueNormal}
+        nodeColor={getColor}
         nodeRelSize={NODE_R}
         nodeLabel={nodeLabelCb}
         nodeCanvasObjectMode={nodeCanvasObjectModeCb}
         nodeCanvasObject={nodeCanvasDrawCb}
-        linkWidth={link => (link === hoveredLinkId ? 5 : 1)}
+        linkWidth={link => (link.id === hoveredLinkId ? 5 : 1)}
         linkDirectionalParticles={4}
-        linkDirectionalParticleWidth={link => (link === hoveredLinkId ? 4 : 0)}
+        linkDirectionalParticleWidth={link =>
+          link.id === hoveredLinkId ? 4 : 0
+        }
         onNodeClick={clickNode}
         onNodeHover={hoverNode}
         onLinkHover={hoverLink}
@@ -111,6 +126,9 @@ GraphSection.propTypes = {
   clickedNodeId: valueType,
   hoveredNodeId: PropTypes.arrayOf(valueType),
   hoveredLinkId: valueType,
+  // Coloring
+  selectedColorKey: PropTypes.string,
+  colorMap: PropTypes.objectOf(PropTypes.string),
   // Redux actions
   setMode: PropTypes.func.isRequired,
   clickNode: PropTypes.func.isRequired,
@@ -125,6 +143,8 @@ const mapStateToProps = state => {
   const clickedNodeId = selectClickedNodeId(state);
   const hoveredNodeId = selectHoveredNodeId(state);
   const hoveredLinkId = selectHoveredLinkId(state);
+  const selectedColorKey = selectSelectedKey(state);
+  const colorMap = selectColorMap(state);
   return {
     isAddLinkMode,
     mode,
@@ -132,6 +152,8 @@ const mapStateToProps = state => {
     clickedNodeId,
     hoveredNodeId,
     hoveredLinkId,
+    selectedColorKey,
+    colorMap,
   };
 };
 

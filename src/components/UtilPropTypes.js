@@ -11,8 +11,8 @@ export const nodeShape = PropTypes.shape({
 });
 
 export const linkShape = PropTypes.shape({
-  source: valueType.isRequired,
-  target: valueType.isRequired,
+  source: PropTypes.oneOfType([valueType, nodeShape]).isRequired,
+  target: PropTypes.oneOfType([valueType, nodeShape]).isRequired,
 });
 
 export const graphDataShape = PropTypes.shape({

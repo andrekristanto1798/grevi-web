@@ -1,4 +1,9 @@
-import { SET, GRAPH_ADD_NODE, GRAPH_ADD_LINK } from '../actions/graph.action';
+import {
+  SET,
+  GRAPH_ADD_NODE,
+  GRAPH_ADD_LINK,
+  RESET_ALL,
+} from '../actions/graph.action';
 import { SELECT_MODE } from '../components/EditingTools';
 
 const initialState = {
@@ -29,6 +34,8 @@ export default function reducer(state = initialState, action) {
       ...state,
       data: { ...state.data, links: [...state.data.links, action.newLink] },
     };
+  case RESET_ALL:
+    return initialState;
   default:
     return state;
   }

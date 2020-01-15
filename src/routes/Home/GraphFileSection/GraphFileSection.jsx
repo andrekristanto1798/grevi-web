@@ -23,8 +23,10 @@ const GraphFileSection = ({
     changeFilename(event.target.value);
   });
   const handleUpload = React.useCallback(uploadData => {
-    changeFilename(extractFilename(uploadData.filename));
-    loadGraph(JSON.parse(uploadData.textContent));
+    loadGraph(
+      extractFilename(uploadData.filename),
+      JSON.parse(uploadData.textContent),
+    );
   });
   return (
     <div className={styles.graphFileContainer}>
