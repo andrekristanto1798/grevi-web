@@ -12,6 +12,8 @@ import {
   ADD_NODE_MODE,
 } from '../components/EditingTools';
 import { getNewNode, getNewLink, isLinkDuplicate } from '../utils/graph';
+import { getUniqueKeys } from '../utils/objects';
+import { showLoading, hideLoading } from './ui.action';
 
 export const SET = 'GRAPH_SET';
 export const GRAPH_ADD_NODE = 'GRAPH_ADD_NODE';
@@ -21,8 +23,12 @@ const set = (key, value) => ({ type: SET, key, value });
 const addNode = newNode => ({ type: GRAPH_ADD_NODE, newNode });
 const addLink = newLink => ({ type: GRAPH_ADD_LINK, newLink });
 
-export const loadGraphFile = ({ nodes, links }) =>
-  set('data', { nodes, links });
+export const loadGraphFile = ({ nodes, links }) => dispatch => {
+  dispatch(showLoading());
+  dispatch(set('data', { nodes, links }));
+  dispatch(hideLoading());
+  dispatch(set('nodeKeys', getUniqueKeys(nodes)));
+};
 
 export const downloadGraphFile = () => (_, getState) => {
   const state = getState();

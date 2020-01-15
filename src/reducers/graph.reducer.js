@@ -6,6 +6,7 @@ const initialState = {
     nodes: [],
     links: [],
   },
+  nodeKeys: [],
   focusedNodeId: null,
   filename: 'Untitled Graph',
   mode: SELECT_MODE,

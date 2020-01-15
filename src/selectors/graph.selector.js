@@ -52,3 +52,8 @@ export const selectHoveredLinkId = createSelector(
   state => state.graph.hoveredLinkId,
   hoveredLinkId => hoveredLinkId,
 );
+
+export const selectNodeKeys = createSelector(
+  state => state.graph.nodeKeys,
+  nodeKeys => nodeKeys,
+);

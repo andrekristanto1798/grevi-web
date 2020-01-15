@@ -1,5 +1,6 @@
 import React from 'react';
 // Components
+import LoadingIndicator from '../../components/LoadingIndicator';
 import WindowSizeListener from '../../components/WindowSizeListener';
 import GraphFileSection from './GraphFileSection';
 // Styles
@@ -9,6 +10,7 @@ import GraphSection from './GraphSection';
 const Home = () => {
   return (
     <div className={styles.homeContainer}>
+      <LoadingIndicator />
       <WindowSizeListener>
         {({ windowWidth, windowHeight }) => {
           if (!windowWidth && !windowHeight) return null;
