@@ -1,4 +1,4 @@
-import { getUniqueValues, getValuesType } from '../utils/objects';
+import { getUniqueValues } from '../utils/objects';
 import { selectGraphNodes } from '../selectors/graph.selector';
 import { getDefaultColorMap } from '../utils/color';
 
@@ -9,12 +9,10 @@ export const selectKey = key => (dispatch, getState) => {
   const state = getState();
   const nodes = selectGraphNodes(state);
   const propertyValues = getUniqueValues(nodes, key).sort();
-  const typeSelectedKey = getValuesType(propertyValues);
   const colorMap = getDefaultColorMap(propertyValues);
   dispatch({
     type: COLORING_SELECT_KEY,
     selectedKey: key,
-    typeSelectedKey,
     propertyValues,
     colorMap,
   });

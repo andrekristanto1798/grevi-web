@@ -6,11 +6,6 @@ export const selectSelectedKey = createSelector(
   selectedKey => selectedKey,
 );
 
-export const selectTypeSelectedKey = createSelector(
-  state => state.coloring.typeSelectedKey,
-  typeSelectedKey => typeSelectedKey,
-);
-
 export const selectPropertyValues = createSelector(
   state => state.coloring.propertyValues,
   propertyValues => propertyValues,

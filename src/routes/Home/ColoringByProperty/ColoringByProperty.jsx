@@ -7,17 +7,12 @@ import * as coloringActions from '../../../actions/coloring.action';
 // Selectors
 import {
   selectSelectedKey,
-  selectTypeSelectedKey,
   selectPropertyValues,
   selectColorMap,
 } from '../../../selectors/coloring.selector';
 import { selectNodeKeys } from '../../../selectors/graph.selector';
 // Utils
-import {
-  QUALITATIVE_TYPE,
-  QUANTATIVE_TYPE,
-  toOption,
-} from '../../../utils/objects';
+import { toOption } from '../../../utils/objects';
 import { valueType } from '../../../components/UtilPropTypes';
 // Styles
 import styles from './styles.scss';
@@ -25,7 +20,6 @@ import styles from './styles.scss';
 const ColoringByProperty = ({
   nodeKeys,
   selectedKey,
-  typeSelectedKey,
   propertyValues,
   colorMap,
   selectKey,
@@ -62,22 +56,19 @@ const ColoringByProperty = ({
           />
         )}
       </div>
-      {selectedKey && typeSelectedKey === QUANTATIVE_TYPE && (
-        // TODO: start and end rangeValues using color
-        <input type="range" min={1} max={100} />
-      )}
-      {selectedKey &&
-        typeSelectedKey === QUALITATIVE_TYPE &&
-        propertyValues.map(value => (
-          <div key={value}>
-            {value} :{' '}
-            <input
-              type="color"
-              value={colorMap[value]}
-              onChange={handleChangeColor(value)}
-            />
-          </div>
-        ))}
+      <div className={styles.coloringByProperty__colorsContainer}>
+        {selectedKey &&
+          propertyValues.map(value => (
+            <div key={value}>
+              {value} :{' '}
+              <input
+                type="color"
+                value={colorMap[value]}
+                onChange={handleChangeColor(value)}
+              />
+            </div>
+          ))}
+      </div>
     </div>
   );
 };
@@ -85,7 +76,6 @@ const ColoringByProperty = ({
 ColoringByProperty.propTypes = {
   nodeKeys: PropTypes.arrayOf(PropTypes.string).isRequired,
   selectedKey: PropTypes.string,
-  typeSelectedKey: PropTypes.oneOf([QUALITATIVE_TYPE, QUANTATIVE_TYPE]),
   propertyValues: PropTypes.arrayOf(valueType),
   colorMap: PropTypes.objectOf(PropTypes.string),
   // Redux actions
@@ -96,13 +86,11 @@ ColoringByProperty.propTypes = {
 const mapStateToProps = state => {
   const nodeKeys = selectNodeKeys(state);
   const selectedKey = selectSelectedKey(state);
-  const typeSelectedKey = selectTypeSelectedKey(state);
   const propertyValues = selectPropertyValues(state);
   const colorMap = selectColorMap(state);
   return {
     nodeKeys,
     selectedKey,
-    typeSelectedKey,
     propertyValues,
     colorMap,
   };
