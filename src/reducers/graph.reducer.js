@@ -12,7 +12,7 @@ const initialState = {
     links: [],
   },
   nodeKeys: [],
-  focusedNodeId: null,
+  focusedNode: null,
   filename: 'Untitled Graph',
   mode: SELECT_MODE,
   clickedNodeId: null,

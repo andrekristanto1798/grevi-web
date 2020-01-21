@@ -14,6 +14,7 @@ import {
   selectClickedNodeId,
   selectHoveredNodeId,
   selectHoveredLinkId,
+  selectGraphFocusedNode,
 } from '../../../selectors/graph.selector';
 import { selectGetColor } from '../../../selectors/coloring.selector';
 // Utils
@@ -21,6 +22,7 @@ import {
   graphDataShape,
   modeShape,
   valueType,
+  nodeShape,
 } from '../../../components/UtilPropTypes';
 import { COLORS } from '../../../utils/color';
 // Styles
@@ -42,7 +44,20 @@ const GraphSection = ({
   hoveredNodeId,
   hoveredLinkId,
   getColor,
+  focusedNode,
+  resetFocusedNode,
 }) => {
+  const graphRef = React.useRef();
+  React.useEffect(
+    () => {
+      if (graphRef && focusedNode && focusedNode.x && focusedNode.y) {
+        graphRef.current.centerAt(focusedNode.x, focusedNode.y, 1000);
+        graphRef.current.zoom(1.8, 1000);
+      }
+      resetFocusedNode();
+    },
+    [focusedNode],
+  );
   const nodeCanvasObjectModeCb = React.useCallback(() => 'after', []);
   const nodeCanvasDrawCb = React.useCallback(
     (node, ctx, globalScale) => {
@@ -87,6 +102,7 @@ const GraphSection = ({
         </div>
       )}
       <ForceGraph2D
+        ref={graphRef}
         graphData={data}
         width={width}
         height={height}
@@ -117,12 +133,14 @@ GraphSection.propTypes = {
   clickedNodeId: valueType,
   hoveredNodeId: PropTypes.arrayOf(valueType),
   hoveredLinkId: valueType,
+  focusedNode: nodeShape,
   // Redux actions
   setMode: PropTypes.func.isRequired,
   getColor: PropTypes.func.isRequired,
   clickNode: PropTypes.func.isRequired,
   hoverNode: PropTypes.func.isRequired,
   hoverLink: PropTypes.func.isRequired,
+  resetFocusedNode: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => {
@@ -133,6 +151,7 @@ const mapStateToProps = state => {
   const hoveredNodeId = selectHoveredNodeId(state);
   const hoveredLinkId = selectHoveredLinkId(state);
   const getColor = selectGetColor(state);
+  const focusedNode = selectGraphFocusedNode(state);
   return {
     isAddLinkMode,
     mode,
@@ -141,6 +160,7 @@ const mapStateToProps = state => {
     hoveredNodeId,
     hoveredLinkId,
     getColor,
+    focusedNode,
   };
 };
 
@@ -149,6 +169,7 @@ const actions = {
   clickNode: graphAction.clickNode,
   hoverNode: graphAction.hoverNode,
   hoverLink: graphAction.hoverLink,
+  resetFocusedNode: graphAction.resetFocusedNode,
 };
 
 export default connect(

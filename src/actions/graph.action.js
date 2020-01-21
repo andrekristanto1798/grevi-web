@@ -50,8 +50,6 @@ export const downloadGraphFile = () => (_, getState) => {
   downloadJSON(JSON.stringify({ nodes, links }, null, 4), `${filename}.json`);
 };
 
-export const focusNode = nodeId => set('focusedNodeId', nodeId);
-
 export const setMode = mode => (dispatch, getState) => {
   dispatch(set('clickedNodeId', null));
   if (mode === SELECT_MODE) {
@@ -95,3 +93,7 @@ export const hoverLink = link => dispatch => {
   dispatch(set('hoveredLinkId', link ? link.id : null));
   dispatch(set('hoveredNodeId', link ? [link.source.id, link.target.id] : []));
 };
+
+export const focusNodeOn = node => set('focusedNode', node);
+
+export const resetFocusedNode = () => set('focusedNode', null);

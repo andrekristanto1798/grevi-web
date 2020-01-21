@@ -18,9 +18,9 @@ export const selectGraphLinks = createSelector(
   data => data.links,
 );
 
-export const selectGraphFocusedNodeId = createSelector(
-  state => state.graph.focusedNodeId,
-  focusedNodeId => focusedNodeId,
+export const selectGraphFocusedNode = createSelector(
+  state => state.graph.focusedNode,
+  focusedNode => focusedNode,
 );
 
 export const selectGraphFilename = createSelector(

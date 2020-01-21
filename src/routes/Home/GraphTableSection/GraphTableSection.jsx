@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-// Components
 import { Table, Button } from 'semantic-ui-react';
+// Actions
+import * as graphAction from '../../../actions/graph.action';
+// Components
 // Selectors
 import {
   selectGraphNodes,
@@ -13,7 +15,7 @@ import { nodeShape } from '../../../components/UtilPropTypes';
 
 import styles from './styles.scss';
 
-function GraphTableSection({ nodes, nodeKeys }) {
+function GraphTableSection({ nodes, nodeKeys, focusNodeOn }) {
   if (nodeKeys.length === 0) {
     return <i>No nodes available</i>;
   }
@@ -35,7 +37,12 @@ function GraphTableSection({ nodes, nodeKeys }) {
                 <Table.Cell key={key}>{node[key]}</Table.Cell>
               ))}
               <Table.Cell>
-                <Button color="facebook" icon="eye" size="mini" />
+                <Button
+                  color="facebook"
+                  icon="eye"
+                  size="mini"
+                  onClick={() => focusNodeOn(node)}
+                />
                 <Button color="green" icon="pencil" size="mini" />
                 <Button color="red" icon="delete" size="mini" />
               </Table.Cell>
@@ -50,6 +57,8 @@ function GraphTableSection({ nodes, nodeKeys }) {
 GraphTableSection.propTypes = {
   nodes: PropTypes.arrayOf(nodeShape).isRequired,
   nodeKeys: PropTypes.arrayOf(PropTypes.string).isRequired,
+  // Actions
+  focusNodeOn: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => {
@@ -58,4 +67,11 @@ const mapStateToProps = state => {
   return { nodes, nodeKeys };
 };
 
-export default connect(mapStateToProps)(GraphTableSection);
+const actions = {
+  focusNodeOn: graphAction.focusNodeOn,
+};
+
+export default connect(
+  mapStateToProps,
+  actions,
+)(GraphTableSection);
