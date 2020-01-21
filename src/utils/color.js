@@ -28,6 +28,11 @@ function hslToHex(h, s, l) {
   return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
 }
 
+function makeColor(colorNum, colors) {
+  const color = (colorNum * (300 / colors)) % 360;
+  return hslToHex(color, 100, 50);
+}
+
 function padZero(str, len = 2) {
   const zeros = new Array(len).join('0');
   return (zeros + str).slice(-len);
@@ -68,11 +73,6 @@ export const COLORS = {
   redNormal: '#db2828',
   grayNormal: '#cacbcd',
 };
-
-function makeColor(colorNum, colors) {
-  const color = (colorNum * (360 / colors)) % 360;
-  return hslToHex(color, 100, 50);
-}
 
 export const getDefaultColorMap = values => {
   return values.reduce(

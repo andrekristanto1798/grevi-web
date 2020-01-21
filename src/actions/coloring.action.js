@@ -8,7 +8,7 @@ export const COLORING_SET_COLOR = 'COLORING_SET_COLOR';
 export const selectKey = key => (dispatch, getState) => {
   const state = getState();
   const nodes = selectGraphNodes(state);
-  const propertyValues = getUniqueValues(nodes, key).sort();
+  const propertyValues = getUniqueValues(nodes, key);
   const colorMap = getDefaultColorMap(propertyValues);
   dispatch({
     type: COLORING_SELECT_KEY,
