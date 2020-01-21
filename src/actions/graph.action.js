@@ -80,7 +80,7 @@ export const clickNode = ({ id: nodeId }) => (dispatch, getState) => {
   if (!!clickedNodeId && clickedNodeId !== nodeId) {
     const links = selectGraphLinks(state);
     if (isLinkDuplicate(links, clickedNodeId, nodeId)) return;
-    dispatch(addLink(getNewLink(clickedNodeId, nodeId)));
+    dispatch(addLink(getNewLink(links, clickedNodeId, nodeId)));
     dispatch(set('clickedNodeId', null));
   } else {
     dispatch(set('clickedNodeId', nodeId));

@@ -13,15 +13,20 @@ export const getNewNode = currentNodeList => {
   return { id: `${nextId}` };
 };
 
-export const getNewLink = (source, target) => {
-  return { source, target };
+export const getNewLink = (linkList, source, target) => {
+  if (linkList.length === 0) {
+    return { id: `1`, source, target };
+  }
+  const lastNodeId = linkList[linkList.length - 1].id;
+  const nextId = Number.parseInt(lastNodeId, 10) + 1;
+  return { id: `${nextId}`, source, target };
 };
 
-export const isLinkDuplicate = (links, source, target) => {
+export const isLinkDuplicate = (links, sourceId, targetId) => {
   const duplicatedLinks = links.filter(
     link =>
-      (link.source === source && link.target === target) ||
-      (link.target === source && link.source === target),
+      (link.source.id === sourceId && link.target.id === targetId) ||
+      (link.target.id === sourceId && link.source.id === targetId),
   );
   return duplicatedLinks.length > 0;
 };
