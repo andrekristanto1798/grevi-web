@@ -25,6 +25,9 @@ const ColoringByProperty = ({
   selectKey,
   selectColor,
 }) => {
+  if (nodeKeys.length === 0) {
+    return <i>No nodes available</i>;
+  }
   if (nodeKeys && nodeKeys.length < 1) return null;
   const handleChangeKey = React.useCallback(
     (_, { value }) => {

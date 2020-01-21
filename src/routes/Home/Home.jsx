@@ -1,12 +1,27 @@
 import React from 'react';
 // Components
+import { Accordion } from 'semantic-ui-react';
 import LoadingIndicator from '../../components/LoadingIndicator';
 import WindowSizeListener from '../../components/WindowSizeListener';
 import GraphFileSection from './GraphFileSection';
 import GraphSection from './GraphSection';
 import ColoringByProperty from './ColoringByProperty';
+import GraphTableSection from './GraphTableSection';
 // Styles
 import styles from './styles.scss';
+
+const accordionPanels = [
+  {
+    key: 'coloring',
+    title: 'Coloring By Property',
+    content: { content: <ColoringByProperty /> },
+  },
+  {
+    key: 'table',
+    title: 'Graph Nodes Table',
+    content: { content: <GraphTableSection /> },
+  },
+];
 
 const Home = () => {
   return (
@@ -20,7 +35,13 @@ const Home = () => {
             <>
               <div className={styles.leftPanelContainer}>
                 <GraphFileSection />
-                <ColoringByProperty />
+                <Accordion
+                  fluid
+                  styled
+                  style={{ marginTop: 8 }}
+                  panels={accordionPanels}
+                  exclusive={false}
+                />
               </div>
               <div className={styles.rightPanelContainer}>
                 <GraphSection width={graphWidth} height={windowHeight} />

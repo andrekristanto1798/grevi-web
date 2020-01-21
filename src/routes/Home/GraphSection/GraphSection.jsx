@@ -58,13 +58,15 @@ const GraphSection = ({
         ctx.fillStyle = COLORS.blueNormal;
         ctx.fill();
       }
-      // // Text
-      const fontSize = 14 / globalScale;
-      ctx.font = `${fontSize}px Sans-Serif`;
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'middle';
-      ctx.fillStyle = 'black';
-      ctx.fillText(node.id, node.x, node.y);
+      if (globalScale >= 0.6) {
+        // Text
+        const fontSize = 14 / globalScale;
+        ctx.font = `${fontSize}px Sans-Serif`;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillStyle = 'black';
+        ctx.fillText(node.id, node.x, node.y);
+      }
     },
     [hoveredNodeId],
   );
