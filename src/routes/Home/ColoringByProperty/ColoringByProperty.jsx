@@ -56,9 +56,12 @@ const ColoringByProperty = ({ nodeKeys, selectedKey, selectKey }) => {
           />
         )}
       </div>
-      <div className={styles.coloringByProperty__colorsContainer}>
-        {selectedKey && <ColorTable />}
-      </div>
+      {selectedKey && (
+        <>
+          <hr />
+          <ColorTable />
+        </>
+      )}
     </div>
   );
 };
