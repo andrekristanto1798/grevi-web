@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { Button, Dropdown } from 'semantic-ui-react';
 // Actions
 import * as coloringActions from '../../../actions/coloring.action';
+// Components
+import ColorTable from './ColorTable';
 // Selectors
 import {
   selectSelectedKey,
@@ -13,18 +15,10 @@ import {
 import { selectNodeKeys } from '../../../selectors/graph.selector';
 // Utils
 import { toOption } from '../../../utils/objects';
-import { valueType } from '../../../components/UtilPropTypes';
 // Styles
 import styles from './styles.scss';
 
-const ColoringByProperty = ({
-  nodeKeys,
-  selectedKey,
-  propertyValues,
-  colorMap,
-  selectKey,
-  selectColor,
-}) => {
+const ColoringByProperty = ({ nodeKeys, selectedKey, selectKey }) => {
   if (nodeKeys.length === 0) {
     return <i>No nodes available</i>;
   }
@@ -34,10 +28,6 @@ const ColoringByProperty = ({
       selectKey(value);
     },
     [selectKey],
-  );
-  const handleChangeColor = React.useCallback(
-    propValue => e => selectColor(propValue, e.target.value),
-    [selectColor],
   );
   const dropdwonOptions = React.useMemo(
     () => [
@@ -67,17 +57,7 @@ const ColoringByProperty = ({
         )}
       </div>
       <div className={styles.coloringByProperty__colorsContainer}>
-        {selectedKey &&
-          propertyValues.map(value => (
-            <div key={value}>
-              {value} :{' '}
-              <input
-                type="color"
-                value={colorMap[value]}
-                onChange={handleChangeColor(value)}
-              />
-            </div>
-          ))}
+        {selectedKey && <ColorTable />}
       </div>
     </div>
   );
@@ -86,11 +66,8 @@ const ColoringByProperty = ({
 ColoringByProperty.propTypes = {
   nodeKeys: PropTypes.arrayOf(PropTypes.string).isRequired,
   selectedKey: PropTypes.string,
-  propertyValues: PropTypes.arrayOf(valueType),
-  colorMap: PropTypes.objectOf(PropTypes.string),
   // Redux actions
   selectKey: PropTypes.func.isRequired,
-  selectColor: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => {
@@ -108,7 +85,6 @@ const mapStateToProps = state => {
 
 const actions = {
   selectKey: coloringActions.selectKey,
-  selectColor: coloringActions.selectColor,
 };
 
 export default connect(
