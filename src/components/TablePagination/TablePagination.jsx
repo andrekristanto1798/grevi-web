@@ -10,17 +10,39 @@ import styles from './styles.scss';
 
 const dataPerPageOptions = [10, 20, 30].map(toOption);
 
-function TablePagination({ getData, dataKey, dataLength }) {
+function TablePagination({ getData, dataKey, dataLength, searchBar }) {
   const [activePage, setActivePage] = React.useState(1);
   const [dataPerPage, setDataPerPage] = React.useState(10);
-  const handleChangeDataPerPage = React.useCallback(
-    (_, { value }) => setDataPerPage(value),
-    [],
-  );
+  const totalPages = Math.ceil(dataLength / dataPerPage);
+  const handleChangeDataPerPage = React.useCallback((_, { value }) => {
+    // if the current page exceeds the total pages
+    // due to the increase of the number of rows per page
+    const newTotalPages = Math.ceil(dataLength / value);
+    if (activePage >= newTotalPages) setActivePage(newTotalPages);
+    setDataPerPage(value);
+  });
+  // side effect on data length changed due to filtering
+  // should update active page to the last pages
+  React.useEffect(() => {
+    if (activePage >= totalPages) setActivePage(totalPages);
+  });
   const firstItemIndex = (activePage - 1) * dataPerPage;
   const lastItemIndex = activePage * dataPerPage;
   return (
     <div className={styles.table__container}>
+      <div className={styles.table__dataPerPage}>
+        {searchBar && (
+          <span style={{ margin: '0px 8px 0px 0px' }}>{searchBar}</span>
+        )}
+        Total Entries: {dataLength} || Show{' '}
+        <Dropdown
+          inline
+          value={dataPerPage}
+          options={dataPerPageOptions}
+          onChange={handleChangeDataPerPage}
+        />{' '}
+        entries per page
+      </div>
       <Table size="small" compact="very" striped>
         <Table.Header>
           <Table.Row>
@@ -41,18 +63,9 @@ function TablePagination({ getData, dataKey, dataLength }) {
           })}
         </Table.Body>
       </Table>
-      <div className={styles.table__dataPerPage}>
-        Total Rows: {dataLength} || Rows per page:{' '}
-        <Dropdown
-          inline
-          value={dataPerPage}
-          options={dataPerPageOptions}
-          onChange={handleChangeDataPerPage}
-        />
-      </div>
       <Pagination
         activePage={activePage}
-        totalPages={Math.ceil(dataLength / dataPerPage)}
+        totalPages={totalPages}
         onChange={setActivePage}
       />
     </div>
@@ -63,6 +76,7 @@ TablePagination.propTypes = {
   getData: PropTypes.func.isRequired,
   dataKey: PropTypes.arrayOf(PropTypes.string).isRequired,
   dataLength: PropTypes.number.isRequired,
+  searchBar: PropTypes.node,
 };
 
 export default TablePagination;
