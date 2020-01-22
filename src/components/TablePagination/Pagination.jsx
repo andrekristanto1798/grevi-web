@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Pagination as Pg, Icon } from 'semantic-ui-react';
+// Styles
+import styles from './styles.scss';
 
 function Pagination({ activePage, totalPages, onChange }) {
   return (
     <Pg
+      className={styles.pagination}
       size="mini"
       ellipsisItem={{
         content: <Icon name="ellipsis horizontal" />,
