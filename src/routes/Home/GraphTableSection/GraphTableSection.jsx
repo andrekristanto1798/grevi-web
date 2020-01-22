@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Table, Button } from 'semantic-ui-react';
+import { Button } from 'semantic-ui-react';
 // Actions
 import * as graphAction from '../../../actions/graph.action';
 // Components
+import TablePagination from '../../../components/TablePagination';
 // Selectors
 import {
   selectGraphNodes,
@@ -12,44 +13,40 @@ import {
 } from '../../../selectors/graph.selector';
 // Utils
 import { nodeShape } from '../../../components/UtilPropTypes';
-
+// Styles
 import styles from './styles.scss';
 
 function GraphTableSection({ nodes, nodeKeys, focusNodeOn }) {
   if (nodeKeys.length === 0) {
     return <i>No nodes available</i>;
   }
+  const handleGetData = React.useCallback(
+    (firstIndex, lastIndex) =>
+      nodes.slice(firstIndex, lastIndex).map(node => ({
+        ...node,
+        Actions: (
+          <>
+            <Button
+              color="facebook"
+              icon="eye"
+              size="mini"
+              onClick={() => focusNodeOn(node)}
+            />
+            <Button color="green" icon="pencil" size="mini" />
+            <Button color="red" icon="delete" size="mini" />
+          </>
+        ),
+      })),
+    [nodes, focusNodeOn],
+  );
+  const dataKey = React.useMemo(() => [...nodeKeys, 'Actions'], [nodeKeys]);
   return (
     <div className={styles.graphTable__container}>
-      <Table size="small" compact="very" striped>
-        <Table.Header>
-          <Table.Row>
-            {nodeKeys.map(key => (
-              <Table.HeaderCell key={key}>{key}</Table.HeaderCell>
-            ))}
-            <Table.HeaderCell>Actions</Table.HeaderCell>
-          </Table.Row>
-        </Table.Header>
-        <Table.Body>
-          {nodes.map(node => (
-            <Table.Row key={node.id}>
-              {nodeKeys.map(key => (
-                <Table.Cell key={key}>{node[key]}</Table.Cell>
-              ))}
-              <Table.Cell>
-                <Button
-                  color="facebook"
-                  icon="eye"
-                  size="mini"
-                  onClick={() => focusNodeOn(node)}
-                />
-                <Button color="green" icon="pencil" size="mini" />
-                <Button color="red" icon="delete" size="mini" />
-              </Table.Cell>
-            </Table.Row>
-          ))}
-        </Table.Body>
-      </Table>
+      <TablePagination
+        getData={handleGetData}
+        dataLength={nodes.length}
+        dataKey={dataKey}
+      />
     </div>
   );
 }

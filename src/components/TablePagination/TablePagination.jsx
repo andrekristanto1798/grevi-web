@@ -10,21 +10,15 @@ import styles from './styles.scss';
 
 const dataPerPageOptions = [10, 20, 30].map(toOption);
 
-function TablePagination({ data, dataKey }) {
+function TablePagination({ getData, dataKey, dataLength }) {
   const [activePage, setActivePage] = React.useState(1);
   const [dataPerPage, setDataPerPage] = React.useState(10);
   const handleChangeDataPerPage = React.useCallback(
     (_, { value }) => setDataPerPage(value),
     [],
   );
-  const currentPageData = React.useMemo(
-    () => {
-      const firstItemIndex = (activePage - 1) * dataPerPage;
-      const lastItemIndex = activePage * dataPerPage;
-      return data.slice(firstItemIndex, lastItemIndex);
-    },
-    [activePage, dataPerPage, data],
-  );
+  const firstItemIndex = (activePage - 1) * dataPerPage;
+  const lastItemIndex = activePage * dataPerPage;
   return (
     <div className={styles.table__container}>
       <Table size="small" compact="very" striped>
@@ -36,7 +30,7 @@ function TablePagination({ data, dataKey }) {
           </Table.Row>
         </Table.Header>
         <Table.Body>
-          {currentPageData.map(obj => {
+          {getData(firstItemIndex, lastItemIndex).map(obj => {
             return (
               <Table.Row key={obj.id}>
                 {dataKey.map(key => (
@@ -48,7 +42,7 @@ function TablePagination({ data, dataKey }) {
         </Table.Body>
       </Table>
       <div className={styles.table__dataPerPage}>
-        Total Rows: {data.length} || Rows per page:{' '}
+        Total Rows: {dataLength} || Rows per page:{' '}
         <Dropdown
           inline
           value={dataPerPage}
@@ -58,7 +52,7 @@ function TablePagination({ data, dataKey }) {
       </div>
       <Pagination
         activePage={activePage}
-        totalPages={Math.ceil(data.length / dataPerPage)}
+        totalPages={Math.ceil(dataLength / dataPerPage)}
         onChange={setActivePage}
       />
     </div>
@@ -66,8 +60,9 @@ function TablePagination({ data, dataKey }) {
 }
 
 TablePagination.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.any)).isRequired,
+  getData: PropTypes.func.isRequired,
   dataKey: PropTypes.arrayOf(PropTypes.string).isRequired,
+  dataLength: PropTypes.number.isRequired,
 };
 
 export default TablePagination;

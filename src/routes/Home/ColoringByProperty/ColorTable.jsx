@@ -15,10 +15,13 @@ import {
 import { valueType } from '../../../components/UtilPropTypes';
 
 function ColorTable({ propertyValues, colorMap, selectedKey, selectColor }) {
-  const propertyKey = `Property (${selectedKey})`;
-  return (
-    <TablePagination
-      data={propertyValues.map(value => ({
+  const propertyKey = React.useMemo(() => `Property (${selectedKey})`, [
+    selectedKey,
+  ]);
+  const dataKey = React.useMemo(() => [propertyKey, 'Color'], [propertyKey]);
+  const handleGetData = React.useCallback(
+    (firstIndex, lastIndex) =>
+      propertyValues.slice(firstIndex, lastIndex).map(value => ({
         id: value,
         [propertyKey]: value,
         Color: (
@@ -28,8 +31,14 @@ function ColorTable({ propertyValues, colorMap, selectedKey, selectColor }) {
             onChange={e => selectColor(value, e.target.value)}
           />
         ),
-      }))}
-      dataKey={[propertyKey, 'Color']}
+      })),
+    [propertyValues, selectColor, propertyKey],
+  );
+  return (
+    <TablePagination
+      getData={handleGetData}
+      dataLength={propertyValues.length}
+      dataKey={dataKey}
     />
   );
 }
