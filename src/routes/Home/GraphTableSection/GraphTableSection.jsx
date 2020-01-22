@@ -63,6 +63,7 @@ function GraphTableSection({ nodes, nodeKeys, focusNodeOn }) {
       <TablePagination
         searchBar={(
           <Input
+            size="small"
             icon="search"
             placeholder="Search..."
             value={searchValue}

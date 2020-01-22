@@ -56,12 +56,7 @@ const ColoringByProperty = ({ nodeKeys, selectedKey, selectKey }) => {
           />
         )}
       </div>
-      {selectedKey && (
-        <>
-          <hr />
-          <ColorTable />
-        </>
-      )}
+      {selectedKey && <ColorTable />}
     </div>
   );
 };
