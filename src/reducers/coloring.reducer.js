@@ -1,6 +1,7 @@
 import {
   COLORING_SELECT_KEY,
   COLORING_SET_COLOR,
+  COLORING_RESET_KEY,
 } from '../actions/coloring.action';
 import { RESET_ALL } from '../actions/graph.action';
 
@@ -19,6 +20,8 @@ export default function reducer(state = initialState, action) {
       propertyValues: action.propertyValues,
       colorMap: action.colorMap,
     };
+  case COLORING_RESET_KEY:
+    return { ...initialState };
   case COLORING_SET_COLOR:
     return {
       ...state,

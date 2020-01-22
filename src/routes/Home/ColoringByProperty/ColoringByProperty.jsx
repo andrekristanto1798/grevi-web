@@ -39,6 +39,13 @@ const ColoringByProperty = ({
     propValue => e => selectColor(propValue, e.target.value),
     [selectColor],
   );
+  const dropdwonOptions = React.useMemo(
+    () => [
+      { key: 'none', value: null, text: 'none' },
+      ...nodeKeys.map(toOption),
+    ],
+    [nodeKeys],
+  );
   return (
     <div className={styles.coloringByProperty__container}>
       <div className={styles.coloringByProperty__inputContainer}>
@@ -47,7 +54,7 @@ const ColoringByProperty = ({
           fluid
           selection
           value={selectedKey}
-          options={nodeKeys.map(toOption)}
+          options={dropdwonOptions}
           onChange={handleChangeKey}
         />
         {selectedKey && (
