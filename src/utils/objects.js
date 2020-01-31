@@ -29,8 +29,17 @@ export const getUniqueKeys = objectList =>
     }, [])
     .filter(key => !ignoredKeys.includes(key));
 
-export const getUniqueValues = (arr, prop) =>
-  uniqBy(arr, prop).map(obj => obj[prop]);
+export const getUniqueValuesByKey = (arr, key) =>
+  uniqBy(arr, key).map(obj => obj[key]);
+
+export const getIdValuesMapByKey = (arr, key) =>
+  arr.reduce(
+    (resultMap, obj) => ({
+      ...resultMap,
+      [obj.id]: obj[key],
+    }),
+    {},
+  );
 
 const isStringNumber = str => /^\d+$/.test(str);
 

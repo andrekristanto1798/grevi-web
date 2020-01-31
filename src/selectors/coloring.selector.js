@@ -6,6 +6,11 @@ export const selectSelectedKey = createSelector(
   selectedKey => selectedKey,
 );
 
+export const selectNodeIdValuesMap = createSelector(
+  state => state.coloring.nodeIdValuesMap,
+  nodeIdValuesMap => nodeIdValuesMap,
+);
+
 export const selectPropertyValues = createSelector(
   state => state.coloring.propertyValues,
   propertyValues => propertyValues,
@@ -18,10 +23,11 @@ export const selectColorMap = createSelector(
 
 export const selectGetColor = createSelector(
   selectColorMap,
+  selectNodeIdValuesMap,
   selectSelectedKey,
-  (colorMap, selectedKey) => {
+  (colorMap, nodeIdValuesMap, selectedKey) => {
     return node => {
-      if (selectedKey) return colorMap[node[selectedKey]];
+      if (selectedKey) return colorMap[nodeIdValuesMap[node.id]];
       return COLORS.blueNormal;
     };
   },

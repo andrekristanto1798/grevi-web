@@ -33,6 +33,31 @@ const ColoringByProperty = ({ nodeKeys, selectedKey, selectKey }) => {
     () => [
       { key: 'none', value: null, text: 'none' },
       ...nodeKeys.map(toOption),
+      {
+        key: coloringActions.COLORING_SPECIAL.DEGREE,
+        value: coloringActions.COLORING_SPECIAL.DEGREE,
+        text: 'Node Degree',
+      },
+      {
+        key: coloringActions.COLORING_SPECIAL.IN_CENTRALITY,
+        value: coloringActions.COLORING_SPECIAL.IN_CENTRALITY,
+        text: 'Node In-Centrality',
+      },
+      {
+        key: coloringActions.COLORING_SPECIAL.OUT_CENTRALITY,
+        value: coloringActions.COLORING_SPECIAL.OUT_CENTRALITY,
+        text: 'Node Out-Centrality',
+      },
+      {
+        key: coloringActions.COLORING_SPECIAL.BETWEENNESS,
+        value: coloringActions.COLORING_SPECIAL.BETWEENNESS,
+        text: 'Node Betweenness',
+      },
+      {
+        key: coloringActions.COLORING_SPECIAL.CLOSENESS,
+        value: coloringActions.COLORING_SPECIAL.CLOSENESS,
+        text: 'Node Closeness',
+      },
     ],
     [nodeKeys],
   );

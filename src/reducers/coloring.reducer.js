@@ -7,6 +7,7 @@ import { RESET_ALL } from '../actions/graph.action';
 
 const initialState = {
   selectedKey: null,
+  nodeIdValuesMap: {},
   propertyValues: [],
   colorMap: {},
 };
@@ -17,6 +18,7 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       selectedKey: action.selectedKey,
+      nodeIdValuesMap: action.nodeIdValuesMap,
       propertyValues: action.propertyValues,
       colorMap: action.colorMap,
     };

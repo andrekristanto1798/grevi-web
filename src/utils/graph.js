@@ -1,3 +1,5 @@
+import get from 'lodash/get';
+
 export const getRandomPosition = () => ({
   x: Math.floor(Math.random() * 500),
   y: Math.floor(Math.random() * 500),
@@ -36,4 +38,15 @@ export const removeLinksWithNode = (links, nodeId) => {
     link => !(link.source.id === nodeId || link.target.id === nodeId),
   );
   return newLinks;
+};
+
+export const getNodeIdDegreeMap = links => {
+  const nodeIdDegreeMap = {};
+  links.forEach(link => {
+    const sourceId = link.source.id;
+    const targetId = link.target.id;
+    nodeIdDegreeMap[sourceId] = get(nodeIdDegreeMap, sourceId, 0) + 1;
+    nodeIdDegreeMap[targetId] = get(nodeIdDegreeMap, targetId, 0) + 1;
+  });
+  return nodeIdDegreeMap;
 };
