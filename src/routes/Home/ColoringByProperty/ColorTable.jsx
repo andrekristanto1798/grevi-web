@@ -32,7 +32,7 @@ function ColorTable({ propertyValues, colorMap, selectedKey, selectColor }) {
           />
         ),
       })),
-    [propertyValues, selectColor, propertyKey],
+    [propertyValues, selectColor, propertyKey, colorMap],
   );
   return (
     <TablePagination
