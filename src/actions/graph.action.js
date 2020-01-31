@@ -4,6 +4,8 @@ import {
   selectGraphFilename,
   selectClickedNodeId,
   selectIsAddLinkMode,
+  selectNodeKeys,
+  selectEditedNodeIndex,
 } from '../selectors/graph.selector';
 import { downloadJSON } from '../utils/download';
 import {
@@ -12,17 +14,23 @@ import {
   ADD_NODE_MODE,
 } from '../components/EditingTools';
 import { getNewNode, getNewLink, isLinkDuplicate } from '../utils/graph';
-import { getUniqueKeys, cleanFromIgnoredKeys } from '../utils/objects';
+import {
+  getUniqueKeys,
+  cleanFromIgnoredKeys,
+  isArrayEqual,
+} from '../utils/objects';
 import { showLoading, hideLoading } from './ui.action';
 
 export const RESET_ALL = 'RESET_ALL';
 export const SET = 'GRAPH_SET';
+export const SET_GRAPH_NODES = 'SET_GRAPH_NODES';
+export const SET_GRAPH_LINKS = 'SET_GRAPH_LINKS';
 export const GRAPH_ADD_NODE = 'GRAPH_ADD_NODE';
 export const GRAPH_ADD_LINK = 'GRAPH_ADD_LINK';
 
 const set = (key, value) => ({ type: SET, key, value });
-const addNode = newNode => ({ type: GRAPH_ADD_NODE, newNode });
-const addLink = newLink => ({ type: GRAPH_ADD_LINK, newLink });
+const setGraphNodes = nodes => ({ type: SET_GRAPH_NODES, nodes });
+const setGraphLinks = links => ({ type: SET_GRAPH_LINKS, links });
 const resetAll = () => ({ type: RESET_ALL });
 
 export const changeFilename = filename => set('filename', filename);
@@ -59,7 +67,7 @@ export const setMode = mode => (dispatch, getState) => {
     const state = getState();
     const nodes = selectGraphNodes(state);
     const newNode = getNewNode(nodes);
-    dispatch(addNode(newNode));
+    dispatch(setGraphNodes([...nodes, newNode]));
     // Setting up the nodeKeys when the graph is in empty state
     if (nodes.length === 0) {
       dispatch(set('nodeKeys', getUniqueKeys([newNode])));
@@ -78,7 +86,8 @@ export const clickNode = ({ id: nodeId }) => (dispatch, getState) => {
   if (!!clickedNodeId && clickedNodeId !== nodeId) {
     const links = selectGraphLinks(state);
     if (isLinkDuplicate(links, clickedNodeId, nodeId)) return;
-    dispatch(addLink(getNewLink(links, clickedNodeId, nodeId)));
+    const newLink = getNewLink(links, clickedNodeId, nodeId);
+    dispatch(setGraphLinks([...links, newLink]));
     dispatch(set('clickedNodeId', null));
   } else {
     dispatch(set('clickedNodeId', nodeId));
@@ -97,3 +106,30 @@ export const hoverLink = link => dispatch => {
 export const focusNodeOn = node => set('focusedNode', node);
 
 export const resetFocusedNode = () => set('focusedNode', null);
+
+export const editNode = (node, index) => dispatch => {
+  dispatch(set('editedNode', node));
+  dispatch(set('editedNodeIndex', index));
+};
+
+export const cancelEditNode = () => set('editedNode', null);
+
+export const submitEditedNode = editedNode => async (dispatch, getState) => {
+  const state = getState();
+  const nodes = selectGraphNodes(state);
+  const index = selectEditedNodeIndex(state);
+  const nodeKeys = selectNodeKeys(state);
+  const editedNodeUniqueKeys = getUniqueKeys([editedNode]);
+  const newNodes = [
+    ...nodes.slice(0, index),
+    editedNode,
+    ...nodes.slice(index + 1),
+  ];
+  if (!isArrayEqual(editedNodeUniqueKeys, nodeKeys)) {
+    // if not the same keys, then nodeKeys = editedNodeUniqueKeys + nodeKeys
+    dispatch(set('nodeKeys', getUniqueKeys(newNodes)));
+  }
+  dispatch(setGraphNodes(newNodes));
+  dispatch(set('editedNode', null));
+  dispatch(set('editedNodeIndex', null));
+};

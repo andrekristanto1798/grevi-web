@@ -24,7 +24,7 @@ const getValidData = (data, dataKey, searchValue) => {
   );
 };
 
-const toGraphTableData = focusNodeOn => node => ({
+const toGraphTableData = (focusNodeOn, editNode) => (node, index) => ({
   ...node,
   Actions: (
     <>
@@ -34,13 +34,18 @@ const toGraphTableData = focusNodeOn => node => ({
         size="mini"
         onClick={() => focusNodeOn(node)}
       />
-      <Button color="green" icon="pencil" size="mini" />
+      <Button
+        color="green"
+        icon="pencil"
+        size="mini"
+        onClick={() => editNode(node, index)}
+      />
       <Button color="red" icon="delete" size="mini" />
     </>
   ),
 });
 
-function GraphTableSection({ nodes, nodeKeys, focusNodeOn }) {
+function GraphTableSection({ nodes, nodeKeys, editNode, focusNodeOn }) {
   if (nodeKeys.length === 0) {
     return <i>No nodes available</i>;
   }
@@ -55,7 +60,9 @@ function GraphTableSection({ nodes, nodeKeys, focusNodeOn }) {
   );
   const handleGetData = React.useCallback(
     (firstIndex, lastIndex) =>
-      validData.slice(firstIndex, lastIndex).map(toGraphTableData(focusNodeOn)),
+      validData
+        .slice(firstIndex, lastIndex)
+        .map(toGraphTableData(focusNodeOn, editNode)),
     [validData, focusNodeOn],
   );
   return (
@@ -82,6 +89,7 @@ GraphTableSection.propTypes = {
   nodes: PropTypes.arrayOf(nodeShape).isRequired,
   nodeKeys: PropTypes.arrayOf(PropTypes.string).isRequired,
   // Actions
+  editNode: PropTypes.func.isRequired,
   focusNodeOn: PropTypes.func.isRequired,
 };
 
@@ -92,6 +100,7 @@ const mapStateToProps = state => {
 };
 
 const actions = {
+  editNode: graphAction.editNode,
   focusNodeOn: graphAction.focusNodeOn,
 };
 

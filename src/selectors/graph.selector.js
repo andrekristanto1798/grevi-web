@@ -57,3 +57,13 @@ export const selectNodeKeys = createSelector(
   state => state.graph.nodeKeys,
   nodeKeys => nodeKeys,
 );
+
+export const selectEditedNode = createSelector(
+  state => state.graph.editedNode,
+  editedNode => editedNode,
+);
+
+export const selectEditedNodeIndex = createSelector(
+  state => state.graph.editedNodeIndex,
+  editedNodeIndex => editedNodeIndex,
+);

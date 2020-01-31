@@ -5,6 +5,11 @@ import uniqBy from 'lodash/uniqBy';
 export const QUALITATIVE_TYPE = 'qualitative_type';
 export const QUANTATIVE_TYPE = 'quantative_type';
 
+export const isArrayEqual = (arr1, arr2) =>
+  arr1.sort().join(',') === arr2.sort().join(',');
+
+export const combineTwoArrays = (arr1, arr2) => uniq([...arr1, ...arr2]);
+
 const ignoredKeys = [
   'x',
   'y',
@@ -20,7 +25,7 @@ const ignoredKeys = [
 export const getUniqueKeys = objectList =>
   objectList
     .reduce((acc, obj) => {
-      return uniq([...acc, ...Object.keys(obj)]);
+      return combineTwoArrays(acc, Object.keys(obj));
     }, [])
     .filter(key => !ignoredKeys.includes(key));
 

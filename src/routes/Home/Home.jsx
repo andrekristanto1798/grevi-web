@@ -9,6 +9,7 @@ import ColoringByProperty from './ColoringByProperty';
 import GraphTableSection from './GraphTableSection';
 // Styles
 import styles from './styles.scss';
+import EditNodeModal from '../../components/EditNodeModal';
 
 const accordionPanels = [
   {
@@ -46,6 +47,7 @@ const Home = () => {
               <div className={styles.rightPanelContainer}>
                 <GraphSection width={graphWidth} height={windowHeight} />
               </div>
+              <EditNodeModal />
             </>
           );
         }}
