@@ -30,3 +30,10 @@ export const isLinkDuplicate = (links, sourceId, targetId) => {
   );
   return duplicatedLinks.length > 0;
 };
+
+export const removeLinksWithNode = (links, nodeId) => {
+  const newLinks = links.filter(
+    link => !(link.source.id === nodeId || link.target.id === nodeId),
+  );
+  return newLinks;
+};

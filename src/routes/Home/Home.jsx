@@ -7,9 +7,10 @@ import GraphFileSection from './GraphFileSection';
 import GraphSection from './GraphSection';
 import ColoringByProperty from './ColoringByProperty';
 import GraphTableSection from './GraphTableSection';
+import EditNodeModal from '../../components/EditNodeModal';
+import DeleteNodeModal from '../../components/DeleteNodeModal';
 // Styles
 import styles from './styles.scss';
-import EditNodeModal from '../../components/EditNodeModal';
 
 const accordionPanels = [
   {
@@ -48,6 +49,7 @@ const Home = () => {
                 <GraphSection width={graphWidth} height={windowHeight} />
               </div>
               <EditNodeModal />
+              <DeleteNodeModal />
             </>
           );
         }}

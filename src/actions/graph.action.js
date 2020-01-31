@@ -6,6 +6,8 @@ import {
   selectIsAddLinkMode,
   selectNodeKeys,
   selectEditedNodeIndex,
+  selectDeletedNode,
+  selectDeletedNodeIndex,
 } from '../selectors/graph.selector';
 import { downloadJSON } from '../utils/download';
 import {
@@ -13,7 +15,12 @@ import {
   ADD_LINK_MODE,
   ADD_NODE_MODE,
 } from '../components/EditingTools';
-import { getNewNode, getNewLink, isLinkDuplicate } from '../utils/graph';
+import {
+  getNewNode,
+  getNewLink,
+  isLinkDuplicate,
+  removeLinksWithNode,
+} from '../utils/graph';
 import {
   getUniqueKeys,
   cleanFromIgnoredKeys,
@@ -114,7 +121,7 @@ export const editNode = (node, index) => dispatch => {
 
 export const cancelEditNode = () => set('editedNode', null);
 
-export const submitEditedNode = editedNode => async (dispatch, getState) => {
+export const submitEditedNode = editedNode => (dispatch, getState) => {
   const state = getState();
   const nodes = selectGraphNodes(state);
   const index = selectEditedNodeIndex(state);
@@ -132,4 +139,28 @@ export const submitEditedNode = editedNode => async (dispatch, getState) => {
   dispatch(setGraphNodes(newNodes));
   dispatch(set('editedNode', null));
   dispatch(set('editedNodeIndex', null));
+};
+
+export const deleteNode = (node, index) => dispatch => {
+  dispatch(set('deletedNode', node));
+  dispatch(set('deletedNodeIndex', index));
+};
+
+export const cancelDeleteNode = () => set('deletedNode', null);
+
+export const submitDeleteNode = () => (dispatch, getState) => {
+  const state = getState();
+  const nodes = selectGraphNodes(state);
+  const links = selectGraphLinks(state);
+  const deletedNode = selectDeletedNode(state);
+  const index = selectDeletedNodeIndex(state);
+  const nodeKeys = selectNodeKeys(state);
+  const newNodes = [...nodes.slice(0, index), ...nodes.slice(index + 1)];
+  const newLinks = removeLinksWithNode(links, deletedNode.id);
+  if (!isArrayEqual(getUniqueKeys(newNodes), nodeKeys)) {
+    dispatch(set('nodeKeys', getUniqueKeys(newNodes)));
+  }
+  dispatch(set('data', { nodes: newNodes, links: newLinks }));
+  dispatch(set('deletedNode', null));
+  dispatch(set('deletedNodeIndex', null));
 };

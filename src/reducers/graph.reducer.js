@@ -7,19 +7,24 @@ import {
 import { SELECT_MODE } from '../components/EditingTools';
 
 const initialState = {
+  // Graph Data
   data: {
     nodes: [],
     links: [],
   },
   nodeKeys: [],
-  focusedNode: null,
   filename: 'Untitled Graph',
+  // Graph Interactions
   mode: SELECT_MODE,
+  focusedNode: null,
   clickedNodeId: null,
   hoveredNodeId: [],
   hoveredLinkId: null,
+  // Node Actions Edit + Delete
   editedNode: null,
   editedNodeIndex: null,
+  deletedNode: null,
+  deletedNodeIndex: null,
 };
 
 export default function reducer(state = initialState, action) {
