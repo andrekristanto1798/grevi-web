@@ -22,21 +22,38 @@ export const COLORING_SPECIAL = {
 const getNodeValuesByKey = (nodes, links, key) => {
   switch (key) {
   case COLORING_SPECIAL.DEGREE: {
-    const nodeIdDegreeMap = getNodeIdDegreeMap(links);
-    const values = uniq(Object.values(nodeIdDegreeMap));
-    return [nodeIdDegreeMap, values];
+    const nodeIdValuesMap = getNodeIdDegreeMap(links);
+    const values = uniq(Object.values(nodeIdValuesMap));
+    return [nodeIdValuesMap, values];
   }
-  case COLORING_SPECIAL.IN_CENTRALITY:
-    return [];
-  case COLORING_SPECIAL.OUT_CENTRALITY:
-    return [];
-  case COLORING_SPECIAL.BETWEENNESS:
-    return [];
-  case COLORING_SPECIAL.CLOSENESS:
-    return [];
+  case COLORING_SPECIAL.IN_CENTRALITY: {
+    // TODO: formula for IN_CENTRALITY
+    const nodeIdValuesMap = {};
+    const values = uniq(Object.values(nodeIdValuesMap));
+    return [nodeIdValuesMap, values];
+  }
+  case COLORING_SPECIAL.OUT_CENTRALITY: {
+    // TODO: formula for OUT_CENTRALITY
+    const nodeIdValuesMap = {};
+    const values = uniq(Object.values(nodeIdValuesMap));
+    return [nodeIdValuesMap, values];
+  }
+  case COLORING_SPECIAL.BETWEENNESS: {
+    // TODO: formula for BETWEENNESS
+    const nodeIdValuesMap = {};
+    const values = uniq(Object.values(nodeIdValuesMap));
+    return [nodeIdValuesMap, values];
+  }
+  case COLORING_SPECIAL.CLOSENESS: {
+    // TODO: formula for CLOSENESS
+    const nodeIdValuesMap = {};
+    const values = uniq(Object.values(nodeIdValuesMap));
+    return [nodeIdValuesMap, values];
+  }
   default: {
     const nodeIdValuesMap = getIdValuesMapByKey(nodes, key);
-    return [nodeIdValuesMap, getUniqueValuesByKey(nodes, key)];
+    const values = getUniqueValuesByKey(nodes, key);
+    return [nodeIdValuesMap, values];
   }
   }
 };
