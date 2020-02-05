@@ -3,5 +3,6 @@ import { combineReducers } from 'redux';
 import graph from './graph.reducer';
 import ui from './ui.reducer';
 import coloring from './coloring.reducer';
+import radius from './radius.reducer';
 
-export default combineReducers({ graph, ui, coloring });
+export default combineReducers({ graph, ui, radius, coloring });

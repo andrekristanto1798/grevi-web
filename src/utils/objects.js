@@ -1,6 +1,5 @@
 import omit from 'lodash/omit';
 import uniq from 'lodash/uniq';
-import uniqBy from 'lodash/uniqBy';
 
 export const QUALITATIVE_TYPE = 'qualitative_type';
 export const QUANTATIVE_TYPE = 'quantative_type';
@@ -29,8 +28,14 @@ export const getUniqueKeys = objectList =>
     }, [])
     .filter(key => !ignoredKeys.includes(key));
 
-export const getUniqueValuesByKey = (arr, key) =>
-  uniqBy(arr, key).map(obj => obj[key]);
+export const reduceMapValuetoNumber = map =>
+  Object.entries(map).reduce(
+    (acc, [key, value]) => ({
+      ...acc,
+      [key]: Number(value),
+    }),
+    {},
+  );
 
 export const getIdValuesMapByKey = (arr, key) =>
   arr.reduce(
