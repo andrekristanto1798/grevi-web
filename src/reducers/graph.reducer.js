@@ -22,9 +22,7 @@ const initialState = {
   hoveredLinkId: null,
   // Node Actions Edit + Delete
   editedNode: null,
-  editedNodeIndex: null,
   deletedNode: null,
-  deletedNodeIndex: null,
 };
 
 export default function reducer(state = initialState, action) {

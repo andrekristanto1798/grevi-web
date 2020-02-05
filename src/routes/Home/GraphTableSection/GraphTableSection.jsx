@@ -24,10 +24,7 @@ const getValidData = (data, dataKey, searchValue) => {
   );
 };
 
-const toGraphTableData = (focusNodeOn, editNode, deleteNode) => (
-  node,
-  index,
-) => ({
+const toGraphTableData = (focusNodeOn, editNode, deleteNode) => node => ({
   ...node,
   Actions: (
     <>
@@ -41,13 +38,13 @@ const toGraphTableData = (focusNodeOn, editNode, deleteNode) => (
         color="green"
         icon="pencil"
         size="mini"
-        onClick={() => editNode(node, index)}
+        onClick={() => editNode(node)}
       />
       <Button
         color="red"
         icon="delete"
         size="mini"
-        onClick={() => deleteNode(node, index)}
+        onClick={() => deleteNode(node)}
       />
     </>
   ),

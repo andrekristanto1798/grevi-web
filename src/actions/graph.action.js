@@ -6,9 +6,7 @@ import {
   selectIsAddLinkMode,
   selectNodeKeys,
   selectEditedNode,
-  selectEditedNodeIndex,
   selectDeletedNode,
-  selectDeletedNodeIndex,
 } from '../selectors/graph.selector';
 import { downloadJSON } from '../utils/download';
 import {
@@ -122,10 +120,7 @@ export const focusNodeOn = node => set('focusedNode', node);
 
 export const resetFocusedNode = () => set('focusedNode', null);
 
-export const editNode = (node, index) => dispatch => {
-  dispatch(set('editedNode', node));
-  dispatch(set('editedNodeIndex', index));
-};
+export const editNode = node => set('editedNode', node);
 
 export const cancelEditNode = () => set('editedNode', null);
 
@@ -134,7 +129,7 @@ export const submitEditedNode = editedNode => (dispatch, getState) => {
   const nodes = selectGraphNodes(state);
   const links = selectGraphLinks(state);
   const prevEditedNode = selectEditedNode(state);
-  const index = selectEditedNodeIndex(state);
+  const index = nodes.findIndex(node => node.id === prevEditedNode.id);
   const nodeKeys = selectNodeKeys(state);
   const editedNodeUniqueKeys = getUniqueKeys([editedNode]);
   // check if new node id exists in the original node list
@@ -160,13 +155,9 @@ export const submitEditedNode = editedNode => (dispatch, getState) => {
   }
   dispatch(set('data', { nodes: newNodes, links: newLinks }));
   dispatch(set('editedNode', null));
-  dispatch(set('editedNodeIndex', null));
 };
 
-export const deleteNode = (node, index) => dispatch => {
-  dispatch(set('deletedNode', node));
-  dispatch(set('deletedNodeIndex', index));
-};
+export const deleteNode = node => set('deletedNode', node);
 
 export const cancelDeleteNode = () => set('deletedNode', null);
 
@@ -175,7 +166,7 @@ export const submitDeleteNode = () => (dispatch, getState) => {
   const nodes = selectGraphNodes(state);
   const links = selectGraphLinks(state);
   const deletedNode = selectDeletedNode(state);
-  const index = selectDeletedNodeIndex(state);
+  const index = nodes.findIndex(node => node.id === deletedNode.id);
   const nodeKeys = selectNodeKeys(state);
   const newNodes = [...nodes.slice(0, index), ...nodes.slice(index + 1)];
   const newLinks = removeLinksWithNode(links, deletedNode.id);
@@ -184,5 +175,4 @@ export const submitDeleteNode = () => (dispatch, getState) => {
   }
   dispatch(set('data', { nodes: newNodes, links: newLinks }));
   dispatch(set('deletedNode', null));
-  dispatch(set('deletedNodeIndex', null));
 };

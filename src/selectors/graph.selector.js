@@ -63,17 +63,7 @@ export const selectEditedNode = createSelector(
   editedNode => editedNode,
 );
 
-export const selectEditedNodeIndex = createSelector(
-  state => state.graph.editedNodeIndex,
-  editedNodeIndex => editedNodeIndex,
-);
-
 export const selectDeletedNode = createSelector(
   state => state.graph.deletedNode,
   deletedNode => deletedNode,
-);
-
-export const selectDeletedNodeIndex = createSelector(
-  state => state.graph.deletedNodeIndex,
-  deletedNodeIndex => deletedNodeIndex,
 );
