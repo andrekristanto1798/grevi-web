@@ -7,11 +7,7 @@ import * as coloringActions from '../../../actions/coloring.action';
 // Components
 import ColorTable from './ColorTable';
 // Selectors
-import {
-  selectSelectedKey,
-  selectPropertyValues,
-  selectColorMap,
-} from '../../../selectors/coloring.selector';
+import { selectSelectedKey } from '../../../selectors/coloring.selector';
 import { selectNodeKeys } from '../../../selectors/graph.selector';
 // Utils
 import { toOption } from '../../../utils/objects';
@@ -96,13 +92,9 @@ ColoringByProperty.propTypes = {
 const mapStateToProps = state => {
   const nodeKeys = selectNodeKeys(state);
   const selectedKey = selectSelectedKey(state);
-  const propertyValues = selectPropertyValues(state);
-  const colorMap = selectColorMap(state);
   return {
     nodeKeys,
     selectedKey,
-    propertyValues,
-    colorMap,
   };
 };
 

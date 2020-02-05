@@ -1,5 +1,5 @@
 import uniq from 'lodash/uniq';
-import { getUniqueValuesByKey, getIdValuesMapByKey } from '../utils/objects';
+import { getIdValuesMapByKey } from '../utils/objects';
 import {
   selectGraphNodes,
   selectGraphLinks,
@@ -52,7 +52,7 @@ const getNodeValuesByKey = (nodes, links, key) => {
   }
   default: {
     const nodeIdValuesMap = getIdValuesMapByKey(nodes, key);
-    const values = getUniqueValuesByKey(nodes, key);
+    const values = uniq(Object.values(nodeIdValuesMap));
     return [nodeIdValuesMap, values];
   }
   }
