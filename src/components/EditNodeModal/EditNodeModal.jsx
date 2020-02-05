@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Header, Modal, Form } from 'semantic-ui-react';
 // Utilsi
+import { cleanFromIgnoredKeys } from '../../utils/objects';
 import { nodeShape } from '../UtilPropTypes';
 
 const toNodeEntries = node =>
@@ -15,11 +16,11 @@ const toNodeObj = nodeEntries =>
 function EditNodeModal({ node, onCancel, onSubmit }) {
   if (!node) return null;
   const [newNodeEntries, setNewNodeEntries] = React.useState(
-    toNodeEntries(node),
+    toNodeEntries(cleanFromIgnoredKeys(node)),
   );
   const handleSubmit = React.useCallback(() => {
     const nodeObj = toNodeObj(newNodeEntries);
-    onSubmit(nodeObj);
+    onSubmit(cleanFromIgnoredKeys(nodeObj));
   });
   const handleAddNewProperty = React.useCallback(() => {
     setNewNodeEntries([...newNodeEntries, { key: 'new_property', value: '' }]);

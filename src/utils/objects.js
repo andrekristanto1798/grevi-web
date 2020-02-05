@@ -19,6 +19,8 @@ const ignoredKeys = [
   'index',
   'vx',
   'vy',
+  'fx',
+  'fy',
 ];
 
 export const getUniqueKeys = objectList =>
@@ -61,3 +63,13 @@ export const getValuesType = values => {
 export const toOption = obj => ({ key: obj, text: obj, value: obj });
 
 export const cleanFromIgnoredKeys = obj => omit(obj, ignoredKeys);
+
+export const cleanNodesFromIgnoredKeys = nodes =>
+  nodes.map(cleanFromIgnoredKeys);
+
+export const cleanLinksFromIgnoredKeys = links =>
+  links.map(cleanFromIgnoredKeys).map(link => ({
+    ...link,
+    source: link.source.id,
+    target: link.target.id,
+  }));

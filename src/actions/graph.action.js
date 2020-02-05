@@ -5,6 +5,7 @@ import {
   selectClickedNodeId,
   selectIsAddLinkMode,
   selectNodeKeys,
+  selectEditedNode,
   selectEditedNodeIndex,
   selectDeletedNode,
   selectDeletedNodeIndex,
@@ -20,11 +21,14 @@ import {
   getNewLink,
   isLinkDuplicate,
   removeLinksWithNode,
+  editLinksWithNewNode,
+  isNodeIdExisted,
 } from '../utils/graph';
 import {
   getUniqueKeys,
-  cleanFromIgnoredKeys,
   isArrayEqual,
+  cleanLinksFromIgnoredKeys,
+  cleanNodesFromIgnoredKeys,
 } from '../utils/objects';
 import { showLoading, hideLoading } from './ui.action';
 
@@ -53,16 +57,20 @@ export const loadGraphFile = (filename, { nodes, links }) => dispatch => {
 
 export const downloadGraphFile = () => (_, getState) => {
   const state = getState();
-  const nodes = selectGraphNodes(state).map(cleanFromIgnoredKeys);
-  const links = selectGraphLinks(state)
-    .map(cleanFromIgnoredKeys)
-    .map(link => ({
-      ...link,
-      source: link.source.id,
-      target: link.target.id,
-    }));
+  const nodes = selectGraphNodes(state);
+  const links = selectGraphLinks(state);
   const filename = selectGraphFilename(state);
-  downloadJSON(JSON.stringify({ nodes, links }, null, 4), `${filename}.json`);
+  downloadJSON(
+    JSON.stringify(
+      {
+        nodes: cleanNodesFromIgnoredKeys(nodes),
+        links: cleanLinksFromIgnoredKeys(links),
+      },
+      null,
+      4,
+    ),
+    `${filename}.json`,
+  );
 };
 
 export const setMode = mode => (dispatch, getState) => {
@@ -124,19 +132,33 @@ export const cancelEditNode = () => set('editedNode', null);
 export const submitEditedNode = editedNode => (dispatch, getState) => {
   const state = getState();
   const nodes = selectGraphNodes(state);
+  const links = selectGraphLinks(state);
+  const prevEditedNode = selectEditedNode(state);
   const index = selectEditedNodeIndex(state);
   const nodeKeys = selectNodeKeys(state);
   const editedNodeUniqueKeys = getUniqueKeys([editedNode]);
+  // check if new node id exists in the original node list
+  if (
+    prevEditedNode.id !== editedNode.id &&
+    isNodeIdExisted(nodes, editedNode.id)
+  ) {
+    // eslint-disable-next-line no-alert
+    window.alert('cannot use the same node id');
+    return;
+  }
   const newNodes = [
     ...nodes.slice(0, index),
     editedNode,
     ...nodes.slice(index + 1),
   ];
+  const newLinks = cleanLinksFromIgnoredKeys(
+    editLinksWithNewNode(links, prevEditedNode.id, editedNode.id),
+  );
   if (!isArrayEqual(editedNodeUniqueKeys, nodeKeys)) {
     // if not the same keys, then nodeKeys = editedNodeUniqueKeys + nodeKeys
     dispatch(set('nodeKeys', getUniqueKeys(newNodes)));
   }
-  dispatch(setGraphNodes(newNodes));
+  dispatch(set('data', { nodes: newNodes, links: newLinks }));
   dispatch(set('editedNode', null));
   dispatch(set('editedNodeIndex', null));
 };
