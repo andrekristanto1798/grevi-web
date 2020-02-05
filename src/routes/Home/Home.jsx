@@ -7,6 +7,7 @@ import GraphFileSection from './GraphFileSection';
 import GraphSection from './GraphSection';
 import ColoringByProperty from './ColoringByProperty';
 import GraphTableSection from './GraphTableSection';
+import RadiusByProperty from './RadiusByProperty';
 import EditNodeModal from '../../components/EditNodeModal';
 import DeleteNodeModal from '../../components/DeleteNodeModal';
 // Styles
@@ -17,6 +18,11 @@ const accordionPanels = [
     key: 'coloring',
     title: 'Coloring By Property',
     content: { content: <ColoringByProperty /> },
+  },
+  {
+    key: 'radius',
+    title: 'Radius By Property',
+    content: { content: <RadiusByProperty /> },
   },
   {
     key: 'table',

@@ -17,6 +17,7 @@ import {
   selectGraphFocusedNode,
 } from '../../../selectors/graph.selector';
 import { selectGetColor } from '../../../selectors/coloring.selector';
+import { selectGetRadius } from '../../../selectors/radius.selector';
 // Utils
 import {
   graphDataShape,
@@ -27,8 +28,6 @@ import {
 import { COLORS } from '../../../utils/color';
 // Styles
 import styles from './styles.scss';
-
-const NODE_R = 8;
 
 const GraphSection = ({
   mode,
@@ -43,6 +42,7 @@ const GraphSection = ({
   hoverLink,
   hoveredNodeId,
   hoveredLinkId,
+  getRadius,
   getColor,
   focusedNode,
   resetFocusedNode,
@@ -58,21 +58,24 @@ const GraphSection = ({
     },
     [focusedNode],
   );
-  const nodeCanvasObjectModeCb = React.useCallback(() => 'after', []);
+  const nodeCanvasObjectModeCb = React.useCallback(() => 'replace', []);
   const nodeCanvasDrawCb = React.useCallback(
     (node, ctx, globalScale) => {
-      if (hoveredNodeId.indexOf(node.id) !== -1) {
+      const radius = getRadius(node);
+      const highlightRadius = radius + 2;
+      const isHighlight = hoveredNodeId.indexOf(node.id) !== -1;
+      if (isHighlight) {
         // The highlight circle
         ctx.beginPath();
-        ctx.arc(node.x, node.y, NODE_R * 1.2, 0, 2 * Math.PI, false);
+        ctx.arc(node.x, node.y, highlightRadius, 0, 2 * Math.PI, false);
         ctx.fillStyle = COLORS.redNormal;
         ctx.fill();
-        // The inside circle
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, NODE_R, 0, 2 * Math.PI, false);
-        ctx.fillStyle = COLORS.blueNormal;
-        ctx.fill();
       }
+      // The inside circle
+      ctx.beginPath();
+      ctx.arc(node.x, node.y, radius, 0, 2 * Math.PI, false);
+      ctx.fillStyle = isHighlight ? COLORS.blueNormal : getColor(node);
+      ctx.fill();
       if (globalScale >= 0.6) {
         // Text
         const fontSize = 14 / globalScale;
@@ -83,7 +86,7 @@ const GraphSection = ({
         ctx.fillText(node.id, node.x, node.y);
       }
     },
-    [hoveredNodeId],
+    [hoveredNodeId, getRadius, getColor],
   );
   const nodeLabelCb = React.useCallback(node => {
     const children = `<pre>${JSON.stringify(node, null, 4)}</pre>`;
@@ -107,7 +110,6 @@ const GraphSection = ({
         width={width}
         height={height}
         nodeColor={getColor}
-        nodeRelSize={NODE_R}
         nodeLabel={nodeLabelCb}
         nodeCanvasObjectMode={nodeCanvasObjectModeCb}
         nodeCanvasObject={nodeCanvasDrawCb}
@@ -137,6 +139,7 @@ GraphSection.propTypes = {
   // Redux actions
   setMode: PropTypes.func.isRequired,
   getColor: PropTypes.func.isRequired,
+  getRadius: PropTypes.func.isRequired,
   clickNode: PropTypes.func.isRequired,
   hoverNode: PropTypes.func.isRequired,
   hoverLink: PropTypes.func.isRequired,
@@ -151,6 +154,7 @@ const mapStateToProps = state => {
   const hoveredNodeId = selectHoveredNodeId(state);
   const hoveredLinkId = selectHoveredLinkId(state);
   const getColor = selectGetColor(state);
+  const getRadius = selectGetRadius(state);
   const focusedNode = selectGraphFocusedNode(state);
   return {
     isAddLinkMode,
@@ -160,6 +164,7 @@ const mapStateToProps = state => {
     hoveredNodeId,
     hoveredLinkId,
     getColor,
+    getRadius,
     focusedNode,
   };
 };
