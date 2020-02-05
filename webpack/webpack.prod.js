@@ -10,7 +10,7 @@ module.exports = {
     filename: '[name].[hash].js',
     path: commonPaths.outputPath,
     chunkFilename: '[name].[chunkhash].js',
-    publicPath: '/',
+    publicPath: '/grevi-web',
   },
   module: {
     rules: [
