@@ -95,7 +95,7 @@ const GraphSection = ({
       cloneObj.source = cloneObj.source.id;
     if (cloneObj.target && cloneObj.target.id !== null)
       cloneObj.target = cloneObj.target.id;
-    const children = `<pre>${JSON.stringify(cloneObj, null, 4)}</pre>`;
+    const children = `<pre>${JSON.stringify(cloneObj, null, 2)}</pre>`;
     return children;
   }, []);
   return (
