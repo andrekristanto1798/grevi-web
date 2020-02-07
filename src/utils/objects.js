@@ -48,6 +48,14 @@ export const getIdValuesMapByKey = (arr, key) =>
     {},
   );
 
+export const reverseKeyValuesMap = map =>
+  Object.entries(map).reduce((acc, curr) => {
+    const [key, value] = curr;
+    acc[value] = acc[value] || [];
+    acc[value].push(key);
+    return acc;
+  }, {});
+
 const isStringNumber = str => /^\d+$/.test(str);
 
 export const getValuesType = values => {

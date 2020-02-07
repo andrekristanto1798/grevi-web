@@ -5,20 +5,30 @@ import { connect } from 'react-redux';
 import * as coloringActions from '../../../actions/coloring.action';
 // Components
 import TablePagination from '../../../components/TablePagination';
+import LinkButton from '../../../components/LinkButton';
 // Selectors
 import {
   selectPropertyValues,
   selectColorMap,
   selectSelectedKey,
+  selectValuesNodeIdMap,
 } from '../../../selectors/coloring.selector';
 // Utils
 import { valueType } from '../../../components/UtilPropTypes';
 
-function ColorTable({ propertyValues, colorMap, selectedKey, selectColor }) {
+function ColorTable({
+  propertyValues,
+  colorMap,
+  valuesNodeIdMap,
+  selectedKey,
+  selectColor,
+}) {
   const propertyKey = React.useMemo(() => `Property (${selectedKey})`, [
     selectedKey,
   ]);
-  const dataKey = React.useMemo(() => [propertyKey, 'Color'], [propertyKey]);
+  const dataKey = React.useMemo(() => [propertyKey, 'Color', 'View Nodes'], [
+    propertyKey,
+  ]);
   const handleGetData = React.useCallback(
     (firstIndex, lastIndex) =>
       propertyValues.slice(firstIndex, lastIndex).map(value => ({
@@ -30,6 +40,11 @@ function ColorTable({ propertyValues, colorMap, selectedKey, selectColor }) {
             value={colorMap[value]}
             onChange={e => selectColor(value, e.target.value)}
           />
+        ),
+        'View Nodes': (
+          <LinkButton>
+            View {valuesNodeIdMap[value].length} corresponding nodes
+          </LinkButton>
         ),
       })),
     [propertyValues, selectColor, propertyKey, colorMap],
@@ -46,6 +61,7 @@ function ColorTable({ propertyValues, colorMap, selectedKey, selectColor }) {
 ColorTable.propTypes = {
   propertyValues: PropTypes.arrayOf(valueType),
   colorMap: PropTypes.objectOf(PropTypes.string),
+  valuesNodeIdMap: PropTypes.objectOf(PropTypes.array),
   selectedKey: PropTypes.string,
   // Redux actions
   selectColor: PropTypes.func.isRequired,
@@ -55,10 +71,12 @@ const mapStateToProps = state => {
   const selectedKey = selectSelectedKey(state);
   const propertyValues = selectPropertyValues(state);
   const colorMap = selectColorMap(state);
+  const valuesNodeIdMap = selectValuesNodeIdMap(state);
   return {
     selectedKey,
     propertyValues,
     colorMap,
+    valuesNodeIdMap,
   };
 };
 
