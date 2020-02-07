@@ -45,6 +45,7 @@ export const selectGetRadius = createSelector(
   selectMaxValue,
   (selectedKey, nodeIdValuesMap, minRadius, maxRadius, minValue, maxValue) => {
     return node => {
+      if (minValue === maxValue) return (minRadius + maxRadius) / 2;
       if (selectedKey) {
         const value = nodeIdValuesMap[node.id];
         const ratio = (value - minValue) / (maxValue - minValue);
