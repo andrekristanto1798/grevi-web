@@ -29,6 +29,8 @@
     "gh-pages": "^2.2.0",
     "immutable": "^4.0.0-rc.12",
     "lodash": "4.17.11",
+    "ngraph.centrality": "^2.0.0",
+    "ngraph.graph": "^19.0.3",
     "prop-types": "15.7.0",
     "query-string": "^6.4.2",
     "react": "16.12.0",

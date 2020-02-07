@@ -6830,9 +6830,17 @@ next-tick@1:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
 
+ngraph.centrality@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/ngraph.centrality/-/ngraph.centrality-2.0.0.tgz#2b2dffebe6541678d740f2def63213eb4436276a"
+
 ngraph.events@1.0.0, ngraph.events@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ngraph.events/-/ngraph.events-1.0.0.tgz#260b638f1d8b1394a10ce1dda9e5d9d9c85001b1"
+
+ngraph.events@^1.2.0:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/ngraph.events/-/ngraph.events-1.2.1.tgz#6e40425ef9dec1e074bbef6da56c8d79b9188fd8"
 
 ngraph.expose@^1.0.0:
   version "1.0.0"
@@ -6861,6 +6869,12 @@ ngraph.graph@^19.0.0:
   resolved "https://registry.yarnpkg.com/ngraph.graph/-/ngraph.graph-19.0.1.tgz#aa1844971f39207878963a1c4642898c99dc2681"
   dependencies:
     ngraph.events "1.0.0"
+
+ngraph.graph@^19.0.3:
+  version "19.0.3"
+  resolved "https://registry.yarnpkg.com/ngraph.graph/-/ngraph.graph-19.0.3.tgz#d9b28c157578478526d4aa18a35a97955fcf5623"
+  dependencies:
+    ngraph.events "^1.2.0"
 
 ngraph.merge@^1.0.0:
   version "1.0.0"
