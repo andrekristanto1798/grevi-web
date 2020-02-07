@@ -4,5 +4,6 @@ import graph from './graph.reducer';
 import ui from './ui.reducer';
 import coloring from './coloring.reducer';
 import radius from './radius.reducer';
+import setting from './setting.reducer';
 
-export default combineReducers({ graph, ui, radius, coloring });
+export default combineReducers({ graph, ui, radius, coloring, setting });
