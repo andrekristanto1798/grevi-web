@@ -53,7 +53,7 @@ const GraphSection = ({
     () => {
       if (graphRef && focusedNode && focusedNode.x && focusedNode.y) {
         graphRef.current.centerAt(focusedNode.x, focusedNode.y, 1000);
-        graphRef.current.zoom(1.8, 1000);
+        graphRef.current.zoom(2.5, 1000);
       }
       resetFocusedNode();
     },
