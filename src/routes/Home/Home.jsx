@@ -8,6 +8,7 @@ import GraphSection from './GraphSection';
 import ColoringByProperty from './ColoringByProperty';
 import GraphTableSection from './GraphTableSection';
 import RadiusByProperty from './RadiusByProperty';
+import SettingSection from './SettingSection';
 import EditNodeModal from '../../components/EditNodeModal';
 import DeleteNodeModal from '../../components/DeleteNodeModal';
 // Styles
@@ -28,6 +29,11 @@ const accordionPanels = [
     key: 'table',
     title: 'Graph Nodes Table',
     content: { content: <GraphTableSection /> },
+  },
+  {
+    key: 'setting',
+    title: 'Settings',
+    content: { content: <SettingSection /> },
   },
 ];
 
