@@ -1,3 +1,5 @@
+import { mapToThreeDecimals } from './objects';
+
 const createGraph = require('ngraph.graph');
 const centrality = require('ngraph.centrality');
 
@@ -83,10 +85,10 @@ export const getNodeIdDegreeMap = (nodes, links) => {
 
 export const getNodeIdBetweennessMap = (nodes, links) => {
   const graph = constructGraph(nodes, links);
-  return centrality.betweenness(graph);
+  return mapToThreeDecimals(centrality.betweenness(graph));
 };
 
 export const getNodeIdClosenessMap = (nodes, links) => {
   const graph = constructGraph(nodes, links);
-  return centrality.closeness(graph);
+  return mapToThreeDecimals(centrality.closeness(graph));
 };

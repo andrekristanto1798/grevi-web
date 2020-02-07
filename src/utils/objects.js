@@ -78,3 +78,12 @@ export const sortNumbers = (numbers, desc = false) => {
   if (desc) return numbers.sort((a, b) => a - b);
   return numbers.sort((a, b) => b - a);
 };
+
+export const mapToThreeDecimals = map =>
+  Object.entries(map).reduce(
+    (acc, [key, value]) => ({
+      ...acc,
+      [key]: Number.parseFloat(value.toFixed(3)),
+    }),
+    {},
+  );
