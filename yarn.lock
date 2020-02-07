@@ -6834,6 +6834,12 @@ ngraph.centrality@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ngraph.centrality/-/ngraph.centrality-2.0.0.tgz#2b2dffebe6541678d740f2def63213eb4436276a"
 
+ngraph.cw@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/ngraph.cw/-/ngraph.cw-2.0.0.tgz#70b65e7875c2afaf2e6a74f2f179d5ffb16b47b0"
+  dependencies:
+    ngraph.random "0.0.1"
+
 ngraph.events@1.0.0, ngraph.events@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ngraph.events/-/ngraph.events-1.0.0.tgz#260b638f1d8b1394a10ce1dda9e5d9d9c85001b1"
@@ -6906,6 +6912,10 @@ ngraph.quadtreebh@^1.0.0:
   resolved "https://registry.yarnpkg.com/ngraph.quadtreebh/-/ngraph.quadtreebh-1.0.0.tgz#ea248e09705016261c9def9f8825c81e6499cabb"
   dependencies:
     ngraph.random "^1.0.0"
+
+ngraph.random@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/ngraph.random/-/ngraph.random-0.0.1.tgz#c008e2ebbfdffaf17ed10e4bbc913e567166bcf8"
 
 ngraph.random@^1.0.0:
   version "1.0.0"
