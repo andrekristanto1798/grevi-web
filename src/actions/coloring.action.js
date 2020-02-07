@@ -13,6 +13,7 @@ import {
   getNodeIdDegreeMap,
   getNodeIdBetweennessMap,
   getNodeIdClosenessMap,
+  getNodeIdClusterMap,
 } from '../utils/graph';
 
 export const COLORING_SELECT_KEY = 'COLORING_SELECT_KEY';
@@ -23,6 +24,7 @@ export const COLORING_SPECIAL = {
   DEGREE: 'DEGREE',
   BETWEENNESS: 'BETWEENNESS',
   CLOSENESS: 'CLOSENESS',
+  CLUSTERING: 'CLUSTERING',
 };
 
 const getNodeValuesByKey = (nodes, links, key) => {
@@ -39,6 +41,11 @@ const getNodeValuesByKey = (nodes, links, key) => {
   }
   case COLORING_SPECIAL.CLOSENESS: {
     const nodeIdValuesMap = getNodeIdClosenessMap(nodes, links);
+    const values = uniq(Object.values(nodeIdValuesMap));
+    return [nodeIdValuesMap, sortNumbers(values)];
+  }
+  case COLORING_SPECIAL.CLUSTERING: {
+    const nodeIdValuesMap = getNodeIdClusterMap(nodes, links, 2);
     const values = uniq(Object.values(nodeIdValuesMap));
     return [nodeIdValuesMap, sortNumbers(values)];
   }

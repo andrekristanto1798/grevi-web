@@ -44,6 +44,11 @@ const ColoringByProperty = ({ nodeKeys, selectedKey, selectKey }) => {
         value: coloringActions.COLORING_SPECIAL.CLOSENESS,
         text: 'Node Closeness',
       },
+      {
+        key: coloringActions.COLORING_SPECIAL.CLUSTERING,
+        value: coloringActions.COLORING_SPECIAL.CLUSTERING,
+        text: 'Node Clustering',
+      },
     ],
     [nodeKeys],
   );

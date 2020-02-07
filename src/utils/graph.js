@@ -2,6 +2,7 @@ import { mapToThreeDecimals } from './objects';
 
 const createGraph = require('ngraph.graph');
 const centrality = require('ngraph.centrality');
+const createWhisper = require('ngraph.cw');
 
 export const getRandomPosition = () => ({
   x: Math.floor(Math.random() * 500),
@@ -90,4 +91,15 @@ export const getNodeIdBetweennessMap = (nodes, links) => {
 export const getNodeIdClosenessMap = (nodes, links) => {
   const graph = constructGraph(nodes, links);
   return mapToThreeDecimals(centrality.closeness(graph));
+};
+
+export const getNodeIdClusterMap = (nodes, links, count) => {
+  const graph = constructGraph(nodes, links);
+  const whisper = createWhisper(graph);
+  for (let i = 0; i < count; i += 1) {
+    whisper.step();
+  }
+  return nodes.reduce((acc, node) => {
+    return { ...acc, [node.id]: whisper.getClass(node.id) };
+  }, {});
 };
