@@ -8,8 +8,8 @@ import { RESET_ALL } from '../actions/graph.action';
 
 const initialState = {
   selectedKey: null,
-  minRadius: 8,
-  maxRadius: 12,
+  minRadius: 4,
+  maxRadius: 18,
   minValue: null,
   maxValue: null,
   nodeIdValuesMap: {},
