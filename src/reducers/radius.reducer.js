@@ -23,8 +23,6 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       selectedKey: action.selectedKey,
-      minRadius: action.minRadius,
-      maxRadius: action.maxRadius,
       minValue: action.minValue,
       maxValue: action.maxValue,
       nodeIdValuesMap: action.nodeIdValuesMap,

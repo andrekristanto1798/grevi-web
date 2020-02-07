@@ -89,12 +89,9 @@ export const selectKey = key => (dispatch, getState) => {
     ] = getNodeValuesByKey(nodes, links, key);
     if (Number.isNaN(minValue) || Number.isNaN(maxValue))
       throw new Error(`Key ${key} cannot be converted into Number value type`);
-    const [minRadius, maxRadius] = [4, 12];
     dispatch({
       type: RADIUS_SELECT_KEY,
       selectedKey: key,
-      minRadius,
-      maxRadius,
       minValue,
       maxValue,
       nodeIdValuesMap,
