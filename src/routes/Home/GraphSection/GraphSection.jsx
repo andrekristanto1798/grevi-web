@@ -116,6 +116,7 @@ const GraphSection = ({
         width={width}
         height={height}
         nodeColor={getColor}
+        nodeVal={getRadius}
         nodeLabel={objLabelCb}
         linkLabel={objLabelCb}
         nodeCanvasObjectMode={nodeCanvasObjectModeCb}
