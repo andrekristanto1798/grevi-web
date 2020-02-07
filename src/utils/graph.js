@@ -1,4 +1,5 @@
-import get from 'lodash/get';
+const createGraph = require('ngraph.graph');
+const centrality = require('ngraph.centrality');
 
 export const getRandomPosition = () => ({
   x: Math.floor(Math.random() * 500),
@@ -68,13 +69,24 @@ export const removeLinksWithNode = (links, nodeId) => {
   return newLinks;
 };
 
-export const getNodeIdDegreeMap = links => {
-  const nodeIdDegreeMap = {};
-  links.forEach(link => {
-    const sourceId = link.source.id;
-    const targetId = link.target.id;
-    nodeIdDegreeMap[sourceId] = get(nodeIdDegreeMap, sourceId, 0) + 1;
-    nodeIdDegreeMap[targetId] = get(nodeIdDegreeMap, targetId, 0) + 1;
-  });
-  return nodeIdDegreeMap;
+export const constructGraph = (nodes, links) => {
+  const graph = createGraph();
+  nodes.forEach(node => graph.addNode(node.id));
+  links.forEach(link => graph.addLink(link.source.id, link.target.id));
+  return graph;
+};
+
+export const getNodeIdDegreeMap = (nodes, links) => {
+  const graph = constructGraph(nodes, links);
+  return centrality.degree(graph);
+};
+
+export const getNodeIdBetweennessMap = (nodes, links) => {
+  const graph = constructGraph(nodes, links);
+  return centrality.betweenness(graph);
+};
+
+export const getNodeIdClosenessMap = (nodes, links) => {
+  const graph = constructGraph(nodes, links);
+  return centrality.closeness(graph);
 };

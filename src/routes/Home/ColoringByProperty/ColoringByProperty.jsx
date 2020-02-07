@@ -35,16 +35,6 @@ const ColoringByProperty = ({ nodeKeys, selectedKey, selectKey }) => {
         text: 'Node Degree',
       },
       {
-        key: coloringActions.COLORING_SPECIAL.IN_CENTRALITY,
-        value: coloringActions.COLORING_SPECIAL.IN_CENTRALITY,
-        text: 'Node In-Centrality',
-      },
-      {
-        key: coloringActions.COLORING_SPECIAL.OUT_CENTRALITY,
-        value: coloringActions.COLORING_SPECIAL.OUT_CENTRALITY,
-        text: 'Node Out-Centrality',
-      },
-      {
         key: coloringActions.COLORING_SPECIAL.BETWEENNESS,
         value: coloringActions.COLORING_SPECIAL.BETWEENNESS,
         text: 'Node Betweenness',

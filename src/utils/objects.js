@@ -73,3 +73,8 @@ export const cleanLinksFromIgnoredKeys = links =>
     source: link.source.id,
     target: link.target.id,
   }));
+
+export const sortNumbers = (numbers, desc = false) => {
+  if (desc) return numbers.sort((a, b) => a - b);
+  return numbers.sort((a, b) => b - a);
+};

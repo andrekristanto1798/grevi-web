@@ -1,10 +1,18 @@
 import uniq from 'lodash/uniq';
-import { getIdValuesMapByKey, reduceMapValuetoNumber } from '../utils/objects';
+import {
+  getIdValuesMapByKey,
+  reduceMapValuetoNumber,
+  sortNumbers,
+} from '../utils/objects';
 import {
   selectGraphNodes,
   selectGraphLinks,
 } from '../selectors/graph.selector';
-import { getNodeIdDegreeMap } from '../utils/graph';
+import {
+  getNodeIdDegreeMap,
+  getNodeIdBetweennessMap,
+  getNodeIdClosenessMap,
+} from '../utils/graph';
 
 export const RADIUS_SELECT_KEY = 'RADIUS_SELECT_KEY';
 export const RADIUS_SELECT_KEY_ERROR = 'RADIUS_SELECT_KEY_ERROR';
@@ -13,18 +21,40 @@ export const RADIUS_SET_RADIUS = 'RADIUS_SET_RADIUS';
 
 export const RADIUS_SPECIAL = {
   DEGREE: 'DEGREE',
+  BETWEENNESS: 'BETWEENNESS',
+  CLOSENESS: 'CLOSENESS',
 };
 
 const getNodeValuesByKey = (nodes, links, key) => {
   switch (key) {
   case RADIUS_SPECIAL.DEGREE: {
-    const nodeIdValuesMap = getNodeIdDegreeMap(links);
+    const nodeIdValuesMap = getNodeIdDegreeMap(nodes, links);
     const values = uniq(Object.values(nodeIdValuesMap));
     return [
       Math.min(...values),
       Math.max(...values),
       nodeIdValuesMap,
-      values,
+      sortNumbers(values),
+    ];
+  }
+  case RADIUS_SPECIAL.BETWEENNESS: {
+    const nodeIdValuesMap = getNodeIdBetweennessMap(nodes, links);
+    const values = uniq(Object.values(nodeIdValuesMap));
+    return [
+      Math.min(...values),
+      Math.max(...values),
+      nodeIdValuesMap,
+      sortNumbers(values),
+    ];
+  }
+  case RADIUS_SPECIAL.CLOSENESS: {
+    const nodeIdValuesMap = getNodeIdClosenessMap(nodes, links);
+    const values = uniq(Object.values(nodeIdValuesMap));
+    return [
+      Math.min(...values),
+      Math.max(...values),
+      nodeIdValuesMap,
+      sortNumbers(values),
     ];
   }
   default: {

@@ -49,6 +49,16 @@ const RadiusByProperty = ({
         value: radiusActions.RADIUS_SPECIAL.DEGREE,
         text: 'Node Degree',
       },
+      {
+        key: radiusActions.RADIUS_SPECIAL.BETWEENNESS,
+        value: radiusActions.RADIUS_SPECIAL.BETWEENNESS,
+        text: 'Node Betweenness',
+      },
+      {
+        key: radiusActions.RADIUS_SPECIAL.CLOSENESS,
+        value: radiusActions.RADIUS_SPECIAL.CLOSENESS,
+        text: 'Node Closeness',
+      },
     ],
     [nodeKeys],
   );
