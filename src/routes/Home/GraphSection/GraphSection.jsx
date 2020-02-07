@@ -25,6 +25,7 @@ import {
   valueType,
   nodeShape,
 } from '../../../components/UtilPropTypes';
+import { cleanFromIgnoredKeys } from '../../../utils/objects';
 import { COLORS } from '../../../utils/color';
 // Styles
 import styles from './styles.scss';
@@ -88,8 +89,13 @@ const GraphSection = ({
     },
     [hoveredNodeId, getRadius, getColor],
   );
-  const nodeLabelCb = React.useCallback(node => {
-    const children = `<pre>${JSON.stringify(node, null, 4)}</pre>`;
+  const objLabelCb = React.useCallback(obj => {
+    const cloneObj = cleanFromIgnoredKeys({ ...obj });
+    if (cloneObj.source && cloneObj.source.id !== null)
+      cloneObj.source = cloneObj.source.id;
+    if (cloneObj.target && cloneObj.target.id !== null)
+      cloneObj.target = cloneObj.target.id;
+    const children = `<pre>${JSON.stringify(cloneObj, null, 4)}</pre>`;
     return children;
   }, []);
   return (
@@ -110,14 +116,11 @@ const GraphSection = ({
         width={width}
         height={height}
         nodeColor={getColor}
-        nodeLabel={nodeLabelCb}
+        nodeLabel={objLabelCb}
+        linkLabel={objLabelCb}
         nodeCanvasObjectMode={nodeCanvasObjectModeCb}
         nodeCanvasObject={nodeCanvasDrawCb}
         linkWidth={link => (link.id === hoveredLinkId ? 5 : 1)}
-        linkDirectionalParticles={4}
-        linkDirectionalParticleWidth={link =>
-          link.id === hoveredLinkId ? 4 : 0
-        }
         onNodeClick={clickNode}
         onNodeHover={hoverNode}
         onLinkHover={hoverLink}
