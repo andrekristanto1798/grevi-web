@@ -121,7 +121,9 @@ const GraphSection = ({
         linkLabel={objLabelCb}
         nodeCanvasObjectMode={nodeCanvasObjectModeCb}
         nodeCanvasObject={nodeCanvasDrawCb}
-        linkWidth={link => (link.id === hoveredLinkId ? 5 : 1)}
+        linkWidth={link =>
+          link.id != null && link.id === hoveredLinkId ? 5 : 1
+        }
         onNodeClick={clickNode}
         onNodeHover={hoverNode}
         onLinkHover={hoverLink}
