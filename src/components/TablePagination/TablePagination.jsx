@@ -24,6 +24,7 @@ function TablePagination({ getData, dataKey, dataLength, searchBar }) {
   // side effect on data length changed due to filtering
   // should update active page to the last pages
   React.useEffect(() => {
+    if (activePage === 0 && totalPages > 0) setActivePage(1);
     if (activePage >= totalPages) setActivePage(totalPages);
   });
   const firstItemIndex = (activePage - 1) * dataPerPage;
