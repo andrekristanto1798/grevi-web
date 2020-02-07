@@ -31,6 +31,12 @@ const accordionPanels = [
   },
 ];
 
+// defaultActiveIndex ensures that all
+// accordionPanels will be opened by default
+const defaultActiveIndex = Array(accordionPanels.length)
+  .fill(0)
+  .map((_, idx) => idx);
+
 const Home = () => {
   return (
     <div className={styles.homeContainer}>
@@ -48,6 +54,7 @@ const Home = () => {
                   styled
                   style={{ marginTop: 8 }}
                   panels={accordionPanels}
+                  defaultActiveIndex={defaultActiveIndex}
                   exclusive={false}
                 />
               </div>
