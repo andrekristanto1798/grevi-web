@@ -18,6 +18,12 @@ import {
 } from '../../../selectors/graph.selector';
 import { selectGetColor } from '../../../selectors/coloring.selector';
 import { selectGetRadius } from '../../../selectors/radius.selector';
+import {
+  selectShowNodeLabel,
+  selectShowLinkLabel,
+  selectShowNodeText,
+  selectAutoHideNodeText,
+} from '../../../selectors/setting.selector';
 // Utils
 import {
   graphDataShape,
@@ -47,6 +53,11 @@ const GraphSection = ({
   getColor,
   focusedNode,
   resetFocusedNode,
+  // settings
+  showNodeLabel,
+  showLinkLabel,
+  showNodeText,
+  autoHideNodeText,
 }) => {
   const graphRef = React.useRef();
   React.useEffect(
@@ -77,7 +88,8 @@ const GraphSection = ({
       ctx.arc(node.x, node.y, radius, 0, 2 * Math.PI, false);
       ctx.fillStyle = isHighlight ? COLORS.blueNormal : getColor(node);
       ctx.fill();
-      if (globalScale >= 0.6) {
+      if (showNodeText) {
+        if (autoHideNodeText && globalScale <= 1.25) return;
         // Text
         const fontSize = 14 / globalScale;
         ctx.font = `${fontSize}px Sans-Serif`;
@@ -87,7 +99,7 @@ const GraphSection = ({
         ctx.fillText(node.id, node.x, node.y);
       }
     },
-    [hoveredNodeId, getRadius, getColor],
+    [hoveredNodeId, getRadius, getColor, showNodeText, autoHideNodeText],
   );
   const objLabelCb = React.useCallback(obj => {
     const cloneObj = cleanFromIgnoredKeys({ ...obj });
@@ -117,8 +129,8 @@ const GraphSection = ({
         height={height}
         nodeColor={getColor}
         nodeVal={getRadius}
-        nodeLabel={objLabelCb}
-        linkLabel={objLabelCb}
+        nodeLabel={showNodeLabel && objLabelCb}
+        linkLabel={showLinkLabel && objLabelCb}
         nodeCanvasObjectMode={nodeCanvasObjectModeCb}
         nodeCanvasObject={nodeCanvasDrawCb}
         linkWidth={link =>
@@ -142,6 +154,11 @@ GraphSection.propTypes = {
   hoveredNodeId: PropTypes.arrayOf(valueType),
   hoveredLinkId: valueType,
   focusedNode: nodeShape,
+  // Setting State
+  showNodeLabel: PropTypes.bool.isRequired,
+  showLinkLabel: PropTypes.bool.isRequired,
+  showNodeText: PropTypes.bool.isRequired,
+  autoHideNodeText: PropTypes.bool.isRequired,
   // Redux actions
   setMode: PropTypes.func.isRequired,
   getColor: PropTypes.func.isRequired,
@@ -162,6 +179,10 @@ const mapStateToProps = state => {
   const getColor = selectGetColor(state);
   const getRadius = selectGetRadius(state);
   const focusedNode = selectGraphFocusedNode(state);
+  const showNodeLabel = selectShowNodeLabel(state);
+  const showLinkLabel = selectShowLinkLabel(state);
+  const showNodeText = selectShowNodeText(state);
+  const autoHideNodeText = selectAutoHideNodeText(state);
   return {
     isAddLinkMode,
     mode,
@@ -172,6 +193,10 @@ const mapStateToProps = state => {
     getColor,
     getRadius,
     focusedNode,
+    showNodeLabel,
+    showLinkLabel,
+    showNodeText,
+    autoHideNodeText,
   };
 };
 
