@@ -6,7 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --open",
     "build": "cross-env NODE_ENV=production webpack",
-    "deploy": "gh-pages -d build",
+    "deploy": "yarn build && gh-pages -d build",
     "format": "prettier --write 'src/**/*.js'",
     "lint:fix": "eslint src/**/*.{js,jsx} --fix",
     "precommit": "lint-staged"
