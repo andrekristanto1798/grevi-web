@@ -176,3 +176,10 @@ export const submitDeleteNode = () => (dispatch, getState) => {
   dispatch(set('data', { nodes: newNodes, links: newLinks }));
   dispatch(set('deletedNode', null));
 };
+
+export const refreshGraphLayout = () => (dispatch, getState) => {
+  const state = getState();
+  const nodes = selectGraphNodes(state);
+  const links = selectGraphLinks(state);
+  dispatch(set('data', { nodes, links }));
+};

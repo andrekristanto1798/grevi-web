@@ -18,6 +18,7 @@ const GraphFileSection = ({
   changeFilename,
   loadGraph,
   downloadGraph,
+  refreshGraphLayout,
 }) => {
   const handleChangeFilename = React.useCallback(event => {
     changeFilename(event.target.value);
@@ -38,6 +39,7 @@ const GraphFileSection = ({
       <div className={styles.graphFileMenu}>
         <Button size="mini" icon="save" onClick={downloadGraph} />
         <UploadButton onUpload={handleUpload} />
+        <Button size="mini" icon="refresh" onClick={refreshGraphLayout} />
       </div>
     </div>
   );
@@ -48,6 +50,7 @@ GraphFileSection.propTypes = {
   changeFilename: PropTypes.func.isRequired,
   loadGraph: PropTypes.func.isRequired,
   downloadGraph: PropTypes.func.isRequired,
+  refreshGraphLayout: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => {
@@ -59,6 +62,7 @@ const actions = {
   changeFilename: graphAction.changeFilename,
   loadGraph: graphAction.loadGraphFile,
   downloadGraph: graphAction.downloadGraphFile,
+  refreshGraphLayout: graphAction.refreshGraphLayout,
 };
 
 export default connect(
