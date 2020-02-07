@@ -16,32 +16,31 @@ export const randomString = () =>
     .toString(36)
     .substring(2, 15);
 
-export const isNodeIdExisted = (nodeList, nodeId) =>
-  nodeList.filter(node => node.id === nodeId).length > 0;
+export const isIdExisted = (list, id) =>
+  list.filter(obj => obj.id === id).length > 0;
 
-export const getNewNode = currentNodeList => {
-  if (currentNodeList.length === 0) {
-    return { id: 1 };
+const getNextId = list => {
+  if (list.length === 0) {
+    return 1;
   }
   // Get the last element and get the next ID
-  const lastNodeId = Math.max(...currentNodeList.map(node => node.id));
-  let nextId = Number.parseInt(lastNodeId, 10) + 1;
-  if (Number.isNaN(lastNodeId)) {
+  const lastId = Math.max(...list.map(obj => obj.id));
+  let nextId = Number.parseInt(lastId, 10) + 1;
+  if (Number.isNaN(lastId)) {
     nextId = randomString();
-    while (isNodeIdExisted(currentNodeList, nextId)) {
+    while (isIdExisted(list, nextId)) {
       nextId = randomString();
     }
   }
-  return { id: `${nextId}` };
+  return nextId;
+};
+
+export const getNewNode = currentNodeList => {
+  return { id: getNextId(currentNodeList) };
 };
 
 export const getNewLink = (linkList, source, target) => {
-  if (linkList.length === 0) {
-    return { id: `1`, source, target };
-  }
-  const lastNodeId = linkList[linkList.length - 1].id;
-  const nextId = Number.parseInt(lastNodeId, 10) + 1;
-  return { id: `${nextId}`, source, target };
+  return { id: getNextId(linkList), source, target };
 };
 
 export const isLinkDuplicate = (links, sourceId, targetId) => {

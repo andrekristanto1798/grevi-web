@@ -20,7 +20,7 @@ import {
   isLinkDuplicate,
   removeLinksWithNode,
   editLinksWithNewNode,
-  isNodeIdExisted,
+  isIdExisted,
 } from '../utils/graph';
 import {
   getUniqueKeys,
@@ -135,7 +135,7 @@ export const submitEditedNode = editedNode => (dispatch, getState) => {
   // check if new node id exists in the original node list
   if (
     prevEditedNode.id !== editedNode.id &&
-    isNodeIdExisted(nodes, editedNode.id)
+    isIdExisted(nodes, editedNode.id)
   ) {
     // eslint-disable-next-line no-alert
     window.alert('cannot use the same node id');
