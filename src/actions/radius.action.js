@@ -105,12 +105,8 @@ export const selectKey = key => (dispatch, getState) => {
   }
 };
 
-export const setMinRadius = minRadius => ({
+export const setRadius = (minRadius, maxRadius) => ({
   type: RADIUS_SET_RADIUS,
   minRadius,
-});
-
-export const setMaxRadius = maxRadius => ({
-  type: RADIUS_SET_RADIUS,
   maxRadius,
 });

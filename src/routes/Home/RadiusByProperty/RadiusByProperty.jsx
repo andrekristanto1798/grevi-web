@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Button, Dropdown, Form, Input } from 'semantic-ui-react';
+import { Button, Dropdown, Form, Input, Divider } from 'semantic-ui-react';
 // Actions
 import * as radiusActions from '../../../actions/radius.action';
 // Components
@@ -29,6 +29,7 @@ const RadiusByProperty = ({
   minRadius,
   maxRadius,
   error,
+  setRadius,
 }) => {
   if (nodeKeys.length === 0) {
     return <i>No nodes available</i>;
@@ -39,6 +40,18 @@ const RadiusByProperty = ({
       selectKey(value);
     },
     [selectKey],
+  );
+  const [currMinRadius, setCurrMinRadius] = React.useState(minRadius);
+  const [currMaxRadius, setCurrMaxRadius] = React.useState(maxRadius);
+  const handleApplyRadius = React.useCallback(() => {
+    const nextMinRadius = Number.parseInt(currMinRadius, 10) || minRadius;
+    const nextMaxRadius = Number.parseInt(currMaxRadius, 10) || maxRadius;
+    setCurrMinRadius(nextMinRadius);
+    setCurrMaxRadius(nextMaxRadius);
+    setRadius(nextMinRadius, nextMaxRadius);
+  });
+  const isDisabled = !(
+    minRadius !== currMinRadius || maxRadius !== currMaxRadius
   );
   const dropdwonOptions = React.useMemo(
     () => [
@@ -83,27 +96,36 @@ const RadiusByProperty = ({
         )}
       </div>
       {selectedKey && !error && (
-        <Form>
-          <div className={styles.radiusByProperty__valuesContainer}>
-            Min Value: {minValue} --- Max Value: {maxValue}
-          </div>
-          <Form.Group widths="equal">
-            <Form.Field
-              inline
-              control={Input}
-              label="Min Radius"
-              placeholder="Min Radius"
-              value={minRadius}
-            />
-            <Form.Field
-              inline
-              control={Input}
-              label="Max Radius"
-              placeholder="Max Radius"
-              value={maxRadius}
-            />
-          </Form.Group>
-        </Form>
+        <>
+          <Divider />
+          <Form>
+            <Form.Group inline>
+              <Form.Field
+                inline
+                control={Input}
+                label={`Min Radius (Min Value: ${minValue})`}
+                placeholder="Min Radius"
+                value={currMinRadius}
+                onChange={e => setCurrMinRadius(e.target.value)}
+              />
+              <Form.Field
+                inline
+                control={Input}
+                label={`Max Radius (Max Value: ${maxValue})`}
+                placeholder="Max Radius"
+                value={currMaxRadius}
+                onChange={e => setCurrMaxRadius(e.target.value)}
+              />
+              <Form.Button
+                disabled={isDisabled}
+                content="Apply"
+                color="green"
+                onClick={handleApplyRadius}
+                basic
+              />
+            </Form.Group>
+          </Form>
+        </>
       )}
       {error && <pre>{error}</pre>}
     </div>
@@ -120,6 +142,7 @@ RadiusByProperty.propTypes = {
   error: PropTypes.string,
   // Redux actions
   selectKey: PropTypes.func.isRequired,
+  setRadius: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => {
@@ -143,8 +166,7 @@ const mapStateToProps = state => {
 
 const actions = {
   selectKey: radiusActions.selectKey,
-  setMinRadius: radiusActions.setMinRadius,
-  setMaxRadius: radiusActions.setMaxRadius,
+  setRadius: radiusActions.setRadius,
 };
 
 export default connect(
