@@ -19,3 +19,8 @@ export const selectAutoHideNodeText = createSelector(
   state => state.setting.autoHideNodeText,
   autoHideNodeText => autoHideNodeText,
 );
+
+export const selectGraphOrientation = createSelector(
+  state => state.setting.orientation,
+  orientation => orientation,
+);

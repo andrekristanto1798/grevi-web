@@ -23,6 +23,7 @@ import {
   selectShowLinkLabel,
   selectShowNodeText,
   selectAutoHideNodeText,
+  selectGraphOrientation,
 } from '../../../selectors/setting.selector';
 // Utils
 import {
@@ -58,6 +59,7 @@ const GraphSection = ({
   showLinkLabel,
   showNodeText,
   autoHideNodeText,
+  orientation,
 }) => {
   const graphRef = React.useRef();
   React.useEffect(
@@ -127,6 +129,7 @@ const GraphSection = ({
         graphData={data}
         width={width}
         height={height}
+        dagMode={orientation}
         nodeColor={getColor}
         nodeVal={getRadius}
         nodeLabel={showNodeLabel && objLabelCb}
@@ -159,6 +162,7 @@ GraphSection.propTypes = {
   showLinkLabel: PropTypes.bool.isRequired,
   showNodeText: PropTypes.bool.isRequired,
   autoHideNodeText: PropTypes.bool.isRequired,
+  orientation: PropTypes.string.isRequired,
   // Redux actions
   setMode: PropTypes.func.isRequired,
   getColor: PropTypes.func.isRequired,
@@ -183,6 +187,7 @@ const mapStateToProps = state => {
   const showLinkLabel = selectShowLinkLabel(state);
   const showNodeText = selectShowNodeText(state);
   const autoHideNodeText = selectAutoHideNodeText(state);
+  const orientation = selectGraphOrientation(state);
   return {
     isAddLinkMode,
     mode,
@@ -197,6 +202,7 @@ const mapStateToProps = state => {
     showLinkLabel,
     showNodeText,
     autoHideNodeText,
+    orientation,
   };
 };
 

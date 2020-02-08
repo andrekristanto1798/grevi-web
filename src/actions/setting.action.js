@@ -23,3 +23,9 @@ export const toogleAutoHideNodeText = prev => ({
   key: 'autoHideNodeText',
   value: !prev,
 });
+
+export const changeGraphOrientation = orientation => ({
+  type: SETTING_SET,
+  key: 'orientation',
+  value: orientation,
+});
