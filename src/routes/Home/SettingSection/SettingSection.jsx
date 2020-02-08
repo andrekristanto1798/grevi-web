@@ -15,7 +15,7 @@ import {
 } from '../../../selectors/setting.selector';
 
 const dropdownOptions = [
-  { key: 'null', value: 'null', text: 'Normal' },
+  { key: 'null', value: null, text: 'Normal' },
   { key: 'td', value: 'td', text: 'Top-Down' },
   { key: 'bu', value: 'bu', text: 'Bottom-Up' },
   { key: 'lr', value: 'lr', text: 'Left-Right' },
@@ -43,6 +43,7 @@ function SettingSection({
         <Dropdown
           inline
           value={orientation}
+          text={orientation === null ? 'Normal' : null}
           options={dropdownOptions}
           onChange={(_, { value }) => changeGraphOrientation(value)}
         />
@@ -85,7 +86,7 @@ SettingSection.propTypes = {
   showLinkLabel: PropTypes.bool.isRequired,
   showNodeText: PropTypes.bool.isRequired,
   autoHideNodeText: PropTypes.bool.isRequired,
-  orientation: PropTypes.string.isRequired,
+  orientation: PropTypes.string,
   // Redux actions
   toogleNodeLabel: PropTypes.func.isRequired,
   toogleLinkLabel: PropTypes.func.isRequired,

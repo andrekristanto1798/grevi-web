@@ -6,7 +6,7 @@ const initialState = {
   showLinkLabel: true,
   showNodeText: false,
   autoHideNodeText: false,
-  orientation: 'null',
+  orientation: null,
 };
 
 export default function reducer(state = initialState, action) {

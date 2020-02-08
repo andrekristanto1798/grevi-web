@@ -37,6 +37,8 @@ import { COLORS } from '../../../utils/color';
 // Styles
 import styles from './styles.scss';
 
+const noOp = () => {};
+
 const GraphSection = ({
   mode,
   isAddLinkMode,
@@ -132,8 +134,8 @@ const GraphSection = ({
         dagMode={orientation}
         nodeColor={getColor}
         nodeVal={getRadius}
-        nodeLabel={showNodeLabel && objLabelCb}
-        linkLabel={showLinkLabel && objLabelCb}
+        nodeLabel={showNodeLabel ? objLabelCb : noOp}
+        linkLabel={showLinkLabel ? objLabelCb : noOp}
         nodeCanvasObjectMode={nodeCanvasObjectModeCb}
         nodeCanvasObject={nodeCanvasDrawCb}
         linkWidth={link =>
@@ -162,7 +164,7 @@ GraphSection.propTypes = {
   showLinkLabel: PropTypes.bool.isRequired,
   showNodeText: PropTypes.bool.isRequired,
   autoHideNodeText: PropTypes.bool.isRequired,
-  orientation: PropTypes.string.isRequired,
+  orientation: PropTypes.string,
   // Redux actions
   setMode: PropTypes.func.isRequired,
   getColor: PropTypes.func.isRequired,
