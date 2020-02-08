@@ -16,6 +16,11 @@ import styles from './styles.scss';
 
 const accordionPanels = [
   {
+    key: 'setting',
+    title: 'Settings',
+    content: { content: <SettingSection /> },
+  },
+  {
     key: 'coloring',
     title: 'Coloring By Property',
     content: { content: <ColoringByProperty /> },
@@ -29,11 +34,6 @@ const accordionPanels = [
     key: 'table',
     title: 'Graph Nodes Table',
     content: { content: <GraphTableSection /> },
-  },
-  {
-    key: 'setting',
-    title: 'Settings',
-    content: { content: <SettingSection /> },
   },
 ];
 
