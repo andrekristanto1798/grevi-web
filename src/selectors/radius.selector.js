@@ -45,14 +45,12 @@ export const selectGetRadius = createSelector(
   selectMaxValue,
   (selectedKey, nodeIdValuesMap, minRadius, maxRadius, minValue, maxValue) => {
     return node => {
+      if (!selectedKey) return 4;
       if (minValue === maxValue) return (minRadius + maxRadius) / 2;
-      if (selectedKey) {
-        const value = nodeIdValuesMap[node.id];
-        const ratio = (value - minValue) / (maxValue - minValue);
-        const adjustedRadius = minRadius + ratio * (maxRadius - minRadius);
-        return adjustedRadius;
-      }
-      return minRadius;
+      const value = nodeIdValuesMap[node.id];
+      const ratio = (value - minValue) / (maxValue - minValue);
+      const adjustedRadius = minRadius + ratio * (maxRadius - minRadius);
+      return adjustedRadius;
     };
   },
 );
