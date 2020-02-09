@@ -1,6 +1,24 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Button } from 'semantic-ui-react';
+// Components
+import { Button, Modal, Grid, Header, Icon } from 'semantic-ui-react';
+import GraphFileCard from '../GraphFileCard';
+// Graph Data
+import { graphFileList } from '../../data/graphs';
+// Styles
+import styles from './styles.scss';
+
+const graphFormat = `
+JSON => { nodes: Node[], links: Link[] }\n
+Node
+- id: Integer || String
+- [key]: value
+Link:
+- id: Integer || String
+- source: Integer || String (= node's id)
+- target: Integer || String (= node's id)
+- [key]: value\n
+`;
 
 export default class UploadButton extends PureComponent {
   static propTypes = {
@@ -15,6 +33,7 @@ export default class UploadButton extends PureComponent {
   constructor(props) {
     super(props);
     this.fileInputRef = React.createRef();
+    this.state = { open: true };
   }
 
   handleClick = () => {
@@ -24,6 +43,8 @@ export default class UploadButton extends PureComponent {
   handleFileRead = filename => reader => {
     const { onUpload } = this.props;
     onUpload({ filename, textContent: reader.target.result });
+    this.setState({ open: false });
+    this.fileInputRef.current.value = '';
   };
 
   handleFileUpload = e => {
@@ -34,8 +55,19 @@ export default class UploadButton extends PureComponent {
     fileReader.readAsText(file);
   };
 
+  handleFileLocalLoad = ({ name, graph }) => () => {
+    const { onUpload } = this.props;
+    onUpload({ filename: name, textContent: JSON.stringify(graph) });
+    this.setState({ open: false });
+  };
+
+  handleOpen = () => this.setState({ open: true });
+
+  handleClose = () => this.setState({ open: false });
+
   render() {
     const { buttonComponent } = this.props;
+    const { open } = this.state;
     return (
       <div>
         <input
@@ -44,7 +76,49 @@ export default class UploadButton extends PureComponent {
           hidden
           onChange={this.handleFileUpload}
         />
-        {React.cloneElement(buttonComponent, { onClick: this.handleClick })}
+        <Modal
+          open={open}
+          onClose={this.handleClose}
+          trigger={React.cloneElement(buttonComponent, {
+            onClick: this.handleOpen,
+          })}
+        >
+          <Modal.Header>Upload Your Graph</Modal.Header>
+          <Modal.Content>
+            <Grid divided style={{ height: '50vw', maxHeight: 400 }}>
+              <Grid.Row columns={2}>
+                <Grid.Column>
+                  <Header.Subheader>
+                    Try out sample graphs below
+                  </Header.Subheader>
+                  <div className={styles.cardContainer}>
+                    {graphFileList.map(graphData => (
+                      <GraphFileCard
+                        {...graphData}
+                        key={graphData.name}
+                        onClick={this.handleFileLocalLoad(graphData)}
+                      />
+                    ))}
+                  </div>
+                </Grid.Column>
+                <Grid.Column>
+                  <div className={styles.browseFromMyComputerContainer}>
+                    Upload your graph in JSON file with following format:
+                    <pre>{graphFormat}</pre>
+                    <Button
+                      size="medium"
+                      color="facebook"
+                      onClick={this.handleClick}
+                    >
+                      <Icon name="computer" />
+                      Browse From My Computer
+                    </Button>
+                  </div>
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+          </Modal.Content>
+        </Modal>
       </div>
     );
   }
