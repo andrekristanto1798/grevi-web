@@ -11,7 +11,7 @@ import {
   selectPropertyValues,
   selectColorMap,
   selectSelectedKey,
-  selectValuesNodeIdMap,
+  selectValuesNodeMap,
 } from '../../../selectors/coloring.selector';
 // Utils
 import { valueType } from '../../../components/UtilPropTypes';
@@ -19,7 +19,7 @@ import { valueType } from '../../../components/UtilPropTypes';
 function ColorTable({
   propertyValues,
   colorMap,
-  valuesNodeIdMap,
+  valuesNodeMap,
   selectedKey,
   selectColor,
 }) {
@@ -43,7 +43,7 @@ function ColorTable({
         ),
         'View Nodes': (
           <LinkButton>
-            View {valuesNodeIdMap[value].length} corresponding nodes
+            Highlight {valuesNodeMap[value].length} corresponding nodes
           </LinkButton>
         ),
       })),
@@ -61,7 +61,7 @@ function ColorTable({
 ColorTable.propTypes = {
   propertyValues: PropTypes.arrayOf(valueType),
   colorMap: PropTypes.objectOf(PropTypes.string),
-  valuesNodeIdMap: PropTypes.objectOf(PropTypes.array),
+  valuesNodeMap: PropTypes.objectOf(PropTypes.array),
   selectedKey: PropTypes.string,
   // Redux actions
   selectColor: PropTypes.func.isRequired,
@@ -71,12 +71,12 @@ const mapStateToProps = state => {
   const selectedKey = selectSelectedKey(state);
   const propertyValues = selectPropertyValues(state);
   const colorMap = selectColorMap(state);
-  const valuesNodeIdMap = selectValuesNodeIdMap(state);
+  const valuesNodeMap = selectValuesNodeMap(state);
   return {
     selectedKey,
     propertyValues,
     colorMap,
-    valuesNodeIdMap,
+    valuesNodeMap,
   };
 };
 

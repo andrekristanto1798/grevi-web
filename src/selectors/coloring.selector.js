@@ -11,9 +11,9 @@ export const selectNodeIdValuesMap = createSelector(
   nodeIdValuesMap => nodeIdValuesMap,
 );
 
-export const selectValuesNodeIdMap = createSelector(
-  state => state.coloring.valuesNodeIdMap,
-  valuesNodeIdMap => valuesNodeIdMap,
+export const selectValuesNodeMap = createSelector(
+  state => state.coloring.valuesNodeMap,
+  valuesNodeMap => valuesNodeMap,
 );
 
 export const selectPropertyValues = createSelector(

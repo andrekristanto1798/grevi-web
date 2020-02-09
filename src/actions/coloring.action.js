@@ -1,9 +1,5 @@
 import uniq from 'lodash/uniq';
-import {
-  getIdValuesMapByKey,
-  sortNumbers,
-  reverseKeyValuesMap,
-} from '../utils/objects';
+import { getIdValuesMapByKey, sortNumbers } from '../utils/objects';
 import {
   selectGraphNodes,
   selectGraphLinks,
@@ -71,11 +67,17 @@ export const selectKey = key => (dispatch, getState) => {
     key,
   );
   const colorMap = getDefaultColorMap(propertyValues);
+  const valuesNodeMap = nodes.reduce((acc, node) => {
+    const value = nodeIdValuesMap[node.id];
+    acc[value] = acc[value] || [];
+    acc[value].push(node);
+    return acc;
+  }, {});
   dispatch({
     type: COLORING_SELECT_KEY,
     selectedKey: key,
     nodeIdValuesMap,
-    valuesNodeIdMap: reverseKeyValuesMap(nodeIdValuesMap),
+    valuesNodeMap,
     propertyValues,
     colorMap,
   });
