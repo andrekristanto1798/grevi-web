@@ -69,6 +69,7 @@ const GraphSection = ({
       if (graphRef && focusedNode && focusedNode.x && focusedNode.y) {
         graphRef.current.centerAt(focusedNode.x, focusedNode.y, 1000);
         graphRef.current.zoom(2.5, 1000);
+        hoverNode(focusedNode);
       }
       resetFocusedNode();
     },
