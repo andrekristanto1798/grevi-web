@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 // Actions
+import * as graphActions from '../../../actions/graph.action';
 import * as coloringActions from '../../../actions/coloring.action';
 // Components
 import TablePagination from '../../../components/TablePagination';
@@ -22,6 +23,7 @@ function ColorTable({
   valuesNodeMap,
   selectedKey,
   selectColor,
+  hoverNodes,
 }) {
   const propertyKey = React.useMemo(() => `Property (${selectedKey})`, [
     selectedKey,
@@ -42,7 +44,7 @@ function ColorTable({
           />
         ),
         'View Nodes': (
-          <LinkButton>
+          <LinkButton onClick={() => hoverNodes(valuesNodeMap[value])}>
             Highlight {valuesNodeMap[value].length} corresponding nodes
           </LinkButton>
         ),
@@ -65,6 +67,7 @@ ColorTable.propTypes = {
   selectedKey: PropTypes.string,
   // Redux actions
   selectColor: PropTypes.func.isRequired,
+  hoverNodes: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => {
@@ -82,6 +85,7 @@ const mapStateToProps = state => {
 
 const actions = {
   selectColor: coloringActions.selectColor,
+  hoverNodes: graphActions.hoverNodes,
 };
 
 export default connect(

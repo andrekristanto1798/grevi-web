@@ -111,6 +111,9 @@ export const hoverNode = node => dispatch => {
   dispatch(set('hoveredNodeId', node ? [node.id] : []));
 };
 
+export const hoverNodes = nodes =>
+  set('hoveredNodeId', nodes.map(node => node.id));
+
 export const hoverLink = link => dispatch => {
   dispatch(set('hoveredLinkId', link ? link.id : null));
   dispatch(set('hoveredNodeId', link ? [link.source.id, link.target.id] : []));
