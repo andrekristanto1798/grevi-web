@@ -59,6 +59,7 @@ const Home = () => {
       <LoadingIndicator />
       <SplitPane
         split="vertical"
+        minSize={600}
         defaultSize={600}
         primary="first"
         onChange={setLeftPanelWidth}
