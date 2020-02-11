@@ -12,11 +12,11 @@
   @extend %flexColumn;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-grow: 0;
   padding: 8px;
   width: 600px;
   height: 100%;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .rightPanelContainer {

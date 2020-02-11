@@ -1,14 +1,19 @@
-.table__container {
-  margin: 8px 0;
+.tablePagination__container {
   display: flex;
   flex-direction: column;
-}
-
-.table__dataPerPage {
-  margin: 8px 0;
 }
 
 .pagination {
   flex: 0 0 auto !important;
   align-self: center;
+}
+
+.table__container {
+  margin: 8px 0;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table__cellContainer {
+  white-space: nowrap;
 }

@@ -30,7 +30,7 @@ function TablePagination({ getData, dataKey, dataLength, searchBar }) {
   const firstItemIndex = (activePage - 1) * dataPerPage;
   const lastItemIndex = activePage * dataPerPage;
   return (
-    <div className={styles.table__container}>
+    <div className={styles.tablePagination__container}>
       <div className={styles.table__dataPerPage}>
         {searchBar && (
           <span style={{ margin: '0px 8px 0px 0px' }}>{searchBar}</span>
@@ -44,26 +44,33 @@ function TablePagination({ getData, dataKey, dataLength, searchBar }) {
         />{' '}
         entries per page
       </div>
-      <Table size="small" compact="very" striped>
-        <Table.Header>
-          <Table.Row>
-            {dataKey.map(key => (
-              <Table.HeaderCell key={key}>{key}</Table.HeaderCell>
-            ))}
-          </Table.Row>
-        </Table.Header>
-        <Table.Body>
-          {getData(firstItemIndex, lastItemIndex).map(obj => {
-            return (
-              <Table.Row key={obj.id}>
-                {dataKey.map(key => (
-                  <Table.Cell key={key}>{obj[key]}</Table.Cell>
-                ))}
-              </Table.Row>
-            );
-          })}
-        </Table.Body>
-      </Table>
+      <div className={styles.table__container}>
+        <Table size="small" striped compact>
+          <Table.Header>
+            <Table.Row>
+              {dataKey.map(key => (
+                <Table.HeaderCell key={key}>{key}</Table.HeaderCell>
+              ))}
+            </Table.Row>
+          </Table.Header>
+          <Table.Body>
+            {getData(firstItemIndex, lastItemIndex).map(obj => {
+              return (
+                <Table.Row key={obj.id}>
+                  {dataKey.map(key => (
+                    <Table.Cell
+                      className={styles.table__cellContainer}
+                      key={key}
+                    >
+                      {obj[key]}
+                    </Table.Cell>
+                  ))}
+                </Table.Row>
+              );
+            })}
+          </Table.Body>
+        </Table>
+      </div>
       <Pagination
         activePage={activePage}
         totalPages={totalPages}
