@@ -66,6 +66,8 @@ const Home = () => {
         <div className={styles.leftPanelContainer}>
           <GraphFileSection />
           <Accordion
+            fluid
+            styled
             style={{ marginTop: 8 }}
             panels={accordionPanels}
             defaultActiveIndex={defaultActiveIndex}
