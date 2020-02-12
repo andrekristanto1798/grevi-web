@@ -5,7 +5,9 @@ import { connect } from 'react-redux';
 import * as graphActions from '../../../actions/graph.action';
 import * as coloringActions from '../../../actions/coloring.action';
 // Components
-import TablePagination from '../../../components/TablePagination';
+import TablePagination, {
+  smallTableOption,
+} from '../../../components/TablePagination';
 import LinkButton from '../../../components/LinkButton';
 // Selectors
 import {
@@ -16,6 +18,8 @@ import {
 } from '../../../selectors/coloring.selector';
 // Utils
 import { valueType } from '../../../components/UtilPropTypes';
+
+const tableProps = { ...smallTableOption, striped: true };
 
 function ColorTable({
   propertyValues,
@@ -56,6 +60,7 @@ function ColorTable({
       getData={handleGetData}
       dataLength={propertyValues.length}
       dataKey={dataKey}
+      tableProps={tableProps}
     />
   );
 }

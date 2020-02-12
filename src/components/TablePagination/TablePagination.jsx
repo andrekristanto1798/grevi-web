@@ -10,7 +10,19 @@ import styles from './styles.scss';
 
 const dataPerPageOptions = [10, 20, 30].map(toOption);
 
-function TablePagination({ getData, dataKey, dataLength, searchBar }) {
+export const smallTableOption = {
+  size: 'small',
+  compact: 'very',
+};
+
+function TablePagination({
+  getData,
+  dataKey,
+  dataLength,
+  searchBar,
+  tableProps,
+  onRowHover,
+}) {
   const [activePage, setActivePage] = React.useState(1);
   const [dataPerPage, setDataPerPage] = React.useState(10);
   const totalPages = Math.ceil(dataLength / dataPerPage);
@@ -29,6 +41,10 @@ function TablePagination({ getData, dataKey, dataLength, searchBar }) {
   });
   const firstItemIndex = (activePage - 1) * dataPerPage;
   const lastItemIndex = activePage * dataPerPage;
+  const handleHover = React.useCallback(
+    data => event => onRowHover != null && onRowHover(event, data),
+    [onRowHover],
+  );
   return (
     <div className={styles.tablePagination__container}>
       <div className={styles.table__dataPerPage}>
@@ -45,7 +61,7 @@ function TablePagination({ getData, dataKey, dataLength, searchBar }) {
         entries per page
       </div>
       <div className={styles.table__container}>
-        <Table size="small" striped compact>
+        <Table selectable={onRowHover != null} {...tableProps}>
           <Table.Header>
             <Table.Row>
               {dataKey.map(key => (
@@ -56,7 +72,11 @@ function TablePagination({ getData, dataKey, dataLength, searchBar }) {
           <Table.Body>
             {getData(firstItemIndex, lastItemIndex).map(obj => {
               return (
-                <Table.Row key={obj.id}>
+                <Table.Row
+                  onMouseEnter={handleHover(obj)}
+                  onMouseLeave={handleHover(null)}
+                  key={obj.id}
+                >
                   {dataKey.map(key => (
                     <Table.Cell
                       className={styles.table__cellContainer}
@@ -85,6 +105,8 @@ TablePagination.propTypes = {
   dataKey: PropTypes.arrayOf(PropTypes.string).isRequired,
   dataLength: PropTypes.number.isRequired,
   searchBar: PropTypes.node,
+  tableProps: PropTypes.objectOf(PropTypes.any),
+  onRowHover: PropTypes.func,
 };
 
 export default TablePagination;

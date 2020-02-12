@@ -5,7 +5,9 @@ import { Button, Input } from 'semantic-ui-react';
 // Actions
 import * as graphAction from '../../../actions/graph.action';
 // Components
-import TablePagination from '../../../components/TablePagination';
+import TablePagination, {
+  smallTableOption,
+} from '../../../components/TablePagination';
 // Selectors
 import {
   selectGraphNodes,
@@ -15,6 +17,8 @@ import {
 import { nodeShape } from '../../../components/UtilPropTypes';
 // Styles
 import styles from './styles.scss';
+
+const tableProps = { ...smallTableOption, striped: true };
 
 const getValidData = (data, dataKey, searchValue) => {
   if (searchValue === '') return data;
@@ -91,6 +95,7 @@ function GraphTableSection({
         getData={handleGetData}
         dataLength={validData.length}
         dataKey={dataKey}
+        tableProps={tableProps}
       />
     </div>
   );
