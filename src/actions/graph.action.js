@@ -186,3 +186,9 @@ export const refreshGraphLayout = () => (dispatch, getState) => {
   const links = selectGraphLinks(state);
   dispatch(set('data', { nodes, links }));
 };
+
+export const handleChangeSearchValue = searchValue =>
+  set('searchValue', searchValue);
+
+export const toogleSearchAsFilter = prevValue =>
+  set('searchAsFilter', !prevValue);

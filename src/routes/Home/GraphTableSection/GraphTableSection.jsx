@@ -10,23 +10,17 @@ import TablePagination, {
 } from '../../../components/TablePagination';
 // Selectors
 import {
-  selectGraphNodes,
   selectNodeKeys,
+  selectSearchValue,
+  selectValidData,
+  selectSearchAsFilter,
 } from '../../../selectors/graph.selector';
 // Utils
-import { nodeShape } from '../../../components/UtilPropTypes';
+import { graphDataShape } from '../../../components/UtilPropTypes';
 // Styles
 import styles from './styles.scss';
 
 const tableProps = { ...smallTableOption, striped: true };
-
-const getValidData = (data, dataKey, searchValue) => {
-  if (searchValue === '') return data;
-  const regex = new RegExp(searchValue, 'i');
-  return data.filter(node =>
-    dataKey.map(key => regex.test(node[key])).some(isCorrect => !!isCorrect),
-  );
-};
 
 const toGraphTableData = (focusNodeOn, editNode, deleteNode) => node => ({
   ...node,
@@ -55,45 +49,66 @@ const toGraphTableData = (focusNodeOn, editNode, deleteNode) => node => ({
 });
 
 function GraphTableSection({
-  nodes,
   nodeKeys,
   deleteNode,
   editNode,
   focusNodeOn,
+  // search props
+  searchValue,
+  validData,
+  searchAsFilter,
+  handleChangeSearchValue,
+  toogleSearchAsFilter,
 }) {
   if (nodeKeys.length === 0) {
     return <i>No nodes available</i>;
   }
   const dataKey = React.useMemo(() => [...nodeKeys, 'Actions'], [nodeKeys]);
-  const [searchValue, setSearchValue] = React.useState('');
-  const handleChangeSearch = React.useCallback((_, { value }) => {
-    setSearchValue(value);
-  }, []);
-  const validData = React.useMemo(
-    () => getValidData(nodes, nodeKeys, searchValue),
-    [nodes, nodeKeys, searchValue],
+  const _handleChangeSearchValue = React.useCallback(
+    (_, { value }) => {
+      handleChangeSearchValue(value);
+    },
+    [handleChangeSearchValue],
   );
   const handleGetData = React.useCallback(
     (firstIndex, lastIndex) =>
-      validData
+      validData.nodes
         .slice(firstIndex, lastIndex)
         .map(toGraphTableData(focusNodeOn, editNode, deleteNode)),
     [validData, focusNodeOn],
+  );
+  const searchAsFilterButtonContent = searchAsFilter
+    ? 'Cancel Filter'
+    : 'Apply search as filter';
+  const searchAsFilterButtonColor = searchAsFilter ? 'red' : 'green';
+  const handleClickApplySearch = React.useCallback(
+    () => {
+      toogleSearchAsFilter(searchAsFilter);
+    },
+    [searchAsFilter],
   );
   return (
     <div className={styles.graphTable__container}>
       <TablePagination
         searchBar={(
-          <Input
-            size="small"
-            icon="search"
-            placeholder="Search..."
-            value={searchValue}
-            onChange={handleChangeSearch}
-          />
+          <div className={styles.graphTable__searchContainer}>
+            <Input
+              size="small"
+              icon="search"
+              placeholder="Search..."
+              value={searchValue}
+              onChange={_handleChangeSearchValue}
+            />
+            <Button
+              className={styles.graphTable__searchButton}
+              content={searchAsFilterButtonContent}
+              color={searchAsFilterButtonColor}
+              onClick={handleClickApplySearch}
+            />
+          </div>
         )}
         getData={handleGetData}
-        dataLength={validData.length}
+        dataLength={validData.nodes.length}
         dataKey={dataKey}
         tableProps={tableProps}
       />
@@ -102,24 +117,37 @@ function GraphTableSection({
 }
 
 GraphTableSection.propTypes = {
-  nodes: PropTypes.arrayOf(nodeShape).isRequired,
   nodeKeys: PropTypes.arrayOf(PropTypes.string).isRequired,
+  searchValue: PropTypes.string,
+  validData: graphDataShape.isRequired,
+  searchAsFilter: PropTypes.bool.isRequired,
   // Actions
   deleteNode: PropTypes.func.isRequired,
   editNode: PropTypes.func.isRequired,
   focusNodeOn: PropTypes.func.isRequired,
+  handleChangeSearchValue: PropTypes.func.isRequired,
+  toogleSearchAsFilter: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => {
-  const nodes = selectGraphNodes(state);
   const nodeKeys = selectNodeKeys(state);
-  return { nodes, nodeKeys };
+  const searchValue = selectSearchValue(state);
+  const validData = selectValidData(state);
+  const searchAsFilter = selectSearchAsFilter(state);
+  return {
+    nodeKeys,
+    searchValue,
+    validData,
+    searchAsFilter,
+  };
 };
 
 const actions = {
   deleteNode: graphAction.deleteNode,
   editNode: graphAction.editNode,
   focusNodeOn: graphAction.focusNodeOn,
+  handleChangeSearchValue: graphAction.handleChangeSearchValue,
+  toogleSearchAsFilter: graphAction.toogleSearchAsFilter,
 };
 
 export default connect(

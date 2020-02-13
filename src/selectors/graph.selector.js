@@ -67,3 +67,32 @@ export const selectDeletedNode = createSelector(
   state => state.graph.deletedNode,
   deletedNode => deletedNode,
 );
+
+export const selectSearchValue = createSelector(
+  state => state.graph.searchValue,
+  searchValue => searchValue,
+);
+
+export const selectSearchAsFilter = createSelector(
+  state => state.graph.searchAsFilter,
+  searchAsFilter => searchAsFilter,
+);
+
+export const selectValidData = createSelector(
+  selectGraphData,
+  selectNodeKeys,
+  selectSearchValue,
+  (data, dataKey, searchValue) => {
+    if (searchValue === '') return data;
+    const regex = new RegExp(searchValue, 'i');
+    const validNodes = data.nodes.filter(node =>
+      dataKey.map(key => regex.test(node[key])).some(isCorrect => !!isCorrect),
+    );
+    const validNodeIds = new Set(validNodes.map(node => node.id));
+    const validLinks = data.links.filter(
+      link =>
+        validNodeIds.has(link.source.id) && validNodeIds.has(link.target.id),
+    );
+    return { nodes: validNodes, links: validLinks };
+  },
+);

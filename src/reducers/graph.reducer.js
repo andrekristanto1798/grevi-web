@@ -23,6 +23,9 @@ const initialState = {
   // Node Actions Edit + Delete
   editedNode: null,
   deletedNode: null,
+  // Search in GraphTableSection
+  searchValue: '',
+  applySearchAsFilter: false,
 };
 
 export default function reducer(state = initialState, action) {

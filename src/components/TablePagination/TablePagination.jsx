@@ -47,10 +47,8 @@ function TablePagination({
   );
   return (
     <div className={styles.tablePagination__container}>
+      {searchBar}
       <div className={styles.table__dataPerPage}>
-        {searchBar && (
-          <span style={{ margin: '0px 8px 0px 0px' }}>{searchBar}</span>
-        )}
         Total Entries: {dataLength} || Show{' '}
         <Dropdown
           inline

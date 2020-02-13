@@ -15,6 +15,8 @@ import {
   selectHoveredNodeId,
   selectHoveredLinkId,
   selectGraphFocusedNode,
+  selectSearchAsFilter,
+  selectValidData,
 } from '../../../selectors/graph.selector';
 import { selectGetColor } from '../../../selectors/coloring.selector';
 import { selectGetRadius } from '../../../selectors/radius.selector';
@@ -179,7 +181,10 @@ GraphSection.propTypes = {
 const mapStateToProps = state => {
   const mode = selectGraphMode(state);
   const isAddLinkMode = selectIsAddLinkMode(state);
-  const data = selectGraphDataJS(state);
+  const searchAsFilter = selectSearchAsFilter(state);
+  const data = !searchAsFilter
+    ? selectGraphDataJS(state)
+    : selectValidData(state);
   const clickedNodeId = selectClickedNodeId(state);
   const hoveredNodeId = selectHoveredNodeId(state);
   const hoveredLinkId = selectHoveredLinkId(state);
