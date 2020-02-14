@@ -70,14 +70,16 @@ const GraphSection = ({
   const graphRef = React.useRef();
   React.useEffect(
     () => {
-      if (graphRef && focusedNode && focusedNode.x && focusedNode.y) {
-        graphRef.current.centerAt(focusedNode.x, focusedNode.y, 1000);
+      if (graphRef && focusedNode && focusedNode.id) {
+        // Need to find the node object since x,y is changed when graph is dragged out
+        const nodeObj = data.nodes.find(node => node.id === focusedNode.id);
+        graphRef.current.centerAt(nodeObj.x, nodeObj.y, 1000);
         graphRef.current.zoom(2.5, 1000);
-        hoverNode(focusedNode);
+        hoverNode(nodeObj);
       }
       resetFocusedNode();
     },
-    [focusedNode],
+    [data.nodes, focusedNode],
   );
   const nodeCanvasObjectModeCb = React.useCallback(() => 'replace', []);
   const nodeCanvasDrawCb = React.useCallback(
