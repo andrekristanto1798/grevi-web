@@ -8,6 +8,8 @@ const initialState = {
   nodeTextKey: 'id',
   autoHideNodeText: true,
   orientation: null,
+  focusNodeOnDoubleClick: true,
+  highlightNodeOnRowHover: true,
 };
 
 export default function reducer(state = initialState, action) {

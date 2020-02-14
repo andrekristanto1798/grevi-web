@@ -35,3 +35,15 @@ export const changeNodeTextKey = nodeTextKey => ({
   key: 'nodeTextKey',
   value: nodeTextKey,
 });
+
+export const toogleFocusNodeOnDoubleClick = prev => ({
+  type: SETTING_SET,
+  key: 'focusNodeOnDoubleClick',
+  value: !prev,
+});
+
+export const toogleHighlightNodeOnRowHover = prev => ({
+  type: SETTING_SET,
+  key: 'highlightNodeOnRowHover',
+  value: !prev,
+});

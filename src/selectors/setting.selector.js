@@ -29,3 +29,13 @@ export const selectNodeTextKey = createSelector(
   state => state.setting.nodeTextKey,
   nodeTextKey => nodeTextKey,
 );
+
+export const selectFocusNodeOnDoubleClick = createSelector(
+  state => state.setting.focusNodeOnDoubleClick,
+  focusNodeOnDoubleClick => focusNodeOnDoubleClick,
+);
+
+export const selectHighlightNodeOnRowHover = createSelector(
+  state => state.setting.highlightNodeOnRowHover,
+  highlightNodeOnRowHover => highlightNodeOnRowHover,
+);

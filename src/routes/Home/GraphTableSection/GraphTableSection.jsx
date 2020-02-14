@@ -15,10 +15,16 @@ import {
   selectValidData,
   selectSearchAsFilter,
 } from '../../../selectors/graph.selector';
+import {
+  selectFocusNodeOnDoubleClick,
+  selectHighlightNodeOnRowHover,
+} from '../../../selectors/setting.selector';
 // Utils
 import { graphDataShape } from '../../../components/UtilPropTypes';
 // Styles
 import styles from './styles.scss';
+
+const noOp = null;
 
 const tableProps = { ...smallTableOption, striped: true };
 
@@ -57,6 +63,9 @@ function GraphTableSection({
   deleteNode,
   editNode,
   focusNodeOn,
+  // setting props
+  focusNodeOnDoubleClick,
+  highlightNodeOnRowHover,
   // search props
   searchValue,
   validData,
@@ -115,8 +124,8 @@ function GraphTableSection({
         dataLength={validData.nodes.length}
         dataKey={dataKey}
         tableProps={tableProps}
-        onRowHover={hoverNode}
-        onRowDoubleClick={focusNodeOn}
+        onRowHover={highlightNodeOnRowHover ? hoverNode : noOp}
+        onRowDoubleClick={focusNodeOnDoubleClick ? focusNodeOn : noOp}
       />
     </div>
   );
@@ -127,6 +136,8 @@ GraphTableSection.propTypes = {
   searchValue: PropTypes.string,
   validData: graphDataShape.isRequired,
   searchAsFilter: PropTypes.bool.isRequired,
+  focusNodeOnDoubleClick: PropTypes.bool.isRequired,
+  highlightNodeOnRowHover: PropTypes.bool.isRequired,
   // Actions
   hoverNode: PropTypes.func.isRequired,
   deleteNode: PropTypes.func.isRequired,
@@ -141,11 +152,15 @@ const mapStateToProps = state => {
   const searchValue = selectSearchValue(state);
   const validData = selectValidData(state);
   const searchAsFilter = selectSearchAsFilter(state);
+  const focusNodeOnDoubleClick = selectFocusNodeOnDoubleClick(state);
+  const highlightNodeOnRowHover = selectHighlightNodeOnRowHover(state);
   return {
     nodeKeys,
     searchValue,
     validData,
     searchAsFilter,
+    focusNodeOnDoubleClick,
+    highlightNodeOnRowHover,
   };
 };
 
