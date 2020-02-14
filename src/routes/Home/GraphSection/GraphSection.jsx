@@ -70,7 +70,7 @@ const GraphSection = ({
   const graphRef = React.useRef();
   React.useEffect(
     () => {
-      if (graphRef && focusedNode && focusedNode.id) {
+      if (graphRef && focusedNode && focusedNode.id != null) {
         // Need to find the node object since x,y is changed when graph is dragged out
         const nodeObj = data.nodes.find(node => node.id === focusedNode.id);
         graphRef.current.centerAt(nodeObj.x, nodeObj.y, 1000);
