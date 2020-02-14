@@ -4,8 +4,9 @@ import { RESET_ALL } from '../actions/graph.action';
 const initialState = {
   showNodeLabel: true,
   showLinkLabel: true,
-  showNodeText: false,
-  autoHideNodeText: false,
+  showNodeText: true,
+  nodeTextKey: 'id',
+  autoHideNodeText: true,
   orientation: null,
 };
 

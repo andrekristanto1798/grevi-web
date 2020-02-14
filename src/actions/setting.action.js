@@ -29,3 +29,9 @@ export const changeGraphOrientation = orientation => ({
   key: 'orientation',
   value: orientation,
 });
+
+export const changeNodeTextKey = nodeTextKey => ({
+  type: SETTING_SET,
+  key: 'nodeTextKey',
+  value: nodeTextKey,
+});

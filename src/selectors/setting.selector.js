@@ -24,3 +24,8 @@ export const selectGraphOrientation = createSelector(
   state => state.setting.orientation,
   orientation => orientation,
 );
+
+export const selectNodeTextKey = createSelector(
+  state => state.setting.nodeTextKey,
+  nodeTextKey => nodeTextKey,
+);

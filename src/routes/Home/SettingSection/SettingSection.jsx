@@ -12,7 +12,11 @@ import {
   selectShowNodeText,
   selectAutoHideNodeText,
   selectGraphOrientation,
+  selectNodeTextKey,
 } from '../../../selectors/setting.selector';
+import { selectNodeKeys } from '../../../selectors/graph.selector';
+// Utils
+import { toOption } from '../../../utils/objects';
 
 const dropdownOptions = [
   { key: 'null', value: null, text: 'Normal' },
@@ -28,6 +32,8 @@ function SettingSection({
   showNodeLabel,
   showLinkLabel,
   showNodeText,
+  nodeTextKey,
+  nodeKeys,
   autoHideNodeText,
   orientation,
   toogleNodeLabel,
@@ -35,7 +41,14 @@ function SettingSection({
   toogleNodeText,
   toogleHideNodeText,
   changeGraphOrientation,
+  changeNodeTextKey,
 }) {
+  const handleChangeNodeTextKey = React.useCallback(
+    (_, { value }) => {
+      changeNodeTextKey(value);
+    },
+    [changeNodeTextKey],
+  );
   return (
     <Form>
       <Form.Field>
@@ -64,7 +77,18 @@ function SettingSection({
       </Form.Field>
       <Form.Field>
         <Checkbox
-          label="Graph - show 'Node' id on the graph"
+          label={(
+            <label htmlFor="showNodeId">
+              Graph - show {"'Node'"}&nbsp;
+              <Dropdown
+                inline
+                value={nodeTextKey}
+                options={nodeKeys.map(toOption)}
+                onChange={handleChangeNodeTextKey}
+              />
+              on the graph
+            </label>
+          )}
           checked={showNodeText}
           onChange={() => toogleNodeText(showNodeText)}
         />
@@ -85,6 +109,8 @@ SettingSection.propTypes = {
   showNodeLabel: PropTypes.bool.isRequired,
   showLinkLabel: PropTypes.bool.isRequired,
   showNodeText: PropTypes.bool.isRequired,
+  nodeTextKey: PropTypes.string.isRequired,
+  nodeKeys: PropTypes.arrayOf(PropTypes.string).isRequired,
   autoHideNodeText: PropTypes.bool.isRequired,
   orientation: PropTypes.string,
   // Redux actions
@@ -93,18 +119,23 @@ SettingSection.propTypes = {
   toogleNodeText: PropTypes.func.isRequired,
   toogleHideNodeText: PropTypes.func.isRequired,
   changeGraphOrientation: PropTypes.func.isRequired,
+  changeNodeTextKey: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => {
   const showNodeLabel = selectShowNodeLabel(state);
   const showLinkLabel = selectShowLinkLabel(state);
   const showNodeText = selectShowNodeText(state);
+  const nodeTextKey = selectNodeTextKey(state);
+  const nodeKeys = selectNodeKeys(state);
   const autoHideNodeText = selectAutoHideNodeText(state);
   const orientation = selectGraphOrientation(state);
   return {
     showNodeLabel,
     showLinkLabel,
     showNodeText,
+    nodeTextKey,
+    nodeKeys,
     autoHideNodeText,
     orientation,
   };
@@ -116,6 +147,7 @@ const actions = {
   toogleNodeText: settingAction.toogleNodeText,
   toogleHideNodeText: settingAction.toogleAutoHideNodeText,
   changeGraphOrientation: settingAction.changeGraphOrientation,
+  changeNodeTextKey: settingAction.changeNodeTextKey,
 };
 
 export default connect(

@@ -26,6 +26,7 @@ import {
   selectShowNodeText,
   selectAutoHideNodeText,
   selectGraphOrientation,
+  selectNodeTextKey,
 } from '../../../selectors/setting.selector';
 // Utils
 import {
@@ -62,6 +63,7 @@ const GraphSection = ({
   showNodeLabel,
   showLinkLabel,
   showNodeText,
+  nodeTextKey,
   autoHideNodeText,
   orientation,
 }) => {
@@ -96,17 +98,25 @@ const GraphSection = ({
       ctx.fillStyle = isHighlight ? COLORS.blueNormal : getColor(node);
       ctx.fill();
       if (showNodeText) {
-        if (autoHideNodeText && globalScale <= 1.25) return;
+        if (autoHideNodeText && globalScale <= 0.5) return;
         // Text
-        const fontSize = 14 / globalScale;
+        let fontSize = 8;
+        if (globalScale > 1) fontSize = 12 / globalScale;
         ctx.font = `${fontSize}px Sans-Serif`;
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         ctx.fillStyle = 'black';
-        ctx.fillText(node.id, node.x, node.y);
+        ctx.fillText(node[nodeTextKey], node.x, node.y);
       }
     },
-    [hoveredNodeId, getRadius, getColor, showNodeText, autoHideNodeText],
+    [
+      hoveredNodeId,
+      getRadius,
+      getColor,
+      showNodeText,
+      nodeTextKey,
+      autoHideNodeText,
+    ],
   );
   const objLabelCb = React.useCallback(obj => {
     const cloneObj = cleanFromIgnoredKeys({ ...obj });
@@ -166,6 +176,7 @@ GraphSection.propTypes = {
   showNodeLabel: PropTypes.bool.isRequired,
   showLinkLabel: PropTypes.bool.isRequired,
   showNodeText: PropTypes.bool.isRequired,
+  nodeTextKey: PropTypes.string.isRequired,
   autoHideNodeText: PropTypes.bool.isRequired,
   orientation: PropTypes.string,
   // Redux actions
@@ -194,6 +205,7 @@ const mapStateToProps = state => {
   const showNodeLabel = selectShowNodeLabel(state);
   const showLinkLabel = selectShowLinkLabel(state);
   const showNodeText = selectShowNodeText(state);
+  const nodeTextKey = selectNodeTextKey(state);
   const autoHideNodeText = selectAutoHideNodeText(state);
   const orientation = selectGraphOrientation(state);
   return {
@@ -209,6 +221,7 @@ const mapStateToProps = state => {
     showNodeLabel,
     showLinkLabel,
     showNodeText,
+    nodeTextKey,
     autoHideNodeText,
     orientation,
   };
