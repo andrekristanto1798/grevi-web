@@ -23,6 +23,7 @@ EditingToolsSvgButton.propTypes = {
 
 const AddLinkButton = props => (
   <EditingToolsSvgButton
+    title="Add Link Mode"
     svg={(
       <svg
         className="tool"
@@ -46,6 +47,7 @@ const AddLinkButton = props => (
 );
 const AddNodeButton = props => (
   <EditingToolsSvgButton
+    title="Add Node Mode"
     svg={(
       <svg
         className="tool"
@@ -69,6 +71,7 @@ const AddNodeButton = props => (
 );
 const SelectPointerButton = props => (
   <EditingToolsSvgButton
+    title="Select Mode"
     svg={(
       <svg
         className="active tool"

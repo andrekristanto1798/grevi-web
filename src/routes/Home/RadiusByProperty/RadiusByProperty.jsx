@@ -117,6 +117,7 @@ const RadiusByProperty = ({
         {selectedKey && (
           <Button
             positive
+            title="Refresh"
             size="mini"
             icon="refresh"
             onClick={() => selectKey(selectedKey)}

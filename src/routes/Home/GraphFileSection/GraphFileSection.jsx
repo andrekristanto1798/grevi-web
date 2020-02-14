@@ -37,9 +37,19 @@ const GraphFileSection = ({
         onChange={handleChangeFilename}
       />
       <div className={styles.graphFileMenu}>
-        <Button size="mini" icon="save" onClick={downloadGraph} />
+        <Button
+          title="Download Graph"
+          size="mini"
+          icon="save"
+          onClick={downloadGraph}
+        />
         <UploadButton onUpload={handleUpload} />
-        <Button size="mini" icon="refresh" onClick={refreshGraphLayout} />
+        <Button
+          title="Refresh Graph Layout"
+          size="mini"
+          icon="refresh"
+          onClick={refreshGraphLayout}
+        />
       </div>
     </div>
   );

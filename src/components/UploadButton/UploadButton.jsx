@@ -80,6 +80,7 @@ export default class UploadButton extends PureComponent {
           open={open}
           onClose={this.handleClose}
           trigger={React.cloneElement(buttonComponent, {
+            title: 'Upload Graph',
             onClick: this.handleOpen,
           })}
         >

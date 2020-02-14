@@ -66,6 +66,7 @@ const ColoringByProperty = ({ nodeKeys, selectedKey, selectKey }) => {
         {selectedKey && (
           <Button
             positive
+            title="Refresh"
             size="mini"
             icon="refresh"
             onClick={() => selectKey(selectedKey)}

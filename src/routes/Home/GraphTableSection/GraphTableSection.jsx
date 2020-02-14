@@ -27,18 +27,21 @@ const toGraphTableData = (focusNodeOn, editNode, deleteNode) => node => ({
   Actions: (
     <>
       <Button
+        title="Focus Node"
         color="facebook"
         icon="eye"
         size="mini"
         onClick={() => focusNodeOn(node)}
       />
       <Button
+        title="Edit Node"
         color="green"
         icon="pencil"
         size="mini"
         onClick={() => editNode(node)}
       />
       <Button
+        title="Delete Node"
         color="red"
         icon="delete"
         size="mini"
