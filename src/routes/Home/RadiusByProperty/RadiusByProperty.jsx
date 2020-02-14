@@ -13,6 +13,7 @@ import {
   selectMinValue,
   selectMaxValue,
   selectError,
+  selectDefaultRadius,
 } from '../../../selectors/radius.selector';
 import { selectNodeKeys } from '../../../selectors/graph.selector';
 // Utils
@@ -28,13 +29,14 @@ const RadiusByProperty = ({
   maxValue,
   minRadius,
   maxRadius,
+  defaultRadius,
   error,
   setRadius,
+  changeDefaultRadius,
 }) => {
   if (nodeKeys.length === 0) {
     return <i>No nodes available</i>;
   }
-  if (nodeKeys && nodeKeys.length < 1) return null;
   const handleChangeKey = React.useCallback(
     (_, { value }) => {
       selectKey(value);
@@ -75,8 +77,34 @@ const RadiusByProperty = ({
     ],
     [nodeKeys],
   );
+  const defaultRadiusOptions = React.useMemo(() => [toOption(defaultRadius)], [
+    defaultRadius,
+  ]);
+  const handleChangeDefaultRadius = React.useCallback(
+    (_, { value }) => {
+      const newValue = Number(value);
+      const validNewValue = Number.isNaN(newValue) ? defaultRadius : newValue;
+      changeDefaultRadius(validNewValue);
+    },
+    [defaultRadius, changeDefaultRadius],
+  );
   return (
     <div className={styles.radiusByProperty__container}>
+      <div className={styles.radiusByProperty__inputContainer}>
+        Default Radius:&nbsp;
+        <span>
+          <Dropdown
+            search
+            selection
+            compact
+            allowAdditions
+            additionLabel="Change to "
+            value={defaultRadius}
+            options={defaultRadiusOptions}
+            onChange={handleChangeDefaultRadius}
+          />
+        </span>
+      </div>
       <div className={styles.radiusByProperty__inputContainer}>
         <Dropdown
           placeholder="Select Node Attributes"
@@ -139,10 +167,12 @@ RadiusByProperty.propTypes = {
   maxValue: PropTypes.number,
   minRadius: PropTypes.number,
   maxRadius: PropTypes.number,
+  defaultRadius: PropTypes.number.isRequired,
   error: PropTypes.string,
   // Redux actions
   selectKey: PropTypes.func.isRequired,
   setRadius: PropTypes.func.isRequired,
+  changeDefaultRadius: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => {
@@ -152,6 +182,7 @@ const mapStateToProps = state => {
   const maxRadius = selectMaxRadius(state);
   const minValue = selectMinValue(state);
   const maxValue = selectMaxValue(state);
+  const defaultRadius = selectDefaultRadius(state);
   const error = selectError(state);
   return {
     nodeKeys,
@@ -160,6 +191,7 @@ const mapStateToProps = state => {
     maxRadius,
     minValue,
     maxValue,
+    defaultRadius,
     error,
   };
 };
@@ -167,6 +199,7 @@ const mapStateToProps = state => {
 const actions = {
   selectKey: radiusActions.selectKey,
   setRadius: radiusActions.setRadius,
+  changeDefaultRadius: radiusActions.changeDefaultRadius,
 };
 
 export default connect(

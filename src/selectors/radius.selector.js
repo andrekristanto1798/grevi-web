@@ -31,6 +31,11 @@ export const selectPropertyValues = createSelector(
   propertyValues => propertyValues,
 );
 
+export const selectDefaultRadius = createSelector(
+  state => state.radius.defaultRadius,
+  defaultRadius => defaultRadius,
+);
+
 export const selectError = createSelector(
   state => state.radius.error,
   error => error,
@@ -43,9 +48,18 @@ export const selectGetRadius = createSelector(
   selectMaxRadius,
   selectMinValue,
   selectMaxValue,
-  (selectedKey, nodeIdValuesMap, minRadius, maxRadius, minValue, maxValue) => {
+  selectDefaultRadius,
+  (
+    selectedKey,
+    nodeIdValuesMap,
+    minRadius,
+    maxRadius,
+    minValue,
+    maxValue,
+    defaultRadius,
+  ) => {
     return node => {
-      if (!selectedKey) return 4;
+      if (!selectedKey) return defaultRadius;
       if (minValue === maxValue) return (minRadius + maxRadius) / 2;
       const value = nodeIdValuesMap[node.id];
       const ratio = (value - minValue) / (maxValue - minValue);

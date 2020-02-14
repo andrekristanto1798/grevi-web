@@ -14,6 +14,7 @@ import {
   getNodeIdClosenessMap,
 } from '../utils/graph';
 
+export const RADIUS_SET = 'RADIUS_SET';
 export const RADIUS_SELECT_KEY = 'RADIUS_SELECT_KEY';
 export const RADIUS_SELECT_KEY_ERROR = 'RADIUS_SELECT_KEY_ERROR';
 export const RADIUS_RESET_KEY = 'RADIUS_RESET_KEY';
@@ -106,4 +107,10 @@ export const setRadius = (minRadius, maxRadius) => ({
   type: RADIUS_SET_RADIUS,
   minRadius,
   maxRadius,
+});
+
+export const changeDefaultRadius = defaultRadius => ({
+  type: RADIUS_SET,
+  key: 'defaultRadius',
+  value: defaultRadius,
 });

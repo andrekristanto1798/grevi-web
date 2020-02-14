@@ -1,4 +1,5 @@
 import {
+  RADIUS_SET,
   RADIUS_SELECT_KEY,
   RADIUS_SELECT_KEY_ERROR,
   RADIUS_RESET_KEY,
@@ -14,11 +15,14 @@ const initialState = {
   maxValue: null,
   nodeIdValuesMap: {},
   propertyValues: [],
+  defaultRadius: 4,
   error: null,
 };
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
+  case RADIUS_SET:
+    return { ...state, [action.key]: action.value };
   case RADIUS_SELECT_KEY:
     return {
       ...state,
