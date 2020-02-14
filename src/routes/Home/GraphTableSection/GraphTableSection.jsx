@@ -53,6 +53,7 @@ const toGraphTableData = (focusNodeOn, editNode, deleteNode) => node => ({
 
 function GraphTableSection({
   nodeKeys,
+  hoverNode,
   deleteNode,
   editNode,
   focusNodeOn,
@@ -114,6 +115,8 @@ function GraphTableSection({
         dataLength={validData.nodes.length}
         dataKey={dataKey}
         tableProps={tableProps}
+        onRowHover={hoverNode}
+        onRowDoubleClick={focusNodeOn}
       />
     </div>
   );
@@ -125,6 +128,7 @@ GraphTableSection.propTypes = {
   validData: graphDataShape.isRequired,
   searchAsFilter: PropTypes.bool.isRequired,
   // Actions
+  hoverNode: PropTypes.func.isRequired,
   deleteNode: PropTypes.func.isRequired,
   editNode: PropTypes.func.isRequired,
   focusNodeOn: PropTypes.func.isRequired,
@@ -146,6 +150,7 @@ const mapStateToProps = state => {
 };
 
 const actions = {
+  hoverNode: graphAction.hoverNode,
   deleteNode: graphAction.deleteNode,
   editNode: graphAction.editNode,
   focusNodeOn: graphAction.focusNodeOn,

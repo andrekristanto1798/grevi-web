@@ -22,6 +22,7 @@ function TablePagination({
   searchBar,
   tableProps,
   onRowHover,
+  onRowDoubleClick,
 }) {
   const [activePage, setActivePage] = React.useState(1);
   const [dataPerPage, setDataPerPage] = React.useState(10);
@@ -41,9 +42,13 @@ function TablePagination({
   });
   const firstItemIndex = (activePage - 1) * dataPerPage;
   const lastItemIndex = activePage * dataPerPage;
-  const handleHover = React.useCallback(
-    data => event => onRowHover != null && onRowHover(event, data),
+  const handleRowHover = React.useCallback(
+    data => () => onRowHover != null && onRowHover(data),
     [onRowHover],
+  );
+  const handleRowDoubleClick = React.useCallback(
+    data => () => onRowDoubleClick != null && onRowDoubleClick(data),
+    [onRowDoubleClick],
   );
   return (
     <div className={styles.tablePagination__container}>
@@ -71,9 +76,10 @@ function TablePagination({
             {getData(firstItemIndex, lastItemIndex).map(obj => {
               return (
                 <Table.Row
-                  onMouseEnter={handleHover(obj)}
-                  onMouseLeave={handleHover(null)}
                   key={obj.id}
+                  onMouseEnter={handleRowHover(obj)}
+                  onMouseLeave={handleRowHover(null)}
+                  onDoubleClick={handleRowDoubleClick(obj)}
                 >
                   {dataKey.map(key => (
                     <Table.Cell
@@ -105,6 +111,7 @@ TablePagination.propTypes = {
   searchBar: PropTypes.node,
   tableProps: PropTypes.objectOf(PropTypes.any),
   onRowHover: PropTypes.func,
+  onRowDoubleClick: PropTypes.func,
 };
 
 export default TablePagination;
