@@ -11,6 +11,7 @@ import { NodeTable, LinkTable } from './GraphTableSection';
 import RadiusByProperty from './RadiusByProperty';
 import SettingSection from './SettingSection';
 import EditNodeModal from '../../components/EditNodeModal';
+import EditLinkModal from '../../components/EditLinkModal';
 import DeleteNodeModal from '../../components/DeleteNodeModal';
 // Styles
 import styles from './styles.scss';
@@ -85,6 +86,7 @@ const Home = () => {
         </div>
       </SplitPane>
       <EditNodeModal />
+      <EditLinkModal />
       <DeleteNodeModal />
     </div>
   );

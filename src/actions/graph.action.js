@@ -7,6 +7,8 @@ import {
   selectNodeKeys,
   selectEditedNode,
   selectDeletedNode,
+  selectLinkKeys,
+  selectEditedLink,
 } from '../selectors/graph.selector';
 import { downloadJSON } from '../utils/download';
 import {
@@ -207,8 +209,54 @@ export const editLink = link => set('editedLink', link);
 
 export const cancelEditLink = () => set('editedLink', null);
 
-// TODO
-export const submitEditedLink = () => {};
+export const submitEditedLink = editedLink => (dispatch, getState) => {
+  const state = getState();
+  const nodes = selectGraphNodes(state);
+  const links = selectGraphLinks(state);
+  const prevEditedLink = selectEditedLink(state);
+  const index = links.findIndex(link => link.id === prevEditedLink.id);
+  const linkKeys = selectLinkKeys(state);
+  const editedLinkUniqueKeys = getUniqueKeys([editedLink]);
+  // check if new link id exists in the original link list
+  if (
+    prevEditedLink.id !== editedLink.id &&
+    isIdExisted(links, editedLink.id)
+  ) {
+    // eslint-disable-next-line no-alert
+    window.alert('cannot use the same link id');
+    return;
+  }
+  if (editedLink.source === editedLink.target) {
+    // eslint-disable-next-line no-alert
+    window.alert('cannot use the same source and target id');
+    return;
+  }
+  const isSourceValid =
+    nodes.findIndex(node => node.id === editedLink.source) > -1;
+  const isTargetValid =
+    nodes.findIndex(node => node.id === editedLink.target) > -1;
+  if (
+    !editedLink.source ||
+    !editedLink.target ||
+    !isSourceValid ||
+    !isTargetValid
+  ) {
+    // eslint-disable-next-line no-alert
+    window.alert('link source and target must be filled with valid node id');
+    return;
+  }
+  const newLinks = [
+    ...links.slice(0, index),
+    editedLink,
+    ...links.slice(index + 1),
+  ];
+  if (!isArrayEqual(editedLinkUniqueKeys, linkKeys)) {
+    // if not the same keys, then linkKeys = editedNodeUniqueKeys + linkKeys
+    dispatch(set('linkKeys', getUniqueKeys(newLinks)));
+  }
+  dispatch(set('data', { nodes, links: newLinks }));
+  dispatch(set('editedLink', null));
+};
 
 export const deleteLink = link => set('deletedLink', link);
 
