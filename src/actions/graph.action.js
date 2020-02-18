@@ -9,6 +9,7 @@ import {
   selectDeletedNode,
   selectLinkKeys,
   selectEditedLink,
+  selectDeletedLink,
 } from '../selectors/graph.selector';
 import { downloadJSON } from '../utils/download';
 import {
@@ -262,8 +263,20 @@ export const deleteLink = link => set('deletedLink', link);
 
 export const cancelDeleteLink = () => set('deletedLink', null);
 
-// TODO
-export const submitDeletedLink = () => {};
+export const submitDeleteLink = () => (dispatch, getState) => {
+  const state = getState();
+  const nodes = selectGraphNodes(state);
+  const links = selectGraphLinks(state);
+  const deletedLink = selectDeletedLink(state);
+  const index = links.findIndex(link => link.id === deletedLink.id);
+  const linkKeys = selectLinkKeys(state);
+  const newLinks = [...links.slice(0, index), ...links.slice(index + 1)];
+  if (!isArrayEqual(getUniqueKeys(newLinks), linkKeys)) {
+    dispatch(set('linkKeys', getUniqueKeys(newLinks)));
+  }
+  dispatch(set('data', { nodes, links: newLinks }));
+  dispatch(set('deletedLink', null));
+};
 
 export const refreshGraphLayout = () => (dispatch, getState) => {
   const state = getState();

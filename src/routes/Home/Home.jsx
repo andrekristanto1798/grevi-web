@@ -13,6 +13,7 @@ import SettingSection from './SettingSection';
 import EditNodeModal from '../../components/EditNodeModal';
 import EditLinkModal from '../../components/EditLinkModal';
 import DeleteNodeModal from '../../components/DeleteNodeModal';
+import DeleteLinkModal from '../../components/DeleteLinkModal';
 // Styles
 import styles from './styles.scss';
 
@@ -88,6 +89,7 @@ const Home = () => {
       <EditNodeModal />
       <EditLinkModal />
       <DeleteNodeModal />
+      <DeleteLinkModal />
     </div>
   );
 };
