@@ -23,6 +23,9 @@ const ignoredKeys = [
   'fy',
 ];
 
+export const normalizeObjectId = (obj, path) =>
+  obj[path] && obj[path].id != null ? obj[path].id : obj[path];
+
 export const getUniqueKeys = objectList =>
   objectList
     .reduce((acc, obj) => {
@@ -72,14 +75,17 @@ export const toOption = obj => ({ key: obj, text: obj, value: obj });
 
 export const cleanFromIgnoredKeys = obj => omit(obj, ignoredKeys);
 
+// clean from ignored keys, id -> string
 export const cleanNodesFromIgnoredKeys = nodes =>
-  nodes.map(cleanFromIgnoredKeys);
+  nodes.map(cleanFromIgnoredKeys).map(node => ({ ...node, id: `${node.id}` }));
 
+// clean from ignored keys, id -> string, source & target -> id
 export const cleanLinksFromIgnoredKeys = links =>
   links.map(cleanFromIgnoredKeys).map(link => ({
     ...link,
-    source: link.source.id,
-    target: link.target.id,
+    id: `${link.id}`,
+    source: `${normalizeObjectId(link, 'source')}`,
+    target: `${normalizeObjectId(link, 'target')}`,
   }));
 
 export const sortNumbers = (numbers, desc = false) => {
@@ -95,6 +101,3 @@ export const mapToThreeDecimals = map =>
     }),
     {},
   );
-
-export const normalizeObjectId = (obj, path) =>
-  obj[path] && obj[path].id != null ? obj[path].id : obj[path];

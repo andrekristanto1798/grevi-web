@@ -49,10 +49,17 @@ export const loadGraphFile = (filename, { nodes, links }) => dispatch => {
   dispatch(resetAll());
   dispatch(showLoading());
   dispatch(changeFilename(filename));
-  dispatch(set('data', { nodes, links }));
+  const cleanNodes = cleanNodesFromIgnoredKeys(nodes);
+  const cleanLinks = cleanLinksFromIgnoredKeys(links);
+  dispatch(
+    set('data', {
+      nodes: cleanNodes,
+      links: cleanLinks,
+    }),
+  );
   dispatch(hideLoading());
-  dispatch(set('nodeKeys', getUniqueKeys(nodes)));
-  dispatch(set('linkKeys', getUniqueKeys(links)));
+  dispatch(set('nodeKeys', getUniqueKeys(cleanNodes)));
+  dispatch(set('linkKeys', getUniqueKeys(cleanLinks)));
 };
 
 export const downloadGraphFile = () => (_, getState) => {

@@ -20,9 +20,10 @@ export const randomString = () =>
 export const isIdExisted = (list, id) =>
   list.filter(obj => obj.id === id).length > 0;
 
+// next Id will be always a string
 const getNextId = list => {
   if (list.length === 0) {
-    return 1;
+    return '1';
   }
   // Get the last element and get the next ID
   const lastId = Math.max(...list.map(obj => obj.id));
@@ -33,7 +34,7 @@ const getNextId = list => {
       nextId = randomString();
     }
   }
-  return nextId;
+  return `${nextId}`;
 };
 
 export const getNewNode = currentNodeList => {
