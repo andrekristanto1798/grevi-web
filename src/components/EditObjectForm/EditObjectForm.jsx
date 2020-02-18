@@ -44,6 +44,7 @@ function EditObjectForm({ entries, setEntries }) {
               onChange={handleEditValue(idx)}
             />
             <Form.Button
+              type="reset"
               width={2}
               icon="delete"
               onClick={handleDeleteProp(idx)}
