@@ -97,4 +97,4 @@ export const mapToThreeDecimals = map =>
   );
 
 export const normalizeObjectId = (obj, path) =>
-  obj[path] && obj[path].id != null ? obj[path].id : obj.source;
+  obj[path] && obj[path].id != null ? obj[path].id : obj[path];
