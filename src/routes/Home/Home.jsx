@@ -7,7 +7,7 @@ import LoadingIndicator from '../../components/LoadingIndicator';
 import GraphFileSection from './GraphFileSection';
 import GraphSection from './GraphSection';
 import ColoringByProperty from './ColoringByProperty';
-import GraphTableSection from './GraphTableSection';
+import { NodeTable, LinkTable } from './GraphTableSection';
 import RadiusByProperty from './RadiusByProperty';
 import SettingSection from './SettingSection';
 import EditNodeModal from '../../components/EditNodeModal';
@@ -32,9 +32,14 @@ const accordionPanels = [
     content: { content: <RadiusByProperty /> },
   },
   {
-    key: 'table',
+    key: 'node-table',
     title: 'Graph Nodes Table',
-    content: { content: <GraphTableSection /> },
+    content: { content: <NodeTable /> },
+  },
+  {
+    key: 'link-table',
+    title: 'Graph Links Table',
+    content: { content: <LinkTable /> },
   },
 ];
 

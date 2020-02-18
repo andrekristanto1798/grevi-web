@@ -15,6 +15,7 @@ import {
   selectHoveredNodeId,
   selectHoveredLinkId,
   selectGraphFocusedNode,
+  selectGraphFocusedLink,
   selectSearchAsFilter,
   selectValidData,
 } from '../../../selectors/graph.selector';
@@ -34,6 +35,7 @@ import {
   modeShape,
   valueType,
   nodeShape,
+  linkShape,
 } from '../../../components/UtilPropTypes';
 import { cleanFromIgnoredKeys } from '../../../utils/objects';
 import { COLORS } from '../../../utils/color';
@@ -59,6 +61,8 @@ const GraphSection = ({
   getColor,
   focusedNode,
   resetFocusedNode,
+  focusedLink,
+  resetFocusedLink,
   // settings
   showNodeLabel,
   showLinkLabel,
@@ -76,10 +80,20 @@ const GraphSection = ({
         graphRef.current.centerAt(nodeObj.x, nodeObj.y, 1000);
         graphRef.current.zoom(2.5, 1000);
         hoverNode(nodeObj);
+        resetFocusedNode();
       }
-      resetFocusedNode();
+      if (graphRef && focusedLink && focusedLink.id != null) {
+        // Need to find the node object since x,y is changed when graph is dragged out
+        const linkObj = data.links.find(link => link.id === focusedLink.id);
+        const x = (linkObj.source.x + linkObj.target.x) / 2;
+        const y = (linkObj.source.y + linkObj.target.y) / 2;
+        graphRef.current.centerAt(x, y, 1000);
+        graphRef.current.zoom(2, 1000);
+        hoverLink(linkObj);
+        resetFocusedLink();
+      }
     },
-    [data.nodes, focusedNode],
+    [data.nodes, focusedNode, focusedLink],
   );
   const nodeCanvasObjectModeCb = React.useCallback(() => 'replace', []);
   const nodeCanvasDrawCb = React.useCallback(
@@ -174,6 +188,7 @@ GraphSection.propTypes = {
   hoveredNodeId: PropTypes.arrayOf(valueType),
   hoveredLinkId: valueType,
   focusedNode: nodeShape,
+  focusedLink: linkShape,
   // Setting State
   showNodeLabel: PropTypes.bool.isRequired,
   showLinkLabel: PropTypes.bool.isRequired,
@@ -189,6 +204,7 @@ GraphSection.propTypes = {
   hoverNode: PropTypes.func.isRequired,
   hoverLink: PropTypes.func.isRequired,
   resetFocusedNode: PropTypes.func.isRequired,
+  resetFocusedLink: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => {
@@ -204,6 +220,7 @@ const mapStateToProps = state => {
   const getColor = selectGetColor(state);
   const getRadius = selectGetRadius(state);
   const focusedNode = selectGraphFocusedNode(state);
+  const focusedLink = selectGraphFocusedLink(state);
   const showNodeLabel = selectShowNodeLabel(state);
   const showLinkLabel = selectShowLinkLabel(state);
   const showNodeText = selectShowNodeText(state);
@@ -220,6 +237,7 @@ const mapStateToProps = state => {
     getColor,
     getRadius,
     focusedNode,
+    focusedLink,
     showNodeLabel,
     showLinkLabel,
     showNodeText,
@@ -235,6 +253,7 @@ const actions = {
   hoverNode: graphAction.hoverNode,
   hoverLink: graphAction.hoverLink,
   resetFocusedNode: graphAction.resetFocusedNode,
+  resetFocusedLink: graphAction.resetFocusedLink,
 };
 
 export default connect(

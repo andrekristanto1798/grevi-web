@@ -51,6 +51,7 @@ export const loadGraphFile = (filename, { nodes, links }) => dispatch => {
   dispatch(set('data', { nodes, links }));
   dispatch(hideLoading());
   dispatch(set('nodeKeys', getUniqueKeys(nodes)));
+  dispatch(set('linkKeys', getUniqueKeys(links)));
 };
 
 export const downloadGraphFile = () => (_, getState) => {
@@ -101,6 +102,9 @@ export const clickNode = ({ id: nodeId }) => (dispatch, getState) => {
     if (isLinkDuplicate(links, clickedNodeId, nodeId)) return;
     const newLink = getNewLink(links, clickedNodeId, nodeId);
     dispatch(setGraphLinks([...links, newLink]));
+    if (links.length === 0) {
+      dispatch(set('linkKeys', getUniqueKeys([newLink])));
+    }
     dispatch(set('clickedNodeId', null));
   } else {
     dispatch(set('clickedNodeId', nodeId));
@@ -122,6 +126,10 @@ export const hoverLink = link => dispatch => {
 export const focusNodeOn = node => set('focusedNode', node);
 
 export const resetFocusedNode = () => set('focusedNode', null);
+
+export const focusLinkOn = link => set('focusedLink', link);
+
+export const resetFocusedLink = () => set('focusedLink', null);
 
 export const editNode = node => set('editedNode', node);
 
@@ -180,6 +188,20 @@ export const submitDeleteNode = () => (dispatch, getState) => {
   dispatch(set('deletedNode', null));
 };
 
+export const editLink = link => set('editedLink', link);
+
+export const cancelEditLink = () => set('editedLink', null);
+
+// TODO
+export const submitEditedLink = () => {};
+
+export const deleteLink = link => set('deletedLink', link);
+
+export const cancelDeleteLink = () => set('deletedLink', null);
+
+// TODO
+export const submitDeletedLink = () => {};
+
 export const refreshGraphLayout = () => (dispatch, getState) => {
   const state = getState();
   const nodes = selectGraphNodes(state);
@@ -187,8 +209,11 @@ export const refreshGraphLayout = () => (dispatch, getState) => {
   dispatch(set('data', { nodes, links }));
 };
 
-export const handleChangeSearchValue = searchValue =>
-  set('searchValue', searchValue);
+export const handleChangeNodeSearchValue = nodeSearchValue =>
+  set('nodeSearchValue', nodeSearchValue);
+
+export const handleChangeLinkSearchValue = linkSearchValue =>
+  set('linkSearchValue', linkSearchValue);
 
 export const toogleSearchAsFilter = prevValue =>
   set('searchAsFilter', !prevValue);

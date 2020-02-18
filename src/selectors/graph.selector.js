@@ -1,5 +1,7 @@
 import { createSelector } from 'reselect';
+import pick from 'lodash/pick';
 import { ADD_LINK_MODE } from '../components/EditingTools';
+import { normalizeObjectId } from '../utils/objects';
 
 const selectGraphData = state => state.graph.data;
 
@@ -21,6 +23,11 @@ export const selectGraphLinks = createSelector(
 export const selectGraphFocusedNode = createSelector(
   state => state.graph.focusedNode,
   focusedNode => focusedNode,
+);
+
+export const selectGraphFocusedLink = createSelector(
+  state => state.graph.focusedLink,
+  focusedLink => focusedLink,
 );
 
 export const selectGraphFilename = createSelector(
@@ -58,6 +65,11 @@ export const selectNodeKeys = createSelector(
   nodeKeys => nodeKeys,
 );
 
+export const selectLinkKeys = createSelector(
+  state => state.graph.linkKeys,
+  linkKeys => linkKeys,
+);
+
 export const selectEditedNode = createSelector(
   state => state.graph.editedNode,
   editedNode => editedNode,
@@ -68,9 +80,24 @@ export const selectDeletedNode = createSelector(
   deletedNode => deletedNode,
 );
 
-export const selectSearchValue = createSelector(
-  state => state.graph.searchValue,
-  searchValue => searchValue,
+export const selectEditedLink = createSelector(
+  state => state.graph.editedLink,
+  editedLink => editedLink,
+);
+
+export const selectDeletedLink = createSelector(
+  state => state.graph.deletedLink,
+  deletedLink => deletedLink,
+);
+
+export const selectNodeSearchValue = createSelector(
+  state => state.graph.nodeSearchValue,
+  nodeSearchValue => nodeSearchValue,
+);
+
+export const selectLinkSearchValue = createSelector(
+  state => state.graph.linkSearchValue,
+  linkSearchValue => linkSearchValue,
 );
 
 export const selectSearchAsFilter = createSelector(
@@ -81,18 +108,37 @@ export const selectSearchAsFilter = createSelector(
 export const selectValidData = createSelector(
   selectGraphData,
   selectNodeKeys,
-  selectSearchValue,
-  (data, dataKey, searchValue) => {
-    if (searchValue === '') return data;
-    const regex = new RegExp(searchValue, 'i');
-    const validNodes = data.nodes.filter(node =>
-      dataKey.map(key => regex.test(node[key])).some(isCorrect => !!isCorrect),
-    );
+  selectLinkKeys,
+  selectNodeSearchValue,
+  selectLinkSearchValue,
+  (data, nodeDataKey, linkDataKey, nodeSearchValue, linkSearchValue) => {
+    if (nodeSearchValue === '' && linkSearchValue === '') return data;
+    const nodeRegex = new RegExp(nodeSearchValue, 'i');
+    const linkRegex = new RegExp(linkSearchValue, 'i');
+    const validNodes =
+      nodeSearchValue === ''
+        ? data.nodes
+        : data.nodes.filter(node =>
+          nodeRegex.test(JSON.stringify(pick(node, nodeDataKey), ';')),
+        );
     const validNodeIds = new Set(validNodes.map(node => node.id));
-    const validLinks = data.links.filter(
+    const validLinksFromValidNodeIds = data.links.filter(
       link =>
         validNodeIds.has(link.source.id) && validNodeIds.has(link.target.id),
     );
+    const validLinks =
+      linkSearchValue === ''
+        ? validLinksFromValidNodeIds
+        : validLinksFromValidNodeIds.filter(link => {
+          const cloneLink = {
+            ...link,
+            source: normalizeObjectId(link, 'source'),
+            target: normalizeObjectId(link, 'target'),
+          };
+          return linkRegex.test(
+            JSON.stringify(pick(cloneLink, linkDataKey), ';'),
+          );
+        });
     return { nodes: validNodes, links: validLinks };
   },
 );

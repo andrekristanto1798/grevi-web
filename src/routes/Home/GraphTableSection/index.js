@@ -1,3 +1,3 @@
-import GraphTableSection from './GraphTableSection';
+import { NodeTable, LinkTable } from './GraphTableSection';
 
-export default GraphTableSection;
+export { NodeTable, LinkTable };

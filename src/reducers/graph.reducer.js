@@ -13,18 +13,23 @@ const initialState = {
     links: [],
   },
   nodeKeys: [],
+  linkKeys: [],
   filename: 'Untitled Graph',
   // Graph Interactions
   mode: SELECT_MODE,
   focusedNode: null,
   clickedNodeId: null,
   hoveredNodeId: [],
+  focusedLink: null,
   hoveredLinkId: null,
   // Node Actions Edit + Delete
   editedNode: null,
+  editedLink: null,
   deletedNode: null,
+  deletedLink: null,
   // Search in GraphTableSection
-  searchValue: '',
+  nodeSearchValue: '',
+  linkSearchValue: '',
   searchAsFilter: false,
 };
 
