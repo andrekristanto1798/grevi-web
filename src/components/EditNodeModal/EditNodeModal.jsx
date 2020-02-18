@@ -8,7 +8,10 @@ import { cleanFromIgnoredKeys } from '../../utils/objects';
 import { nodeShape } from '../UtilPropTypes';
 
 const toNodeEntries = node =>
-  Object.entries(node).map(([key, value]) => ({ key, value }));
+  Object.entries(node).map(([key, value]) => ({
+    key,
+    value,
+  }));
 
 const toNodeObj = nodeEntries =>
   nodeEntries.reduce((acc, { key, value }) => {

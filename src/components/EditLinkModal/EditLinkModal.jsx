@@ -4,11 +4,15 @@ import PropTypes from 'prop-types';
 import { Button, Header, Modal } from 'semantic-ui-react';
 import EditObjectForm from '../EditObjectForm';
 // Utils
-import { cleanFromIgnoredKeys } from '../../utils/objects';
+import { cleanFromIgnoredKeys, normalizeObjectId } from '../../utils/objects';
 import { linkShape } from '../UtilPropTypes';
 
 const toLinkEntries = link =>
-  Object.entries(link).map(([key, value]) => ({ key, value }));
+  Object.entries(link).map(([key, value]) => {
+    if (key === 'source' || key === 'target')
+      return { key, value: normalizeObjectId(link, key) };
+    return { key, value };
+  });
 
 const toLinkObj = linkEntries =>
   linkEntries.reduce((acc, { key, value }) => {

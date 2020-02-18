@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Form } from 'semantic-ui-react';
+import { valueType } from '../UtilPropTypes';
 
 function EditObjectForm({ entries, setEntries }) {
   const handleEditProperty = React.useCallback(idx => e => {
@@ -39,7 +40,7 @@ function EditObjectForm({ entries, setEntries }) {
               width={6}
               fluid
               placeholder={`Value Property ${idx}`}
-              value={value}
+              value={value == null ? '' : value}
               onChange={handleEditValue(idx)}
             />
             <Form.Button
@@ -54,10 +55,13 @@ function EditObjectForm({ entries, setEntries }) {
   );
 }
 
-const entryShape = PropTypes.arrayOf(PropTypes.string);
+const keyValueShape = PropTypes.shape({
+  key: PropTypes.string.isRequired,
+  value: valueType,
+});
 
 EditObjectForm.propTypes = {
-  entries: PropTypes.arrayOf(entryShape).isRequired,
+  entries: PropTypes.arrayOf(keyValueShape).isRequired,
   setEntries: PropTypes.func.isRequired,
 };
 
