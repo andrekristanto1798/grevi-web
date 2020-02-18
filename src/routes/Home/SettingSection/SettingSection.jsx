@@ -13,8 +13,8 @@ import {
   selectAutoHideNodeText,
   selectGraphOrientation,
   selectNodeTextKey,
-  selectFocusNodeOnDoubleClick,
-  selectHighlightNodeOnRowHover,
+  selectFocusOnDoubleClick,
+  selectHighlightOnRowHover,
 } from '../../../selectors/setting.selector';
 import { selectNodeKeys } from '../../../selectors/graph.selector';
 // Utils
@@ -46,10 +46,10 @@ function SettingSection({
   changeGraphOrientation,
   changeNodeTextKey,
   // node table
-  focusNodeOnDoubleClick,
-  highlightNodeOnRowHover,
-  toogleFocusNodeOnDoubleClick,
-  toogleHighlightNodeOnRowHover,
+  focusOnDoubleClick,
+  highlightOnRowHover,
+  toogleFocusOnDoubleClick,
+  toogleHighlightOnRowHover,
 }) {
   const handleChangeNodeTextKey = React.useCallback(
     (_, { value }) => {
@@ -110,18 +110,16 @@ function SettingSection({
       </Form.Field>
       <Form.Field>
         <Checkbox
-          label="Table - automatically focus Node on row double click"
-          checked={focusNodeOnDoubleClick}
-          onChange={() => toogleFocusNodeOnDoubleClick(focusNodeOnDoubleClick)}
+          label="Table - automatically focus on row double click"
+          checked={focusOnDoubleClick}
+          onChange={() => toogleFocusOnDoubleClick(focusOnDoubleClick)}
         />
       </Form.Field>
       <Form.Field>
         <Checkbox
-          label="Table - automatically highlight Node on row hover"
-          checked={highlightNodeOnRowHover}
-          onChange={() =>
-            toogleHighlightNodeOnRowHover(highlightNodeOnRowHover)
-          }
+          label="Table - automatically highlight on row hover"
+          checked={highlightOnRowHover}
+          onChange={() => toogleHighlightOnRowHover(highlightOnRowHover)}
         />
       </Form.Field>
     </Form>
@@ -145,11 +143,11 @@ SettingSection.propTypes = {
   changeGraphOrientation: PropTypes.func.isRequired,
   changeNodeTextKey: PropTypes.func.isRequired,
   // Node Table state
-  focusNodeOnDoubleClick: PropTypes.bool.isRequired,
-  highlightNodeOnRowHover: PropTypes.bool.isRequired,
+  focusOnDoubleClick: PropTypes.bool.isRequired,
+  highlightOnRowHover: PropTypes.bool.isRequired,
   // Node Table actions
-  toogleFocusNodeOnDoubleClick: PropTypes.func.isRequired,
-  toogleHighlightNodeOnRowHover: PropTypes.func.isRequired,
+  toogleFocusOnDoubleClick: PropTypes.func.isRequired,
+  toogleHighlightOnRowHover: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => {
@@ -162,8 +160,8 @@ const mapStateToProps = state => {
   const autoHideNodeText = selectAutoHideNodeText(state);
   const orientation = selectGraphOrientation(state);
   // Node Table
-  const focusNodeOnDoubleClick = selectFocusNodeOnDoubleClick(state);
-  const highlightNodeOnRowHover = selectHighlightNodeOnRowHover(state);
+  const focusOnDoubleClick = selectFocusOnDoubleClick(state);
+  const highlightOnRowHover = selectHighlightOnRowHover(state);
   return {
     showNodeLabel,
     showLinkLabel,
@@ -172,8 +170,8 @@ const mapStateToProps = state => {
     nodeKeys,
     autoHideNodeText,
     orientation,
-    focusNodeOnDoubleClick,
-    highlightNodeOnRowHover,
+    focusOnDoubleClick,
+    highlightOnRowHover,
   };
 };
 
@@ -186,8 +184,8 @@ const actions = {
   changeGraphOrientation: settingAction.changeGraphOrientation,
   changeNodeTextKey: settingAction.changeNodeTextKey,
   // Node Table
-  toogleFocusNodeOnDoubleClick: settingAction.toogleFocusNodeOnDoubleClick,
-  toogleHighlightNodeOnRowHover: settingAction.toogleHighlightNodeOnRowHover,
+  toogleFocusOnDoubleClick: settingAction.toogleFocusOnDoubleClick,
+  toogleHighlightOnRowHover: settingAction.toogleHighlightOnRowHover,
 };
 
 export default connect(

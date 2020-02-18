@@ -27,6 +27,7 @@ import {
   isArrayEqual,
   cleanLinksFromIgnoredKeys,
   cleanNodesFromIgnoredKeys,
+  normalizeObjectId,
 } from '../utils/objects';
 import { showLoading, hideLoading } from './ui.action';
 
@@ -120,7 +121,14 @@ export const hoverNodes = nodes =>
 
 export const hoverLink = link => dispatch => {
   dispatch(set('hoveredLinkId', link ? link.id : null));
-  dispatch(set('hoveredNodeId', link ? [link.source.id, link.target.id] : []));
+  dispatch(
+    set(
+      'hoveredNodeId',
+      link
+        ? [normalizeObjectId(link, 'source'), normalizeObjectId(link, 'target')]
+        : [],
+    ),
+  );
 };
 
 export const focusNodeOn = node => set('focusedNode', node);

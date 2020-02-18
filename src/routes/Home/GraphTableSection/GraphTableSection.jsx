@@ -14,8 +14,8 @@ import {
   selectSearchAsFilter,
 } from '../../../selectors/graph.selector';
 import {
-  selectFocusNodeOnDoubleClick,
-  selectHighlightNodeOnRowHover,
+  selectFocusOnDoubleClick,
+  selectHighlightOnRowHover,
 } from '../../../selectors/setting.selector';
 
 const nodeTableStateToProps = state => {
@@ -23,8 +23,8 @@ const nodeTableStateToProps = state => {
   const nodeSearchValue = selectNodeSearchValue(state);
   const validData = selectValidData(state);
   const searchAsFilter = selectSearchAsFilter(state);
-  const focusOnDoubleClick = selectFocusNodeOnDoubleClick(state);
-  const highlightOnRowHover = selectHighlightNodeOnRowHover(state);
+  const focusOnDoubleClick = selectFocusOnDoubleClick(state);
+  const highlightOnRowHover = selectHighlightOnRowHover(state);
   return {
     dataKeys: nodeKeys,
     searchValue: nodeSearchValue,
@@ -55,8 +55,8 @@ const linkTableStateToProps = state => {
   const linkSearchValue = selectLinkSearchValue(state);
   const validData = selectValidData(state);
   const searchAsFilter = selectSearchAsFilter(state);
-  const focusOnDoubleClick = selectFocusNodeOnDoubleClick(state);
-  const highlightOnRowHover = selectHighlightNodeOnRowHover(state);
+  const focusOnDoubleClick = selectFocusOnDoubleClick(state);
+  const highlightOnRowHover = selectHighlightOnRowHover(state);
   return {
     dataKeys: linkKeys,
     searchValue: linkSearchValue,
