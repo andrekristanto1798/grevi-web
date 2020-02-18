@@ -15,6 +15,16 @@ export const smallTableOption = {
   compact: 'very',
 };
 
+const SORTING_DIRECTION = {
+  asc: 'ascending',
+  desc: 'descending',
+};
+
+const defaultSortState = {
+  column: null,
+  direction: null,
+};
+
 function TablePagination({
   getData,
   dataKey,
@@ -26,6 +36,7 @@ function TablePagination({
 }) {
   const [activePage, setActivePage] = React.useState(1);
   const [dataPerPage, setDataPerPage] = React.useState(10);
+  const [sortState, setSortState] = React.useState(defaultSortState);
   const totalPages = Math.ceil(dataLength / dataPerPage);
   const handleChangeDataPerPage = React.useCallback((_, { value }) => {
     // if the current page exceeds the total pages
@@ -42,6 +53,21 @@ function TablePagination({
   });
   const firstItemIndex = (activePage - 1) * dataPerPage;
   const lastItemIndex = activePage * dataPerPage;
+  const handleSort = React.useCallback(column => () => {
+    if (!tableProps.sortable) return;
+    if (column !== sortState.column) {
+      setSortState({ column, direction: SORTING_DIRECTION.asc });
+    } else {
+      setSortState({
+        column,
+        direction:
+          sortState.direction === SORTING_DIRECTION.asc
+            ? SORTING_DIRECTION.desc
+            : SORTING_DIRECTION.asc,
+      });
+    }
+  });
+  const resetSort = React.useCallback(() => setSortState(defaultSortState));
   const handleRowHover = React.useCallback(
     data => () => onRowHover != null && onRowHover(data),
     [onRowHover],
@@ -64,16 +90,27 @@ function TablePagination({
         entries per page
       </div>
       <div className={styles.table__container}>
-        <Table selectable={onRowHover != null} {...tableProps}>
+        <Table celled selectable={onRowHover != null} {...tableProps}>
           <Table.Header>
             <Table.Row>
               {dataKey.map(key => (
-                <Table.HeaderCell key={key}>{key}</Table.HeaderCell>
+                <Table.HeaderCell
+                  key={key}
+                  sorted={
+                    tableProps.sortable && sortState.column === key
+                      ? sortState.direction
+                      : null
+                  }
+                  onClick={handleSort(key)}
+                  onDoubleClick={resetSort}
+                >
+                  {key}
+                </Table.HeaderCell>
               ))}
             </Table.Row>
           </Table.Header>
           <Table.Body>
-            {getData(firstItemIndex, lastItemIndex).map(obj => {
+            {getData(firstItemIndex, lastItemIndex, sortState).map(obj => {
               return (
                 <Table.Row
                   key={obj.id}
