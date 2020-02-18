@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import sortBy from 'lodash/sortBy';
 // Components
 import { Button, Input } from 'semantic-ui-react';
 import TablePagination, { smallTableOption } from '../TablePagination';
@@ -10,7 +11,7 @@ import styles from './styles.scss';
 
 const noOp = null;
 
-const tableProps = { ...smallTableOption, striped: true };
+const tableProps = { ...smallTableOption, striped: true, sortable: true };
 
 function TableSection({
   dataKeys,
@@ -40,10 +41,18 @@ function TableSection({
     [handleChangeSearchValue],
   );
   const handleGetData = React.useCallback(
-    (firstIndex, lastIndex) =>
-      validData
+    (firstIndex, lastIndex, { column, direction }) => {
+      let data = validData;
+      if (direction === 'ascending') {
+        data = sortBy(validData, [column]).reverse();
+      }
+      if (direction === 'descending') {
+        data = sortBy(validData, [column]);
+      }
+      return data
         .slice(firstIndex, lastIndex)
-        .map(dataMappingFunction(focusOn, edit, remove)),
+        .map(dataMappingFunction(focusOn, edit, remove));
+    },
     [validData, focusOn],
   );
   const searchAsFilterButtonContent = searchAsFilter
@@ -59,6 +68,7 @@ function TableSection({
   return (
     <div className={styles.tableSection__container}>
       <TablePagination
+        sortable
         searchBar={(
           <div className={styles.tableSection__searchContainer}>
             <Input
