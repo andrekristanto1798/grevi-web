@@ -86,7 +86,7 @@ export default class UploadButton extends PureComponent {
         >
           <Modal.Header>Upload Your Graph</Modal.Header>
           <Modal.Content>
-            <Grid divided style={{ height: '50vw', maxHeight: 400 }}>
+            <Grid divided style={{ height: 'fit-content', maxHeight: '50vw' }}>
               <Grid.Row columns={2}>
                 <Grid.Column>
                   <Header.Subheader>

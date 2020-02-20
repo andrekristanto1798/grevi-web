@@ -1,12 +1,18 @@
 const sampleGraph = require('./sample_graph.json');
+const clusterGraph = require('./cluster_graph.json');
 const covid19sg = require('./covid_19_sg.json');
 const d3Deps = require('./d3_deps.json');
 
 export const graphFileList = [
   {
-    name: 'Sample Graph 1.json',
+    name: 'Sample Graph.json',
     graph: sampleGraph,
     desc: 'It is good to play around',
+  },
+  {
+    name: 'Sample Clustered Graph.json',
+    graph: clusterGraph,
+    desc: 'It has clustered graphs',
   },
   {
     name: 'COVID-19 Singapore.json',
