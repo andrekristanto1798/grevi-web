@@ -15,6 +15,11 @@ export const selectShowNodeText = createSelector(
   showNodeText => showNodeText,
 );
 
+export const selectShowLinkDirection = createSelector(
+  state => state.setting.showLinkDirection,
+  showLinkDirection => showLinkDirection,
+);
+
 export const selectAutoHideNodeText = createSelector(
   state => state.setting.autoHideNodeText,
   autoHideNodeText => autoHideNodeText,

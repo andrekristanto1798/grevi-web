@@ -25,6 +25,7 @@ import {
   selectShowNodeLabel,
   selectShowLinkLabel,
   selectShowNodeText,
+  selectShowLinkDirection,
   selectAutoHideNodeText,
   selectGraphOrientation,
   selectNodeTextKey,
@@ -67,10 +68,15 @@ const GraphSection = ({
   showNodeLabel,
   showLinkLabel,
   showNodeText,
+  showLinkDirection,
   nodeTextKey,
   autoHideNodeText,
   orientation,
 }) => {
+  const getLinkArrowLength = React.useCallback(
+    () => (showLinkDirection ? 6 : 0),
+    [showLinkDirection],
+  );
   const graphRef = React.useRef();
   React.useEffect(
     () => {
@@ -161,7 +167,6 @@ const GraphSection = ({
         width={width}
         height={height}
         dagMode={orientation}
-        nodeColor={getColor}
         nodeVal={getRadius}
         nodeLabel={showNodeLabel ? objLabelCb : noOp}
         linkLabel={showLinkLabel ? objLabelCb : noOp}
@@ -173,6 +178,8 @@ const GraphSection = ({
         onNodeClick={clickNode}
         onNodeHover={hoverNode}
         onLinkHover={hoverLink}
+        linkDirectionalArrowRelPos={1}
+        linkDirectionalArrowLength={getLinkArrowLength}
       />
     </div>
   );
@@ -193,6 +200,7 @@ GraphSection.propTypes = {
   showNodeLabel: PropTypes.bool.isRequired,
   showLinkLabel: PropTypes.bool.isRequired,
   showNodeText: PropTypes.bool.isRequired,
+  showLinkDirection: PropTypes.bool.isRequired,
   nodeTextKey: PropTypes.string.isRequired,
   autoHideNodeText: PropTypes.bool.isRequired,
   orientation: PropTypes.string,
@@ -224,6 +232,7 @@ const mapStateToProps = state => {
   const showNodeLabel = selectShowNodeLabel(state);
   const showLinkLabel = selectShowLinkLabel(state);
   const showNodeText = selectShowNodeText(state);
+  const showLinkDirection = selectShowLinkDirection(state);
   const nodeTextKey = selectNodeTextKey(state);
   const autoHideNodeText = selectAutoHideNodeText(state);
   const orientation = selectGraphOrientation(state);
@@ -241,6 +250,7 @@ const mapStateToProps = state => {
     showNodeLabel,
     showLinkLabel,
     showNodeText,
+    showLinkDirection,
     nodeTextKey,
     autoHideNodeText,
     orientation,

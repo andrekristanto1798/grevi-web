@@ -18,6 +18,12 @@ export const toogleNodeText = prev => ({
   value: !prev,
 });
 
+export const toogleLinkDirection = prev => ({
+  type: SETTING_SET,
+  key: 'showLinkDirection',
+  value: !prev,
+});
+
 export const toogleAutoHideNodeText = prev => ({
   type: SETTING_SET,
   key: 'autoHideNodeText',
