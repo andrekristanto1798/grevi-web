@@ -101,9 +101,17 @@ export const getNodeIdClusterMap = (nodes, links, count) => {
   for (let i = 0; i < count; i += 1) {
     whisper.step();
   }
-  return nodes.reduce((acc, node) => {
-    return { ...acc, [node.id]: whisper.getClass(node.id) };
-  }, {});
+  const nodeMap = {};
+  let idx = 1;
+  whisper.forEachCluster(cluster => {
+    if (cluster == null) return;
+    const clusterName = `Cluster ${idx}`;
+    cluster.nodes.forEach(nodeId => {
+      nodeMap[nodeId] = clusterName;
+    });
+    idx += 1;
+  });
+  return nodeMap;
 };
 
 export const getNodeIdPageRankMap = (nodes, links) => {
