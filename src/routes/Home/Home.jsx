@@ -1,15 +1,12 @@
 import React from 'react';
 import { useWindowResize, useThrottledFn } from 'beautiful-react-hooks';
 // Components
-import { Accordion } from 'semantic-ui-react';
+import { Tab } from 'semantic-ui-react';
 import SplitPane from 'react-split-pane';
+import { VisualizationTab, DataTab, SettingTab } from './Home.parts';
 import LoadingIndicator from '../../components/LoadingIndicator';
 import GraphFileSection from './GraphFileSection';
 import GraphSection from './GraphSection';
-import ColoringByProperty from './ColoringByProperty';
-import { NodeTable, LinkTable } from './GraphTableSection';
-import RadiusByProperty from './RadiusByProperty';
-import SettingSection from './SettingSection';
 import EditNodeModal from '../../components/EditNodeModal';
 import EditLinkModal from '../../components/EditLinkModal';
 import DeleteNodeModal from '../../components/DeleteNodeModal';
@@ -17,39 +14,32 @@ import DeleteLinkModal from '../../components/DeleteLinkModal';
 // Styles
 import styles from './styles.scss';
 
-const accordionPanels = [
+const tabPanes = [
   {
-    key: 'setting',
-    title: 'Settings',
-    content: { content: <SettingSection /> },
+    menuItem: {
+      key: 'vis',
+      icon: 'line graph',
+      content: 'Visualization',
+    },
+    render: VisualizationTab,
   },
   {
-    key: 'coloring',
-    title: 'Coloring By Property',
-    content: { content: <ColoringByProperty /> },
+    menuItem: {
+      key: 'data',
+      icon: 'database',
+      content: 'Data',
+    },
+    render: DataTab,
   },
   {
-    key: 'radius',
-    title: 'Radius By Property',
-    content: { content: <RadiusByProperty /> },
-  },
-  {
-    key: 'node-table',
-    title: 'Graph Nodes Table',
-    content: { content: <NodeTable /> },
-  },
-  {
-    key: 'link-table',
-    title: 'Graph Links Table',
-    content: { content: <LinkTable /> },
+    menuItem: {
+      key: 'setting',
+      icon: 'settings',
+      content: 'Setting',
+    },
+    render: SettingTab,
   },
 ];
-
-// defaultActiveIndex ensures that all
-// accordionPanels will be opened by default
-const defaultActiveIndex = Array(accordionPanels.length)
-  .fill(0)
-  .map((_, idx) => idx);
 
 const Home = () => {
   const [leftPanelWidth, setLeftPanelWidth] = React.useState(600);
@@ -73,13 +63,10 @@ const Home = () => {
       >
         <div className={styles.leftPanelContainer}>
           <GraphFileSection />
-          <Accordion
-            fluid
-            styled
-            style={{ marginTop: 8 }}
-            panels={accordionPanels}
-            defaultActiveIndex={defaultActiveIndex}
-            exclusive={false}
+          <Tab
+            style={{ width: '100%' }}
+            menu={{ secondary: true, pointing: true }}
+            panes={tabPanes}
           />
         </div>
         <div className={styles.rightPanelContainer}>
