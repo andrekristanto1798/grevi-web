@@ -1,3 +1,4 @@
+import { forceCollide } from 'd3';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -100,6 +101,14 @@ const GraphSection = ({
       }
     },
     [data.nodes, focusedNode, focusedLink],
+  );
+  React.useEffect(
+    () => {
+      const fg = graphRef.current;
+      // Add collision and bounding box forces
+      fg.d3Force('collide', forceCollide(getRadius));
+    },
+    [getRadius],
   );
   const nodeCanvasObjectModeCb = React.useCallback(() => 'replace', []);
   const nodeCanvasDrawCb = React.useCallback(
