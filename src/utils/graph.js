@@ -108,6 +108,5 @@ export const getNodeIdClusterMap = (nodes, links, count) => {
 
 export const getNodeIdPageRankMap = (nodes, links) => {
   const graph = constructGraph(nodes, links);
-  const rank = pagerank(graph);
-  return rank;
+  return mapToThreeDecimals(pagerank(graph));
 };
