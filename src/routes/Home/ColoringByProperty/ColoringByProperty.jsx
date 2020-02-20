@@ -49,6 +49,11 @@ const ColoringByProperty = ({ nodeKeys, selectedKey, selectKey }) => {
         value: coloringActions.COLORING_SPECIAL.CLUSTERING,
         text: 'Node Clustering',
       },
+      {
+        key: coloringActions.COLORING_SPECIAL.PAGE_RANKING,
+        value: coloringActions.COLORING_SPECIAL.PAGE_RANKING,
+        text: 'Page Ranking',
+      },
     ],
     [nodeKeys],
   );

@@ -3,6 +3,7 @@ import { mapToThreeDecimals } from './objects';
 const createGraph = require('ngraph.graph');
 const centrality = require('ngraph.centrality');
 const createWhisper = require('ngraph.cw');
+const pagerank = require('ngraph.pagerank');
 
 export const getRandomPosition = () => ({
   x: Math.floor(Math.random() * 500),
@@ -103,4 +104,10 @@ export const getNodeIdClusterMap = (nodes, links, count) => {
   return nodes.reduce((acc, node) => {
     return { ...acc, [node.id]: whisper.getClass(node.id) };
   }, {});
+};
+
+export const getNodeIdPageRankMap = (nodes, links) => {
+  const graph = constructGraph(nodes, links);
+  const rank = pagerank(graph);
+  return rank;
 };

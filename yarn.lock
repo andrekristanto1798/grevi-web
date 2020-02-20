@@ -3231,6 +3231,10 @@ dot-prop@^4.1.0:
   dependencies:
     is-obj "^1.0.0"
 
+dotparser@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/dotparser/-/dotparser-0.4.0.tgz#e548dbd0a34e65c364a3d8ddd5113f516efbb90c"
+
 dtype@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/dtype/-/dtype-2.0.0.tgz#cd052323ce061444ecd2e8f5748f69a29be28434"
@@ -6847,6 +6851,10 @@ ngraph.cw@^2.0.0:
   dependencies:
     ngraph.random "0.0.1"
 
+ngraph.events@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/ngraph.events/-/ngraph.events-0.0.3.tgz#38f55316f3d207ad631ff94f6622ca8f2c0e87d0"
+
 ngraph.events@1.0.0, ngraph.events@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ngraph.events/-/ngraph.events-1.0.0.tgz#260b638f1d8b1394a10ce1dda9e5d9d9c85001b1"
@@ -6877,6 +6885,19 @@ ngraph.forcelayout@^1.0.0:
     ngraph.events "^1.0.0"
     ngraph.physics.simulator "^1.0.0"
 
+ngraph.fromdot@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/ngraph.fromdot/-/ngraph.fromdot-5.0.0.tgz#5973a637f33dcc4f080c7513bd457f176df6273e"
+  dependencies:
+    dotparser "^0.4.0"
+    ngraph.graph "18.0.0"
+
+ngraph.graph@18.0.0:
+  version "18.0.0"
+  resolved "https://registry.yarnpkg.com/ngraph.graph/-/ngraph.graph-18.0.0.tgz#f999131b1ea16bab110c0ba792bcf4925349c564"
+  dependencies:
+    ngraph.events "0.0.3"
+
 ngraph.graph@^19.0.0:
   version "19.0.1"
   resolved "https://registry.yarnpkg.com/ngraph.graph/-/ngraph.graph-19.0.1.tgz#aa1844971f39207878963a1c4642898c99dc2681"
@@ -6892,6 +6913,12 @@ ngraph.graph@^19.0.3:
 ngraph.merge@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ngraph.merge/-/ngraph.merge-1.0.0.tgz#d763cdfa48b1bbd4270ea246f06c9c8ff5d3477c"
+
+ngraph.pagerank@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/ngraph.pagerank/-/ngraph.pagerank-2.0.0.tgz#cfe1b373aa668b6f6926b4e660618c579f940dd0"
+  dependencies:
+    ngraph.fromdot "^5.0.0"
 
 ngraph.physics.primitives@^1.0.0:
   version "1.0.0"

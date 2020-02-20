@@ -74,6 +74,11 @@ const RadiusByProperty = ({
         value: radiusActions.RADIUS_SPECIAL.CLOSENESS,
         text: 'Node Closeness',
       },
+      {
+        key: radiusActions.RADIUS_SPECIAL.PAGE_RANKING,
+        value: radiusActions.RADIUS_SPECIAL.PAGE_RANKING,
+        text: 'Page Ranking',
+      },
     ],
     [nodeKeys],
   );

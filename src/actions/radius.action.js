@@ -12,6 +12,7 @@ import {
   getNodeIdDegreeMap,
   getNodeIdBetweennessMap,
   getNodeIdClosenessMap,
+  getNodeIdPageRankMap,
 } from '../utils/graph';
 
 export const RADIUS_SET = 'RADIUS_SET';
@@ -24,6 +25,7 @@ export const RADIUS_SPECIAL = {
   DEGREE: 'DEGREE',
   BETWEENNESS: 'BETWEENNESS',
   CLOSENESS: 'CLOSENESS',
+  PAGE_RANKING: 'PAGE_RANKING',
 };
 
 const getNodeValuesByKey = (nodes, links, key) => {
@@ -50,6 +52,16 @@ const getNodeValuesByKey = (nodes, links, key) => {
   }
   case RADIUS_SPECIAL.CLOSENESS: {
     const nodeIdValuesMap = getNodeIdClosenessMap(nodes, links);
+    const values = uniq(Object.values(nodeIdValuesMap));
+    return [
+      Math.min(...values),
+      Math.max(...values),
+      nodeIdValuesMap,
+      sortNumbers(values),
+    ];
+  }
+  case RADIUS_SPECIAL.PAGE_RANKING: {
+    const nodeIdValuesMap = getNodeIdPageRankMap(nodes, links);
     const values = uniq(Object.values(nodeIdValuesMap));
     return [
       Math.min(...values),
