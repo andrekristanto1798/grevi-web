@@ -29,7 +29,7 @@ function hslToHex(h, s, l) {
 }
 
 function makeColor(colorNum, colors) {
-  const color = (colorNum * (300 / colors)) % 360;
+  const color = (colorNum * (280 / colors)) % 360;
   return hslToHex(color, 100, 50);
 }
 
