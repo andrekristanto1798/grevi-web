@@ -1,5 +1,5 @@
 const sampleGraph = require('./sample_graph.json');
-const clusterGraph = require('./cluster_graph.json');
+const covid19sg = require('./covid_19_sg.json');
 const d3Deps = require('./d3_deps.json');
 
 export const graphFileList = [
@@ -9,9 +9,9 @@ export const graphFileList = [
     desc: 'It is good to play around',
   },
   {
-    name: 'Clustered Graph.json',
-    graph: clusterGraph,
-    desc: 'It has clustered graphs',
+    name: 'COVID-19 Singapore.json',
+    graph: covid19sg,
+    desc: 'COVID-19 Cluster in Singapore',
   },
   {
     name: 'D3 Dependencies.json',

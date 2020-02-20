@@ -1,0 +1,743 @@
+{
+  "nodes": [
+    {
+      "id": "CLUSTER-0",
+      "age": 0,
+      "gender": "",
+      "name": "ROOT"
+    },
+    {
+      "id": "CLUSTER-1",
+      "age": 0,
+      "gender": "",
+      "name": "GRACE ASSEMBLY OF GOD CHURCH"
+    },
+    {
+      "id": "CASE-48",
+      "gender": "MALE",
+      "age": 34,
+      "information": "",
+      "name": "CASE-48"
+    },
+    {
+      "id": "CASE-49",
+      "gender": "MALE",
+      "age": 46,
+      "information": "",
+      "name": "CASE-49"
+    },
+    {
+      "id": "CASE-51",
+      "gender": "MALE",
+      "age": 48,
+      "information": "",
+      "name": "CASE-51"
+    },
+    {
+      "id": "CASE-53",
+      "gender": "MALE",
+      "age": 54,
+      "information": "NUS PROFESSOR",
+      "name": "CASE-53"
+    },
+    {
+      "id": "CASE-54",
+      "gender": "FEMALE",
+      "age": 55,
+      "information": "",
+      "name": "CASE-54"
+    },
+    {
+      "id": "CASE-57",
+      "gender": "MALE",
+      "age": 26,
+      "information": "",
+      "name": "CASE-57"
+    },
+    {
+      "id": "CASE-58",
+      "gender": "MALE",
+      "age": 55,
+      "information": "",
+      "name": "CASE-58"
+    },
+    {
+      "id": "CASE-60",
+      "gender": "FEMALE",
+      "age": 51,
+      "information": "",
+      "name": "CASE-60"
+    },
+    {
+      "id": "CASE-61",
+      "gender": "MALE",
+      "age": 57,
+      "information": "",
+      "name": "CASE-61"
+    },
+    {
+      "id": "CASE-62",
+      "gender": "FEMALE",
+      "age": 44,
+      "information": "",
+      "name": "CASE-62"
+    },
+    {
+      "id": "CASE-63",
+      "gender": "FEMALE",
+      "age": 54,
+      "information": "",
+      "name": "CASE-63"
+    },
+    {
+      "id": "CASE-66",
+      "gender": "MALE",
+      "age": 28,
+      "information": "",
+      "name": "CASE-66"
+    },
+    {
+      "id": "CASE-67",
+      "gender": "FEMALE",
+      "age": 56,
+      "information": "",
+      "name": "CASE-67"
+    },
+    {
+      "id": "CASE-73",
+      "gender": "MALE",
+      "age": 43,
+      "information": "SAF REGULAR SERVICEMAN",
+      "name": "CASE-73"
+    },
+    {
+      "id": "CASE-74",
+      "gender": "MALE",
+      "age": 29,
+      "information": "",
+      "name": "CASE-74"
+    },
+    {
+      "id": "CASE-78",
+      "gender": "FEMALE",
+      "age": 57,
+      "information": "",
+      "name": "CASE-78"
+    },
+    {
+      "id": "CASE-81",
+      "gender": "FEMALE",
+      "age": 50,
+      "information": "",
+      "name": "CASE-81"
+    },
+    {
+      "id": "CLUSTER-2",
+      "age": 0,
+      "gender": "",
+      "name": "THE LIFE CHURCH AND MISSIONS SINGAPORE"
+    },
+    {
+      "id": "CASE-8",
+      "gender": "FEMALE",
+      "age": 56,
+      "information": "CHINESE NATIONAL",
+      "name": "CASE-8"
+    },
+    {
+      "id": "CASE-9",
+      "gender": "MALE",
+      "age": 56,
+      "information": "CHINESE NATIONAL",
+      "name": "CASE-9"
+    },
+    {
+      "id": "CASE-31",
+      "gender": "MALE",
+      "age": 53,
+      "information": "",
+      "name": "CASE-31"
+    },
+    {
+      "id": "CASE-33",
+      "gender": "FEMALE",
+      "age": 39,
+      "information": "",
+      "name": "CASE-33"
+    },
+    {
+      "id": "CASE-38",
+      "gender": "FEMALE",
+      "age": 52,
+      "information": "",
+      "name": "CASE-38"
+    },
+    {
+      "id": "CLUSTER-3",
+      "age": 0,
+      "gender": "",
+      "name": "YONG THAI HANG MEDICAL PRODUCTS SHOP"
+    },
+    {
+      "id": "CASE-19",
+      "gender": "FEMALE",
+      "age": 28,
+      "information": "",
+      "name": "CASE-19"
+    },
+    {
+      "id": "CASE-20",
+      "gender": "FEMALE",
+      "age": 48,
+      "information": "",
+      "name": "CASE-20"
+    },
+    {
+      "id": "CASE-24",
+      "gender": "FEMALE",
+      "age": 32,
+      "information": "TOUR GUIDE",
+      "name": "CASE-24"
+    },
+    {
+      "id": "CASE-34",
+      "gender": "FEMALE",
+      "age": 40,
+      "information": "",
+      "name": "CASE-34"
+    },
+    {
+      "id": "CASE-40",
+      "gender": "MALE",
+      "age": 36,
+      "information": "",
+      "name": "CASE-40"
+    },
+    {
+      "id": "CLUSTER-4",
+      "age": 0,
+      "gender": "",
+      "name": "GRAND HYATT SINGAPORE"
+    },
+    {
+      "id": "CASE-30",
+      "gender": "MALE",
+      "age": 27,
+      "information": "",
+      "name": "CASE-30"
+    },
+    {
+      "id": "CASE-36",
+      "gender": "FEMALE",
+      "age": 38,
+      "information": "",
+      "name": "CASE-36"
+    },
+    {
+      "id": "CASE-39",
+      "gender": "MALE",
+      "age": 51,
+      "information": "",
+      "name": "CASE-39"
+    },
+    {
+      "id": "CLUSTER-5",
+      "age": 0,
+      "gender": "",
+      "name": "SELETAR AEROSPACE HEIGHTS CONSTRUCTION SITE"
+    },
+    {
+      "id": "CASE-42",
+      "gender": "MALE",
+      "age": 39,
+      "information": "BANGLADESHI",
+      "name": "CASE-42"
+    },
+    {
+      "id": "CASE-47",
+      "gender": "MALE",
+      "age": 39,
+      "information": "BANGLADESHI",
+      "name": "CASE-47"
+    },
+    {
+      "id": "CASE-52",
+      "gender": "MALE",
+      "age": 37,
+      "information": "BANGLADESHI",
+      "name": "CASE-52"
+    },
+    {
+      "id": "CASE-56",
+      "gender": "MALE",
+      "age": 30,
+      "information": "BANGLADESHI",
+      "name": "CASE-56"
+    },
+    {
+      "id": "CASE-69",
+      "gender": "MALE",
+      "age": 26,
+      "information": "BANGLADESHI",
+      "name": "CASE-69"
+    },
+    {
+      "id": "CLUSTER-6",
+      "age": 0,
+      "gender": "",
+      "name": "OTHERS"
+    },
+    {
+      "id": "CASE-50",
+      "gender": "MALE",
+      "age": 62,
+      "information": "DBS",
+      "name": "CASE-50"
+    },
+    {
+      "id": "CASE-59",
+      "gender": "MALE",
+      "age": 61,
+      "information": "WORKS AT PRIVATE HOSPITAL",
+      "name": "CASE-59"
+    },
+    {
+      "id": "CASE-41",
+      "gender": "MALE",
+      "age": 71,
+      "information": "",
+      "name": "CASE-41"
+    },
+    {
+      "id": "CASE-13",
+      "gender": "FEMALE",
+      "age": 73,
+      "information": "CHINESE NATIONAL",
+      "name": "CASE-13"
+    },
+    {
+      "id": "CASE-26",
+      "gender": "FEMALE",
+      "age": 42,
+      "information": "CHINESE NATIONAL",
+      "name": "CASE-26"
+    },
+    {
+      "id": "CASE-68",
+      "gender": "FEMALE",
+      "age": 79,
+      "information": "FAMILY MEMBER",
+      "name": "CASE-68"
+    },
+    {
+      "id": "CASE-70",
+      "gender": "FEMALE",
+      "age": 27,
+      "information": "FAMILY MEMBER",
+      "name": "CASE-70"
+    },
+    {
+      "id": "CASE-71",
+      "gender": "MALE",
+      "age": 25,
+      "information": "CONTACT",
+      "name": "CASE-71"
+    },
+    {
+      "id": "CASE-80",
+      "gender": "FEMALE",
+      "age": 38,
+      "information": "LINKED",
+      "name": "CASE-80"
+    },
+    {
+      "id": "CASE-21",
+      "gender": "FEMALE",
+      "age": 21,
+      "information": "MAID",
+      "name": "CASE-21"
+    },
+    {
+      "id": "CASE-27",
+      "gender": "MALE",
+      "age": 45,
+      "information": "PRIVATE-HIRE DRIVER",
+      "name": "CASE-27"
+    },
+    {
+      "id": "CASE-28",
+      "gender": "MALE",
+      "age": 0.5,
+      "information": "BABY SON",
+      "name": "CASE-28"
+    },
+    {
+      "id": "CASE-25",
+      "gender": "MALE",
+      "age": 40,
+      "information": "HUSBAND",
+      "name": "CASE-25"
+    },
+    {
+      "id": "CASE-55",
+      "gender": "MALE",
+      "age": 30,
+      "information": "FAMILY MEMBER",
+      "name": "CASE-55"
+    },
+    {
+      "id": "CASE-65",
+      "gender": "FEMALE",
+      "age": 61,
+      "information": "FAMILY MEMBER",
+      "name": "CASE-65"
+    },
+    {
+      "id": "CASE-77",
+      "gender": "MALE",
+      "age": 35,
+      "information": "CONTACT",
+      "name": "CASE-77"
+    },
+    {
+      "id": "CASE-72",
+      "gender": "MALE",
+      "age": 40,
+      "information": "CONTACT",
+      "name": "CASE-72"
+    },
+    {
+      "id": "CASE-79",
+      "gender": "FEMALE",
+      "age": 35,
+      "information": "FAMILY MEMBER",
+      "name": "CASE-79"
+    },
+    {
+      "id": "CASE-75",
+      "gender": "FEMALE",
+      "age": 71,
+      "information": "FAMILY MEMBER",
+      "name": "CASE-75"
+    },
+    {
+      "id": "CASE-44",
+      "gender": "MALE",
+      "age": 37,
+      "information": "CERTIS CISCO OFFICER",
+      "name": "CASE-44"
+    }
+  ],
+  "links": [
+    {
+      "id": "1",
+      "target": "CASE-48",
+      "source": "CLUSTER-1"
+    },
+    {
+      "id": "2",
+      "target": "CASE-49",
+      "source": "CLUSTER-1"
+    },
+    {
+      "id": "3",
+      "target": "CASE-51",
+      "source": "CLUSTER-1"
+    },
+    {
+      "id": "4",
+      "target": "CASE-53",
+      "source": "CLUSTER-1"
+    },
+    {
+      "id": "5",
+      "target": "CASE-54",
+      "source": "CLUSTER-1"
+    },
+    {
+      "id": "6",
+      "target": "CASE-57",
+      "source": "CLUSTER-1"
+    },
+    {
+      "id": "7",
+      "target": "CASE-58",
+      "source": "CLUSTER-1"
+    },
+    {
+      "id": "8",
+      "target": "CASE-60",
+      "source": "CLUSTER-1"
+    },
+    {
+      "id": "9",
+      "target": "CASE-61",
+      "source": "CLUSTER-1"
+    },
+    {
+      "id": "10",
+      "target": "CASE-62",
+      "source": "CLUSTER-1"
+    },
+    {
+      "id": "11",
+      "target": "CASE-63",
+      "source": "CLUSTER-1"
+    },
+    {
+      "id": "12",
+      "target": "CASE-66",
+      "source": "CLUSTER-1"
+    },
+    {
+      "id": "13",
+      "target": "CASE-67",
+      "source": "CLUSTER-1"
+    },
+    {
+      "id": "14",
+      "target": "CASE-73",
+      "source": "CLUSTER-1"
+    },
+    {
+      "id": "15",
+      "target": "CASE-74",
+      "source": "CLUSTER-1"
+    },
+    {
+      "id": "16",
+      "target": "CASE-78",
+      "source": "CLUSTER-1"
+    },
+    {
+      "id": "17",
+      "target": "CASE-81",
+      "source": "CLUSTER-1"
+    },
+    {
+      "id": "18",
+      "target": "CASE-8",
+      "source": "CLUSTER-2"
+    },
+    {
+      "id": "19",
+      "target": "CASE-9",
+      "source": "CLUSTER-2"
+    },
+    {
+      "id": "20",
+      "target": "CASE-31",
+      "source": "CLUSTER-2"
+    },
+    {
+      "id": "21",
+      "target": "CASE-33",
+      "source": "CLUSTER-2"
+    },
+    {
+      "id": "22",
+      "target": "CASE-38",
+      "source": "CLUSTER-2"
+    },
+    {
+      "id": "23",
+      "target": "CASE-19",
+      "source": "CLUSTER-3"
+    },
+    {
+      "id": "24",
+      "target": "CASE-20",
+      "source": "CLUSTER-3"
+    },
+    {
+      "id": "25",
+      "target": "CASE-24",
+      "source": "CLUSTER-3"
+    },
+    {
+      "id": "26",
+      "target": "CASE-34",
+      "source": "CLUSTER-3"
+    },
+    {
+      "id": "27",
+      "target": "CASE-40",
+      "source": "CLUSTER-3"
+    },
+    {
+      "id": "28",
+      "target": "CASE-30",
+      "source": "CLUSTER-4"
+    },
+    {
+      "id": "29",
+      "target": "CASE-36",
+      "source": "CLUSTER-4"
+    },
+    {
+      "id": "30",
+      "target": "CASE-39",
+      "source": "CLUSTER-4"
+    },
+    {
+      "id": "31",
+      "target": "CASE-42",
+      "source": "CLUSTER-5"
+    },
+    {
+      "id": "32",
+      "target": "CASE-47",
+      "source": "CLUSTER-5"
+    },
+    {
+      "id": "33",
+      "target": "CASE-52",
+      "source": "CLUSTER-5"
+    },
+    {
+      "id": "34",
+      "target": "CASE-56",
+      "source": "CLUSTER-5"
+    },
+    {
+      "id": "35",
+      "target": "CASE-69",
+      "source": "CLUSTER-5"
+    },
+    {
+      "id": "36",
+      "target": "CASE-50",
+      "source": "CLUSTER-6"
+    },
+    {
+      "id": "37",
+      "target": "CASE-59",
+      "source": "CLUSTER-6"
+    },
+    {
+      "id": "38",
+      "target": "CASE-41",
+      "source": "CLUSTER-6"
+    },
+    {
+      "id": "39",
+      "target": "CASE-13",
+      "source": "CLUSTER-6"
+    },
+    {
+      "id": "40",
+      "target": "CASE-26",
+      "source": "CLUSTER-6"
+    },
+    {
+      "id": "41",
+      "target": "CASE-68",
+      "source": "CASE-66"
+    },
+    {
+      "id": "42",
+      "target": "CASE-70",
+      "source": "CASE-66"
+    },
+    {
+      "id": "43",
+      "target": "CASE-71",
+      "source": "CASE-66"
+    },
+    {
+      "id": "44",
+      "target": "CASE-80",
+      "source": "CASE-66"
+    },
+    {
+      "id": "45",
+      "target": "CASE-21",
+      "source": "CASE-19"
+    },
+    {
+      "id": "46",
+      "target": "CASE-27",
+      "source": "CASE-19"
+    },
+    {
+      "id": "47",
+      "target": "CASE-28",
+      "source": "CASE-19"
+    },
+    {
+      "id": "48",
+      "target": "CASE-25",
+      "source": "CASE-24"
+    },
+    {
+      "id": "49",
+      "target": "CASE-55",
+      "source": "CASE-50"
+    },
+    {
+      "id": "50",
+      "target": "CASE-65",
+      "source": "CASE-50"
+    },
+    {
+      "id": "51",
+      "target": "CASE-77",
+      "source": "CASE-50"
+    },
+    {
+      "id": "52",
+      "target": "CASE-72",
+      "source": "CASE-59"
+    },
+    {
+      "id": "53",
+      "target": "CASE-79",
+      "source": "CASE-72"
+    },
+    {
+      "id": "54",
+      "target": "CASE-75",
+      "source": "CASE-41"
+    },
+    {
+      "id": "55",
+      "target": "CASE-44",
+      "source": "CASE-13"
+    },
+    {
+      "id": "56",
+      "target": "CASE-44",
+      "source": "CASE-26"
+    },
+    {
+      "id": "57",
+      "target": "CLUSTER-1",
+      "source": "CLUSTER-0"
+    },
+    {
+      "id": "58",
+      "target": "CLUSTER-2",
+      "source": "CLUSTER-0"
+    },
+    {
+      "id": "59",
+      "target": "CLUSTER-3",
+      "source": "CLUSTER-0"
+    },
+    {
+      "id": "60",
+      "target": "CLUSTER-4",
+      "source": "CLUSTER-0"
+    },
+    {
+      "id": "61",
+      "target": "CLUSTER-5",
+      "source": "CLUSTER-0"
+    },
+    {
+      "id": "62",
+      "target": "CLUSTER-6",
+      "source": "CLUSTER-0"
+    }
+  ]
+}
