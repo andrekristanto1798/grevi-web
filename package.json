@@ -33,6 +33,7 @@
     "ngraph.centrality": "^2.0.0",
     "ngraph.cw": "^2.0.0",
     "ngraph.graph": "^19.0.3",
+    "ngraph.kruskal": "^1.0.0",
     "ngraph.pagerank": "^2.0.0",
     "prop-types": "15.7.0",
     "query-string": "^6.4.2",

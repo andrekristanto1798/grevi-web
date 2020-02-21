@@ -6851,6 +6851,10 @@ ngraph.cw@^2.0.0:
   dependencies:
     ngraph.random "0.0.1"
 
+ngraph.disjoint-set@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ngraph.disjoint-set/-/ngraph.disjoint-set-1.0.0.tgz#a450282b0cd6460b7a5f918ae37d931f513ccb38"
+
 ngraph.events@0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/ngraph.events/-/ngraph.events-0.0.3.tgz#38f55316f3d207ad631ff94f6622ca8f2c0e87d0"
@@ -6909,6 +6913,12 @@ ngraph.graph@^19.0.3:
   resolved "https://registry.yarnpkg.com/ngraph.graph/-/ngraph.graph-19.0.3.tgz#d9b28c157578478526d4aa18a35a97955fcf5623"
   dependencies:
     ngraph.events "^1.2.0"
+
+ngraph.kruskal@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ngraph.kruskal/-/ngraph.kruskal-1.0.0.tgz#a41ac51890697c387f2b11dd5100a600440bdf00"
+  dependencies:
+    ngraph.disjoint-set "^1.0.0"
 
 ngraph.merge@^1.0.0:
   version "1.0.0"
