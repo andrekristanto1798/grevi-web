@@ -5,6 +5,7 @@ import { Accordion } from 'semantic-ui-react';
 import ColoringByProperty from './ColoringByProperty';
 import RadiusByProperty from './RadiusByProperty';
 import MST from './MST';
+import ShortestPath from './ShortestPath';
 // Data
 import { NodeTable, LinkTable } from './GraphTableSection';
 // Setting
@@ -25,6 +26,11 @@ const visualizationPanels = [
     key: 'mst',
     title: 'Minimum Spanning Tree',
     content: { content: <MST /> },
+  },
+  {
+    key: 'shortest-path',
+    title: 'ShortestPath',
+    content: { content: <ShortestPath /> },
   },
 ];
 

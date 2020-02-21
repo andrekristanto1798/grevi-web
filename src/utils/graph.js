@@ -5,6 +5,7 @@ const centrality = require('ngraph.centrality');
 const createWhisper = require('ngraph.cw');
 const pagerank = require('ngraph.pagerank');
 const kruskal = require('ngraph.kruskal');
+const shortestPath = require('ngraph.path');
 
 export const getRandomPosition = () => ({
   x: Math.floor(Math.random() * 500),
@@ -143,4 +144,35 @@ export const getMstGraph = (nodes, links, weightFn) => {
     newLinks.push(correspondingLink);
   });
   return { nodes, links: newLinks };
+};
+
+export const getShortestPathGraph = (
+  nodes,
+  links,
+  fromNode,
+  toNode,
+  weightFn,
+) => {
+  const graph = constructGraph(nodes, links);
+  const pathFinder = shortestPath.aStar(graph, {
+    distance: (f, t, link) => weightFn(link),
+  });
+  const nodePaths = pathFinder.find(fromNode, toNode);
+  const newNodesId = nodePaths.map(node => node.id);
+  const newLinksId = [];
+  nodePaths.forEach((node, idx) => {
+    if (idx + 1 === nodePaths.length) return;
+    const fromId = node.id;
+    const toId = nodePaths[idx + 1].id;
+    const linkId = node.links.find(
+      link =>
+        (link.fromId === fromId && link.toId === toId) ||
+        (link.fromId === toId && link.toId === fromId),
+    ).data;
+    newLinksId.push(linkId);
+  });
+  return {
+    nodes: nodes.filter(node => newNodesId.includes(node.id)),
+    links: links.filter(link => newLinksId.includes(link.id)),
+  };
 };

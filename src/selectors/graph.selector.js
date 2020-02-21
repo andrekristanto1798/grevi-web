@@ -3,6 +3,10 @@ import pick from 'lodash/pick';
 import { ADD_LINK_MODE } from '../components/EditingTools';
 import { selectMstGraph, selectIsMstApplied } from './mst.selector';
 import { getLinkTarget, getLinkSource } from '../utils/graph';
+import {
+  selectShortestPathGraph,
+  selectIsShortestPathApplied,
+} from './shortestPath.selector';
 
 const selectGraphData = state => state.graph.data;
 
@@ -109,21 +113,27 @@ export const selectSearchAsFilter = createSelector(
 export const selectValidData = createSelector(
   selectGraphData,
   selectMstGraph,
+  selectShortestPathGraph,
   selectNodeKeys,
   selectLinkKeys,
   selectNodeSearchValue,
   selectLinkSearchValue,
   selectIsMstApplied,
+  selectIsShortestPathApplied,
   (
     graphData,
     mstData,
+    shortestPathGraph,
     nodeDataKey,
     linkDataKey,
     nodeSearchValue,
     linkSearchValue,
     isMstApplied,
+    isShortestPathApplied,
   ) => {
-    const data = isMstApplied ? mstData : graphData;
+    let data = graphData;
+    if (isMstApplied) data = mstData;
+    if (isShortestPathApplied) data = shortestPathGraph;
     if (nodeSearchValue === '' && linkSearchValue === '') return data;
     const nodeRegex = new RegExp(nodeSearchValue, 'i');
     const linkRegex = new RegExp(linkSearchValue, 'i');
@@ -160,11 +170,23 @@ export const selectVisualizedGraphData = createSelector(
   selectGraphData,
   selectValidData,
   selectMstGraph,
+  selectShortestPathGraph,
   selectSearchAsFilter,
   selectIsMstApplied,
-  (graphData, validData, mstGraph, searchAsFilter, isMstApplied) => {
+  selectIsShortestPathApplied,
+  (
+    graphData,
+    validData,
+    mstGraph,
+    shortestPathGraph,
+    searchAsFilter,
+    isMstApplied,
+    isShortestPathApplied,
+  ) => {
     if (searchAsFilter && isMstApplied) return validData;
+    if (searchAsFilter && isShortestPathApplied) return validData;
     if (isMstApplied) return mstGraph;
+    if (isShortestPathApplied) return shortestPathGraph;
     return graphData;
   },
 );

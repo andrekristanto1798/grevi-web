@@ -2,18 +2,18 @@ import {
   selectGraphNodes,
   selectGraphLinks,
 } from '../selectors/graph.selector';
-import { getMstGraph } from '../utils/graph';
-import { cancelShortestPath } from './shortestPath.action';
+import { getShortestPathGraph } from '../utils/graph';
+import { selectKey as selectMstKey } from './mst.action';
 
-export const MST_SELECT_KEY = 'MST_SELECT_KEY';
-export const MST_RESET_KEY = 'MST_RESET_KEY';
+export const SHORTEST_PATH_APPLY = 'SHORTEST_PATH_APPLY';
+export const SHORTEST_PATH_CANCEL = 'SHORTEST_PATH_CANCEL';
 
-export const MST_UNIFORM_WEIGHT = 'MST_UNIFORM_WEIGHT';
+export const SHORTEST_PATH_UNIFORM_WEIGHT = 'SHORTEST_PATH_UNIFORM_WEIGHT';
 
 const defaultWeightFn = () => 1;
 
 const getWeightFn = (links, key) => {
-  if (key === MST_UNIFORM_WEIGHT) return [defaultWeightFn, null];
+  if (key === SHORTEST_PATH_UNIFORM_WEIGHT) return [defaultWeightFn, null];
   try {
     const map = links.reduce((acc, val) => {
       const valNumber = Number(val[key]);
@@ -30,22 +30,28 @@ const getWeightFn = (links, key) => {
   }
 };
 
-export const selectKey = key => (dispatch, getState) => {
-  if (key === null) {
-    dispatch({ type: MST_RESET_KEY });
-    return;
-  }
-  // need to reset shortest path graph
-  dispatch(cancelShortestPath());
+export const applyShortestPath = (fromNode, toNode, key) => (
+  dispatch,
+  getState,
+) => {
+  // need to reset mst graph
+  dispatch(selectMstKey(null));
   const state = getState();
   const nodes = selectGraphNodes(state);
   const links = selectGraphLinks(state);
   const [weightFn, error] = getWeightFn(links, key);
-  const mstGraph = getMstGraph(nodes, links, weightFn);
+  const shortestPathGraph = getShortestPathGraph(
+    nodes,
+    links,
+    fromNode,
+    toNode,
+    weightFn,
+  );
   dispatch({
-    type: MST_SELECT_KEY,
-    selectedKey: key,
-    mstGraph,
+    type: SHORTEST_PATH_APPLY,
+    shortestPathGraph,
     error,
   });
 };
+
+export const cancelShortestPath = () => ({ type: SHORTEST_PATH_CANCEL });
