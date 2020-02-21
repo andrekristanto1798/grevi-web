@@ -155,3 +155,16 @@ export const selectValidData = createSelector(
     return { nodes: validNodes, links: validLinks };
   },
 );
+
+export const selectVisualizedGraphData = createSelector(
+  selectGraphData,
+  selectValidData,
+  selectMstGraph,
+  selectSearchAsFilter,
+  selectIsMstApplied,
+  (graphData, validData, mstGraph, searchAsFilter, isMstApplied) => {
+    if (searchAsFilter && isMstApplied) return validData;
+    if (isMstApplied) return mstGraph;
+    return graphData;
+  },
+);

@@ -9,7 +9,6 @@ import * as graphAction from '../../../actions/graph.action';
 import EditingTools from '../../../components/EditingTools';
 // Selectors
 import {
-  selectGraphDataJS,
   selectGraphMode,
   selectIsAddLinkMode,
   selectClickedNodeId,
@@ -17,12 +16,10 @@ import {
   selectHoveredLinkId,
   selectGraphFocusedNode,
   selectGraphFocusedLink,
-  selectSearchAsFilter,
-  selectValidData,
+  selectVisualizedGraphData,
 } from '../../../selectors/graph.selector';
 import { selectGetColor } from '../../../selectors/coloring.selector';
 import { selectGetRadius } from '../../../selectors/radius.selector';
-import { selectIsMstApplied } from '../../../selectors/mst.selector';
 import {
   selectShowNodeLabel,
   selectShowLinkLabel,
@@ -228,12 +225,7 @@ GraphSection.propTypes = {
 const mapStateToProps = state => {
   const mode = selectGraphMode(state);
   const isAddLinkMode = selectIsAddLinkMode(state);
-  const searchAsFilter = selectSearchAsFilter(state);
-  const isMstApplied = selectIsMstApplied(state);
-  const data =
-    searchAsFilter || isMstApplied // if search as filter or mst applied
-      ? selectValidData(state) // then get the graph data from valid data
-      : selectGraphDataJS(state);
+  const data = selectVisualizedGraphData(state);
   const clickedNodeId = selectClickedNodeId(state);
   const hoveredNodeId = selectHoveredNodeId(state);
   const hoveredLinkId = selectHoveredLinkId(state);
