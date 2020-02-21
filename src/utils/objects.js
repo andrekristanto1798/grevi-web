@@ -1,5 +1,6 @@
 import omit from 'lodash/omit';
 import uniq from 'lodash/uniq';
+import { getLinkSource, getLinkTarget } from './graph';
 
 export const QUALITATIVE_TYPE = 'qualitative_type';
 export const QUANTATIVE_TYPE = 'quantative_type';
@@ -84,8 +85,8 @@ export const cleanLinksFromIgnoredKeys = links =>
   links.map(cleanFromIgnoredKeys).map(link => ({
     ...link,
     id: `${link.id}`,
-    source: `${normalizeObjectId(link, 'source')}`,
-    target: `${normalizeObjectId(link, 'target')}`,
+    source: `${getLinkSource(link)}`,
+    target: `${getLinkTarget(link)}`,
   }));
 
 export const sortNumbers = (numbers, desc = false) => {

@@ -1,9 +1,10 @@
-import { mapToThreeDecimals } from './objects';
+import { mapToThreeDecimals, normalizeObjectId } from './objects';
 
 const createGraph = require('ngraph.graph');
 const centrality = require('ngraph.centrality');
 const createWhisper = require('ngraph.cw');
 const pagerank = require('ngraph.pagerank');
+const kruskal = require('ngraph.kruskal');
 
 export const getRandomPosition = () => ({
   x: Math.floor(Math.random() * 500),
@@ -38,6 +39,9 @@ const getNextId = list => {
   return `${nextId}`;
 };
 
+export const getLinkSource = link => normalizeObjectId(link, 'source');
+export const getLinkTarget = link => normalizeObjectId(link, 'target');
+
 export const getNewNode = currentNodeList => {
   return { id: getNextId(currentNodeList) };
 };
@@ -49,9 +53,10 @@ export const getNewLink = (linkList, source, target) => {
 export const isLinkDuplicate = (links, sourceId, targetId) => {
   const duplicatedLinks = links.filter(
     link =>
-      (link.source.id === sourceId && link.target.id === targetId) ||
-      (link.target.id === sourceId && link.source.id === targetId),
+      (getLinkSource(link) === sourceId && getLinkSource(link) === targetId) ||
+      (getLinkTarget(link) === sourceId && getLinkTarget(link) === targetId),
   );
+
   return duplicatedLinks.length > 0;
 };
 
@@ -59,8 +64,8 @@ export const editLinksWithNewNode = (links, prevNodeId, newNodeId) => {
   if (prevNodeId === newNodeId) return links;
   const newLinks = links.map(link => {
     const newLink = { ...link };
-    if (link.source.id === prevNodeId) newLink.source.id = newNodeId;
-    if (link.target.id === prevNodeId) newLink.target.id = newNodeId;
+    if (getLinkSource(link) === prevNodeId) newLink.source.id = newNodeId;
+    if (getLinkTarget(link) === prevNodeId) newLink.target.id = newNodeId;
     return newLink;
   });
   return newLinks;
@@ -68,7 +73,7 @@ export const editLinksWithNewNode = (links, prevNodeId, newNodeId) => {
 
 export const removeLinksWithNode = (links, nodeId) => {
   const newLinks = links.filter(
-    link => !(link.source.id === nodeId || link.target.id === nodeId),
+    link => !(getLinkSource(link) === nodeId || getLinkTarget(link) === nodeId),
   );
   return newLinks;
 };
@@ -76,7 +81,11 @@ export const removeLinksWithNode = (links, nodeId) => {
 export const constructGraph = (nodes, links) => {
   const graph = createGraph();
   nodes.forEach(node => graph.addNode(node.id));
-  links.forEach(link => graph.addLink(link.source.id, link.target.id));
+  links.forEach(link => {
+    const sourceId = getLinkSource(link);
+    const targetId = getLinkTarget(link);
+    graph.addLink(sourceId, targetId, link.id);
+  });
   return graph;
 };
 
@@ -117,4 +126,21 @@ export const getNodeIdClusterMap = (nodes, links, count) => {
 export const getNodeIdPageRankMap = (nodes, links) => {
   const graph = constructGraph(nodes, links);
   return mapToThreeDecimals(pagerank(graph));
+};
+
+export const getMstGraph = (nodes, links, weightFn) => {
+  const graph = constructGraph(nodes, links);
+  const mstPath = kruskal(graph, weightFn);
+  const linkMap = links.reduce((acc, link) => {
+    const sourceId = getLinkSource(link);
+    const targetId = getLinkTarget(link);
+    const key = `${sourceId}-${targetId}`;
+    return { ...acc, [key]: link };
+  }, {});
+  const newLinks = [];
+  mstPath.forEach(path => {
+    const correspondingLink = linkMap[`${path.fromId}-${path.toId}`];
+    newLinks.push(correspondingLink);
+  });
+  return { nodes, links: newLinks };
 };

@@ -1,0 +1,16 @@
+@import 'base.scss';
+
+.mst {
+  &__container {
+    width: 100%;
+  }
+
+  &__inputContainer {
+    @extend %flexRow;
+    width: 100%;
+
+    >* {
+      margin: 0 4px 0 0 !important;
+    }
+  }
+}

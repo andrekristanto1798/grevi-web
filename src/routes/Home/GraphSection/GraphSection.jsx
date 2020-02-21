@@ -22,6 +22,7 @@ import {
 } from '../../../selectors/graph.selector';
 import { selectGetColor } from '../../../selectors/coloring.selector';
 import { selectGetRadius } from '../../../selectors/radius.selector';
+import { selectIsMstApplied } from '../../../selectors/mst.selector';
 import {
   selectShowNodeLabel,
   selectShowLinkLabel,
@@ -228,9 +229,11 @@ const mapStateToProps = state => {
   const mode = selectGraphMode(state);
   const isAddLinkMode = selectIsAddLinkMode(state);
   const searchAsFilter = selectSearchAsFilter(state);
-  const data = !searchAsFilter
-    ? selectGraphDataJS(state)
-    : selectValidData(state);
+  const isMstApplied = selectIsMstApplied(state);
+  const data =
+    searchAsFilter || isMstApplied // if search as filter or mst applied
+      ? selectValidData(state) // then get the graph data from valid data
+      : selectGraphDataJS(state);
   const clickedNodeId = selectClickedNodeId(state);
   const hoveredNodeId = selectHoveredNodeId(state);
   const hoveredLinkId = selectHoveredLinkId(state);

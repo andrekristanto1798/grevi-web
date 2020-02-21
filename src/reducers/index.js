@@ -5,5 +5,13 @@ import ui from './ui.reducer';
 import coloring from './coloring.reducer';
 import radius from './radius.reducer';
 import setting from './setting.reducer';
+import mst from './mst.reducer';
 
-export default combineReducers({ graph, ui, radius, coloring, setting });
+export default combineReducers({
+  graph,
+  ui,
+  radius,
+  coloring,
+  setting,
+  mst,
+});

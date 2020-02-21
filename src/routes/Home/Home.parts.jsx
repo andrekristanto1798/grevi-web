@@ -1,9 +1,13 @@
 import React from 'react';
 // Components
 import { Accordion } from 'semantic-ui-react';
+// Visualization
 import ColoringByProperty from './ColoringByProperty';
-import { NodeTable, LinkTable } from './GraphTableSection';
 import RadiusByProperty from './RadiusByProperty';
+import MST from './MST';
+// Data
+import { NodeTable, LinkTable } from './GraphTableSection';
+// Setting
 import SettingSection from './SettingSection';
 
 const visualizationPanels = [
@@ -16,6 +20,11 @@ const visualizationPanels = [
     key: 'radius',
     title: 'Radius By Property',
     content: { content: <RadiusByProperty /> },
+  },
+  {
+    key: 'mst',
+    title: 'Minimum Spanning Tree',
+    content: { content: <MST /> },
   },
 ];
 

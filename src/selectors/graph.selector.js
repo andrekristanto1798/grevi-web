@@ -1,7 +1,8 @@
 import { createSelector } from 'reselect';
 import pick from 'lodash/pick';
 import { ADD_LINK_MODE } from '../components/EditingTools';
-import { normalizeObjectId } from '../utils/objects';
+import { selectMstGraph, selectIsMstApplied } from './mst.selector';
+import { getLinkTarget, getLinkSource } from '../utils/graph';
 
 const selectGraphData = state => state.graph.data;
 
@@ -107,11 +108,22 @@ export const selectSearchAsFilter = createSelector(
 
 export const selectValidData = createSelector(
   selectGraphData,
+  selectMstGraph,
   selectNodeKeys,
   selectLinkKeys,
   selectNodeSearchValue,
   selectLinkSearchValue,
-  (data, nodeDataKey, linkDataKey, nodeSearchValue, linkSearchValue) => {
+  selectIsMstApplied,
+  (
+    graphData,
+    mstData,
+    nodeDataKey,
+    linkDataKey,
+    nodeSearchValue,
+    linkSearchValue,
+    isMstApplied,
+  ) => {
+    const data = isMstApplied ? mstData : graphData;
     if (nodeSearchValue === '' && linkSearchValue === '') return data;
     const nodeRegex = new RegExp(nodeSearchValue, 'i');
     const linkRegex = new RegExp(linkSearchValue, 'i');
@@ -124,7 +136,8 @@ export const selectValidData = createSelector(
     const validNodeIds = new Set(validNodes.map(node => node.id));
     const validLinksFromValidNodeIds = data.links.filter(
       link =>
-        validNodeIds.has(link.source.id) && validNodeIds.has(link.target.id),
+        validNodeIds.has(getLinkSource(link)) &&
+        validNodeIds.has(getLinkTarget(link)),
     );
     const validLinks =
       linkSearchValue === ''
@@ -132,8 +145,8 @@ export const selectValidData = createSelector(
         : validLinksFromValidNodeIds.filter(link => {
           const cloneLink = {
             ...link,
-            source: normalizeObjectId(link, 'source'),
-            target: normalizeObjectId(link, 'target'),
+            source: getLinkSource(link),
+            target: getLinkTarget(link),
           };
           return linkRegex.test(
             JSON.stringify(pick(cloneLink, linkDataKey), ';'),

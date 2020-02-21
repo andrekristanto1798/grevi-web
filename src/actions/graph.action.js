@@ -24,13 +24,14 @@ import {
   removeLinksWithNode,
   editLinksWithNewNode,
   isIdExisted,
+  getLinkSource,
+  getLinkTarget,
 } from '../utils/graph';
 import {
   getUniqueKeys,
   isArrayEqual,
   cleanLinksFromIgnoredKeys,
   cleanNodesFromIgnoredKeys,
-  normalizeObjectId,
 } from '../utils/objects';
 import { showLoading, hideLoading } from './ui.action';
 
@@ -134,9 +135,7 @@ export const hoverLink = link => dispatch => {
   dispatch(
     set(
       'hoveredNodeId',
-      link
-        ? [normalizeObjectId(link, 'source'), normalizeObjectId(link, 'target')]
-        : [],
+      link ? [getLinkSource(link), getLinkTarget(link)] : [],
     ),
   );
 };
