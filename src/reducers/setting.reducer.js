@@ -5,7 +5,7 @@ const initialState = {
   showNodeLabel: true,
   showLinkLabel: true,
   showNodeText: true,
-  showLinkDirection: true,
+  showLinkDirection: false,
   nodeTextKey: 'id',
   autoHideNodeText: true,
   orientation: null,
