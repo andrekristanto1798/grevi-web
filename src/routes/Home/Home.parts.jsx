@@ -29,7 +29,7 @@ const visualizationPanels = [
   },
   {
     key: 'shortest-path',
-    title: 'ShortestPath',
+    title: 'Shortest Path',
     content: { content: <ShortestPath /> },
   },
 ];
@@ -47,30 +47,17 @@ const dataPanels = [
   },
 ];
 
-// getDefaultActiveIndex ensures that all
-// panels will be opened by default
-// by returning the array containing [0...(arr.length)]
-const getDefaultActiveIndex = arr =>
-  Array(arr.length)
-    .fill(0)
-    .map((_, idx) => idx);
-
 export const VisualizationTab = () => (
   <Accordion
     fluid
     panels={visualizationPanels}
-    defaultActiveIndex={getDefaultActiveIndex(visualizationPanels)}
+    activeIndex={[0, 1, 2, 3]}
     exclusive={false}
   />
 );
 
 export const DataTab = () => (
-  <Accordion
-    fluid
-    panels={dataPanels}
-    defaultActiveIndex={getDefaultActiveIndex(dataPanels)}
-    exclusive={false}
-  />
+  <Accordion fluid panels={dataPanels} activeIndex={[0, 1]} exclusive={false} />
 );
 
 export const SettingTab = () => <SettingSection />;
