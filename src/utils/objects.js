@@ -89,9 +89,17 @@ export const cleanLinksFromIgnoredKeys = links =>
     target: `${getLinkTarget(link)}`,
   }));
 
-export const sortNumbers = (numbers, desc = false) => {
-  if (desc) return numbers.sort((a, b) => a - b);
-  return numbers.sort((a, b) => b - a);
+export const sortNumberOrString = arr => {
+  const mathNumbers = arr.map(Number);
+  const isString = mathNumbers.some(Number.isNaN);
+  const data = isString ? arr : mathNumbers;
+  const compareFn = (a, b) => {
+    if (b > a) return 1;
+    if (b === a) return 0;
+    return -1;
+  };
+  if (isString) return data.sort((a, b) => compareFn(b, a)); // asc
+  return data.sort(compareFn); // desc
 };
 
 export const mapToThreeDecimals = map =>

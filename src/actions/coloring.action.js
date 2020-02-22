@@ -1,5 +1,5 @@
 import uniq from 'lodash/uniq';
-import { getIdValuesMapByKey, sortNumbers } from '../utils/objects';
+import { getIdValuesMapByKey, sortNumberOrString } from '../utils/objects';
 import {
   selectGraphNodes,
   selectGraphLinks,
@@ -30,32 +30,32 @@ const getNodeValuesByKey = (nodes, links, key) => {
   case COLORING_SPECIAL.DEGREE: {
     const nodeIdValuesMap = getNodeIdDegreeMap(nodes, links);
     const values = uniq(Object.values(nodeIdValuesMap));
-    return [nodeIdValuesMap, sortNumbers(values)];
+    return [nodeIdValuesMap, sortNumberOrString(values)];
   }
   case COLORING_SPECIAL.BETWEENNESS: {
     const nodeIdValuesMap = getNodeIdBetweennessMap(nodes, links);
     const values = uniq(Object.values(nodeIdValuesMap));
-    return [nodeIdValuesMap, sortNumbers(values)];
+    return [nodeIdValuesMap, sortNumberOrString(values)];
   }
   case COLORING_SPECIAL.CLOSENESS: {
     const nodeIdValuesMap = getNodeIdClosenessMap(nodes, links);
     const values = uniq(Object.values(nodeIdValuesMap));
-    return [nodeIdValuesMap, sortNumbers(values)];
+    return [nodeIdValuesMap, sortNumberOrString(values)];
   }
   case COLORING_SPECIAL.CLUSTERING: {
     const nodeIdValuesMap = getNodeIdClusterMap(nodes, links, 2);
     const values = uniq(Object.values(nodeIdValuesMap));
-    return [nodeIdValuesMap, sortNumbers(values)];
+    return [nodeIdValuesMap, sortNumberOrString(values)];
   }
   case COLORING_SPECIAL.PAGE_RANKING: {
     const nodeIdValuesMap = getNodeIdPageRankMap(nodes, links);
     const values = uniq(Object.values(nodeIdValuesMap));
-    return [nodeIdValuesMap, sortNumbers(values)];
+    return [nodeIdValuesMap, sortNumberOrString(values)];
   }
   default: {
     const nodeIdValuesMap = getIdValuesMapByKey(nodes, key);
     const values = uniq(Object.values(nodeIdValuesMap));
-    return [nodeIdValuesMap, values];
+    return [nodeIdValuesMap, sortNumberOrString(values)];
   }
   }
 };

@@ -2,7 +2,7 @@ import uniq from 'lodash/uniq';
 import {
   getIdValuesMapByKey,
   reduceMapValuetoNumber,
-  sortNumbers,
+  sortNumberOrString,
 } from '../utils/objects';
 import {
   selectGraphNodes,
@@ -37,7 +37,7 @@ const getNodeValuesByKey = (nodes, links, key) => {
       Math.min(...values),
       Math.max(...values),
       nodeIdValuesMap,
-      sortNumbers(values),
+      sortNumberOrString(values),
     ];
   }
   case RADIUS_SPECIAL.BETWEENNESS: {
@@ -47,7 +47,7 @@ const getNodeValuesByKey = (nodes, links, key) => {
       Math.min(...values),
       Math.max(...values),
       nodeIdValuesMap,
-      sortNumbers(values),
+      sortNumberOrString(values),
     ];
   }
   case RADIUS_SPECIAL.CLOSENESS: {
@@ -57,7 +57,7 @@ const getNodeValuesByKey = (nodes, links, key) => {
       Math.min(...values),
       Math.max(...values),
       nodeIdValuesMap,
-      sortNumbers(values),
+      sortNumberOrString(values),
     ];
   }
   case RADIUS_SPECIAL.PAGE_RANKING: {
@@ -67,7 +67,7 @@ const getNodeValuesByKey = (nodes, links, key) => {
       Math.min(...values),
       Math.max(...values),
       nodeIdValuesMap,
-      sortNumbers(values),
+      sortNumberOrString(values),
     ];
   }
   default: {
