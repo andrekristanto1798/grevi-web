@@ -11,6 +11,7 @@ import EditNodeModal from '../../components/EditNodeModal';
 import EditLinkModal from '../../components/EditLinkModal';
 import DeleteNodeModal from '../../components/DeleteNodeModal';
 import DeleteLinkModal from '../../components/DeleteLinkModal';
+import GraphStatusInfo from './GraphStatusInfo/GraphStatusInfo';
 // Styles
 import styles from './styles.scss';
 
@@ -70,6 +71,7 @@ const Home = () => {
           />
         </div>
         <div className={styles.rightPanelContainer}>
+          <GraphStatusInfo className={styles.floatingStatusInfo} />
           <GraphSection width={width - leftPanelWidth} height={height} />
         </div>
       </SplitPane>

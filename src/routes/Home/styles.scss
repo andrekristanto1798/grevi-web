@@ -23,3 +23,13 @@
   flex: 1;
   height: 100%;
 }
+
+.floatingStatusInfo {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 200px;
+  height: fit-content;
+  z-index: 11;
+  border-radius: 8px;
+}
