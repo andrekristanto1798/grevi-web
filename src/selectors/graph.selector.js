@@ -183,10 +183,10 @@ export const selectVisualizedGraphData = createSelector(
     isMstApplied,
     isShortestPathApplied,
   ) => {
-    if (searchAsFilter && isMstApplied) return validData;
-    if (searchAsFilter && isShortestPathApplied) return validData;
-    if (isMstApplied) return mstGraph;
-    if (isShortestPathApplied) return shortestPathGraph;
+    if (!searchAsFilter && isMstApplied) return mstGraph;
+    if (!searchAsFilter && isShortestPathApplied) return shortestPathGraph;
+    if (searchAsFilter || isMstApplied || isShortestPathApplied)
+      return validData;
     return graphData;
   },
 );
