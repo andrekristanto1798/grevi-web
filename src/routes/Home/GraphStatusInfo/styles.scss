@@ -1,0 +1,13 @@
+@import 'base.scss';
+
+.graphStatusInfo {
+  &__darkContainer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+  }
+
+  &__rowContainer {
+    padding: 8px;
+    @extend %flexRow;
+  }
+}
