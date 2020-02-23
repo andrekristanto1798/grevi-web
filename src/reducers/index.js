@@ -5,8 +5,7 @@ import ui from './ui.reducer';
 import coloring from './coloring.reducer';
 import radius from './radius.reducer';
 import setting from './setting.reducer';
-import mst from './mst.reducer';
-import shortestPath from './shortestPath.reducer';
+import algo from './algo.reducer';
 
 export default combineReducers({
   graph,
@@ -14,6 +13,5 @@ export default combineReducers({
   radius,
   coloring,
   setting,
-  mst,
-  shortestPath,
+  algo,
 });

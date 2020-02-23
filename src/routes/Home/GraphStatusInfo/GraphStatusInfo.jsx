@@ -13,8 +13,7 @@ import {
   selectNodeSearchValue,
   selectLinkSearchValue,
 } from '../../../selectors/graph.selector';
-import { selectIsShortestPathApplied } from '../../../selectors/shortestPath.selector';
-import { selectIsMstApplied } from '../../../selectors/mst.selector';
+import { selectAlgo } from '../../../selectors/algo.selector';
 // Utils
 import { graphDataShape } from '../../../components/UtilPropTypes';
 // Styles
@@ -62,16 +61,12 @@ GraphStatusInfo.propTypes = {
 
 const mapStateToProps = state => {
   const searchAsFilter = selectSearchAsFilter(state);
-  const isMstApplied = selectIsMstApplied(state);
-  const isShortestPathApplied = selectIsShortestPathApplied(state);
+  const algo = selectAlgo(state) || 'ORIGINAL';
   const graphData = selectVisualizedGraphData(state);
   const nodeSearchValue = selectNodeSearchValue(state);
   const linkSearchValue = selectLinkSearchValue(state);
-  let graphType = 'ORIGINAL';
-  if (isMstApplied) graphType = 'MST';
-  if (isShortestPathApplied) graphType = 'SHORTEST PATH';
   return {
-    graphType,
+    graphType: algo,
     graphData,
     searchAsFilter,
     nodeSearchValue,

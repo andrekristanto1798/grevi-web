@@ -3,19 +3,16 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Button, Dropdown } from 'semantic-ui-react';
 // Actions
-import * as mstActions from '../../../actions/mst.action';
+import * as algoActions from '../../../actions/algo.action';
 // Selectors
-import {
-  selectSelectedKey,
-  selectError,
-} from '../../../selectors/mst.selector';
+import { makeSelectAlgoError } from '../../../selectors/algo.selector';
 import { selectLinkKeys } from '../../../selectors/graph.selector';
 // Utils
 import { toOption } from '../../../utils/objects';
 // Styles
 import styles from './styles.scss';
 
-const MST = ({ linkKeys, selectedKey, selectKey, error }) => {
+const MST = ({ linkKeys, applyMst, cancelMst, error }) => {
   if (linkKeys.length === 0) {
     return <i>No links available</i>;
   }
@@ -23,19 +20,17 @@ const MST = ({ linkKeys, selectedKey, selectKey, error }) => {
     () => linkKeys.filter(key => key !== 'source' && key !== 'target'),
     [linkKeys],
   ); // to filter out source and target key
-  const handleChangeKey = React.useCallback(
-    (_, { value }) => {
-      selectKey(value);
-    },
-    [selectKey],
-  );
+  const [selectedKey, selectKey] = React.useState(null);
+  const handleChangeKey = React.useCallback((_, { value }) => {
+    selectKey(value);
+  }, []);
   const dropdwonOptions = React.useMemo(
     () => [
       { key: 'none', value: null, text: 'none' },
       ...validLinkKeys.map(toOption),
       {
         key: 'uniform-weight',
-        value: mstActions.MST_UNIFORM_WEIGHT,
+        value: algoActions.ALGO_UNIFORM_WEIGHT,
         text: 'Uniform Weight',
       },
     ],
@@ -52,15 +47,15 @@ const MST = ({ linkKeys, selectedKey, selectKey, error }) => {
           options={dropdwonOptions}
           onChange={handleChangeKey}
         />
-        {selectedKey && (
-          <Button
-            positive
-            title="Refresh"
-            size="mini"
-            icon="refresh"
-            onClick={() => selectKey(selectedKey)}
-          />
-        )}
+        <Button
+          positive
+          content="Apply"
+          // disabled when inputs are invalid
+          // or selected key of link prop is null
+          disabled={selectedKey == null}
+          onClick={() => applyMst(selectedKey)}
+        />
+        <Button negative content="Cancel" onClick={cancelMst} />
       </div>
       {error && <pre style={{ whiteSpace: 'pre-wrap' }}>{error}</pre>}
     </div>
@@ -69,28 +64,31 @@ const MST = ({ linkKeys, selectedKey, selectKey, error }) => {
 
 MST.propTypes = {
   linkKeys: PropTypes.arrayOf(PropTypes.string).isRequired,
-  selectedKey: PropTypes.string,
   error: PropTypes.string,
   // Redux actions
-  selectKey: PropTypes.func.isRequired,
+  applyMst: PropTypes.func.isRequired,
+  cancelMst: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = state => {
-  const linkKeys = selectLinkKeys(state);
-  const selectedKey = selectSelectedKey(state);
-  const error = selectError(state);
-  return {
-    linkKeys,
-    selectedKey,
-    error,
+const makeMapStateToProps = () => {
+  const selectAlgoError = makeSelectAlgoError();
+  const mapStateToProps = state => {
+    const linkKeys = selectLinkKeys(state);
+    const error = selectAlgoError(state, algoActions.ALGO_TYPE.MST);
+    return {
+      linkKeys,
+      error,
+    };
   };
+  return mapStateToProps;
 };
 
 const actions = {
-  selectKey: mstActions.selectKey,
+  applyMst: algoActions.applyMst,
+  cancelMst: algoActions.cancelMst,
 };
 
 export default connect(
-  mapStateToProps,
+  makeMapStateToProps,
   actions,
 )(MST);

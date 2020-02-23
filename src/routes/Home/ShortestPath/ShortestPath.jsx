@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Form, Input, Button, Dropdown } from 'semantic-ui-react';
 // Actions
-import * as shortestPathActions from '../../../actions/shortestPath.action';
+import * as algoActions from '../../../actions/algo.action';
 // Selectors
-import { selectError } from '../../../selectors/shortestPath.selector';
+import { makeSelectAlgoError } from '../../../selectors/algo.selector';
 import { selectLinkKeys } from '../../../selectors/graph.selector';
 // Utils
 import { toOption } from '../../../utils/objects';
@@ -45,7 +45,7 @@ const ShortestPath = ({
       ...validLinkKeys.map(toOption),
       {
         key: 'uniform-weight',
-        value: shortestPathActions.SHORTEST_PATH_UNIFORM_WEIGHT,
+        value: algoActions.ALGO_UNIFORM_WEIGHT,
         text: 'Uniform Weight',
       },
     ],
@@ -105,21 +105,25 @@ ShortestPath.propTypes = {
   cancelShortestPath: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = state => {
-  const linkKeys = selectLinkKeys(state);
-  const error = selectError(state);
-  return {
-    linkKeys,
-    error,
+const makeMapStateToProps = () => {
+  const selectAlgoError = makeSelectAlgoError();
+  const mapStateToProps = state => {
+    const linkKeys = selectLinkKeys(state);
+    const error = selectAlgoError(state, algoActions.ALGO_TYPE.SHORTEST_PATH);
+    return {
+      linkKeys,
+      error,
+    };
   };
+  return mapStateToProps;
 };
 
 const actions = {
-  applyShortestPath: shortestPathActions.applyShortestPath,
-  cancelShortestPath: shortestPathActions.cancelShortestPath,
+  applyShortestPath: algoActions.applyShortestPath,
+  cancelShortestPath: algoActions.cancelShortestPath,
 };
 
 export default connect(
-  mapStateToProps,
+  makeMapStateToProps,
   actions,
 )(ShortestPath);

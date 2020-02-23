@@ -1,26 +1,22 @@
-import {
-  SHORTEST_PATH_APPLY,
-  SHORTEST_PATH_CANCEL,
-} from '../actions/shortestPath.action';
+import { ALGO_APPLY, ALGO_CANCEL } from '../actions/algo.action';
 import { RESET_ALL } from '../actions/graph.action';
 
 const initialState = {
-  selectedKey: null,
-  shortestPathGraph: null,
-  isShortestPathApplied: false,
+  algo: null,
+  graph: null,
   error: null,
 };
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
-  case SHORTEST_PATH_APPLY:
+  case ALGO_APPLY:
     return {
       ...state,
-      shortestPathGraph: action.shortestPathGraph,
-      isShortestPathApplied: true,
+      algo: action.algo,
+      graph: action.graph,
       error: action.error,
     };
-  case SHORTEST_PATH_CANCEL:
+  case ALGO_CANCEL:
     return { ...initialState };
   case RESET_ALL:
     return initialState;

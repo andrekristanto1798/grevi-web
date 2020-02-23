@@ -1,12 +1,8 @@
 import { createSelector } from 'reselect';
 import pick from 'lodash/pick';
 import { ADD_LINK_MODE } from '../components/EditingTools';
-import { selectMstGraph, selectIsMstApplied } from './mst.selector';
+import { selectAlgo, selectAlgoGraph } from './algo.selector';
 import { getLinkTarget, getLinkSource } from '../utils/graph';
-import {
-  selectShortestPathGraph,
-  selectIsShortestPathApplied,
-} from './shortestPath.selector';
 
 const selectGraphData = state => state.graph.data;
 
@@ -111,29 +107,23 @@ export const selectSearchAsFilter = createSelector(
 );
 
 export const selectValidData = createSelector(
+  selectAlgo,
   selectGraphData,
-  selectMstGraph,
-  selectShortestPathGraph,
+  selectAlgoGraph,
   selectNodeKeys,
   selectLinkKeys,
   selectNodeSearchValue,
   selectLinkSearchValue,
-  selectIsMstApplied,
-  selectIsShortestPathApplied,
   (
+    algo,
     graphData,
-    mstData,
-    shortestPathGraph,
+    algoGraph,
     nodeDataKey,
     linkDataKey,
     nodeSearchValue,
     linkSearchValue,
-    isMstApplied,
-    isShortestPathApplied,
   ) => {
-    let data = graphData;
-    if (isMstApplied) data = mstData;
-    if (isShortestPathApplied) data = shortestPathGraph;
+    const data = algo === null ? graphData : algoGraph;
     if (nodeSearchValue === '' && linkSearchValue === '') return data;
     const nodeRegex = new RegExp(nodeSearchValue, 'i');
     const linkRegex = new RegExp(linkSearchValue, 'i');
@@ -167,26 +157,14 @@ export const selectValidData = createSelector(
 );
 
 export const selectVisualizedGraphData = createSelector(
+  selectAlgo,
   selectGraphData,
+  selectAlgoGraph,
   selectValidData,
-  selectMstGraph,
-  selectShortestPathGraph,
   selectSearchAsFilter,
-  selectIsMstApplied,
-  selectIsShortestPathApplied,
-  (
-    graphData,
-    validData,
-    mstGraph,
-    shortestPathGraph,
-    searchAsFilter,
-    isMstApplied,
-    isShortestPathApplied,
-  ) => {
-    if (!searchAsFilter && isMstApplied) return mstGraph;
-    if (!searchAsFilter && isShortestPathApplied) return shortestPathGraph;
-    if (searchAsFilter || isMstApplied || isShortestPathApplied)
-      return validData;
+  (algo, graphData, algoGraph, validData, searchAsFilter) => {
+    if (!searchAsFilter && algo !== null) return algoGraph;
+    if (searchAsFilter) return validData;
     return graphData;
   },
 );
