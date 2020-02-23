@@ -110,3 +110,12 @@ export const mapToThreeDecimals = map =>
     }),
     {},
   );
+
+export const beautifyObject = obj => {
+  const objStringify = JSON.stringify(obj, null, 4);
+  const arrStringWithoutBrackets = objStringify.split('\n').slice(1, -1);
+  const cleanArrString = arrStringWithoutBrackets.map(str =>
+    str.trim().replace(/,$/, ''),
+  );
+  return cleanArrString.join('\n');
+};

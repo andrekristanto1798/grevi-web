@@ -37,7 +37,7 @@ import {
   nodeShape,
   linkShape,
 } from '../../../components/UtilPropTypes';
-import { cleanFromIgnoredKeys } from '../../../utils/objects';
+import { cleanFromIgnoredKeys, beautifyObject } from '../../../utils/objects';
 import { COLORS } from '../../../utils/color';
 // Styles
 import styles from './styles.scss';
@@ -153,7 +153,8 @@ const GraphSection = ({
       cloneObj.source = cloneObj.source.id;
     if (cloneObj.target && cloneObj.target.id !== null)
       cloneObj.target = cloneObj.target.id;
-    const children = `<pre>${JSON.stringify(cloneObj, null, 2)}</pre>`;
+    const str = beautifyObject(cloneObj);
+    const children = `<pre style="margin: 8px"}}>${str}</pre>`;
     return children;
   }, []);
   return (
