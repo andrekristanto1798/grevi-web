@@ -3,16 +3,19 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Button, Dropdown } from 'semantic-ui-react';
 // Actions
-import * as algoActions from '../../../actions/algo.action';
+import * as algoActions from '../../../../actions/algo.action';
 // Selectors
-import { makeSelectAlgoError } from '../../../selectors/algo.selector';
-import { selectLinkKeys } from '../../../selectors/graph.selector';
+import {
+  makeSelectAlgoError,
+  selectAlgo,
+} from '../../../../selectors/algo.selector';
+import { selectLinkKeys } from '../../../../selectors/graph.selector';
 // Utils
-import { toOption } from '../../../utils/objects';
+import { getLinkKeyOptions } from '../algo.utils';
 // Styles
 import styles from './styles.scss';
 
-const MST = ({ linkKeys, applyMst, cancelMst, error }) => {
+const MST = ({ algo, linkKeys, applyMst, cancelMst, error }) => {
   if (linkKeys.length === 0) {
     return <i>No links available</i>;
   }
@@ -25,15 +28,7 @@ const MST = ({ linkKeys, applyMst, cancelMst, error }) => {
     selectKey(value);
   }, []);
   const dropdwonOptions = React.useMemo(
-    () => [
-      { key: 'none', value: null, text: 'none' },
-      ...validLinkKeys.map(toOption),
-      {
-        key: 'uniform-weight',
-        value: algoActions.ALGO_UNIFORM_WEIGHT,
-        text: 'Uniform Weight',
-      },
-    ],
+    () => getLinkKeyOptions(validLinkKeys),
     [validLinkKeys],
   );
   return (
@@ -55,7 +50,12 @@ const MST = ({ linkKeys, applyMst, cancelMst, error }) => {
           disabled={selectedKey == null}
           onClick={() => applyMst(selectedKey)}
         />
-        <Button negative content="Cancel" onClick={cancelMst} />
+        <Button
+          disabled={algo !== algoActions.ALGO_TYPE.MST}
+          negative
+          content="Cancel"
+          onClick={() => cancelMst()}
+        />
       </div>
       {error && <pre style={{ whiteSpace: 'pre-wrap' }}>{error}</pre>}
     </div>
@@ -63,6 +63,7 @@ const MST = ({ linkKeys, applyMst, cancelMst, error }) => {
 };
 
 MST.propTypes = {
+  algo: PropTypes.string,
   linkKeys: PropTypes.arrayOf(PropTypes.string).isRequired,
   error: PropTypes.string,
   // Redux actions
@@ -73,9 +74,11 @@ MST.propTypes = {
 const makeMapStateToProps = () => {
   const selectAlgoError = makeSelectAlgoError();
   const mapStateToProps = state => {
+    const algo = selectAlgo(state);
     const linkKeys = selectLinkKeys(state);
     const error = selectAlgoError(state, algoActions.ALGO_TYPE.MST);
     return {
+      algo,
       linkKeys,
       error,
     };
@@ -85,7 +88,7 @@ const makeMapStateToProps = () => {
 
 const actions = {
   applyMst: algoActions.applyMst,
-  cancelMst: algoActions.cancelMst,
+  cancelMst: algoActions.cancelAlgo,
 };
 
 export default connect(

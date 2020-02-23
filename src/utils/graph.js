@@ -176,3 +176,25 @@ export const getShortestPathGraph = (
     links: links.filter(link => newLinksId.includes(link.id)),
   };
 };
+
+export const extractSubgraph = (nodes, links, nodeId, numberOfHops) => {
+  const graph = constructGraph(nodes, links);
+  if (!graph.hasNode(nodeId))
+    throw new Error(`Error: nodeId (${nodeId}) does not exist`);
+  const newNodesId = new Set([nodeId]);
+  const newLinksId = new Set();
+  function dfsWithHop(startingNode, hop, maxNumberOfHops) {
+    if (hop < maxNumberOfHops) {
+      graph.forEachLinkedNode(startingNode, (node, link) => {
+        newNodesId.add(node.id);
+        newLinksId.add(link.data);
+        dfsWithHop(node.id, hop + 1, maxNumberOfHops);
+      });
+    }
+  }
+  dfsWithHop(nodeId, 0, numberOfHops);
+  return {
+    nodes: nodes.filter(node => newNodesId.has(node.id)),
+    links: links.filter(link => newLinksId.has(link.id)),
+  };
+};

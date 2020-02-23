@@ -4,8 +4,9 @@ import { Accordion } from 'semantic-ui-react';
 // Visualization
 import ColoringByProperty from './ColoringByProperty';
 import RadiusByProperty from './RadiusByProperty';
-import MST from './MST';
-import ShortestPath from './ShortestPath';
+import MST from './AlgoSection/MST';
+import ShortestPath from './AlgoSection/ShortestPath';
+import ExtractSubgraph from './AlgoSection/ExtractSubgraph';
 // Data
 import { NodeTable, LinkTable } from './GraphTableSection';
 // Setting
@@ -32,6 +33,11 @@ const visualizationPanels = [
     title: 'Shortest Path',
     content: { content: <ShortestPath /> },
   },
+  {
+    key: 'extract-subgraph',
+    title: 'Extract Subgraph',
+    content: { content: <ExtractSubgraph /> },
+  },
 ];
 
 const dataPanels = [
@@ -51,7 +57,7 @@ export const VisualizationTab = () => (
   <Accordion
     fluid
     panels={visualizationPanels}
-    activeIndex={[0, 1, 2, 3]}
+    activeIndex={[0, 1, 2, 3, 4]}
     exclusive={false}
   />
 );

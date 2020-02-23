@@ -133,7 +133,7 @@ const RadiusByProperty = ({
         <>
           <Divider />
           <Form>
-            <Form.Group inline>
+            <Form.Group inline style={{ alignItems: 'flex-end' }}>
               <Form.Field
                 inline
                 control={Input}

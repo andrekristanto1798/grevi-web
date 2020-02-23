@@ -2,7 +2,11 @@ import {
   selectGraphNodes,
   selectGraphLinks,
 } from '../selectors/graph.selector';
-import { getShortestPathGraph, getMstGraph } from '../utils/graph';
+import {
+  getShortestPathGraph,
+  getMstGraph,
+  extractSubgraph,
+} from '../utils/graph';
 
 export const ALGO_APPLY = 'ALGO_SELECT_KEY';
 export const ALGO_CANCEL = 'ALGO_CANCEL';
@@ -12,6 +16,7 @@ export const ALGO_UNIFORM_WEIGHT = 'ALGO_UNIFORM_WEIGHT';
 export const ALGO_TYPE = {
   MST: 'MST',
   SHORTEST_PATH: 'SHORTEST_PATH',
+  EXTRACT_SUBGRAPH: 'EXTRACT_SUBGRAPH',
 };
 
 const defaultWeightFn = () => 1;
@@ -34,19 +39,11 @@ const getWeightFn = (links, key) => {
   }
 };
 
-export const cancelMst = () => ({
+export const cancelAlgo = () => ({
   type: ALGO_CANCEL,
-  algo: ALGO_TYPE.MST,
-});
-
-export const cancelShortestPath = () => ({
-  type: ALGO_CANCEL,
-  algo: ALGO_TYPE.SHORTEST_PATH,
 });
 
 export const applyMst = key => (dispatch, getState) => {
-  // need to reset shortest path graph
-  dispatch(cancelShortestPath());
   const state = getState();
   const nodes = selectGraphNodes(state);
   const links = selectGraphLinks(state);
@@ -64,23 +61,55 @@ export const applyShortestPath = (fromNode, toNode, key) => (
   dispatch,
   getState,
 ) => {
-  // need to reset mst graph
-  dispatch(applyMst(null));
   const state = getState();
   const nodes = selectGraphNodes(state);
   const links = selectGraphLinks(state);
-  const [weightFn, error] = getWeightFn(links, key);
-  const shortestPathGraph = getShortestPathGraph(
-    nodes,
-    links,
-    fromNode,
-    toNode,
-    weightFn,
-  );
-  dispatch({
-    type: ALGO_APPLY,
-    algo: ALGO_TYPE.SHORTEST_PATH,
-    graph: shortestPathGraph,
-    error,
-  });
+  try {
+    const [weightFn, error] = getWeightFn(links, key);
+    const shortestPathGraph = getShortestPathGraph(
+      nodes,
+      links,
+      fromNode,
+      toNode,
+      weightFn,
+    );
+    dispatch({
+      type: ALGO_APPLY,
+      algo: ALGO_TYPE.SHORTEST_PATH,
+      graph: shortestPathGraph,
+      error,
+    });
+  } catch (error) {
+    dispatch({
+      type: ALGO_APPLY,
+      algo: ALGO_TYPE.SHORTEST_PATH,
+      graph: { nodes, links },
+      error: error.toString(),
+    });
+  }
+};
+
+export const applyExtractSubgraph = (nodeId, numberOfHops) => (
+  dispatch,
+  getState,
+) => {
+  const state = getState();
+  const nodes = selectGraphNodes(state);
+  const links = selectGraphLinks(state);
+  try {
+    const graph = extractSubgraph(nodes, links, nodeId, numberOfHops);
+    dispatch({
+      type: ALGO_APPLY,
+      algo: ALGO_TYPE.EXTRACT_SUBGRAPH,
+      graph,
+      error: '',
+    });
+  } catch (error) {
+    dispatch({
+      type: ALGO_APPLY,
+      algo: ALGO_TYPE.EXTRACT_SUBGRAPH,
+      graph: { nodes, links },
+      error: error.toString(),
+    });
+  }
 };

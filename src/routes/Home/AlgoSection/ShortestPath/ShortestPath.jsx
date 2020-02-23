@@ -3,16 +3,20 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Form, Input, Button, Dropdown } from 'semantic-ui-react';
 // Actions
-import * as algoActions from '../../../actions/algo.action';
+import * as algoActions from '../../../../actions/algo.action';
 // Selectors
-import { makeSelectAlgoError } from '../../../selectors/algo.selector';
-import { selectLinkKeys } from '../../../selectors/graph.selector';
+import {
+  makeSelectAlgoError,
+  selectAlgo,
+} from '../../../../selectors/algo.selector';
+import { selectLinkKeys } from '../../../../selectors/graph.selector';
 // Utils
-import { toOption } from '../../../utils/objects';
+import { getLinkKeyOptions } from '../algo.utils';
 // Styles
 import styles from './styles.scss';
 
 const ShortestPath = ({
+  algo,
   linkKeys,
   error,
   applyShortestPath,
@@ -40,15 +44,7 @@ const ShortestPath = ({
     selectKey(value);
   }, []);
   const dropdwonOptions = React.useMemo(
-    () => [
-      { key: 'none', value: null, text: 'none' },
-      ...validLinkKeys.map(toOption),
-      {
-        key: 'uniform-weight',
-        value: algoActions.ALGO_UNIFORM_WEIGHT,
-        text: 'Uniform Weight',
-      },
-    ],
+    () => getLinkKeyOptions(validLinkKeys),
     [validLinkKeys],
   );
   return (
@@ -90,7 +86,12 @@ const ShortestPath = ({
           disabled={!isInputsValid || selectedKey == null}
           onClick={() => applyShortestPath(fromNode, toNode, selectedKey)}
         />
-        <Button negative content="Cancel" onClick={cancelShortestPath} />
+        <Button
+          disabled={algo !== algoActions.ALGO_TYPE.SHORTEST_PATH}
+          negative
+          content="Cancel"
+          onClick={() => cancelShortestPath()}
+        />
       </div>
       {error && <pre style={{ whiteSpace: 'pre-wrap' }}>{error}</pre>}
     </div>
@@ -98,6 +99,7 @@ const ShortestPath = ({
 };
 
 ShortestPath.propTypes = {
+  algo: PropTypes.string,
   linkKeys: PropTypes.arrayOf(PropTypes.string).isRequired,
   error: PropTypes.string,
   // Redux Actions
@@ -108,9 +110,11 @@ ShortestPath.propTypes = {
 const makeMapStateToProps = () => {
   const selectAlgoError = makeSelectAlgoError();
   const mapStateToProps = state => {
+    const algo = selectAlgo(state);
     const linkKeys = selectLinkKeys(state);
     const error = selectAlgoError(state, algoActions.ALGO_TYPE.SHORTEST_PATH);
     return {
+      algo,
       linkKeys,
       error,
     };
@@ -120,7 +124,7 @@ const makeMapStateToProps = () => {
 
 const actions = {
   applyShortestPath: algoActions.applyShortestPath,
-  cancelShortestPath: algoActions.cancelShortestPath,
+  cancelShortestPath: algoActions.cancelAlgo,
 };
 
 export default connect(
