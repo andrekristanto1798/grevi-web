@@ -140,6 +140,18 @@ export const hoverLink = link => dispatch => {
   );
 };
 
+export const setNodePopup = node => dispatch => {
+  dispatch(set('popupData', { type: 'node', data: node }));
+};
+
+export const setLinkPopup = link => dispatch => {
+  dispatch(set('popupData', { type: 'link', data: link }));
+};
+
+export const resetPopupData = () => dispatch => {
+  dispatch(set('popupData', { type: null, data: null }));
+};
+
 export const focusNodeOn = node => set('focusedNode', node);
 
 export const resetFocusedNode = () => set('focusedNode', null);
@@ -201,6 +213,7 @@ export const submitDeleteNode = () => (dispatch, getState) => {
   if (!isArrayEqual(getUniqueKeys(newNodes), nodeKeys)) {
     dispatch(set('nodeKeys', getUniqueKeys(newNodes)));
   }
+  dispatch(resetPopupData());
   dispatch(set('data', { nodes: newNodes, links: newLinks }));
   dispatch(set('deletedNode', null));
 };
@@ -273,6 +286,7 @@ export const submitDeleteLink = () => (dispatch, getState) => {
   if (!isArrayEqual(getUniqueKeys(newLinks), linkKeys)) {
     dispatch(set('linkKeys', getUniqueKeys(newLinks)));
   }
+  dispatch(resetPopupData());
   dispatch(set('data', { nodes, links: newLinks }));
   dispatch(set('deletedLink', null));
 };

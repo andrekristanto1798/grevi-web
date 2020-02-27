@@ -17,6 +17,7 @@ import {
   selectGraphFocusedNode,
   selectGraphFocusedLink,
   selectVisualizedGraphData,
+  selectPopupData,
 } from '../../../selectors/graph.selector';
 import { selectGetColor } from '../../../selectors/coloring.selector';
 import { selectGetRadius } from '../../../selectors/radius.selector';
@@ -36,11 +37,12 @@ import {
   valueType,
   nodeShape,
   linkShape,
+  popupDataShape,
 } from '../../../components/UtilPropTypes';
-import { cleanFromIgnoredKeys, beautifyObject } from '../../../utils/objects';
 import { COLORS } from '../../../utils/color';
 // Styles
 import styles from './styles.scss';
+import GraphPopover from '../../../components/GraphPopover';
 
 const noOp = () => {};
 
@@ -63,6 +65,10 @@ const GraphSection = ({
   resetFocusedNode,
   focusedLink,
   resetFocusedLink,
+  popupData,
+  setNodePopup,
+  setLinkPopup,
+  resetPopupData,
   // settings
   showNodeLabel,
   showLinkLabel,
@@ -147,16 +153,6 @@ const GraphSection = ({
       autoHideNodeText,
     ],
   );
-  const objLabelCb = React.useCallback(obj => {
-    const cloneObj = cleanFromIgnoredKeys({ ...obj });
-    if (cloneObj.source && cloneObj.source.id !== null)
-      cloneObj.source = cloneObj.source.id;
-    if (cloneObj.target && cloneObj.target.id !== null)
-      cloneObj.target = cloneObj.target.id;
-    const str = beautifyObject(cloneObj);
-    const children = `<pre style="margin: 8px"}}>${str}</pre>`;
-    return children;
-  }, []);
   return (
     <div className={styles.graphContainer}>
       <div className={styles.editingToolsContainer}>
@@ -176,8 +172,8 @@ const GraphSection = ({
         height={height}
         dagMode={orientation}
         nodeVal={getRadius}
-        nodeLabel={showNodeLabel ? objLabelCb : noOp}
-        linkLabel={showLinkLabel ? objLabelCb : noOp}
+        nodeLabel={showNodeLabel ? setNodePopup : noOp}
+        linkLabel={showLinkLabel ? setLinkPopup : noOp}
         nodeCanvasObjectMode={nodeCanvasObjectModeCb}
         nodeCanvasObject={nodeCanvasDrawCb}
         linkWidth={link =>
@@ -188,7 +184,9 @@ const GraphSection = ({
         onLinkHover={hoverLink}
         linkDirectionalArrowRelPos={1}
         linkDirectionalArrowLength={getLinkArrowLength}
+        onZoom={resetPopupData}
       />
+      <GraphPopover popupData={popupData} onClose={resetPopupData} />
     </div>
   );
 };
@@ -204,6 +202,7 @@ GraphSection.propTypes = {
   hoveredLinkId: valueType,
   focusedNode: nodeShape,
   focusedLink: linkShape,
+  popupData: popupDataShape.isRequired,
   // Setting State
   showNodeLabel: PropTypes.bool.isRequired,
   showLinkLabel: PropTypes.bool.isRequired,
@@ -221,6 +220,9 @@ GraphSection.propTypes = {
   hoverLink: PropTypes.func.isRequired,
   resetFocusedNode: PropTypes.func.isRequired,
   resetFocusedLink: PropTypes.func.isRequired,
+  setNodePopup: PropTypes.func.isRequired,
+  setLinkPopup: PropTypes.func.isRequired,
+  resetPopupData: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => {
@@ -234,6 +236,7 @@ const mapStateToProps = state => {
   const getRadius = selectGetRadius(state);
   const focusedNode = selectGraphFocusedNode(state);
   const focusedLink = selectGraphFocusedLink(state);
+  const popupData = selectPopupData(state);
   const showNodeLabel = selectShowNodeLabel(state);
   const showLinkLabel = selectShowLinkLabel(state);
   const showNodeText = selectShowNodeText(state);
@@ -252,6 +255,7 @@ const mapStateToProps = state => {
     getRadius,
     focusedNode,
     focusedLink,
+    popupData,
     showNodeLabel,
     showLinkLabel,
     showNodeText,
@@ -269,6 +273,9 @@ const actions = {
   hoverLink: graphAction.hoverLink,
   resetFocusedNode: graphAction.resetFocusedNode,
   resetFocusedLink: graphAction.resetFocusedLink,
+  setNodePopup: graphAction.setNodePopup,
+  setLinkPopup: graphAction.setLinkPopup,
+  resetPopupData: graphAction.resetPopupData,
 };
 
 export default connect(

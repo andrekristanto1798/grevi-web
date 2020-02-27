@@ -6,6 +6,11 @@ import {
 } from '../actions/graph.action';
 import { SELECT_MODE } from '../components/EditingTools';
 
+const defaultPopupData = {
+  type: null,
+  data: null,
+};
+
 const initialState = {
   // Graph Data
   data: {
@@ -22,6 +27,7 @@ const initialState = {
   hoveredNodeId: [],
   focusedLink: null,
   hoveredLinkId: null,
+  popupData: defaultPopupData,
   // Node Actions Edit + Delete
   editedNode: null,
   editedLink: null,

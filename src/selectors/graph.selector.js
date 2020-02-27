@@ -168,3 +168,8 @@ export const selectVisualizedGraphData = createSelector(
     return graphData;
   },
 );
+
+export const selectPopupData = createSelector(
+  state => state.graph.popupData,
+  popupData => popupData,
+);
