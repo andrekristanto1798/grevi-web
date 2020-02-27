@@ -25,3 +25,8 @@ export const modeShape = PropTypes.oneOf([
   ADD_NODE_MODE,
   ADD_LINK_MODE,
 ]);
+
+export const popupDataShape = PropTypes.shape({
+  type: PropTypes.string,
+  data: PropTypes.oneOfType([nodeShape, linkShape]),
+});

@@ -1,0 +1,25 @@
+@import 'base.scss';
+
+.graphPopover__container {
+  background: white;
+  border: 1px solid black;
+}
+
+.content {
+  &__container {
+    @extend %flexColumn;
+    padding: 8px
+  }
+
+  &Header__container {
+    @extend %flexRow;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &Footer__container {
+    @extend %flexRow;
+    justify-content: center;
+    align-items: center;
+  }
+}
