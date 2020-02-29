@@ -1,4 +1,8 @@
-import { mapToThreeDecimals, normalizeObjectId } from './objects';
+import {
+  mapToThreeDecimals,
+  normalizeObjectId,
+  cleanLinksFromIgnoredKeys,
+} from './objects';
 
 const createGraph = require('ngraph.graph');
 const centrality = require('ngraph.centrality');
@@ -197,4 +201,77 @@ export const extractSubgraph = (nodes, links, nodeId, numberOfHops) => {
     nodes: nodes.filter(node => newNodesId.has(node.id)),
     links: links.filter(link => newLinksId.has(link.id)),
   };
+};
+
+export const editGraphNode = ({ nodes, links }, prevEditedNode, editedNode) => {
+  const index = nodes.findIndex(node => node.id === prevEditedNode.id);
+  // check if new node id exists in the original node list
+  if (
+    prevEditedNode.id !== editedNode.id &&
+    isIdExisted(nodes, editedNode.id)
+  ) {
+    // eslint-disable-next-line no-alert
+    window.alert('cannot use the same node id');
+    return { nodes, links };
+  }
+  const newNodes = [
+    ...nodes.slice(0, index),
+    editedNode,
+    ...nodes.slice(index + 1),
+  ];
+  const newLinks = cleanLinksFromIgnoredKeys(
+    editLinksWithNewNode(links, prevEditedNode.id, editedNode.id),
+  );
+  return { nodes: newNodes, links: newLinks };
+};
+
+export const editGraphLink = ({ nodes, links }, prevEditedLink, editedLink) => {
+  const index = links.findIndex(link => link.id === prevEditedLink.id);
+  // check if new link id exists in the original link list
+  if (
+    prevEditedLink.id !== editedLink.id &&
+    isIdExisted(links, editedLink.id)
+  ) {
+    // eslint-disable-next-line no-alert
+    window.alert('cannot use the same link id');
+    return { nodes, links };
+  }
+  if (editedLink.source === editedLink.target) {
+    // eslint-disable-next-line no-alert
+    window.alert('cannot use the same source and target id');
+    return { nodes, links };
+  }
+  const isSourceValid =
+    nodes.findIndex(node => node.id === editedLink.source) > -1;
+  const isTargetValid =
+    nodes.findIndex(node => node.id === editedLink.target) > -1;
+  if (
+    !editedLink.source ||
+    !editedLink.target ||
+    !isSourceValid ||
+    !isTargetValid
+  ) {
+    // eslint-disable-next-line no-alert
+    window.alert('link source and target must be filled with valid node id');
+    return { nodes, links };
+  }
+  const newLinks = [
+    ...links.slice(0, index),
+    editedLink,
+    ...links.slice(index + 1),
+  ];
+  return { nodes, links: newLinks };
+};
+
+export const removeGraphNode = ({ nodes, links }, deletedNode) => {
+  const index = nodes.findIndex(node => node.id === deletedNode.id);
+  const newNodes = [...nodes.slice(0, index), ...nodes.slice(index + 1)];
+  const newLinks = removeLinksWithNode(links, deletedNode.id);
+  return { nodes: newNodes, links: newLinks };
+};
+
+export const removeGraphLink = ({ nodes, links }, deletedLink) => {
+  const index = links.findIndex(link => link.id === deletedLink.id);
+  const newLinks = [...links.slice(0, index), ...links.slice(index + 1)];
+  return { nodes, links: newLinks };
 };

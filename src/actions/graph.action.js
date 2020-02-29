@@ -10,6 +10,7 @@ import {
   selectLinkKeys,
   selectEditedLink,
   selectDeletedLink,
+  selectGraphDataJS,
 } from '../selectors/graph.selector';
 import { downloadJSON } from '../utils/download';
 import {
@@ -21,11 +22,12 @@ import {
   getNewNode,
   getNewLink,
   isLinkDuplicate,
-  removeLinksWithNode,
-  editLinksWithNewNode,
-  isIdExisted,
   getLinkSource,
   getLinkTarget,
+  editGraphNode,
+  removeGraphNode,
+  editGraphLink,
+  removeGraphLink,
 } from '../utils/graph';
 import {
   getUniqueKeys,
@@ -166,28 +168,14 @@ export const cancelEditNode = () => set('editedNode', null);
 
 export const submitEditedNode = editedNode => (dispatch, getState) => {
   const state = getState();
-  const nodes = selectGraphNodes(state);
-  const links = selectGraphLinks(state);
+  const graphData = selectGraphDataJS(state);
   const prevEditedNode = selectEditedNode(state);
-  const index = nodes.findIndex(node => node.id === prevEditedNode.id);
   const nodeKeys = selectNodeKeys(state);
   const editedNodeUniqueKeys = getUniqueKeys([editedNode]);
-  // check if new node id exists in the original node list
-  if (
-    prevEditedNode.id !== editedNode.id &&
-    isIdExisted(nodes, editedNode.id)
-  ) {
-    // eslint-disable-next-line no-alert
-    window.alert('cannot use the same node id');
-    return;
-  }
-  const newNodes = [
-    ...nodes.slice(0, index),
+  const { nodes: newNodes, links: newLinks } = editGraphNode(
+    graphData,
+    prevEditedNode,
     editedNode,
-    ...nodes.slice(index + 1),
-  ];
-  const newLinks = cleanLinksFromIgnoredKeys(
-    editLinksWithNewNode(links, prevEditedNode.id, editedNode.id),
   );
   if (!isArrayEqual(editedNodeUniqueKeys, nodeKeys)) {
     // if not the same keys, then nodeKeys = editedNodeUniqueKeys + nodeKeys
@@ -203,13 +191,13 @@ export const cancelDeleteNode = () => set('deletedNode', null);
 
 export const submitDeleteNode = () => (dispatch, getState) => {
   const state = getState();
-  const nodes = selectGraphNodes(state);
-  const links = selectGraphLinks(state);
+  const graphData = selectGraphDataJS(state);
   const deletedNode = selectDeletedNode(state);
-  const index = nodes.findIndex(node => node.id === deletedNode.id);
   const nodeKeys = selectNodeKeys(state);
-  const newNodes = [...nodes.slice(0, index), ...nodes.slice(index + 1)];
-  const newLinks = removeLinksWithNode(links, deletedNode.id);
+  const { nodes: newNodes, links: newLinks } = removeGraphNode(
+    graphData,
+    deletedNode,
+  );
   if (!isArrayEqual(getUniqueKeys(newNodes), nodeKeys)) {
     dispatch(set('nodeKeys', getUniqueKeys(newNodes)));
   }
@@ -224,50 +212,20 @@ export const cancelEditLink = () => set('editedLink', null);
 
 export const submitEditedLink = editedLink => (dispatch, getState) => {
   const state = getState();
-  const nodes = selectGraphNodes(state);
-  const links = selectGraphLinks(state);
+  const graphData = selectGraphDataJS(state);
   const prevEditedLink = selectEditedLink(state);
-  const index = links.findIndex(link => link.id === prevEditedLink.id);
   const linkKeys = selectLinkKeys(state);
   const editedLinkUniqueKeys = getUniqueKeys([editedLink]);
-  // check if new link id exists in the original link list
-  if (
-    prevEditedLink.id !== editedLink.id &&
-    isIdExisted(links, editedLink.id)
-  ) {
-    // eslint-disable-next-line no-alert
-    window.alert('cannot use the same link id');
-    return;
-  }
-  if (editedLink.source === editedLink.target) {
-    // eslint-disable-next-line no-alert
-    window.alert('cannot use the same source and target id');
-    return;
-  }
-  const isSourceValid =
-    nodes.findIndex(node => node.id === editedLink.source) > -1;
-  const isTargetValid =
-    nodes.findIndex(node => node.id === editedLink.target) > -1;
-  if (
-    !editedLink.source ||
-    !editedLink.target ||
-    !isSourceValid ||
-    !isTargetValid
-  ) {
-    // eslint-disable-next-line no-alert
-    window.alert('link source and target must be filled with valid node id');
-    return;
-  }
-  const newLinks = [
-    ...links.slice(0, index),
+  const { nodes: newNodes, links: newLinks } = editGraphLink(
+    graphData,
+    prevEditedLink,
     editedLink,
-    ...links.slice(index + 1),
-  ];
+  );
   if (!isArrayEqual(editedLinkUniqueKeys, linkKeys)) {
     // if not the same keys, then linkKeys = editedNodeUniqueKeys + linkKeys
     dispatch(set('linkKeys', getUniqueKeys(newLinks)));
   }
-  dispatch(set('data', { nodes, links: newLinks }));
+  dispatch(set('data', { nodes: newNodes, links: newLinks }));
   dispatch(set('editedLink', null));
 };
 
@@ -277,17 +235,18 @@ export const cancelDeleteLink = () => set('deletedLink', null);
 
 export const submitDeleteLink = () => (dispatch, getState) => {
   const state = getState();
-  const nodes = selectGraphNodes(state);
-  const links = selectGraphLinks(state);
+  const graphData = selectGraphDataJS(state);
   const deletedLink = selectDeletedLink(state);
-  const index = links.findIndex(link => link.id === deletedLink.id);
   const linkKeys = selectLinkKeys(state);
-  const newLinks = [...links.slice(0, index), ...links.slice(index + 1)];
+  const { nodes: newNodes, links: newLinks } = removeGraphLink(
+    graphData,
+    deletedLink,
+  );
   if (!isArrayEqual(getUniqueKeys(newLinks), linkKeys)) {
     dispatch(set('linkKeys', getUniqueKeys(newLinks)));
   }
   dispatch(resetPopupData());
-  dispatch(set('data', { nodes, links: newLinks }));
+  dispatch(set('data', { nodes: newNodes, links: newLinks }));
   dispatch(set('deletedLink', null));
 };
 
