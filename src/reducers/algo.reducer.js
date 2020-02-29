@@ -1,4 +1,8 @@
-import { ALGO_APPLY, ALGO_CANCEL } from '../actions/algo.action';
+import {
+  ALGO_SET_GRAPH,
+  ALGO_APPLY,
+  ALGO_CANCEL,
+} from '../actions/algo.action';
 import { RESET_ALL } from '../actions/graph.action';
 
 const initialState = {
@@ -9,6 +13,8 @@ const initialState = {
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
+  case ALGO_SET_GRAPH:
+    return { ...state, graph: action.graph };
   case ALGO_APPLY:
     return {
       ...state,

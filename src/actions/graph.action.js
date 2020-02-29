@@ -12,6 +12,7 @@ import {
   selectDeletedLink,
   selectGraphDataJS,
 } from '../selectors/graph.selector';
+import { selectAlgoGraph } from '../selectors/algo.selector';
 import { downloadJSON } from '../utils/download';
 import {
   SELECT_MODE,
@@ -35,6 +36,7 @@ import {
   cleanLinksFromIgnoredKeys,
   cleanNodesFromIgnoredKeys,
 } from '../utils/objects';
+import { setAlgoGraph } from './algo.action';
 import { showLoading, hideLoading } from './ui.action';
 
 export const RESET_ALL = 'RESET_ALL';
@@ -169,10 +171,12 @@ export const cancelEditNode = () => set('editedNode', null);
 export const submitEditedNode = editedNode => (dispatch, getState) => {
   const state = getState();
   const graphData = selectGraphDataJS(state);
+  const algoGraph = selectAlgoGraph(state) || {};
   const prevEditedNode = selectEditedNode(state);
   const nodeKeys = selectNodeKeys(state);
   const editedNodeUniqueKeys = getUniqueKeys([editedNode]);
   try {
+    const newAlgoGraph = editGraphNode(algoGraph, prevEditedNode, editedNode);
     const { nodes: newNodes, links: newLinks } = editGraphNode(
       graphData,
       prevEditedNode,
@@ -182,6 +186,7 @@ export const submitEditedNode = editedNode => (dispatch, getState) => {
       // if not the same keys, then nodeKeys = editedNodeUniqueKeys + nodeKeys
       dispatch(set('nodeKeys', getUniqueKeys(newNodes)));
     }
+    dispatch(setAlgoGraph(newAlgoGraph));
     dispatch(set('data', { nodes: newNodes, links: newLinks }));
     dispatch(set('editedNode', null));
   } catch (error) {
@@ -197,8 +202,10 @@ export const cancelDeleteNode = () => set('deletedNode', null);
 export const submitDeleteNode = () => (dispatch, getState) => {
   const state = getState();
   const graphData = selectGraphDataJS(state);
+  const algoGraph = selectAlgoGraph(state) || {};
   const deletedNode = selectDeletedNode(state);
   const nodeKeys = selectNodeKeys(state);
+  const newAlgoGraph = removeGraphNode(algoGraph, deletedNode);
   const { nodes: newNodes, links: newLinks } = removeGraphNode(
     graphData,
     deletedNode,
@@ -207,6 +214,7 @@ export const submitDeleteNode = () => (dispatch, getState) => {
     dispatch(set('nodeKeys', getUniqueKeys(newNodes)));
   }
   dispatch(resetPopupData());
+  dispatch(setAlgoGraph(newAlgoGraph));
   dispatch(set('data', { nodes: newNodes, links: newLinks }));
   dispatch(set('deletedNode', null));
 };
@@ -218,10 +226,12 @@ export const cancelEditLink = () => set('editedLink', null);
 export const submitEditedLink = editedLink => (dispatch, getState) => {
   const state = getState();
   const graphData = selectGraphDataJS(state);
+  const algoGraph = selectAlgoGraph(state) || {};
   const prevEditedLink = selectEditedLink(state);
   const linkKeys = selectLinkKeys(state);
   const editedLinkUniqueKeys = getUniqueKeys([editedLink]);
   try {
+    const newAlgoGraph = editGraphLink(algoGraph, prevEditedLink, editedLink);
     const { nodes: newNodes, links: newLinks } = editGraphLink(
       graphData,
       prevEditedLink,
@@ -231,6 +241,7 @@ export const submitEditedLink = editedLink => (dispatch, getState) => {
       // if not the same keys, then linkKeys = editedNodeUniqueKeys + linkKeys
       dispatch(set('linkKeys', getUniqueKeys(newLinks)));
     }
+    dispatch(setAlgoGraph(newAlgoGraph));
     dispatch(set('data', { nodes: newNodes, links: newLinks }));
     dispatch(set('editedLink', null));
   } catch (error) {
@@ -246,8 +257,10 @@ export const cancelDeleteLink = () => set('deletedLink', null);
 export const submitDeleteLink = () => (dispatch, getState) => {
   const state = getState();
   const graphData = selectGraphDataJS(state);
+  const algoGraph = selectAlgoGraph(state) || {};
   const deletedLink = selectDeletedLink(state);
   const linkKeys = selectLinkKeys(state);
+  const newAlgoGraph = removeGraphLink(algoGraph, deletedLink);
   const { nodes: newNodes, links: newLinks } = removeGraphLink(
     graphData,
     deletedLink,
@@ -256,6 +269,7 @@ export const submitDeleteLink = () => (dispatch, getState) => {
     dispatch(set('linkKeys', getUniqueKeys(newLinks)));
   }
   dispatch(resetPopupData());
+  dispatch(setAlgoGraph(newAlgoGraph));
   dispatch(set('data', { nodes: newNodes, links: newLinks }));
   dispatch(set('deletedLink', null));
 };

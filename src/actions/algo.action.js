@@ -8,6 +8,7 @@ import {
   extractSubgraph,
 } from '../utils/graph';
 
+export const ALGO_SET_GRAPH = 'ALGO_SET_GRAPH';
 export const ALGO_APPLY = 'ALGO_SELECT_KEY';
 export const ALGO_CANCEL = 'ALGO_CANCEL';
 
@@ -41,6 +42,11 @@ const getWeightFn = (links, key) => {
 
 export const cancelAlgo = () => ({
   type: ALGO_CANCEL,
+});
+
+export const setAlgoGraph = graph => ({
+  type: ALGO_SET_GRAPH,
+  graph,
 });
 
 export const applyMst = key => (dispatch, getState) => {

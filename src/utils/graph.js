@@ -204,6 +204,7 @@ export const extractSubgraph = (nodes, links, nodeId, numberOfHops) => {
 };
 
 export const editGraphNode = ({ nodes, links }, prevEditedNode, editedNode) => {
+  if (!nodes || !links) return null;
   const index = nodes.findIndex(node => node.id === prevEditedNode.id);
   // check if new node id exists in the original node list
   if (
@@ -224,6 +225,7 @@ export const editGraphNode = ({ nodes, links }, prevEditedNode, editedNode) => {
 };
 
 export const editGraphLink = ({ nodes, links }, prevEditedLink, editedLink) => {
+  if (!nodes || !links) return null;
   const index = links.findIndex(link => link.id === prevEditedLink.id);
   // check if new link id exists in the original link list
   if (
@@ -256,6 +258,7 @@ export const editGraphLink = ({ nodes, links }, prevEditedLink, editedLink) => {
 };
 
 export const removeGraphNode = ({ nodes, links }, deletedNode) => {
+  if (!nodes || !links) return null;
   const index = nodes.findIndex(node => node.id === deletedNode.id);
   const newNodes = [...nodes.slice(0, index), ...nodes.slice(index + 1)];
   const newLinks = removeLinksWithNode(links, deletedNode.id);
@@ -263,6 +266,7 @@ export const removeGraphNode = ({ nodes, links }, deletedNode) => {
 };
 
 export const removeGraphLink = ({ nodes, links }, deletedLink) => {
+  if (!nodes || !links) return null;
   const index = links.findIndex(link => link.id === deletedLink.id);
   const newLinks = [...links.slice(0, index), ...links.slice(index + 1)];
   return { nodes, links: newLinks };
