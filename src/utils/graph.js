@@ -210,9 +210,7 @@ export const editGraphNode = ({ nodes, links }, prevEditedNode, editedNode) => {
     prevEditedNode.id !== editedNode.id &&
     isIdExisted(nodes, editedNode.id)
   ) {
-    // eslint-disable-next-line no-alert
-    window.alert('cannot use the same node id');
-    return { nodes, links };
+    throw new Error('Cannot use the same node id');
   }
   const newNodes = [
     ...nodes.slice(0, index),
@@ -232,14 +230,10 @@ export const editGraphLink = ({ nodes, links }, prevEditedLink, editedLink) => {
     prevEditedLink.id !== editedLink.id &&
     isIdExisted(links, editedLink.id)
   ) {
-    // eslint-disable-next-line no-alert
-    window.alert('cannot use the same link id');
-    return { nodes, links };
+    throw new Error('Cannot use the same link id');
   }
   if (editedLink.source === editedLink.target) {
-    // eslint-disable-next-line no-alert
-    window.alert('cannot use the same source and target id');
-    return { nodes, links };
+    throw new Error('Cannot use the same source and target id');
   }
   const isSourceValid =
     nodes.findIndex(node => node.id === editedLink.source) > -1;
@@ -251,9 +245,7 @@ export const editGraphLink = ({ nodes, links }, prevEditedLink, editedLink) => {
     !isSourceValid ||
     !isTargetValid
   ) {
-    // eslint-disable-next-line no-alert
-    window.alert('link source and target must be filled with valid node id');
-    return { nodes, links };
+    throw new Error('Link source and target must be filled with valid node id');
   }
   const newLinks = [
     ...links.slice(0, index),

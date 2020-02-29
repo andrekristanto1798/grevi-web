@@ -172,17 +172,22 @@ export const submitEditedNode = editedNode => (dispatch, getState) => {
   const prevEditedNode = selectEditedNode(state);
   const nodeKeys = selectNodeKeys(state);
   const editedNodeUniqueKeys = getUniqueKeys([editedNode]);
-  const { nodes: newNodes, links: newLinks } = editGraphNode(
-    graphData,
-    prevEditedNode,
-    editedNode,
-  );
-  if (!isArrayEqual(editedNodeUniqueKeys, nodeKeys)) {
-    // if not the same keys, then nodeKeys = editedNodeUniqueKeys + nodeKeys
-    dispatch(set('nodeKeys', getUniqueKeys(newNodes)));
+  try {
+    const { nodes: newNodes, links: newLinks } = editGraphNode(
+      graphData,
+      prevEditedNode,
+      editedNode,
+    );
+    if (!isArrayEqual(editedNodeUniqueKeys, nodeKeys)) {
+      // if not the same keys, then nodeKeys = editedNodeUniqueKeys + nodeKeys
+      dispatch(set('nodeKeys', getUniqueKeys(newNodes)));
+    }
+    dispatch(set('data', { nodes: newNodes, links: newLinks }));
+    dispatch(set('editedNode', null));
+  } catch (error) {
+    // eslint-disable-next-line no-alert
+    window.alert(error);
   }
-  dispatch(set('data', { nodes: newNodes, links: newLinks }));
-  dispatch(set('editedNode', null));
 };
 
 export const deleteNode = node => set('deletedNode', node);
@@ -216,17 +221,22 @@ export const submitEditedLink = editedLink => (dispatch, getState) => {
   const prevEditedLink = selectEditedLink(state);
   const linkKeys = selectLinkKeys(state);
   const editedLinkUniqueKeys = getUniqueKeys([editedLink]);
-  const { nodes: newNodes, links: newLinks } = editGraphLink(
-    graphData,
-    prevEditedLink,
-    editedLink,
-  );
-  if (!isArrayEqual(editedLinkUniqueKeys, linkKeys)) {
-    // if not the same keys, then linkKeys = editedNodeUniqueKeys + linkKeys
-    dispatch(set('linkKeys', getUniqueKeys(newLinks)));
+  try {
+    const { nodes: newNodes, links: newLinks } = editGraphLink(
+      graphData,
+      prevEditedLink,
+      editedLink,
+    );
+    if (!isArrayEqual(editedLinkUniqueKeys, linkKeys)) {
+      // if not the same keys, then linkKeys = editedNodeUniqueKeys + linkKeys
+      dispatch(set('linkKeys', getUniqueKeys(newLinks)));
+    }
+    dispatch(set('data', { nodes: newNodes, links: newLinks }));
+    dispatch(set('editedLink', null));
+  } catch (error) {
+    // eslint-disable-next-line no-alert
+    window.alert(error);
   }
-  dispatch(set('data', { nodes: newNodes, links: newLinks }));
-  dispatch(set('editedLink', null));
 };
 
 export const deleteLink = link => set('deletedLink', link);
