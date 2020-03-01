@@ -1,8 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useWindowResize, useThrottledFn } from 'beautiful-react-hooks';
-// Components
+import { connect } from 'react-redux';
 import { Tab } from 'semantic-ui-react';
 import SplitPane from 'react-split-pane';
+// Actions
+import * as uiActions from '../../actions/ui.action';
+// Components
 import { VisualizationTab, DataTab, SettingTab } from './Home.parts';
 import LoadingIndicator from '../../components/LoadingIndicator';
 import GraphFileSection from './GraphFileSection';
@@ -12,6 +16,8 @@ import EditLinkModal from '../../components/EditLinkModal';
 import DeleteNodeModal from '../../components/DeleteNodeModal';
 import DeleteLinkModal from '../../components/DeleteLinkModal';
 import GraphStatusInfo from './GraphStatusInfo/GraphStatusInfo';
+// Selectors
+import { selectTabIndex } from '../../selectors/ui.selector';
 // Styles
 import styles from './styles.scss';
 
@@ -42,7 +48,7 @@ const tabPanes = [
   },
 ];
 
-const Home = () => {
+const Home = ({ tabIndex, setTabIndex }) => {
   const [leftPanelWidth, setLeftPanelWidth] = React.useState(600);
   const [width, setWidth] = React.useState(window.innerWidth);
   const [height, setHeight] = React.useState(window.innerHeight);
@@ -68,6 +74,8 @@ const Home = () => {
             style={{ width: '100%' }}
             menu={{ secondary: true, pointing: true }}
             panes={tabPanes}
+            activeIndex={tabIndex}
+            onTabChange={(_, { activeIndex }) => setTabIndex(activeIndex)}
           />
         </div>
         <div className={styles.rightPanelContainer}>
@@ -83,4 +91,23 @@ const Home = () => {
   );
 };
 
-export default Home;
+Home.propTypes = {
+  // State
+  tabIndex: PropTypes.number.isRequired,
+  // Actions
+  setTabIndex: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = state => {
+  const tabIndex = selectTabIndex(state);
+  return { tabIndex };
+};
+
+const actions = {
+  setTabIndex: uiActions.setTabIndex,
+};
+
+export default connect(
+  mapStateToProps,
+  actions,
+)(Home);

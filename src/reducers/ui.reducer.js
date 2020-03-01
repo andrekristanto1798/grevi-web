@@ -3,6 +3,7 @@ import { RESET_ALL } from '../actions/graph.action';
 
 const initialState = {
   loading: false,
+  tabIndex: 0,
 };
 
 export default function reducer(state = initialState, action) {
