@@ -271,3 +271,8 @@ export const removeGraphLink = ({ nodes, links }, deletedLink) => {
   const newLinks = [...links.slice(0, index), ...links.slice(index + 1)];
   return { nodes, links: newLinks };
 };
+
+export const assertNodeProp = node => node.id != null;
+
+export const assertLinkProp = link =>
+  link.id != null && link.source != null && link.target != null;

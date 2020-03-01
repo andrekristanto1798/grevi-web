@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import {
   selectGraphNodes,
   selectGraphLinks,
@@ -29,6 +30,8 @@ import {
   removeGraphNode,
   editGraphLink,
   removeGraphLink,
+  assertNodeProp,
+  assertLinkProp,
 } from '../utils/graph';
 import {
   getUniqueKeys,
@@ -56,18 +59,30 @@ export const changeFilename = filename => set('filename', filename);
 export const loadGraphFile = (filename, { nodes, links }) => dispatch => {
   dispatch(resetAll());
   dispatch(showLoading());
-  dispatch(changeFilename(filename));
-  const cleanNodes = cleanNodesFromIgnoredKeys(nodes);
-  const cleanLinks = cleanLinksFromIgnoredKeys(links);
-  dispatch(
-    set('data', {
-      nodes: cleanNodes,
-      links: cleanLinks,
-    }),
-  );
+  try {
+    const isNodesValid = nodes.every(assertNodeProp);
+    const isLinksValid = links.every(assertLinkProp);
+    if (!isNodesValid) {
+      throw new Error('All nodes must have id');
+    }
+    if (!isLinksValid) {
+      throw new Error('All links must have id, source, and target');
+    }
+    const cleanNodes = cleanNodesFromIgnoredKeys(nodes);
+    const cleanLinks = cleanLinksFromIgnoredKeys(links);
+    dispatch(changeFilename(filename));
+    dispatch(
+      set('data', {
+        nodes: cleanNodes,
+        links: cleanLinks,
+      }),
+    );
+    dispatch(set('nodeKeys', getUniqueKeys(cleanNodes)));
+    dispatch(set('linkKeys', getUniqueKeys(cleanLinks)));
+  } catch (error) {
+    window.alert(error);
+  }
   dispatch(hideLoading());
-  dispatch(set('nodeKeys', getUniqueKeys(cleanNodes)));
-  dispatch(set('linkKeys', getUniqueKeys(cleanLinks)));
 };
 
 export const downloadGraphFile = () => (_, getState) => {
@@ -190,7 +205,6 @@ export const submitEditedNode = editedNode => (dispatch, getState) => {
     dispatch(set('data', { nodes: newNodes, links: newLinks }));
     dispatch(set('editedNode', null));
   } catch (error) {
-    // eslint-disable-next-line no-alert
     window.alert(error);
   }
 };
@@ -245,7 +259,6 @@ export const submitEditedLink = editedLink => (dispatch, getState) => {
     dispatch(set('data', { nodes: newNodes, links: newLinks }));
     dispatch(set('editedLink', null));
   } catch (error) {
-    // eslint-disable-next-line no-alert
     window.alert(error);
   }
 };
