@@ -28,7 +28,10 @@ const tabPanes = [
       icon: 'line graph',
       content: 'Visualization',
     },
-    render: VisualizationTab,
+    pane: {
+      content: <VisualizationTab />,
+      className: styles.home__tabPane,
+    },
   },
   {
     menuItem: {
@@ -36,7 +39,10 @@ const tabPanes = [
       icon: 'database',
       content: 'Data',
     },
-    render: DataTab,
+    pane: {
+      content: <DataTab />,
+      className: styles.home__tabPane,
+    },
   },
   {
     menuItem: {
@@ -44,7 +50,10 @@ const tabPanes = [
       icon: 'settings',
       content: 'Setting',
     },
-    render: SettingTab,
+    pane: {
+      content: <SettingTab />,
+      className: styles.home__tabPane,
+    },
   },
 ];
 
@@ -76,6 +85,7 @@ const Home = ({ tabIndex, setTabIndex }) => {
             panes={tabPanes}
             activeIndex={tabIndex}
             onTabChange={(_, { activeIndex }) => setTabIndex(activeIndex)}
+            renderActiveOnly={false}
           />
         </div>
         <div className={styles.rightPanelContainer}>
