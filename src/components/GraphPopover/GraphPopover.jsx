@@ -16,7 +16,7 @@ function GraphPopover({ popupData: { data, type }, onClose }) {
     () => {
       if (prevDataRef !== data) {
         prevDataRef.current = data;
-        position.current = { x: clientX, y: clientY };
+        position.current = { x: clientX + 10, y: clientY + 10 };
       }
     },
     [data],
