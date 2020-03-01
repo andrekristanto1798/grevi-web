@@ -111,6 +111,15 @@ export const mapToThreeDecimals = map =>
     {},
   );
 
+export const mapToString = map =>
+  Object.entries(map).reduce(
+    (acc, [key, value]) => ({
+      ...acc,
+      [key]: JSON.stringify(value).replace(/"/g, ''),
+    }),
+    {},
+  );
+
 export const beautifyObject = obj => {
   const objStringify = JSON.stringify(obj, null, 4);
   const arrStringWithoutBrackets = objStringify.split('\n').slice(1, -1);
