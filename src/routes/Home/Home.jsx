@@ -29,6 +29,7 @@ const tabPanes = [
       content: 'Visualization',
     },
     pane: {
+      key: 'vis',
       content: <VisualizationTab />,
       className: styles.home__tabPane,
     },
@@ -40,6 +41,7 @@ const tabPanes = [
       content: 'Data',
     },
     pane: {
+      key: 'data',
       content: <DataTab />,
       className: styles.home__tabPane,
     },
@@ -51,6 +53,7 @@ const tabPanes = [
       content: 'Setting',
     },
     pane: {
+      key: 'setting',
       content: <SettingTab />,
       className: styles.home__tabPane,
     },
