@@ -45,7 +45,7 @@ function NodeContent({ node, onClose, focusOn, edit, remove }) {
           <Button icon="close" basic size="mini" onClick={onClose} />
         </span>
       </div>
-      <pre>{beautifyObject(cloneObj)}</pre>
+      <pre style={{ whiteSpace: 'pre-wrap' }}>{beautifyObject(cloneObj)}</pre>
       <div className={styles.contentFooter__container}>
         <NodeLinkActions
           data={node}
@@ -91,7 +91,7 @@ export function LinkContent({ link, onClose, focusOn, edit, remove }) {
           <Button icon="close" basic size="mini" onClick={onClose} />
         </span>
       </div>
-      <pre>{beautifyObject(cloneObj)}</pre>
+      <pre style={{ whiteSpace: 'pre-wrap' }}>{beautifyObject(cloneObj)}</pre>
       <div className={styles.contentFooter__container}>
         <NodeLinkActions
           data={link}
