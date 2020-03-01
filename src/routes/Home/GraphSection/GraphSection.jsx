@@ -185,6 +185,7 @@ const GraphSection = ({
         linkDirectionalArrowRelPos={1}
         linkDirectionalArrowLength={getLinkArrowLength}
         onZoom={resetPopupData}
+        onNodeDrag={resetPopupData}
       />
       <GraphPopover popupData={popupData} onClose={resetPopupData} />
     </div>
