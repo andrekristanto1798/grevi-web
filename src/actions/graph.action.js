@@ -1,4 +1,5 @@
 /* eslint-disable no-alert */
+import throttle from 'lodash/throttle';
 import {
   selectGraphNodes,
   selectGraphLinks,
@@ -166,10 +167,12 @@ export const setNodePopup = node => dispatch => {
 export const setLinkPopup = link => dispatch => {
   dispatch(set('popupData', { type: 'link', data: link }));
 };
-
-export const resetPopupData = () => dispatch => {
-  dispatch(set('popupData', { type: null, data: null }));
-};
+export const resetPopupData = throttle(
+  () => dispatch => {
+    dispatch(set('popupData', { type: null, data: null }));
+  },
+  200,
+);
 
 export const focusNodeOn = node => set('focusedNode', node);
 
