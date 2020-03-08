@@ -115,7 +115,7 @@ export const mapToString = map =>
   Object.entries(map).reduce(
     (acc, [key, value]) => ({
       ...acc,
-      [key]: JSON.stringify(value).replace(/"/g, ''),
+      [key]: JSON.stringify(value || '').replace(/"/g, ''),
     }),
     {},
   );
