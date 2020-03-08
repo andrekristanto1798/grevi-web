@@ -7,6 +7,7 @@ import {
   getMstGraph,
   extractSubgraph,
 } from '../utils/graph';
+import { showLoading, hideLoading } from './ui.action';
 
 export const ALGO_SET_GRAPH = 'ALGO_SET_GRAPH';
 export const ALGO_APPLY = 'ALGO_SELECT_KEY';
@@ -49,12 +50,14 @@ export const setAlgoGraph = graph => ({
   graph,
 });
 
-export const applyMst = key => (dispatch, getState) => {
+export const applyMst = key => async (dispatch, getState) => {
+  dispatch(showLoading());
   const state = getState();
   const nodes = selectGraphNodes(state);
   const links = selectGraphLinks(state);
   const [weightFn, error] = getWeightFn(links, key);
   const mstGraph = getMstGraph(nodes, links, weightFn);
+  dispatch(hideLoading());
   dispatch({
     type: ALGO_APPLY,
     algo: ALGO_TYPE.MST,
@@ -63,10 +66,11 @@ export const applyMst = key => (dispatch, getState) => {
   });
 };
 
-export const applyShortestPath = (fromNode, toNode, key) => (
+export const applyShortestPath = (fromNode, toNode, key) => async (
   dispatch,
   getState,
 ) => {
+  dispatch(showLoading());
   const state = getState();
   const nodes = selectGraphNodes(state);
   const links = selectGraphLinks(state);
@@ -93,12 +97,14 @@ export const applyShortestPath = (fromNode, toNode, key) => (
       error: error.toString(),
     });
   }
+  dispatch(hideLoading());
 };
 
-export const applyExtractSubgraph = (nodeId, numberOfHops) => (
+export const applyExtractSubgraph = (nodeId, numberOfHops) => async (
   dispatch,
   getState,
 ) => {
+  dispatch(showLoading());
   const state = getState();
   const nodes = selectGraphNodes(state);
   const links = selectGraphLinks(state);
@@ -118,4 +124,5 @@ export const applyExtractSubgraph = (nodeId, numberOfHops) => (
       error: error.toString(),
     });
   }
+  dispatch(hideLoading());
 };
