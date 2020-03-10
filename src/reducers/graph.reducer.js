@@ -17,6 +17,7 @@ const initialState = {
     nodes: [],
     links: [],
   },
+  zoom: null,
   nodeKeys: [],
   linkKeys: [],
   filename: 'Untitled Graph',

@@ -18,7 +18,6 @@ import {
   selectGraphFocusedNode,
   selectGraphFocusedLink,
   selectVisualizedGraphData,
-  selectPopupData,
 } from '../../../selectors/graph.selector';
 import { selectGetColor } from '../../../selectors/coloring.selector';
 import { selectGetRadius } from '../../../selectors/radius.selector';
@@ -38,7 +37,6 @@ import {
   valueType,
   nodeShape,
   linkShape,
-  popupDataShape,
 } from '../../../components/UtilPropTypes';
 import { COLORS } from '../../../utils/color';
 // Styles
@@ -66,10 +64,10 @@ const GraphSection = ({
   resetFocusedNode,
   focusedLink,
   resetFocusedLink,
-  popupData,
   setNodePopup,
   setLinkPopup,
   resetPopupData,
+  onZoom,
   // settings
   showNodeLabel,
   showLinkLabel,
@@ -166,8 +164,15 @@ const GraphSection = ({
   const handleNodeDragEnd = React.useCallback(() => {
     setIsDragging(false);
   }, []);
+  const handleZoom = React.useCallback(
+    throttle(zoom => {
+      onZoom(zoom);
+      resetPopupData();
+    }, 200),
+    [],
+  );
   return (
-    <div className={styles.graphContainer}>
+    <div id="graph-container" className={styles.graphContainer}>
       <div className={styles.editingToolsContainer}>
         <EditingTools mode={mode} onModeChange={setMode} />
       </div>
@@ -197,11 +202,11 @@ const GraphSection = ({
         onLinkHover={isDragging ? noOp : hoverLink}
         linkDirectionalArrowRelPos={1}
         linkDirectionalArrowLength={getLinkArrowLength}
-        onZoom={resetPopupData}
+        onZoom={handleZoom}
         onNodeDrag={handleNodeDrag}
         onNodeDragEnd={handleNodeDragEnd}
       />
-      <GraphPopover popupData={popupData} onClose={resetPopupData} />
+      <GraphPopover />
     </div>
   );
 };
@@ -217,7 +222,6 @@ GraphSection.propTypes = {
   hoveredLinkId: valueType,
   focusedNode: nodeShape,
   focusedLink: linkShape,
-  popupData: popupDataShape.isRequired,
   // Setting State
   showNodeLabel: PropTypes.bool.isRequired,
   showLinkLabel: PropTypes.bool.isRequired,
@@ -238,6 +242,7 @@ GraphSection.propTypes = {
   setNodePopup: PropTypes.func.isRequired,
   setLinkPopup: PropTypes.func.isRequired,
   resetPopupData: PropTypes.func.isRequired,
+  onZoom: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => {
@@ -251,7 +256,6 @@ const mapStateToProps = state => {
   const getRadius = selectGetRadius(state);
   const focusedNode = selectGraphFocusedNode(state);
   const focusedLink = selectGraphFocusedLink(state);
-  const popupData = selectPopupData(state);
   const showNodeLabel = selectShowNodeLabel(state);
   const showLinkLabel = selectShowLinkLabel(state);
   const showNodeText = selectShowNodeText(state);
@@ -270,7 +274,6 @@ const mapStateToProps = state => {
     getRadius,
     focusedNode,
     focusedLink,
-    popupData,
     showNodeLabel,
     showLinkLabel,
     showNodeText,
@@ -291,6 +294,7 @@ const actions = {
   setNodePopup: graphAction.setNodePopup,
   setLinkPopup: graphAction.setLinkPopup,
   resetPopupData: graphAction.resetPopupData,
+  onZoom: graphAction.onZoom,
 };
 
 export default connect(

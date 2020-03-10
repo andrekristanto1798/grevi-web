@@ -30,3 +30,8 @@ export const popupDataShape = PropTypes.shape({
   type: PropTypes.string,
   data: PropTypes.oneOfType([nodeShape, linkShape]),
 });
+
+export const positionShape = PropTypes.shape({
+  x: PropTypes.number.isRequired,
+  y: PropTypes.number.isRequired,
+});

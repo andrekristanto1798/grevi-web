@@ -1,26 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useMouseState } from 'beautiful-react-hooks';
 import {
   Popover,
   ConnectedNodeContent,
   ConnectedLinkContent,
 } from './GraphPopover.parts';
-import { popupDataShape } from '../UtilPropTypes';
+import { popupDataShape, positionShape } from '../UtilPropTypes';
 
-function GraphPopover({ popupData: { data, type }, onClose }) {
-  const { clientX, clientY } = useMouseState();
-  const position = React.useRef({ x: 0, y: 0 });
-  const prevDataRef = React.useRef();
-  React.useEffect(
-    () => {
-      if (prevDataRef !== data) {
-        prevDataRef.current = data;
-        position.current = { x: clientX + 10, y: clientY + 10 };
-      }
-    },
-    [data],
-  );
+function GraphPopover({ popupData: { data, type }, position, onClose }) {
+  if (type == null) return null;
   let content = '';
   if (type === 'node')
     content = <ConnectedNodeContent node={data} onClose={onClose} />;
@@ -28,8 +16,8 @@ function GraphPopover({ popupData: { data, type }, onClose }) {
     content = <ConnectedLinkContent link={data} onClose={onClose} />;
   return (
     <Popover
-      x={position.current.x}
-      y={position.current.y}
+      x={position.x}
+      y={position.y}
       content={content}
       onClose={onClose}
     />
@@ -38,6 +26,7 @@ function GraphPopover({ popupData: { data, type }, onClose }) {
 
 GraphPopover.propTypes = {
   popupData: popupDataShape.isRequired,
+  position: positionShape.isRequired,
   onClose: PropTypes.func.isRequired,
 };
 

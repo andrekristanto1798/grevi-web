@@ -305,3 +305,5 @@ export const handleChangeLinkSearchValue = linkSearchValue =>
 
 export const toogleSearchAsFilter = prevValue =>
   set('searchAsFilter', !prevValue);
+
+export const onZoom = zoom => set('zoom', zoom);

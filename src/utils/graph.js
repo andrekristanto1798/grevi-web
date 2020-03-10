@@ -276,3 +276,8 @@ export const assertNodeProp = node => node.id != null;
 
 export const assertLinkProp = link =>
   link.id != null && link.source != null && link.target != null;
+
+export const graph2ScreenCoor = (zoom, node) => ({
+  x: (node.x || 0) * zoom.k + zoom.x,
+  y: (node.y || 0) * zoom.k + zoom.y,
+});
