@@ -31,3 +31,8 @@ export const graphFileList = [
     desc: 'Contains all d3 modules',
   },
 ];
+
+export const emptyGraphData = {
+  name: 'Empty Graph.json',
+  graph: { nodes: [], links: [] },
+};

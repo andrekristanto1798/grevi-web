@@ -4,9 +4,10 @@ import PropTypes from 'prop-types';
 import { Button, Modal, Grid, Header, Icon } from 'semantic-ui-react';
 import GraphFileCard from '../GraphFileCard';
 // Graph Data
-import { graphFileList } from '../../data/graphs';
+import { graphFileList, emptyGraphData } from '../../data/graphs';
 // Styles
 import styles from './styles.scss';
+import LinkButton from '../LinkButton';
 
 const graphFormat = `
 JSON => { nodes: Node[], links: Link[] }\n
@@ -88,9 +89,14 @@ export default class UploadButton extends PureComponent {
           <Modal.Content>
             <Grid divided style={{ height: 'fit-content' }}>
               <Grid.Row columns={2}>
-                <Grid.Column>
+                <Grid.Column style={{ maxHeight: 500, overflow: 'auto' }}>
                   <Header.Subheader>
-                    Try out sample graphs below
+                    Try out sample graphs below or start{' '}
+                    <LinkButton
+                      onClick={this.handleFileLocalLoad(emptyGraphData)}
+                    >
+                      Empty Graph
+                    </LinkButton>
                   </Header.Subheader>
                   <div className={styles.cardContainer}>
                     {graphFileList.map(graphData => (
