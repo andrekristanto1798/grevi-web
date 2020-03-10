@@ -200,8 +200,8 @@ export const selectPopupPosition = createSelector(
       position = graph2ScreenCoor(zoom, data);
     }
     return {
-      x: position.x + offsetX,
-      y: position.y + offsetY,
+      x: position.x + offsetX + 10,
+      y: position.y + offsetY + 10,
     };
   },
 );
