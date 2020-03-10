@@ -7,7 +7,7 @@ import throttle from 'lodash/throttle';
 // Actions
 import * as graphAction from '../../../actions/graph.action';
 // Components
-import EditingTools from '../../../components/EditingTools';
+import EditingTools, { ADD_LINK_MODE } from '../../../components/EditingTools';
 // Selectors
 import {
   selectGraphMode,
@@ -29,6 +29,8 @@ import {
   selectAutoHideNodeText,
   selectGraphOrientation,
   selectNodeTextKey,
+  selectForceLinkDistance,
+  selectForceChargeStrength,
 } from '../../../selectors/setting.selector';
 // Utils
 import {
@@ -68,6 +70,7 @@ const GraphSection = ({
   setLinkPopup,
   resetPopupData,
   onZoom,
+  refreshGraphLayout,
   // settings
   showNodeLabel,
   showLinkLabel,
@@ -76,6 +79,8 @@ const GraphSection = ({
   nodeTextKey,
   autoHideNodeText,
   orientation,
+  forceChargeStrength,
+  forceLinkDistance,
 }) => {
   const getLinkArrowLength = React.useCallback(
     () => (showLinkDirection ? 6 : 0),
@@ -106,12 +111,17 @@ const GraphSection = ({
     [data.nodes, focusedNode, focusedLink],
   );
   React.useEffect(
-    () => {
+    throttle(() => {
       const fg = graphRef.current;
       // Add collision and bounding box forces
       fg.d3Force('collide', forceCollide(getRadius));
-    },
-    [getRadius],
+      // Change force charge strength
+      fg.d3Force('charge').strength(forceChargeStrength);
+      // Change force link strength
+      fg.d3Force('link').distance(forceLinkDistance);
+      refreshGraphLayout();
+    }, 200),
+    [getRadius, forceChargeStrength, forceLinkDistance],
   );
   const nodeCanvasObjectModeCb = React.useCallback(() => 'replace', []);
   const nodeCanvasDrawCb = React.useCallback(
@@ -171,6 +181,10 @@ const GraphSection = ({
     }, 200),
     [],
   );
+  const shouldShowNodeLabel =
+    showNodeLabel && !isDragging && mode !== ADD_LINK_MODE;
+  const shouldShowLinkLabel =
+    showLinkLabel && !isDragging && mode !== ADD_LINK_MODE;
   return (
     <div id="graph-container" className={styles.graphContainer}>
       <div className={styles.editingToolsContainer}>
@@ -190,8 +204,8 @@ const GraphSection = ({
         height={height}
         dagMode={orientation}
         nodeVal={getRadius}
-        nodeLabel={showNodeLabel && !isDragging ? setNodePopup : noOp}
-        linkLabel={showLinkLabel && !isDragging ? setLinkPopup : noOp}
+        nodeLabel={shouldShowNodeLabel ? setNodePopup : noOp}
+        linkLabel={shouldShowLinkLabel ? setLinkPopup : noOp}
         nodeCanvasObjectMode={nodeCanvasObjectModeCb}
         nodeCanvasObject={nodeCanvasDrawCb}
         linkWidth={link =>
@@ -230,6 +244,8 @@ GraphSection.propTypes = {
   nodeTextKey: PropTypes.string.isRequired,
   autoHideNodeText: PropTypes.bool.isRequired,
   orientation: PropTypes.string,
+  forceChargeStrength: PropTypes.number.isRequired,
+  forceLinkDistance: PropTypes.number.isRequired,
   // Redux actions
   setMode: PropTypes.func.isRequired,
   getColor: PropTypes.func.isRequired,
@@ -243,6 +259,7 @@ GraphSection.propTypes = {
   setLinkPopup: PropTypes.func.isRequired,
   resetPopupData: PropTypes.func.isRequired,
   onZoom: PropTypes.func.isRequired,
+  refreshGraphLayout: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => {
@@ -263,6 +280,8 @@ const mapStateToProps = state => {
   const nodeTextKey = selectNodeTextKey(state);
   const autoHideNodeText = selectAutoHideNodeText(state);
   const orientation = selectGraphOrientation(state);
+  const forceChargeStrength = selectForceChargeStrength(state);
+  const forceLinkDistance = selectForceLinkDistance(state);
   return {
     isAddLinkMode,
     mode,
@@ -281,6 +300,8 @@ const mapStateToProps = state => {
     nodeTextKey,
     autoHideNodeText,
     orientation,
+    forceChargeStrength,
+    forceLinkDistance,
   };
 };
 
@@ -295,6 +316,7 @@ const actions = {
   setLinkPopup: graphAction.setLinkPopup,
   resetPopupData: graphAction.resetPopupData,
   onZoom: graphAction.onZoom,
+  refreshGraphLayout: graphAction.refreshGraphLayout,
 };
 
 export default connect(

@@ -53,3 +53,15 @@ export const toogleHighlightOnRowHover = prev => ({
   key: 'highlightOnRowHover',
   value: !prev,
 });
+
+export const setForceChargeStrength = value => ({
+  type: SETTING_SET,
+  key: 'forceChargeStrength',
+  value: Number(value),
+});
+
+export const setForceLinkDistance = value => ({
+  type: SETTING_SET,
+  key: 'forceLinkDistance',
+  value: Number(value),
+});

@@ -104,6 +104,13 @@ export const downloadGraphFile = () => (_, getState) => {
   );
 };
 
+export const resetPopupData = throttle(
+  () => dispatch => {
+    dispatch(set('popupData', { type: null, data: null }));
+  },
+  200,
+);
+
 export const setMode = mode => (dispatch, getState) => {
   dispatch(set('clickedNodeId', null));
   if (mode === SELECT_MODE) {
@@ -121,6 +128,7 @@ export const setMode = mode => (dispatch, getState) => {
   }
   if (mode === ADD_LINK_MODE) {
     dispatch(set('mode', ADD_LINK_MODE));
+    dispatch(resetPopupData());
   }
 };
 
@@ -167,12 +175,6 @@ export const setNodePopup = node => dispatch => {
 export const setLinkPopup = link => dispatch => {
   dispatch(set('popupData', { type: 'link', data: link }));
 };
-export const resetPopupData = throttle(
-  () => dispatch => {
-    dispatch(set('popupData', { type: null, data: null }));
-  },
-  200,
-);
 
 export const focusNodeOn = node => set('focusedNode', node);
 

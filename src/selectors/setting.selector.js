@@ -44,3 +44,13 @@ export const selectHighlightOnRowHover = createSelector(
   state => state.setting.highlightOnRowHover,
   highlightOnRowHover => highlightOnRowHover,
 );
+
+export const selectForceChargeStrength = createSelector(
+  state => state.setting.forceChargeStrength,
+  forceChargeStrength => forceChargeStrength,
+);
+
+export const selectForceLinkDistance = createSelector(
+  state => state.setting.forceLinkDistance,
+  forceLinkDistance => forceLinkDistance,
+);

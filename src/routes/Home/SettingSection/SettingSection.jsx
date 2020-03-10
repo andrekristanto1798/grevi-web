@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 // Components
-import { Form, Checkbox, Dropdown } from 'semantic-ui-react';
+import { Form, Checkbox, Dropdown, Input } from 'semantic-ui-react';
 // Actions
 import * as settingAction from '../../../actions/setting.action';
 // Selectors
@@ -16,6 +16,8 @@ import {
   selectNodeTextKey,
   selectFocusOnDoubleClick,
   selectHighlightOnRowHover,
+  selectForceChargeStrength,
+  selectForceLinkDistance,
 } from '../../../selectors/setting.selector';
 import { selectNodeKeys } from '../../../selectors/graph.selector';
 // Utils
@@ -31,6 +33,16 @@ const dropdownOptions = [
   { key: 'radialin', value: 'radialin', text: 'Radial-In' },
 ];
 
+const FORCE_CHARGE_STRENGTH_RANGE = {
+  min: -200,
+  max: 0,
+};
+
+const FORCE_LINK_DISTANCE_RANGE = {
+  min: 0,
+  max: 120,
+};
+
 function SettingSection({
   // graph
   showNodeLabel,
@@ -41,6 +53,8 @@ function SettingSection({
   nodeKeys,
   autoHideNodeText,
   orientation,
+  forceChargeStrength,
+  forceLinkDistance,
   toogleNodeLabel,
   toogleLinkLabel,
   toogleNodeText,
@@ -48,6 +62,8 @@ function SettingSection({
   toogleHideNodeText,
   changeGraphOrientation,
   changeNodeTextKey,
+  setForceChargeStrength,
+  setForceLinkDistance,
   // node table
   focusOnDoubleClick,
   highlightOnRowHover,
@@ -132,6 +148,24 @@ function SettingSection({
           onChange={() => toogleHighlightOnRowHover(highlightOnRowHover)}
         />
       </Form.Field>
+      <Form.Field
+        control={Input}
+        label={`D3 - Force Charge Strength (Value: ${forceChargeStrength})`}
+        type="range"
+        step={10}
+        value={forceChargeStrength}
+        onChange={e => setForceChargeStrength(e.target.value)}
+        {...FORCE_CHARGE_STRENGTH_RANGE}
+      />
+      <Form.Field
+        control={Input}
+        label={`D3 - Force Link Distance (Value: ${forceLinkDistance})`}
+        type="range"
+        step={10}
+        value={forceLinkDistance}
+        onChange={e => setForceLinkDistance(e.target.value)}
+        {...FORCE_LINK_DISTANCE_RANGE}
+      />
     </Form>
   );
 }
@@ -146,6 +180,8 @@ SettingSection.propTypes = {
   nodeKeys: PropTypes.arrayOf(PropTypes.string).isRequired,
   autoHideNodeText: PropTypes.bool.isRequired,
   orientation: PropTypes.string,
+  forceChargeStrength: PropTypes.number.isRequired,
+  forceLinkDistance: PropTypes.number.isRequired,
   // Graph Setting actions
   toogleNodeLabel: PropTypes.func.isRequired,
   toogleLinkLabel: PropTypes.func.isRequired,
@@ -154,6 +190,8 @@ SettingSection.propTypes = {
   toogleHideNodeText: PropTypes.func.isRequired,
   changeGraphOrientation: PropTypes.func.isRequired,
   changeNodeTextKey: PropTypes.func.isRequired,
+  setForceChargeStrength: PropTypes.func.isRequired,
+  setForceLinkDistance: PropTypes.func.isRequired,
   // Node Table state
   focusOnDoubleClick: PropTypes.bool.isRequired,
   highlightOnRowHover: PropTypes.bool.isRequired,
@@ -172,6 +210,8 @@ const mapStateToProps = state => {
   const nodeKeys = selectNodeKeys(state);
   const autoHideNodeText = selectAutoHideNodeText(state);
   const orientation = selectGraphOrientation(state);
+  const forceChargeStrength = selectForceChargeStrength(state);
+  const forceLinkDistance = selectForceLinkDistance(state);
   // Node Table
   const focusOnDoubleClick = selectFocusOnDoubleClick(state);
   const highlightOnRowHover = selectHighlightOnRowHover(state);
@@ -184,6 +224,8 @@ const mapStateToProps = state => {
     nodeKeys,
     autoHideNodeText,
     orientation,
+    forceChargeStrength,
+    forceLinkDistance,
     focusOnDoubleClick,
     highlightOnRowHover,
   };
@@ -198,6 +240,8 @@ const actions = {
   toogleHideNodeText: settingAction.toogleAutoHideNodeText,
   changeGraphOrientation: settingAction.changeGraphOrientation,
   changeNodeTextKey: settingAction.changeNodeTextKey,
+  setForceChargeStrength: settingAction.setForceChargeStrength,
+  setForceLinkDistance: settingAction.setForceLinkDistance,
   // Node Table
   toogleFocusOnDoubleClick: settingAction.toogleFocusOnDoubleClick,
   toogleHighlightOnRowHover: settingAction.toogleHighlightOnRowHover,

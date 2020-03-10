@@ -11,6 +11,8 @@ const initialState = {
   orientation: null,
   focusOnDoubleClick: true,
   highlightOnRowHover: true,
+  forceChargeStrength: -30,
+  forceLinkDistance: 30,
 };
 
 export default function reducer(state = initialState, action) {
