@@ -1,8 +1,9 @@
-import { forceCollide } from 'd3';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { ForceGraph2D } from 'react-force-graph';
+import { forceCollide } from 'd3';
+import throttle from 'lodash/throttle';
 // Actions
 import * as graphAction from '../../../actions/graph.action';
 // Components
@@ -153,6 +154,18 @@ const GraphSection = ({
       autoHideNodeText,
     ],
   );
+  const [isDragging, setIsDragging] = React.useState(false);
+  const handleNodeDrag = React.useCallback(
+    throttle(() => {
+      if (isDragging) return;
+      setIsDragging(true);
+      resetPopupData();
+    }, 200),
+    [isDragging],
+  );
+  const handleNodeDragEnd = React.useCallback(() => {
+    setIsDragging(false);
+  }, []);
   return (
     <div className={styles.graphContainer}>
       <div className={styles.editingToolsContainer}>
@@ -172,20 +185,21 @@ const GraphSection = ({
         height={height}
         dagMode={orientation}
         nodeVal={getRadius}
-        nodeLabel={showNodeLabel ? setNodePopup : noOp}
-        linkLabel={showLinkLabel ? setLinkPopup : noOp}
+        nodeLabel={showNodeLabel && !isDragging ? setNodePopup : noOp}
+        linkLabel={showLinkLabel && !isDragging ? setLinkPopup : noOp}
         nodeCanvasObjectMode={nodeCanvasObjectModeCb}
         nodeCanvasObject={nodeCanvasDrawCb}
         linkWidth={link =>
           link.id != null && link.id === hoveredLinkId ? 5 : 1
         }
-        onNodeClick={clickNode}
-        onNodeHover={hoverNode}
-        onLinkHover={hoverLink}
+        onNodeClick={isDragging ? noOp : clickNode}
+        onNodeHover={isDragging ? noOp : hoverNode}
+        onLinkHover={isDragging ? noOp : hoverLink}
         linkDirectionalArrowRelPos={1}
         linkDirectionalArrowLength={getLinkArrowLength}
         onZoom={resetPopupData}
-        onNodeDrag={resetPopupData}
+        onNodeDrag={handleNodeDrag}
+        onNodeDragEnd={handleNodeDragEnd}
       />
       <GraphPopover popupData={popupData} onClose={resetPopupData} />
     </div>
