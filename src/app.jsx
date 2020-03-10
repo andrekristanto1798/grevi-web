@@ -7,6 +7,9 @@ import rootReducer from './reducers';
 
 import createStore from './store/createStore';
 
+// Semantic ui global css
+import 'semantic-ui-css/semantic.min.css';
+// App scss
 import 'app.scss';
 
 ReactDOM.render(
