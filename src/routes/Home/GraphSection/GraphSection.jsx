@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { ForceGraph2D } from 'react-force-graph';
-import { forceCollide } from 'd3';
 import throttle from 'lodash/throttle';
 // Actions
 import * as graphAction from '../../../actions/graph.action';
@@ -113,15 +112,20 @@ const GraphSection = ({
   React.useEffect(
     throttle(() => {
       const fg = graphRef.current;
-      // Add collision and bounding box forces
-      fg.d3Force('collide', forceCollide(getRadius));
       // Change force charge strength
       fg.d3Force('charge').strength(forceChargeStrength);
+      refreshGraphLayout();
+    }, 200),
+    [forceChargeStrength],
+  );
+  React.useEffect(
+    throttle(() => {
+      const fg = graphRef.current;
       // Change force link strength
       fg.d3Force('link').distance(forceLinkDistance);
       refreshGraphLayout();
     }, 200),
-    [getRadius, forceChargeStrength, forceLinkDistance],
+    [forceLinkDistance],
   );
   const nodeCanvasObjectModeCb = React.useCallback(() => 'replace', []);
   const nodeCanvasDrawCb = React.useCallback(
