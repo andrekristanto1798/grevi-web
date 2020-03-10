@@ -291,10 +291,13 @@ export const submitDeleteLink = () => (dispatch, getState) => {
 };
 
 export const refreshGraphLayout = () => (dispatch, getState) => {
+  // Refresh Graph Layout just need to create a new object
+  // such that redux connect will pick it up as the new state
   const state = getState();
-  const nodes = selectGraphNodes(state);
-  const links = selectGraphLinks(state);
-  dispatch(set('data', { nodes, links }));
+  const graphData = selectGraphDataJS(state);
+  const algoGraph = selectAlgoGraph(state) || {};
+  dispatch(setAlgoGraph({ ...algoGraph }));
+  dispatch(set('data', { ...graphData }));
 };
 
 export const handleChangeNodeSearchValue = nodeSearchValue =>
