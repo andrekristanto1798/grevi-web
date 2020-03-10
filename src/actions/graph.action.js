@@ -42,6 +42,7 @@ import {
 } from '../utils/objects';
 import { setAlgoGraph } from './algo.action';
 import { showLoading, hideLoading } from './ui.action';
+import { changeNodeTextKey } from './setting.action';
 
 export const RESET_ALL = 'RESET_ALL';
 export const SET = 'GRAPH_SET';
@@ -78,8 +79,15 @@ export const loadGraphFile = (filename, { nodes, links }) => dispatch => {
         links: cleanLinks,
       }),
     );
-    dispatch(set('nodeKeys', getUniqueKeys(cleanNodes)));
-    dispatch(set('linkKeys', getUniqueKeys(cleanLinks)));
+    const nodeKeys = getUniqueKeys(cleanNodes);
+    const linkKeys = getUniqueKeys(cleanLinks);
+    dispatch(set('nodeKeys', nodeKeys));
+    dispatch(set('linkKeys', linkKeys));
+    if (nodeKeys.includes('name')) {
+      dispatch(changeNodeTextKey('name'));
+    } else {
+      dispatch(changeNodeTextKey('id'));
+    }
   } catch (error) {
     window.alert(error);
   }
