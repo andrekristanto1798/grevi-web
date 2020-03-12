@@ -143,7 +143,11 @@ const GraphSection = ({
       // The inside circle
       ctx.beginPath();
       ctx.arc(node.x, node.y, radius, 0, 2 * Math.PI, false);
-      ctx.fillStyle = isHighlight ? COLORS.blueNormal : getColor(node);
+      if (hoveredNodeId.length > 0 && !isHighlight) {
+        ctx.fillStyle = 'rgba(0,0,0,0.3)';
+      } else {
+        ctx.fillStyle = getColor(node);
+      }
       ctx.fill();
       if (showNodeText) {
         if (autoHideNodeText && globalScale <= 0.5) return;
@@ -185,10 +189,23 @@ const GraphSection = ({
     }, 200),
     [],
   );
-  const shouldShowNodeLabel =
-    showNodeLabel && !isDragging && mode !== ADD_LINK_MODE;
-  const shouldShowLinkLabel =
-    showLinkLabel && !isDragging && mode !== ADD_LINK_MODE;
+  const handleClickNode = React.useCallback(
+    node => {
+      clickNode(node);
+      if (mode !== ADD_LINK_MODE && showNodeLabel) {
+        setNodePopup(node);
+      }
+    },
+    [mode, showNodeLabel],
+  );
+  const handleClickLink = React.useCallback(
+    node => {
+      if (mode !== ADD_LINK_MODE && showLinkLabel) {
+        setLinkPopup(node);
+      }
+    },
+    [mode, showLinkLabel],
+  );
   return (
     <div id="graph-container" className={styles.graphContainer}>
       <div className={styles.editingToolsContainer}>
@@ -208,16 +225,17 @@ const GraphSection = ({
         height={height}
         dagMode={orientation}
         nodeVal={getRadius}
-        nodeLabel={shouldShowNodeLabel ? setNodePopup : noOp}
-        linkLabel={shouldShowLinkLabel ? setLinkPopup : noOp}
+        nodeLabel={noOp}
+        linkLabel={noOp}
         nodeCanvasObjectMode={nodeCanvasObjectModeCb}
         nodeCanvasObject={nodeCanvasDrawCb}
         linkWidth={link =>
           link.id != null && link.id === hoveredLinkId ? 5 : 1
         }
-        onNodeClick={isDragging ? noOp : clickNode}
+        onNodeClick={isDragging ? noOp : handleClickNode}
         onNodeHover={isDragging ? noOp : hoverNode}
         onLinkHover={isDragging ? noOp : hoverLink}
+        onLinkClick={isDragging ? noOp : handleClickLink}
         linkDirectionalArrowRelPos={1}
         linkDirectionalArrowLength={getLinkArrowLength}
         onZoom={handleZoom}

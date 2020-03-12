@@ -10,16 +10,16 @@ import { popupDataShape, positionShape } from '../UtilPropTypes';
 
 function GraphPopover({ popupData: { data, type }, position, onClose }) {
   const { clientX, clientY } = useMouseState();
-  const mousePos = React.useRef({ x: 0, y: 0 });
+  const [mousePos, setMousePos] = React.useState({ x: 0, y: 0 });
   const prevDataRef = React.useRef();
   React.useEffect(
     () => {
       if (prevDataRef !== data) {
         prevDataRef.current = data;
-        mousePos.current = { x: clientX + 10, y: clientY + 10 };
+        setMousePos({ x: clientX + 10, y: clientY + 10 });
       }
     },
-    [data],
+    [data, type],
   );
   if (type == null) return null;
   let popupPosition;
@@ -32,7 +32,7 @@ function GraphPopover({ popupData: { data, type }, position, onClose }) {
   if (type === 'link') {
     // Change popup position based on the currentMouse
     content = <ConnectedLinkContent link={data} onClose={onClose} />;
-    popupPosition = mousePos.current;
+    popupPosition = mousePos;
   }
   return (
     <Popover
