@@ -9,6 +9,7 @@
     "deploy": "yarn build && gh-pages -d build",
     "format": "prettier --write 'src/**/*.js'",
     "lint:fix": "eslint src/**/*.{js,jsx} --fix",
+    "gen:covid-data": "node ./parser/covid_github_parser.js && node ./parser/covid_cna.parser.js",
     "precommit": "lint-staged"
   },
   "lint-staged": {

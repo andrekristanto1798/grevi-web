@@ -153,14 +153,12 @@
             "case": "162",
             "name": "Male, 28",
             "gp": "9",
-            "new": "1",
             "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-covid19-new-cases-safra-mar-10-12521660"
           },
           {
             "case": "163",
             "name": "Female, 27",
             "gp": "9",
-            "new": "1",
             "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-covid19-new-cases-safra-mar-10-12521660"
           }
         ]
@@ -186,6 +184,7 @@
       {
         "case": "148",
         "name": "Female, 67",
+        "recovered": "1",
         "gp": "9",
         "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-cases-safra-jurong-singapore-12515592"
       },
@@ -241,22 +240,26 @@
         "case": "161",
         "name": "Male, 73",
         "gp": "9",
-        "new": "1",
         "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-covid19-new-cases-safra-mar-10-12521660"
       },
       {
         "case": "164",
         "name": "Singapore PR, female, 57",
         "gp": "9",
-        "new": "1",
         "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-covid19-new-cases-safra-mar-10-12521660"
       },
       {
         "case": "166",
         "name": "Female, 55",
         "gp": "9",
-        "new": "1",
         "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-covid19-new-cases-safra-mar-10-12521660"
+      },
+      {
+        "case": "174",
+        "name": "Female, 67",
+        "gp": "9",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
       }
     ]
   },
@@ -731,6 +734,7 @@
       {
         "case": "106",
         "name": "Japanese national, male, 54",
+        "recovered": "1",
         "gp": "8",
         "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-covid-19-cases-update-moh-12487992"
       },
@@ -915,6 +919,7 @@
       {
         "case": "92",
         "name": "Male, 47",
+        "recovered": "1",
         "gp": "6",
         "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-patients-covid-19-moh-update-12472024"
       },
@@ -955,6 +960,20 @@
         "name": "Cleaner at NTU, male, 69",
         "gp": "6",
         "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-cases-safra-jurong-singapore-12515592"
+      },
+      {
+        "case": "168",
+        "name": "Male, 47",
+        "gp": "6",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
+      },
+      {
+        "case": "172",
+        "name": "Filipino national, female, 42",
+        "gp": "6",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
       }
     ]
   },
@@ -1212,11 +1231,84 @@
       },
       {
         "case": "165",
-        "name": "Singaporean, male, 30",
+        "name": "RSAF serviceman, male, 30",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-covid19-new-cases-safra-mar-10-12521660"
+      },
+      {
+        "case": "169",
+        "name": "RSAF serviceman, male, 40",
         "type": "imported",
         "gp": "7",
         "new": "1",
-        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-covid19-new-cases-safra-mar-10-12521660"
+        "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
+      },
+      {
+        "case": "170",
+        "name": "Indonesian national, female, 56",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
+      },
+      {
+        "case": "171",
+        "name": "Singaporean, male, 27",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
+      },
+      {
+        "case": "173",
+        "name": "RSAF serviceman, male, 31",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
+      },
+      {
+        "case": "175",
+        "name": "RSAF serviceman, male, 44",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
+      },
+      {
+        "case": "176",
+        "name": "British national, female, 37",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
+      },
+      {
+        "case": "177",
+        "name": "Singaporean, male, 26",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
+      },
+      {
+        "case": "178",
+        "name": "Filipino national, male, 37",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710",
+        "children": [
+          {
+            "case": "167",
+            "name": "NTFGH nurse, Filipino national, female, 35",
+            "type": "imported",
+            "gp": "7",
+            "new": "1",
+            "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
+          }
+        ]
       }
     ]
   }

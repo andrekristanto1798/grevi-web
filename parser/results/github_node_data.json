@@ -1,0 +1,1070 @@
+[
+    {
+        "case": 1,
+        "confirmed": "2020-01-23",
+        "discharged": "2020-02-19",
+        "hospital": "Singapore General Hospital"
+    },
+    {
+        "case": 2,
+        "confirmed": "2020-01-24",
+        "discharged": "2020-02-07",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 3,
+        "confirmed": "2020-01-24",
+        "discharged": "2020-02-21",
+        "hospital": "Singapore General Hospital"
+    },
+    {
+        "case": 4,
+        "confirmed": "2020-01-25",
+        "discharged": "2020-02-12",
+        "hospital": "Sengkang General Hospital"
+    },
+    {
+        "case": 5,
+        "confirmed": "2020-01-27",
+        "discharged": "2020-02-18",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 6,
+        "confirmed": "2020-01-27",
+        "discharged": "2020-02-20",
+        "hospital": "Changi General Hospital"
+    },
+    {
+        "case": 7,
+        "confirmed": "2020-01-27",
+        "discharged": "2020-02-04",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 8,
+        "confirmed": "2020-01-29",
+        "discharged": "2020-02-18",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 9,
+        "confirmed": "2020-01-29",
+        "discharged": "2020-02-23",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 10,
+        "confirmed": "2020-01-29",
+        "discharged": "2020-02-09",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 11,
+        "confirmed": "2020-01-29",
+        "discharged": "2020-02-10",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 12,
+        "confirmed": "2020-01-29",
+        "discharged": "2020-02-12",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 13,
+        "confirmed": "2020-01-30",
+        "discharged": "2020-02-09",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 14,
+        "confirmed": "2020-01-30",
+        "discharged": "2020-02-17",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 15,
+        "confirmed": "2020-01-31",
+        "discharged": "2020-02-16",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 16,
+        "confirmed": "2020-01-31",
+        "discharged": "2020-02-20",
+        "hospital": "Singapore General Hospital"
+    },
+    {
+        "case": 17,
+        "confirmed": "2020-01-31",
+        "discharged": "2020-02-11",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 18,
+        "confirmed": "2020-02-01",
+        "discharged": "2020-02-27",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 19,
+        "confirmed": "2020-02-03",
+        "discharged": "2020-02-22",
+        "hospital": " Singapore General Hospital"
+    },
+    {
+        "case": 20,
+        "confirmed": "2020-02-04",
+        "discharged": "2020-02-29",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 21,
+        "confirmed": "2020-02-04",
+        "discharged": "2020-02-18",
+        "hospital": " Singapore General Hospital"
+    },
+    {
+        "case": 22,
+        "confirmed": "2020-02-03",
+        "discharged": "2020-02-09",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 23,
+        "confirmed": "2020-02-03",
+        "discharged": "2020-02-21",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 24,
+        "confirmed": "2020-02-04",
+        "discharged": "2020-02-15",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 25,
+        "confirmed": "2020-02-04",
+        "discharged": "2020-02-12",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 26,
+        "confirmed": "2020-02-04",
+        "discharged": "2020-02-09",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 27,
+        "confirmed": "2020-02-05",
+        "discharged": "2020-02-21",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 28,
+        "confirmed": "2020-02-05",
+        "discharged": "2020-02-22",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 29,
+        "confirmed": "2020-02-05",
+        "discharged": "2020-02-12",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 30,
+        "confirmed": "2020-02-06",
+        "discharged": "2020-02-14",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 31,
+        "confirmed": "2020-02-06",
+        "discharged": "2020-02-17",
+        "hospital": "Changi General Hospital"
+    },
+    {
+        "case": 32,
+        "confirmed": "2020-02-06",
+        "discharged": "2020-02-19",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 33,
+        "confirmed": "2020-02-06",
+        "discharged": "2020-02-19",
+        "hospital": "Sengkang General Hospital"
+    },
+    {
+        "case": 34,
+        "confirmed": "2020-02-07",
+        "discharged": "2020-02-12",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 35,
+        "confirmed": "2020-02-07",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 36,
+        "confirmed": "2020-02-07",
+        "discharged": "2020-02-11",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 37,
+        "confirmed": "2020-02-07",
+        "discharged": "2020-03-02",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 38,
+        "confirmed": "2020-02-08",
+        "discharged": "2020-02-18",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 39,
+        "confirmed": "2020-02-08",
+        "discharged": "2020-02-16",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 40,
+        "confirmed": "2020-02-08",
+        "discharged": "2020-02-12",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 41,
+        "confirmed": "2020-02-08",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 42,
+        "confirmed": "2020-02-08",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 43,
+        "confirmed": "2020-02-08",
+        "discharged": "2020-03-07",
+        "hospital": "Sengkang General Hospital"
+    },
+    {
+        "case": 44,
+        "confirmed": "2020-02-08",
+        "discharged": "2020-02-19",
+        "hospital": "Khoo Teck Puat Hospital"
+    },
+    {
+        "case": 45,
+        "confirmed": "2020-02-10",
+        "discharged": "2020-02-14",
+        "hospital": "KK Women’s and Children’s Hospital"
+    },
+    {
+        "case": 46,
+        "confirmed": "2020-02-10",
+        "discharged": "2020-02-24",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 47,
+        "confirmed": "2020-02-10",
+        "discharged": "2020-03-07",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 48,
+        "confirmed": "2020-02-11",
+        "discharged": "2020-02-17",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 49,
+        "confirmed": "2020-02-11",
+        "discharged": "2020-02-26",
+        "hospital": "National University Hospital"
+    },
+    {
+        "case": 50,
+        "confirmed": "2020-02-12",
+        "discharged": "2020-02-21",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 51,
+        "confirmed": "2020-02-12",
+        "discharged": "2020-02-21",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 52,
+        "confirmed": "2020-02-12",
+        "discharged": "2020-02-28",
+        "hospital": "Tan Tock Seng Hospital"
+    },
+    {
+        "case": 53,
+        "confirmed": "2020-02-12",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 54,
+        "confirmed": "2020-02-13",
+        "discharged": "2020-03-01",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 55,
+        "confirmed": "2020-02-13",
+        "discharged": "2020-02-19",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 56,
+        "confirmed": "2020-02-13",
+        "discharged": "2020-02-26",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 57,
+        "confirmed": "2020-02-13",
+        "discharged": "2020-02-21",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 58,
+        "confirmed": "2020-02-13",
+        "discharged": "2020-02-25",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 59,
+        "confirmed": "2020-02-13",
+        "discharged": "2020-02-26",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 60,
+        "confirmed": "2020-02-13",
+        "discharged": "2020-03-01",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 61,
+        "confirmed": "2020-02-13",
+        "discharged": "2020-03-04",
+        "hospital": "National University Hospital"
+    },
+    {
+        "case": 62,
+        "confirmed": "2020-02-13",
+        "discharged": "2020-02-25",
+        "hospital": "Singapore General Hospital"
+    },
+    {
+        "case": 63,
+        "confirmed": "2020-02-14",
+        "discharged": "2020-02-21",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 64,
+        "confirmed": "2020-02-14",
+        "discharged": "2020-02-23",
+        "hospital": "National University Hospital"
+    },
+    {
+        "case": 65,
+        "confirmed": "2020-02-14",
+        "discharged": "2020-02-17",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 66,
+        "confirmed": "2020-02-14",
+        "discharged": "2020-02-20",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 67,
+        "confirmed": "2020-02-14",
+        "discharged": "2020-03-02",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 68,
+        "confirmed": "2020-02-14",
+        "discharged": "2020-02-29",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 69,
+        "confirmed": "2020-02-14",
+        "discharged": "2020-03-02",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 70,
+        "confirmed": "2020-02-15",
+        "discharged": "2020-02-21",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 71,
+        "confirmed": "2020-02-15",
+        "discharged": "2020-03-05",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 72,
+        "confirmed": "2020-02-15",
+        "discharged": "2020-02-27",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 73,
+        "confirmed": "2020-02-15",
+        "discharged": "2020-02-26",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 74,
+        "confirmed": "2020-02-15",
+        "discharged": "2020-03-07",
+        "hospital": "Alexandra Hospital"
+    },
+    {
+        "case": 75,
+        "confirmed": "2020-02-16",
+        "discharged": "2020-02-29",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 76,
+        "confirmed": "2020-02-16",
+        "discharged": "2020-02-18",
+        "hospital": "KK Women’s and Children’s Hospital"
+    },
+    {
+        "case": 77,
+        "confirmed": "2020-02-16",
+        "discharged": "2020-02-25",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 78,
+        "confirmed": "2020-02-17",
+        "discharged": "2020-02-27",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 79,
+        "confirmed": "2020-02-17",
+        "discharged": "2020-02-28",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 80,
+        "confirmed": "2020-02-18",
+        "discharged": "2020-02-27",
+        "hospital": "National University Hospital"
+    },
+    {
+        "case": 81,
+        "confirmed": "2020-02-18",
+        "discharged": "2020-02-25",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 82,
+        "confirmed": "2020-02-18",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital"
+    },
+    {
+        "case": 83,
+        "confirmed": "2020-02-19",
+        "discharged": "2020-02-21",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 84,
+        "confirmed": "2020-02-19",
+        "discharged": "2020-02-21",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 85,
+        "confirmed": "2020-02-20",
+        "discharged": "2020-03-07",
+        "hospital": "Khoo Teck Puat Hospital"
+    },
+    {
+        "case": 86,
+        "confirmed": "2020-02-20",
+        "discharged": "2020-03-07",
+        "hospital": "Ng Teng Fong General Hospital"
+    },
+    {
+        "case": 87,
+        "confirmed": "2020-02-21",
+        "discharged": "2020-02-24",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 88,
+        "confirmed": "2020-02-21",
+        "discharged": "2020-03-02",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 89,
+        "confirmed": "2020-02-22",
+        "discharged": "2020-02-28",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 90,
+        "confirmed": "2020-02-23",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 91,
+        "confirmed": "2020-02-22",
+        "discharged": "2020-02-25",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 92,
+        "confirmed": "2020-02-26",
+        "discharged": "2020-03-11",
+        "hospital": "Sengkang General Hospital"
+    },
+    {
+        "case": 93,
+        "confirmed": "2020-02-26",
+        "discharged": "2020-03-07",
+        "hospital": "Ng Teng Fong General Hospital"
+    },
+    {
+        "case": 94,
+        "confirmed": "2020-02-26",
+        "discharged": "",
+        "hospital": "Singapore General Hospital"
+    },
+    {
+        "case": 95,
+        "confirmed": "2020-02-27",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital"
+    },
+    {
+        "case": 96,
+        "confirmed": "2020-02-27",
+        "discharged": "2020-03-07",
+        "hospital": "KK Women’s and Children’s Hospital"
+    },
+    {
+        "case": 97,
+        "confirmed": "2020-02-28",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 98,
+        "confirmed": "2020-02-28",
+        "discharged": "2020-03-05",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 99,
+        "confirmed": "2020-02-29",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 100,
+        "confirmed": "2020-02-29",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 101,
+        "confirmed": "2020-02-29",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital"
+    },
+    {
+        "case": 102,
+        "confirmed": "2020-02-29",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital"
+    },
+    {
+        "case": 103,
+        "confirmed": "2020-03-01",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 104,
+        "confirmed": "2020-03-01",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 105,
+        "confirmed": "2020-03-01",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 106,
+        "confirmed": "2020-03-01",
+        "discharged": "2020-03-11",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 107,
+        "confirmed": "2020-03-01",
+        "discharged": "2020-03-06",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 108,
+        "confirmed": "2020-03-02",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital"
+    },
+    {
+        "case": 109,
+        "confirmed": "2020-03-02",
+        "discharged": "",
+        "hospital": "Singapore General Hospital"
+    },
+    {
+        "case": 110,
+        "confirmed": "2020-03-03",
+        "discharged": "2020-03-07",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 111,
+        "confirmed": "2020-03-03",
+        "discharged": "",
+        "hospital": "National University Hospital"
+    },
+    {
+        "case": 112,
+        "confirmed": "2020-03-04",
+        "discharged": "2020-03-09",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 113,
+        "confirmed": "2020-03-04",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 114,
+        "confirmed": "2020-03-04",
+        "discharged": "",
+        "hospital": "National University Hospital"
+    },
+    {
+        "case": 115,
+        "confirmed": "2020-03-05",
+        "discharged": "",
+        "hospital": "National University Hospital"
+    },
+    {
+        "case": 116,
+        "confirmed": "2020-03-05",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 117,
+        "confirmed": "2020-03-05",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 118,
+        "confirmed": "2020-03-05",
+        "discharged": "",
+        "hospital": "National University Hospital"
+    },
+    {
+        "case": 119,
+        "confirmed": "2020-03-05",
+        "discharged": "",
+        "hospital": "Alexandra Hospital"
+    },
+    {
+        "case": 120,
+        "confirmed": "2020-03-05",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 121,
+        "confirmed": "2020-03-05",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 122,
+        "confirmed": "2020-03-05",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 123,
+        "confirmed": "2020-03-05",
+        "discharged": "",
+        "hospital": "Sengkang General Hospital"
+    },
+    {
+        "case": 124,
+        "confirmed": "2020-03-06",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 125,
+        "confirmed": "2020-03-06",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 126,
+        "confirmed": "2020-03-05",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 127,
+        "confirmed": "2020-03-05",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 128,
+        "confirmed": "2020-03-06",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 129,
+        "confirmed": "2020-03-06",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital"
+    },
+    {
+        "case": 130,
+        "confirmed": "2020-03-06",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital"
+    },
+    {
+        "case": 131,
+        "confirmed": "2020-03-06",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital"
+    },
+    {
+        "case": 132,
+        "confirmed": "2020-03-06",
+        "discharged": "",
+        "hospital": "National University Hospital"
+    },
+    {
+        "case": 133,
+        "confirmed": "2020-03-06",
+        "discharged": "",
+        "hospital": "National University Hospital"
+    },
+    {
+        "case": 134,
+        "confirmed": "2020-03-06",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 135,
+        "confirmed": "2020-03-06",
+        "discharged": "",
+        "hospital": "Singapore General Hospital"
+    },
+    {
+        "case": 136,
+        "confirmed": "2020-03-06",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 137,
+        "confirmed": "2020-03-06",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 138,
+        "confirmed": "2020-03-06",
+        "discharged": "2020-03-09",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 139,
+        "confirmed": "2020-03-07",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital"
+    },
+    {
+        "case": 140,
+        "confirmed": "2020-03-07",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital"
+    },
+    {
+        "case": 141,
+        "confirmed": "2020-03-07",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital"
+    },
+    {
+        "case": 142,
+        "confirmed": "2020-03-07",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital"
+    },
+    {
+        "case": 143,
+        "confirmed": "2020-03-07",
+        "discharged": "",
+        "hospital": "National University Hospital"
+    },
+    {
+        "case": 144,
+        "confirmed": "2020-03-07",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital"
+    },
+    {
+        "case": 145,
+        "confirmed": "2020-03-08",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 146,
+        "confirmed": "2020-03-08",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 147,
+        "confirmed": "2020-03-08",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 148,
+        "confirmed": "2020-03-08",
+        "discharged": "2020-03-11",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 149,
+        "confirmed": "2020-03-08",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 150,
+        "confirmed": "2020-03-08",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 151,
+        "confirmed": "2020-03-08",
+        "discharged": "2020-03-08",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 152,
+        "confirmed": "2020-03-08",
+        "discharged": "",
+        "hospital": "Singapore General Hospital"
+    },
+    {
+        "case": 153,
+        "confirmed": "2020-03-08",
+        "discharged": "",
+        "hospital": "Singapore General Hospital"
+    },
+    {
+        "case": 154,
+        "confirmed": "2020-03-09",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 155,
+        "confirmed": "2020-03-09",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 156,
+        "confirmed": "2020-03-09",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 157,
+        "confirmed": "2020-03-09",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 158,
+        "confirmed": "2020-03-09",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital"
+    },
+    {
+        "case": 159,
+        "confirmed": "2020-03-09",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital"
+    },
+    {
+        "case": 160,
+        "confirmed": "2020-03-09",
+        "discharged": "",
+        "hospital": "KK Women’s and Children’s Hospital"
+    },
+    {
+        "case": 161,
+        "confirmed": "2020-03-09",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 162,
+        "confirmed": "2020-03-09",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 163,
+        "confirmed": "2020-03-09",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 164,
+        "confirmed": "2020-03-10",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 165,
+        "confirmed": "2020-03-10",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 166,
+        "confirmed": "2020-03-10",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 167,
+        "confirmed": "2020-03-10",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital"
+    },
+    {
+        "case": 168,
+        "confirmed": "2020-03-10",
+        "discharged": "",
+        "hospital": "Sengkang Hospital"
+    },
+    {
+        "case": 169,
+        "confirmed": "2020-03-10",
+        "discharged": "",
+        "hospital": "Khoo Teck Puat Hospital"
+    },
+    {
+        "case": 170,
+        "confirmed": "2020-03-10",
+        "discharged": "",
+        "hospital": "Singapore General Hospital"
+    },
+    {
+        "case": 171,
+        "confirmed": "2020-03-11",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 172,
+        "confirmed": "2020-03-11",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 173,
+        "confirmed": "2020-03-11",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 174,
+        "confirmed": "2020-03-11",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 175,
+        "confirmed": "2020-03-11",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 176,
+        "confirmed": "2020-03-11",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 177,
+        "confirmed": "2020-03-11",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases"
+    },
+    {
+        "case": 178,
+        "confirmed": "2020-03-11",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital"
+    }
+]

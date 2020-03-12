@@ -1,0 +1,2675 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.809796, 1.257736]
+      },
+      "properties": {
+        "id": "case-1",
+        "title": "Case 1",
+        "confirmed": "2020-01-23",
+        "discharged": "2020-02-19",
+        "hospital": "Singapore General Hospital",
+        "source": "https://www.straitstimes.com/singapore/health/singapore-confirms-first-case-of-wuhan-virus"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.858465, 1.30761]
+      },
+      "properties": {
+        "id": "case-2",
+        "title": "Case 2",
+        "confirmed": "2020-01-24",
+        "discharged": "2020-02-07",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.straitstimes.com/singapore/health/singapore-confirms-2-more-wuhan-virus-cases-bringing-total-to-three-infected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.809781, 1.257843]
+      },
+      "properties": {
+        "id": "case-3",
+        "title": "Case 3",
+        "confirmed": "2020-01-24",
+        "discharged": "2020-02-21",
+        "hospital": "Singapore General Hospital",
+        "source": "https://www.straitstimes.com/singapore/health/singapore-confirms-2-more-wuhan-virus-cases-bringing-total-to-three-infected"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.820195, 1.252415]
+      },
+      "properties": {
+        "id": "case-4",
+        "title": "Case 4",
+        "confirmed": "2020-01-25",
+        "discharged": "2020-02-12",
+        "hospital": "Sengkang General Hospital",
+        "source": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.900648, 1.30857]
+      },
+      "properties": {
+        "id": "case-5",
+        "title": "Case 5",
+        "confirmed": "2020-01-27",
+        "discharged": "2020-02-18",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.945253, 1.371061]
+      },
+      "properties": {
+        "id": "case-6",
+        "title": "Case 6",
+        "confirmed": "2020-01-27",
+        "discharged": "2020-02-20",
+        "hospital": "Changi General Hospital",
+        "source": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.860595, 1.283346]
+      },
+      "properties": {
+        "id": "case-7",
+        "title": "Case 7",
+        "confirmed": "2020-01-27",
+        "discharged": "2020-02-04",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.877308, 1.350397]
+      },
+      "properties": {
+        "id": "case-8",
+        "title": "Case 8",
+        "confirmed": "2020-01-29",
+        "discharged": "2020-02-18",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/wuhan-virus-singapore-new-confirmed-cases-10-total-12364556"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.877178, 1.350474]
+      },
+      "properties": {
+        "id": "case-9",
+        "title": "Case 9",
+        "confirmed": "2020-01-29",
+        "discharged": "2020-02-23",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/wuhan-virus-singapore-new-confirmed-cases-10-total-12364556"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.863305, 1.2712]
+      },
+      "properties": {
+        "id": "case-10",
+        "title": "Case 10",
+        "confirmed": "2020-01-29",
+        "discharged": "2020-02-09",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/wuhan-virus-singapore-new-confirmed-cases-10-total-12364556"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.820154, 1.25254]
+      },
+      "properties": {
+        "id": "case-11",
+        "title": "Case 11",
+        "confirmed": "2020-01-29",
+        "discharged": "2020-02-10",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/wuhan-virus-singapore-new-confirmed-cases-13-12369838"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.820236, 1.252291]
+      },
+      "properties": {
+        "id": "case-12",
+        "title": "Case 12",
+        "confirmed": "2020-01-29",
+        "discharged": "2020-02-12",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/wuhan-virus-singapore-new-confirmed-cases-13-12369838"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.846322, 1.285659]
+      },
+      "properties": {
+        "id": "case-13",
+        "title": "Case 13",
+        "confirmed": "2020-01-30",
+        "discharged": "2020-02-09",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/wuhan-virus-singapore-new-confirmed-cases-13-12369838"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.737294, 1.337087]
+      },
+      "properties": {
+        "id": "case-14",
+        "title": "Case 14",
+        "confirmed": "2020-01-30",
+        "discharged": "2020-02-17",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/wuhan-virus-singapore-new-cases-coronavirus-china-12373156"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.991089, 1.364375]
+      },
+      "properties": {
+        "id": "case-15",
+        "title": "Case 15",
+        "confirmed": "2020-01-31",
+        "discharged": "2020-02-16",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.straitstimes.com/singapore/health/wuhan-virus-first-singaporean-confirmed-to-have-virus-she-was-on-scoot-flight-from"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.825716, 1.296291]
+      },
+      "properties": {
+        "id": "case-16",
+        "title": "Case 16",
+        "confirmed": "2020-01-31",
+        "discharged": "2020-02-20",
+        "hospital": "Singapore General Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/wuhan-virus-singapore-new-cases-coronavirus-china-12373156"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.991209, 1.364646]
+      },
+      "properties": {
+        "id": "case-17",
+        "title": "Case 17",
+        "confirmed": "2020-01-31",
+        "discharged": "2020-02-11",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/wuhan-virus-2-new-imported-cases-no-evidence-of-community-spread-12379384"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.878151, 1.311611]
+      },
+      "properties": {
+        "id": "case-18",
+        "title": "Case 18",
+        "confirmed": "2020-02-01",
+        "discharged": "2020-02-27",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/wuhan-virus-2-new-imported-cases-no-evidence-of-community-spread-12379384"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.819616, 1.283503]
+      },
+      "properties": {
+        "id": "case-19",
+        "title": "Case 19",
+        "confirmed": "2020-02-03",
+        "discharged": "2020-02-22",
+        "hospital": " Singapore General Hospital",
+        "source": "https://www.straitstimes.com/singapore/coronavirus-after-2-cases-yong-thai-hang-health-products-shop-in-lavender-closed-as-more"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.886418, 1.374734]
+      },
+      "properties": {
+        "id": "case-20",
+        "title": "Case 20",
+        "confirmed": "2020-02-04",
+        "discharged": "2020-02-29",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/wuhan-virus-coronavirus-singapore-community-spread-tourists-12389314"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.81939, 1.283603]
+      },
+      "properties": {
+        "id": "case-21",
+        "title": "Case 21",
+        "confirmed": "2020-02-04",
+        "discharged": "2020-02-18",
+        "hospital": " Singapore General Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/wuhan-virus-coronavirus-singapore-community-spread-tourists-12389314"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.991875, 1.364335]
+      },
+      "properties": {
+        "id": "case-22",
+        "title": "Case 22",
+        "confirmed": "2020-02-03",
+        "discharged": "2020-02-09",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/wuhan-virus-coronavirus-singapore-community-spread-tourists-12389314"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.991531, 1.364474]
+      },
+      "properties": {
+        "id": "case-23",
+        "title": "Case 23",
+        "confirmed": "2020-02-03",
+        "discharged": "2020-02-21",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/wuhan-virus-coronavirus-singapore-community-spread-tourists-12389314"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.883165, 1.379344]
+      },
+      "properties": {
+        "id": "case-24",
+        "title": "Case 24",
+        "confirmed": "2020-02-04",
+        "discharged": "2020-02-15",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/wuhan-virus-coronavirus-singapore-community-spread-tourists-12389314"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.882688, 1.379366]
+      },
+      "properties": {
+        "id": "case-25",
+        "title": "Case 25",
+        "confirmed": "2020-02-04",
+        "discharged": "2020-02-12",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/wuhan-virus-coronavirus-singapore-number-cases-12395928"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.84609, 1.285819]
+      },
+      "properties": {
+        "id": "case-26",
+        "title": "Case 26",
+        "confirmed": "2020-02-04",
+        "discharged": "2020-02-09",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/wuhan-virus-coronavirus-singapore-number-cases-12395928"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.819492, 1.283845]
+      },
+      "properties": {
+        "id": "case-27",
+        "title": "Case 27",
+        "confirmed": "2020-02-05",
+        "discharged": "2020-02-21",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/wuhan-virus-coronavirus-singapore-number-cases-12395928"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.819754, 1.283766]
+      },
+      "properties": {
+        "id": "case-28",
+        "title": "Case 28",
+        "confirmed": "2020-02-05",
+        "discharged": "2020-02-22",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/wuhan-virus-coronavirus-singapore-number-cases-12395928"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.844028, 1.322268]
+      },
+      "properties": {
+        "id": "case-29",
+        "title": "Case 29",
+        "confirmed": "2020-02-05",
+        "discharged": "2020-02-12",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/wuhan-virus-coronavirus-singapore-cases-number-12401016"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.833302, 1.306504]
+      },
+      "properties": {
+        "id": "case-30",
+        "title": "Case 30",
+        "confirmed": "2020-02-06",
+        "discharged": "2020-02-14",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.straitstimes.com/singapore/coronavirus-gas-analysis-conference-at-grand-hyatt-singapore-hotel-linked-to-infections"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.951724, 1.355349]
+      },
+      "properties": {
+        "id": "case-31",
+        "title": "Case 31",
+        "confirmed": "2020-02-06",
+        "discharged": "2020-02-17",
+        "hospital": "Changi General Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/wuhan-coronavirus-moh-new-cases-feb-7-12405040"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.919399, 1.306289]
+      },
+      "properties": {
+        "id": "case-32",
+        "title": "Case 32",
+        "confirmed": "2020-02-06",
+        "discharged": "2020-02-19",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.straitstimes.com/singapore/health/coronavirus-what-we-know-about-the-3-new-singaporean-patients-confirmed-with-no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.890712, 1.328042]
+      },
+      "properties": {
+        "id": "case-33",
+        "title": "Case 33",
+        "confirmed": "2020-02-06",
+        "discharged": "2020-02-19",
+        "hospital": "Sengkang General Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/coronavirus-what-we-know-local-transmission-clusters-singapore-12412558"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.837797, 1.355926]
+      },
+      "properties": {
+        "id": "case-34",
+        "title": "Case 34",
+        "confirmed": "2020-02-07",
+        "discharged": "2020-02-12",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.straitstimes.com/singapore/coronavirus-after-2-cases-yong-thai-hang-health-products-shop-in-lavender-closed-as-more"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.821715, 1.288876]
+      },
+      "properties": {
+        "id": "case-35",
+        "title": "Case 35",
+        "confirmed": "2020-02-07",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.750248, 1.358187]
+      },
+      "properties": {
+        "id": "case-36",
+        "title": "Case 36",
+        "confirmed": "2020-02-07",
+        "discharged": "2020-02-11",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.straitstimes.com/singapore/coronavirus-gas-analysis-conference-at-grand-hyatt-singapore-hotel-linked-to-infections"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.733856, 1.347064]
+      },
+      "properties": {
+        "id": "case-37",
+        "title": "Case 37",
+        "confirmed": "2020-02-07",
+        "discharged": "2020-03-02",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.741346, 1.380201]
+      },
+      "properties": {
+        "id": "case-38",
+        "title": "Case 38",
+        "confirmed": "2020-02-08",
+        "discharged": "2020-02-18",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.705438, 1.342621]
+      },
+      "properties": {
+        "id": "case-39",
+        "title": "Case 39",
+        "confirmed": "2020-02-08",
+        "discharged": "2020-02-16",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.straitstimes.com/singapore/coronavirus-gas-analysis-conference-at-grand-hyatt-singapore-hotel-linked-to-infections"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.918415, 1.33517]
+      },
+      "properties": {
+        "id": "case-40",
+        "title": "Case 40",
+        "confirmed": "2020-02-08",
+        "discharged": "2020-02-12",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.straitstimes.com/singapore/coronavirus-after-2-cases-yong-thai-hang-health-products-shop-in-lavender-closed-as-more"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.882502, 1.35769]
+      },
+      "properties": {
+        "id": "case-41",
+        "title": "Case 41",
+        "confirmed": "2020-02-08",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.90378, 1.337343]
+      },
+      "properties": {
+        "id": "case-42",
+        "title": "Case 42",
+        "confirmed": "2020-02-08",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.87995, 1.394505]
+      },
+      "properties": {
+        "id": "case-43",
+        "title": "Case 43",
+        "confirmed": "2020-02-08",
+        "discharged": "2020-03-07",
+        "hospital": "Sengkang General Hospital",
+        "source": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.816947, 1.452668]
+      },
+      "properties": {
+        "id": "case-44",
+        "title": "Case 44",
+        "confirmed": "2020-02-08",
+        "discharged": "2020-02-19",
+        "hospital": "Khoo Teck Puat Hospital",
+        "source": "https://www.straitstimes.com/singapore/certis-man-who-served-orders-for-quarantine-1-of-2-new-cases"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.991728, 1.364079]
+      },
+      "properties": {
+        "id": "case-45",
+        "title": "Case 45",
+        "confirmed": "2020-02-10",
+        "discharged": "2020-02-14",
+        "hospital": "KK Women’s and Children’s Hospital",
+        "source": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.765586, 1.459396]
+      },
+      "properties": {
+        "id": "case-46",
+        "title": "Case 46",
+        "confirmed": "2020-02-10",
+        "discharged": "2020-02-24",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.straitstimes.com/singapore/health/coronavirus-2-new-cases-in-spore-including-man-who-works-at-rws-casino-2-more"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.854344, 1.307478]
+      },
+      "properties": {
+        "id": "case-47",
+        "title": "Case 47",
+        "confirmed": "2020-02-10",
+        "discharged": "2020-03-07",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/novel-coronavirus-confirmed-cases-singapore-feb-11-12421724"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.760911, 1.343906]
+      },
+      "properties": {
+        "id": "case-48",
+        "title": "Case 48",
+        "confirmed": "2020-02-11",
+        "discharged": "2020-02-17",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-singapore-cases-feb-12-12426526"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.747584, 1.336376]
+      },
+      "properties": {
+        "id": "case-49",
+        "title": "Case 49",
+        "confirmed": "2020-02-11",
+        "discharged": "2020-02-26",
+        "hospital": "National University Hospital",
+        "source": "https://www.straitstimes.com/singapore/health/coronavirus-3-new-cases-in-singapore-2-from-grace-assembly-of-god-church-1-from-dbs"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.860394, 1.353586]
+      },
+      "properties": {
+        "id": "case-50",
+        "title": "Case 50",
+        "confirmed": "2020-02-12",
+        "discharged": "2020-02-21",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.straitstimes.com/singapore/coronavirus-300-evacuated-from-mbfc-tower-3-after-confirmed-case-at-dbs-asia-central"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.854543, 1.347157]
+      },
+      "properties": {
+        "id": "case-51",
+        "title": "Case 51",
+        "confirmed": "2020-02-12",
+        "discharged": "2020-02-21",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-senior-pastor-grace-assembly-god-church-12432584"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.851944, 1.305697]
+      },
+      "properties": {
+        "id": "case-52",
+        "title": "Case 52",
+        "confirmed": "2020-02-12",
+        "discharged": "2020-02-28",
+        "hospital": "Tan Tock Seng Hospital",
+        "source": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.763906, 1.359665]
+      },
+      "properties": {
+        "id": "case-53",
+        "title": "Case 53",
+        "confirmed": "2020-02-12",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.856082, 1.376044]
+      },
+      "properties": {
+        "id": "case-54",
+        "title": "Case 54",
+        "confirmed": "2020-02-13",
+        "discharged": "2020-03-01",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.860761, 1.353748]
+      },
+      "properties": {
+        "id": "case-55",
+        "title": "Case 55",
+        "confirmed": "2020-02-13",
+        "discharged": "2020-02-19",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.865541, 1.405554]
+      },
+      "properties": {
+        "id": "case-56",
+        "title": "Case 56",
+        "confirmed": "2020-02-13",
+        "discharged": "2020-02-26",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.76193, 1.386733]
+      },
+      "properties": {
+        "id": "case-57",
+        "title": "Case 57",
+        "confirmed": "2020-02-13",
+        "discharged": "2020-02-21",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.881355, 1.346926]
+      },
+      "properties": {
+        "id": "case-58",
+        "title": "Case 58",
+        "confirmed": "2020-02-13",
+        "discharged": "2020-02-25",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.890847, 1.302677]
+      },
+      "properties": {
+        "id": "case-59",
+        "title": "Case 59",
+        "confirmed": "2020-02-13",
+        "discharged": "2020-02-26",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.857274, 1.368952]
+      },
+      "properties": {
+        "id": "case-60",
+        "title": "Case 60",
+        "confirmed": "2020-02-13",
+        "discharged": "2020-03-01",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.703681, 1.341208]
+      },
+      "properties": {
+        "id": "case-61",
+        "title": "Case 61",
+        "confirmed": "2020-02-13",
+        "discharged": "2020-03-04",
+        "hospital": "National University Hospital",
+        "source": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.843442, 1.276374]
+      },
+      "properties": {
+        "id": "case-62",
+        "title": "Case 62",
+        "confirmed": "2020-02-13",
+        "discharged": "2020-02-25",
+        "hospital": "Singapore General Hospital",
+        "source": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.865177, 1.333592]
+      },
+      "properties": {
+        "id": "case-63",
+        "title": "Case 63",
+        "confirmed": "2020-02-14",
+        "discharged": "2020-02-21",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.695092, 1.347171]
+      },
+      "properties": {
+        "id": "case-64",
+        "title": "Case 64",
+        "confirmed": "2020-02-14",
+        "discharged": "2020-02-23",
+        "hospital": "National University Hospital",
+        "source": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.860991, 1.353677]
+      },
+      "properties": {
+        "id": "case-65",
+        "title": "Case 65",
+        "confirmed": "2020-02-14",
+        "discharged": "2020-02-17",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.moh.gov.sg/news-highlights/details/one-more-case-discharged-five-new-cases-of-covid19-infection-confirmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.860583, 1.353631]
+      },
+      "properties": {
+        "id": "case-66",
+        "title": "Case 66",
+        "confirmed": "2020-02-14",
+        "discharged": "2020-02-20",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.moh.gov.sg/news-highlights/details/one-more-case-discharged-five-new-cases-of-covid19-infection-confirmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.703916, 1.341095]
+      },
+      "properties": {
+        "id": "case-67",
+        "title": "Case 67",
+        "confirmed": "2020-02-14",
+        "discharged": "2020-03-02",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.860847, 1.353573]
+      },
+      "properties": {
+        "id": "case-68",
+        "title": "Case 68",
+        "confirmed": "2020-02-14",
+        "discharged": "2020-02-29",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid19-singapore-cases-feb-15-12437852"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.865741, 1.405768]
+      },
+      "properties": {
+        "id": "case-69",
+        "title": "Case 69",
+        "confirmed": "2020-02-14",
+        "discharged": "2020-03-02",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid19-singapore-cases-feb-15-12437852"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.860503, 1.353838]
+      },
+      "properties": {
+        "id": "case-70",
+        "title": "Case 70",
+        "confirmed": "2020-02-15",
+        "discharged": "2020-02-21",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid19-singapore-cases-feb-15-12437852"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.87613, 1.393622]
+      },
+      "properties": {
+        "id": "case-71",
+        "title": "Case 71",
+        "confirmed": "2020-02-15",
+        "discharged": "2020-03-05",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid19-singapore-cases-feb-15-12437852"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.802425, 1.446852]
+      },
+      "properties": {
+        "id": "case-72",
+        "title": "Case 72",
+        "confirmed": "2020-02-15",
+        "discharged": "2020-02-27",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid19-singapore-cases-feb-15-12437852"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.856472, 1.339826]
+      },
+      "properties": {
+        "id": "case-73",
+        "title": "Case 73",
+        "confirmed": "2020-02-15",
+        "discharged": "2020-02-26",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-new-cases-rsaf-serviceman-grace-assembly-god-12439772"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.803188, 1.294315]
+      },
+      "properties": {
+        "id": "case-74",
+        "title": "Case 74",
+        "confirmed": "2020-02-15",
+        "discharged": "2020-03-07",
+        "hospital": "Alexandra Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-new-cases-rsaf-serviceman-grace-assembly-god-12439772"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.88219, 1.357346]
+      },
+      "properties": {
+        "id": "case-75",
+        "title": "Case 75",
+        "confirmed": "2020-02-16",
+        "discharged": "2020-02-29",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-new-cases-rsaf-serviceman-grace-assembly-god-12439772"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.991414, 1.364203]
+      },
+      "properties": {
+        "id": "case-76",
+        "title": "Case 76",
+        "confirmed": "2020-02-16",
+        "discharged": "2020-02-18",
+        "hospital": "KK Women’s and Children’s Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-singapore-update-feb-17-12441176"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.858469, 1.319953]
+      },
+      "properties": {
+        "id": "case-77",
+        "title": "Case 77",
+        "confirmed": "2020-02-16",
+        "discharged": "2020-02-25",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.moh.gov.sg/news-highlights/details/five-more-cases-discharged-four-new-cases-of-covid-19-infection-confirmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.773297, 1.364716]
+      },
+      "properties": {
+        "id": "case-78",
+        "title": "Case 78",
+        "confirmed": "2020-02-17",
+        "discharged": "2020-02-27",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid19-singapore-update-cases-tuesday-12441808"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.802666, 1.446903]
+      },
+      "properties": {
+        "id": "case-79",
+        "title": "Case 79",
+        "confirmed": "2020-02-17",
+        "discharged": "2020-02-28",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.moh.gov.sg/news-highlights/details/five-more-cases-discharged-four-new-cases-of-covid-19-infection-confirmed"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.879046, 1.394049]
+      },
+      "properties": {
+        "id": "case-80",
+        "title": "Case 80",
+        "confirmed": "2020-02-18",
+        "discharged": "2020-02-27",
+        "hospital": "National University Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid19-singapore-update-cases-tuesday-12441808"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.823638, 1.280671]
+      },
+      "properties": {
+        "id": "case-81",
+        "title": "Case 81",
+        "confirmed": "2020-02-18",
+        "discharged": "2020-02-25",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid19-singapore-update-cases-tuesday-12441808"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.723248, 1.348317]
+      },
+      "properties": {
+        "id": "case-82",
+        "title": "Case 82",
+        "confirmed": "2020-02-18",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-cases-singapore-feb-19-update-12449834"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.904546, 1.387353]
+      },
+      "properties": {
+        "id": "case-83",
+        "title": "Case 83",
+        "confirmed": "2020-02-19",
+        "discharged": "2020-02-21",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-cases-singapore-feb-19-update-12449834"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.881252, 1.323315]
+      },
+      "properties": {
+        "id": "case-84",
+        "title": "Case 84",
+        "confirmed": "2020-02-19",
+        "discharged": "2020-02-21",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-cases-singapore-feb-19-update-12449834"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.803008, 1.438816]
+      },
+      "properties": {
+        "id": "case-85",
+        "title": "Case 85",
+        "confirmed": "2020-02-20",
+        "discharged": "2020-03-07",
+        "hospital": "Khoo Teck Puat Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-singapore-moh-update-feb-21-12457272"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.754902, 1.353315]
+      },
+      "properties": {
+        "id": "case-86",
+        "title": "Case 86",
+        "confirmed": "2020-02-20",
+        "discharged": "2020-03-07",
+        "hospital": "Ng Teng Fong General Hospital",
+        "source": "https://www.todayonline.com/covid-19-1-new-case-wuhan-virus-linked-to-first-known-case-with-both-dengue-coronavirus"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.991281, 1.363905]
+      },
+      "properties": {
+        "id": "case-87",
+        "title": "Case 87",
+        "confirmed": "2020-02-21",
+        "discharged": "2020-02-24",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-moh-singapore-update-feb-22-12460526"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.882139, 1.377135]
+      },
+      "properties": {
+        "id": "case-88",
+        "title": "Case 88",
+        "confirmed": "2020-02-21",
+        "discharged": "2020-03-02",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-moh-singapore-update-feb-22-12460526"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.868234, 1.351538]
+      },
+      "properties": {
+        "id": "case-89",
+        "title": "Case 89",
+        "confirmed": "2020-02-22",
+        "discharged": "2020-02-28",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-moh-singapore-update-feb-22-12460526"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.850806, 1.346333]
+      },
+      "properties": {
+        "id": "case-90",
+        "title": "Case 90",
+        "confirmed": "2020-02-23",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-singapore-update-coronavirus-cases-feb-24-12463606"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.90333, 1.38771]
+      },
+      "properties": {
+        "id": "case-91",
+        "title": "Case 91",
+        "confirmed": "2020-02-22",
+        "discharged": "2020-02-25",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-singapore-update-coronavirus-cases-feb-24-12463606"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.866641, 1.352229]
+      },
+      "properties": {
+        "id": "case-92",
+        "title": "Case 92",
+        "confirmed": "2020-02-26",
+        "discharged": "2020-03-11",
+        "hospital": "Sengkang General Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-patients-covid-19-moh-update-12472024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.750987, 1.358849]
+      },
+      "properties": {
+        "id": "case-93",
+        "title": "Case 93",
+        "confirmed": "2020-02-26",
+        "discharged": "2020-03-07",
+        "hospital": "Ng Teng Fong General Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-patients-covid-19-moh-update-12472024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.769782, 1.343501]
+      },
+      "properties": {
+        "id": "case-94",
+        "title": "Case 94",
+        "confirmed": "2020-02-26",
+        "discharged": "",
+        "hospital": "Singapore General Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-singapore-new-cases-discharged-feb-27-moh-12475870"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.74831, 1.403252]
+      },
+      "properties": {
+        "id": "case-95",
+        "title": "Case 95",
+        "confirmed": "2020-02-27",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-singapore-new-cases-discharged-feb-27-moh-12475870"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.769728, 1.343381]
+      },
+      "properties": {
+        "id": "case-96",
+        "title": "Case 96",
+        "confirmed": "2020-02-27",
+        "discharged": "2020-03-07",
+        "hospital": "KK Women’s and Children’s Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-singapore-new-cases-discharged-feb-27-moh-12475870"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.746845, 1.392035]
+      },
+      "properties": {
+        "id": "case-97",
+        "title": "Case 97",
+        "confirmed": "2020-02-28",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid-19-wizlearn-science-park-cluster-coronavirus-12480290"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.698495, 1.338615]
+      },
+      "properties": {
+        "id": "case-98",
+        "title": "Case 98",
+        "confirmed": "2020-02-28",
+        "discharged": "2020-03-05",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid-19-wizlearn-science-park-cluster-coronavirus-12480290"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.694935, 1.347025]
+      },
+      "properties": {
+        "id": "case-99",
+        "title": "Case 99",
+        "confirmed": "2020-02-29",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.straitstimes.com/singapore/coronavirus-four-new-cases-confirmed-all-linked-to-wizlearn-technologies-cluster-three"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.795039, 1.309062]
+      },
+      "properties": {
+        "id": "case-100",
+        "title": "Case 100",
+        "confirmed": "2020-02-29",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.straitstimes.com/singapore/coronavirus-four-new-cases-confirmed-all-linked-to-wizlearn-technologies-cluster-three"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.756333, 1.342642]
+      },
+      "properties": {
+        "id": "case-101",
+        "title": "Case 101",
+        "confirmed": "2020-02-29",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital",
+        "source": "https://www.straitstimes.com/singapore/coronavirus-four-new-cases-confirmed-all-linked-to-wizlearn-technologies-cluster-three"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.75659, 1.34275]
+      },
+      "properties": {
+        "id": "case-102",
+        "title": "Case 102",
+        "confirmed": "2020-02-29",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital",
+        "source": "https://www.straitstimes.com/singapore/coronavirus-four-new-cases-confirmed-all-linked-to-wizlearn-technologies-cluster-three"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.750986, 1.358926]
+      },
+      "properties": {
+        "id": "case-103",
+        "title": "Case 103",
+        "confirmed": "2020-03-01",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-covid-19-cases-update-moh-12487992"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.750746, 1.358947]
+      },
+      "properties": {
+        "id": "case-104",
+        "title": "Case 104",
+        "confirmed": "2020-03-01",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-covid-19-cases-update-moh-12487992"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.767481, 1.358459]
+      },
+      "properties": {
+        "id": "case-105",
+        "title": "Case 105",
+        "confirmed": "2020-03-01",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-covid-19-cases-update-moh-12487992"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.957796, 1.359165]
+      },
+      "properties": {
+        "id": "case-106",
+        "title": "Case 106",
+        "confirmed": "2020-03-01",
+        "discharged": "2020-03-11",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-covid-19-cases-update-moh-12487992"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.853484, 1.350006]
+      },
+      "properties": {
+        "id": "case-107",
+        "title": "Case 107",
+        "confirmed": "2020-03-01",
+        "discharged": "2020-03-06",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.todayonline.com/singapore/covid-19-2-new-cases-singapore-1-which-linked-wizlearn-technologies-cluster"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.756389, 1.342685]
+      },
+      "properties": {
+        "id": "case-108",
+        "title": "Case 108",
+        "confirmed": "2020-03-02",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital",
+        "source": "https://www.todayonline.com/singapore/covid-19-2-new-cases-singapore-1-which-linked-wizlearn-technologies-cluster"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.839951, 1.277077]
+      },
+      "properties": {
+        "id": "case-109",
+        "title": "Case 109",
+        "confirmed": "2020-03-02",
+        "discharged": "",
+        "hospital": "Singapore General Hospital",
+        "source": "https://www.straitstimes.com/singapore/health/two-new-coronavirus-cases-in-singapore-one-linked-to-wizlearn-technologies-no-new"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.872077, 1.31451]
+      },
+      "properties": {
+        "id": "case-110",
+        "title": "Case 110",
+        "confirmed": "2020-03-03",
+        "discharged": "2020-03-07",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.straitstimes.com/singapore/health/two-new-coronavirus-cases-in-singapore-one-linked-to-wizlearn-technologies-no-new"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.898378, 1.395071]
+      },
+      "properties": {
+        "id": "case-111",
+        "title": "Case 111",
+        "confirmed": "2020-03-03",
+        "discharged": "",
+        "hospital": "National University Hospital",
+        "source": "https://www.straitstimes.com/singapore/health/2-new-covid-19-cases-in-singapore-including-non-teaching-staff-at-pre-school-at"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.745864, 1.328742]
+      },
+      "properties": {
+        "id": "case-112",
+        "title": "Case 112",
+        "confirmed": "2020-03-04",
+        "discharged": "2020-03-09",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.straitstimes.com/singapore/health/2-new-covid-19-cases-in-singapore-including-non-teaching-staff-at-pre-school-at"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.846681, 1.30111]
+      },
+      "properties": {
+        "id": "case-113",
+        "title": "Case 113",
+        "confirmed": "2020-03-04",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.straitstimes.com/singapore/health/5-new-covid-19-cases-in-spore-including-4-linked-to-a-new-cluster-a-private-dinner"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.699016, 1.351254]
+      },
+      "properties": {
+        "id": "case-114",
+        "title": "Case 114",
+        "confirmed": "2020-03-04",
+        "discharged": "",
+        "hospital": "National University Hospital",
+        "source": "https://www.straitstimes.com/singapore/health/5-new-covid-19-cases-in-spore-including-4-linked-to-a-new-cluster-a-private-dinner"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.698853, 1.351309]
+      },
+      "properties": {
+        "id": "case-115",
+        "title": "Case 115",
+        "confirmed": "2020-03-05",
+        "discharged": "",
+        "hospital": "National University Hospital",
+        "source": "https://www.straitstimes.com/singapore/health/5-new-covid-19-cases-in-spore-including-4-linked-to-a-new-cluster-a-private-dinner"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.69485, 1.347016]
+      },
+      "properties": {
+        "id": "case-116",
+        "title": "Case 116",
+        "confirmed": "2020-03-05",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.straitstimes.com/singapore/health/5-new-covid-19-cases-in-spore-including-4-linked-to-a-new-cluster-a-private-dinner"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.761804, 1.38503]
+      },
+      "properties": {
+        "id": "case-117",
+        "title": "Case 117",
+        "confirmed": "2020-03-05",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.straitstimes.com/singapore/health/5-new-covid-19-cases-in-spore-including-4-linked-to-a-new-cluster-a-private-dinner"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.699113, 1.351306]
+      },
+      "properties": {
+        "id": "case-118",
+        "title": "Case 118",
+        "confirmed": "2020-03-05",
+        "discharged": "",
+        "hospital": "National University Hospital",
+        "source": "https://www.todayonline.com/singapore/covid-19-13-new-cases-singapore-safra-jurong-cluster-new-hotspot"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.804395, 1.29534]
+      },
+      "properties": {
+        "id": "case-119",
+        "title": "Case 119",
+        "confirmed": "2020-03-05",
+        "discharged": "",
+        "hospital": "Alexandra Hospital",
+        "source": "https://www.todayonline.com/singapore/covid-19-13-new-cases-singapore-safra-jurong-cluster-new-hotspot"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.701032, 1.339948]
+      },
+      "properties": {
+        "id": "case-120",
+        "title": "Case 120",
+        "confirmed": "2020-03-05",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.todayonline.com/singapore/covid-19-13-new-cases-singapore-safra-jurong-cluster-new-hotspot"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.723178, 1.333006]
+      },
+      "properties": {
+        "id": "case-121",
+        "title": "Case 121",
+        "confirmed": "2020-03-05",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.todayonline.com/singapore/covid-19-13-new-cases-singapore-safra-jurong-cluster-new-hotspot"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.770944, 1.374906]
+      },
+      "properties": {
+        "id": "case-122",
+        "title": "Case 122",
+        "confirmed": "2020-03-05",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.todayonline.com/singapore/covid-19-13-new-cases-singapore-safra-jurong-cluster-new-hotspot"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.879886, 1.394462]
+      },
+      "properties": {
+        "id": "case-123",
+        "title": "Case 123",
+        "confirmed": "2020-03-05",
+        "discharged": "",
+        "hospital": "Sengkang General Hospital",
+        "source": "https://www.todayonline.com/singapore/covid-19-13-new-cases-singapore-safra-jurong-cluster-new-hotspot"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.81759, 1.455223]
+      },
+      "properties": {
+        "id": "case-124",
+        "title": "Case 124",
+        "confirmed": "2020-03-06",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.todayonline.com/singapore/covid-19-13-new-cases-singapore-safra-jurong-cluster-new-hotspot"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.699033, 1.346008]
+      },
+      "properties": {
+        "id": "case-125",
+        "title": "Case 125",
+        "confirmed": "2020-03-06",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.todayonline.com/singapore/covid-19-13-new-cases-singapore-safra-jurong-cluster-new-hotspot"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.903789, 1.321523]
+      },
+      "properties": {
+        "id": "case-126",
+        "title": "Case 126",
+        "confirmed": "2020-03-05",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.todayonline.com/singapore/covid-19-13-new-cases-singapore-safra-jurong-cluster-new-hotspot"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.769303, 1.379119]
+      },
+      "properties": {
+        "id": "case-127",
+        "title": "Case 127",
+        "confirmed": "2020-03-05",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.todayonline.com/singapore/covid-19-13-new-cases-singapore-safra-jurong-cluster-new-hotspot"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.698386, 1.345729]
+      },
+      "properties": {
+        "id": "case-128",
+        "title": "Case 128",
+        "confirmed": "2020-03-06",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.todayonline.com/singapore/covid-19-13-new-cases-singapore-safra-jurong-cluster-new-hotspot"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.695432, 1.342809]
+      },
+      "properties": {
+        "id": "case-129",
+        "title": "Case 129",
+        "confirmed": "2020-03-06",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital",
+        "source": "https://www.todayonline.com/singapore/covid-19-13-new-cases-singapore-safra-jurong-cluster-new-hotspot"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.695487, 1.342738]
+      },
+      "properties": {
+        "id": "case-130",
+        "title": "Case 130",
+        "confirmed": "2020-03-06",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital",
+        "source": "https://www.todayonline.com/singapore/covid-19-13-new-cases-singapore-safra-jurong-cluster-new-hotspot"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.747576, 1.320352]
+      },
+      "properties": {
+        "id": "case-131",
+        "title": "Case 131",
+        "confirmed": "2020-03-06",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-mar-7-cases-12512420t"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.819286, 1.301882]
+      },
+      "properties": {
+        "id": "case-132",
+        "title": "Case 132",
+        "confirmed": "2020-03-06",
+        "discharged": "",
+        "hospital": "National University Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-mar-7-cases-12512420t"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.697797, 1.338205]
+      },
+      "properties": {
+        "id": "case-133",
+        "title": "Case 133",
+        "confirmed": "2020-03-06",
+        "discharged": "",
+        "hospital": "National University Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-mar-7-cases-12512420t"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.695875, 1.342309]
+      },
+      "properties": {
+        "id": "case-134",
+        "title": "Case 134",
+        "confirmed": "2020-03-06",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-mar-7-cases-12512420t"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.820229, 1.277084]
+      },
+      "properties": {
+        "id": "case-135",
+        "title": "Case 135",
+        "confirmed": "2020-03-06",
+        "discharged": "",
+        "hospital": "Singapore General Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-mar-7-cases-12512420t"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.843497, 1.276834]
+      },
+      "properties": {
+        "id": "case-136",
+        "title": "Case 136",
+        "confirmed": "2020-03-06",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-mar-7-cases-12512420t"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.72326, 1.348075]
+      },
+      "properties": {
+        "id": "case-137",
+        "title": "Case 137",
+        "confirmed": "2020-03-06",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-mar-7-cases-12512420t"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.903466, 1.387737]
+      },
+      "properties": {
+        "id": "case-138",
+        "title": "Case 138",
+        "confirmed": "2020-03-06",
+        "discharged": "2020-03-09",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-mar-7-cases-12512420t"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.695005, 1.347019]
+      },
+      "properties": {
+        "id": "case-139",
+        "title": "Case 139",
+        "confirmed": "2020-03-07",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-cases-safra-jurong-singapore-12515592"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.694918, 1.346944]
+      },
+      "properties": {
+        "id": "case-140",
+        "title": "Case 140",
+        "confirmed": "2020-03-07",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-cases-safra-jurong-singapore-12515592"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.703837, 1.341118]
+      },
+      "properties": {
+        "id": "case-141",
+        "title": "Case 141",
+        "confirmed": "2020-03-07",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-cases-safra-jurong-singapore-12515592"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.69472, 1.346971]
+      },
+      "properties": {
+        "id": "case-142",
+        "title": "Case 142",
+        "confirmed": "2020-03-07",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-cases-safra-jurong-singapore-12515592"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.81895, 1.301665]
+      },
+      "properties": {
+        "id": "case-143",
+        "title": "Case 143",
+        "confirmed": "2020-03-07",
+        "discharged": "",
+        "hospital": "National University Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-cases-safra-jurong-singapore-12515592"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.699223, 1.349417]
+      },
+      "properties": {
+        "id": "case-144",
+        "title": "Case 144",
+        "confirmed": "2020-03-07",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-cases-safra-jurong-singapore-12515592"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.752622, 1.378768]
+      },
+      "properties": {
+        "id": "case-145",
+        "title": "Case 145",
+        "confirmed": "2020-03-08",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-cases-safra-jurong-singapore-12515592"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.841689, 1.387775]
+      },
+      "properties": {
+        "id": "case-146",
+        "title": "Case 146",
+        "confirmed": "2020-03-08",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-cases-safra-jurong-singapore-12515592"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.841208, 1.298611]
+      },
+      "properties": {
+        "id": "case-147",
+        "title": "Case 147",
+        "confirmed": "2020-03-08",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-cases-safra-jurong-singapore-12515592"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.793523, 1.321682]
+      },
+      "properties": {
+        "id": "case-148",
+        "title": "Case 148",
+        "confirmed": "2020-03-08",
+        "discharged": "2020-03-11",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-cases-safra-jurong-singapore-12515592"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.733052, 1.346399]
+      },
+      "properties": {
+        "id": "case-149",
+        "title": "Case 149",
+        "confirmed": "2020-03-08",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-cases-safra-jurong-singapore-12515592"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.703917, 1.340784]
+      },
+      "properties": {
+        "id": "case-150",
+        "title": "Case 150",
+        "confirmed": "2020-03-08",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-cases-safra-jurong-singapore-12515592"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.83216, 1.426123]
+      },
+      "properties": {
+        "id": "case-151",
+        "title": "Case 151",
+        "confirmed": "2020-03-08",
+        "discharged": "2020-03-08",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/singapore-covid-19-cases-moh-mar-9-12518318"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.835872, 1.279567]
+      },
+      "properties": {
+        "id": "case-152",
+        "title": "Case 152",
+        "confirmed": "2020-03-08",
+        "discharged": "",
+        "hospital": "Singapore General Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/singapore-covid-19-cases-moh-mar-9-12518318"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.757606, 1.380032]
+      },
+      "properties": {
+        "id": "case-153",
+        "title": "Case 153",
+        "confirmed": "2020-03-08",
+        "discharged": "",
+        "hospital": "Singapore General Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/singapore-covid-19-cases-moh-mar-9-12518318"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.854469, 1.29489]
+      },
+      "properties": {
+        "id": "case-154",
+        "title": "Case 154",
+        "confirmed": "2020-03-09",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/singapore-covid-19-cases-moh-mar-9-12518318"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.713167, 1.346321]
+      },
+      "properties": {
+        "id": "case-155",
+        "title": "Case 155",
+        "confirmed": "2020-03-09",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/singapore-covid-19-cases-moh-mar-9-12518318"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.69923, 1.34941]
+      },
+      "properties": {
+        "id": "case-156",
+        "title": "Case 156",
+        "confirmed": "2020-03-09",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/singapore-covid-19-cases-moh-mar-9-12518318"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.694574, 1.347203]
+      },
+      "properties": {
+        "id": "case-157",
+        "title": "Case 157",
+        "confirmed": "2020-03-09",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/singapore-covid-19-cases-moh-mar-9-12518318"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.771087, 1.37627]
+      },
+      "properties": {
+        "id": "case-158",
+        "title": "Case 158",
+        "confirmed": "2020-03-09",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/singapore-covid-19-cases-moh-mar-9-12518318"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.771198, 1.376457]
+      },
+      "properties": {
+        "id": "case-159",
+        "title": "Case 159",
+        "confirmed": "2020-03-09",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/singapore-covid-19-cases-moh-mar-9-12518318"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.752447, 1.379252]
+      },
+      "properties": {
+        "id": "case-160",
+        "title": "Case 160",
+        "confirmed": "2020-03-09",
+        "discharged": "",
+        "hospital": "KK Women’s and Children’s Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/singapore-covid-19-cases-moh-mar-9-12518318"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.852038, 1.348476]
+      },
+      "properties": {
+        "id": "case-161",
+        "title": "Case 161",
+        "confirmed": "2020-03-09",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-covid19-new-cases-safra-mar-10-12521660"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.827501, 1.282576]
+      },
+      "properties": {
+        "id": "case-162",
+        "title": "Case 162",
+        "confirmed": "2020-03-09",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-covid19-new-cases-safra-mar-10-12521660"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.81615, 1.287692]
+      },
+      "properties": {
+        "id": "case-163",
+        "title": "Case 163",
+        "confirmed": "2020-03-09",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-covid19-new-cases-safra-mar-10-12521660"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.693066, 1.338144]
+      },
+      "properties": {
+        "id": "case-164",
+        "title": "Case 164",
+        "confirmed": "2020-03-10",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-covid19-new-cases-safra-mar-10-12521660"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.880107, 1.332946]
+      },
+      "properties": {
+        "id": "case-165",
+        "title": "Case 165",
+        "confirmed": "2020-03-10",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-covid19-new-cases-safra-mar-10-12521660"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.768978, 1.379084]
+      },
+      "properties": {
+        "id": "case-166",
+        "title": "Case 166",
+        "confirmed": "2020-03-10",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-covid19-new-cases-safra-mar-10-12521660"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.743317, 1.337108]
+      },
+      "properties": {
+        "id": "case-167",
+        "title": "Case 167",
+        "confirmed": "2020-03-10",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.903477, 1.388427]
+      },
+      "properties": {
+        "id": "case-168",
+        "title": "Case 168",
+        "confirmed": "2020-03-10",
+        "discharged": "",
+        "hospital": "Sengkang Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.837341, 1.415088]
+      },
+      "properties": {
+        "id": "case-169",
+        "title": "Case 169",
+        "confirmed": "2020-03-10",
+        "discharged": "",
+        "hospital": "Khoo Teck Puat Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.836032, 1.279708]
+      },
+      "properties": {
+        "id": "case-170",
+        "title": "Case 170",
+        "confirmed": "2020-03-10",
+        "discharged": "",
+        "hospital": "Singapore General Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.847054, 1.322111]
+      },
+      "properties": {
+        "id": "case-171",
+        "title": "Case 171",
+        "confirmed": "2020-03-11",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.847123, 1.322113]
+      },
+      "properties": {
+        "id": "case-172",
+        "title": "Case 172",
+        "confirmed": "2020-03-11",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.847123, 1.322113]
+      },
+      "properties": {
+        "id": "case-173",
+        "title": "Case 173",
+        "confirmed": "2020-03-11",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.847123, 1.322113]
+      },
+      "properties": {
+        "id": "case-174",
+        "title": "Case 174",
+        "confirmed": "2020-03-11",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.847123, 1.322113]
+      },
+      "properties": {
+        "id": "case-175",
+        "title": "Case 175",
+        "confirmed": "2020-03-11",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.847123, 1.322113]
+      },
+      "properties": {
+        "id": "case-176",
+        "title": "Case 176",
+        "confirmed": "2020-03-11",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.847123, 1.322113]
+      },
+      "properties": {
+        "id": "case-177",
+        "title": "Case 177",
+        "confirmed": "2020-03-11",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "source": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [103.74335, 1.337025]
+      },
+      "properties": {
+        "id": "case-178",
+        "title": "Case 178",
+        "confirmed": "2020-03-11",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital",
+        "source": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
+      }
+    }
+  ]
+}

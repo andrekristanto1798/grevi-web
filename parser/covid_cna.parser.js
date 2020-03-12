@@ -1,5 +1,7 @@
+// Source: https://infographics.channelnewsasia.com/covid-19/coronavirus-singapore-clusters.html
 const fs = require('fs');
-const covidTreeCNA = require('./covid_tree_cna.json');
+const covidTreeCNA = require('./data/covid_tree_cna.json');
+const nodeData = require('./results/github_node_data.json');
 
 const rootNode = { id: 1, name: 'Confirmed Cases' };
 const nodes = [rootNode];
@@ -11,13 +13,16 @@ const links = [];
 // if it has case prop, then add gender
 
 const traverse = (parent, child) => {
-  const currentNode = { ...child, id: nodes.length + 1 };
+  let currentNode = { ...child, id: nodes.length + 1 };
   if (currentNode.case != null) {
     // ?, GENDER, AGE
     const nameData = currentNode.name.split(',').map(str => str.trim());
     currentNode.case = Number(currentNode.case);
     currentNode.age = Number(nameData[nameData.length - 1]);
     currentNode.gender = nameData[nameData.length - 2].toUpperCase();
+    // Add additional info from github node data
+    const dataEl = nodeData[currentNode.case];
+    currentNode = { ...currentNode, ...dataEl };
   }
   if (currentNode.gp != null) {
     currentNode.gp = Number(currentNode.gp);
@@ -52,4 +57,4 @@ covidTreeCNA.forEach(cluster => {
 
 const parsedGraph = JSON.stringify({ nodes, links }, null, 4);
 
-fs.writeFileSync('./covid_graph.json', parsedGraph);
+fs.writeFileSync('./parser/results/covid_graph.json', parsedGraph);
