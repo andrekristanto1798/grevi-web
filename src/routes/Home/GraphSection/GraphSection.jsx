@@ -68,7 +68,6 @@ const GraphSection = ({
   setNodePopup,
   setLinkPopup,
   resetPopupData,
-  onZoom,
   refreshGraphLayout,
   // settings
   showNodeLabel,
@@ -183,25 +182,24 @@ const GraphSection = ({
     setIsDragging(false);
   }, []);
   const handleZoom = React.useCallback(
-    throttle(zoom => {
-      onZoom(zoom);
+    throttle(() => {
       resetPopupData();
     }, 200),
     [],
   );
   const handleClickNode = React.useCallback(
-    node => {
+    (node, { clientX: x, clientY: y }) => {
       clickNode(node);
       if (mode !== ADD_LINK_MODE && showNodeLabel) {
-        setNodePopup(node);
+        setNodePopup(node, { x, y });
       }
     },
     [mode, showNodeLabel],
   );
   const handleClickLink = React.useCallback(
-    node => {
+    (link, { clientX: x, clientY: y }) => {
       if (mode !== ADD_LINK_MODE && showLinkLabel) {
-        setLinkPopup(node);
+        setLinkPopup(link, { x, y });
       }
     },
     [mode, showLinkLabel],
@@ -280,7 +278,6 @@ GraphSection.propTypes = {
   setNodePopup: PropTypes.func.isRequired,
   setLinkPopup: PropTypes.func.isRequired,
   resetPopupData: PropTypes.func.isRequired,
-  onZoom: PropTypes.func.isRequired,
   refreshGraphLayout: PropTypes.func.isRequired,
 };
 
@@ -337,7 +334,6 @@ const actions = {
   setNodePopup: graphAction.setNodePopup,
   setLinkPopup: graphAction.setLinkPopup,
   resetPopupData: graphAction.resetPopupData,
-  onZoom: graphAction.onZoom,
   refreshGraphLayout: graphAction.refreshGraphLayout,
 };
 

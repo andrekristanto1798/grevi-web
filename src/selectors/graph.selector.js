@@ -2,7 +2,7 @@ import { createSelector } from 'reselect';
 import pick from 'lodash/pick';
 import { ADD_LINK_MODE } from '../components/EditingTools';
 import { selectAlgo, selectAlgoGraph } from './algo.selector';
-import { getLinkTarget, getLinkSource, graph2ScreenCoor } from '../utils/graph';
+import { getLinkTarget, getLinkSource } from '../utils/graph';
 
 const selectGraphData = state => state.graph.data;
 
@@ -172,36 +172,4 @@ export const selectVisualizedGraphData = createSelector(
 export const selectPopupData = createSelector(
   state => state.graph.popupData,
   popupData => popupData,
-);
-
-export const selectZoom = createSelector(
-  state => state.graph.zoom,
-  zoom => zoom,
-);
-
-export const selectPopupPosition = createSelector(
-  selectPopupData,
-  selectZoom,
-  ({ type, data }, zoom) => {
-    if (type == null) return { x: 0, y: 0 };
-    const { x: offsetX, y: offsetY } = document
-      .getElementById('graph-container')
-      .getBoundingClientRect();
-    let position;
-    if (type === 'link') {
-      const sourcePos = graph2ScreenCoor(zoom, data.source);
-      const targetPos = graph2ScreenCoor(zoom, data.target);
-      position = {
-        x: (sourcePos.x + targetPos.x) / 2,
-        y: (sourcePos.y + targetPos.y) / 2,
-      };
-    }
-    if (type === 'node') {
-      position = graph2ScreenCoor(zoom, data);
-    }
-    return {
-      x: position.x + offsetX + 10,
-      y: position.y + offsetY + 10,
-    };
-  },
 );

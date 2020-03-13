@@ -176,12 +176,12 @@ export const hoverLink = link => dispatch => {
   );
 };
 
-export const setNodePopup = node => dispatch => {
-  dispatch(set('popupData', { type: 'node', data: node }));
+export const setNodePopup = (node, position) => dispatch => {
+  dispatch(set('popupData', { type: 'node', data: node, position }));
 };
 
-export const setLinkPopup = link => dispatch => {
-  dispatch(set('popupData', { type: 'link', data: link }));
+export const setLinkPopup = (link, position) => dispatch => {
+  dispatch(set('popupData', { type: 'link', data: link, position }));
 };
 
 export const focusNodeOn = node => set('focusedNode', node);
@@ -318,5 +318,3 @@ export const handleChangeLinkSearchValue = linkSearchValue =>
 
 export const toogleSearchAsFilter = prevValue =>
   set('searchAsFilter', !prevValue);
-
-export const onZoom = zoom => set('zoom', zoom);

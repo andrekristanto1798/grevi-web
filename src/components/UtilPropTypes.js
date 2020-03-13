@@ -26,12 +26,13 @@ export const modeShape = PropTypes.oneOf([
   ADD_LINK_MODE,
 ]);
 
-export const popupDataShape = PropTypes.shape({
-  type: PropTypes.string,
-  data: PropTypes.oneOfType([nodeShape, linkShape]),
-});
-
 export const positionShape = PropTypes.shape({
   x: PropTypes.number.isRequired,
   y: PropTypes.number.isRequired,
+});
+
+export const popupDataShape = PropTypes.shape({
+  type: PropTypes.string,
+  data: PropTypes.oneOfType([nodeShape, linkShape]),
+  position: positionShape.isRequired,
 });
