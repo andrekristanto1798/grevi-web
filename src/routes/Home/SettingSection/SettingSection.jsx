@@ -10,6 +10,7 @@ import {
   selectShowNodeLabel,
   selectShowLinkLabel,
   selectShowNodeText,
+  selectShowTextOnly,
   selectShowLinkDirection,
   selectAutoHideNodeText,
   selectGraphOrientation,
@@ -48,6 +49,7 @@ function SettingSection({
   showNodeLabel,
   showLinkLabel,
   showNodeText,
+  showTextOnly,
   showLinkDirection,
   nodeTextKey,
   nodeKeys,
@@ -58,6 +60,7 @@ function SettingSection({
   toogleNodeLabel,
   toogleLinkLabel,
   toogleNodeText,
+  toogleTextOnly,
   toogleLinkDirection,
   toogleHideNodeText,
   changeGraphOrientation,
@@ -122,6 +125,13 @@ function SettingSection({
       </Form.Field>
       <Form.Field>
         <Checkbox
+          label="Graph - show Node text only"
+          checked={showTextOnly}
+          onChange={() => toogleTextOnly(showTextOnly)}
+        />
+      </Form.Field>
+      <Form.Field>
+        <Checkbox
           label="Graph - show Link directionality on the graph"
           checked={showLinkDirection}
           onChange={() => toogleLinkDirection(showLinkDirection)}
@@ -175,6 +185,7 @@ SettingSection.propTypes = {
   showNodeLabel: PropTypes.bool.isRequired,
   showLinkLabel: PropTypes.bool.isRequired,
   showNodeText: PropTypes.bool.isRequired,
+  showTextOnly: PropTypes.bool.isRequired,
   showLinkDirection: PropTypes.bool.isRequired,
   nodeTextKey: PropTypes.string.isRequired,
   nodeKeys: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -186,6 +197,7 @@ SettingSection.propTypes = {
   toogleNodeLabel: PropTypes.func.isRequired,
   toogleLinkLabel: PropTypes.func.isRequired,
   toogleNodeText: PropTypes.func.isRequired,
+  toogleTextOnly: PropTypes.func.isRequired,
   toogleLinkDirection: PropTypes.func.isRequired,
   toogleHideNodeText: PropTypes.func.isRequired,
   changeGraphOrientation: PropTypes.func.isRequired,
@@ -205,6 +217,7 @@ const mapStateToProps = state => {
   const showNodeLabel = selectShowNodeLabel(state);
   const showLinkLabel = selectShowLinkLabel(state);
   const showNodeText = selectShowNodeText(state);
+  const showTextOnly = selectShowTextOnly(state);
   const showLinkDirection = selectShowLinkDirection(state);
   const nodeTextKey = selectNodeTextKey(state);
   const nodeKeys = selectNodeKeys(state);
@@ -219,6 +232,7 @@ const mapStateToProps = state => {
     showNodeLabel,
     showLinkLabel,
     showNodeText,
+    showTextOnly,
     showLinkDirection,
     nodeTextKey,
     nodeKeys,
@@ -236,6 +250,7 @@ const actions = {
   toogleNodeLabel: settingAction.toogleNodeLabel,
   toogleLinkLabel: settingAction.toogleLinkLabel,
   toogleNodeText: settingAction.toogleNodeText,
+  toogleTextOnly: settingAction.toogleTextOnly,
   toogleLinkDirection: settingAction.toogleLinkDirection,
   toogleHideNodeText: settingAction.toogleAutoHideNodeText,
   changeGraphOrientation: settingAction.changeGraphOrientation,

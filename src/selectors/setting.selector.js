@@ -35,6 +35,11 @@ export const selectNodeTextKey = createSelector(
   nodeTextKey => nodeTextKey,
 );
 
+export const selectShowTextOnly = createSelector(
+  state => state.setting.showTextOnly,
+  showTextOnly => showTextOnly,
+);
+
 export const selectFocusOnDoubleClick = createSelector(
   state => state.setting.focusOnDoubleClick,
   focusOnDoubleClick => focusOnDoubleClick,

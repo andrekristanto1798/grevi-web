@@ -18,6 +18,12 @@ export const toogleNodeText = prev => ({
   value: !prev,
 });
 
+export const toogleTextOnly = prev => ({
+  type: SETTING_SET,
+  key: 'showTextOnly',
+  value: !prev,
+});
+
 export const toogleLinkDirection = prev => ({
   type: SETTING_SET,
   key: 'showLinkDirection',
