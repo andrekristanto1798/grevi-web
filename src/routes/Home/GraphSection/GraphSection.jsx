@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { ForceGraph2D } from 'react-force-graph';
+import { forceCollide } from 'd3';
 import throttle from 'lodash/throttle';
 // Actions
 import * as graphAction from '../../../actions/graph.action';
@@ -28,6 +29,7 @@ import {
   selectAutoHideNodeText,
   selectGraphOrientation,
   selectNodeTextKey,
+  selectShowTextOnly,
   selectForceLinkDistance,
   selectForceChargeStrength,
 } from '../../../selectors/setting.selector';
@@ -73,6 +75,7 @@ const GraphSection = ({
   showNodeLabel,
   showLinkLabel,
   showNodeText,
+  showTextOnly,
   showLinkDirection,
   nodeTextKey,
   autoHideNodeText,
@@ -126,37 +129,55 @@ const GraphSection = ({
     }, 200),
     [forceLinkDistance],
   );
+  React.useEffect(
+    throttle(() => {
+      const fg = graphRef.current;
+      // Change force link strength
+      fg.d3Force('forceCollide', forceCollide(getRadius));
+      refreshGraphLayout();
+    }, 200),
+    [getRadius],
+  );
   const nodeCanvasObjectModeCb = React.useCallback(() => 'replace', []);
   const nodeCanvasDrawCb = React.useCallback(
     (node, ctx, globalScale) => {
       const radius = getRadius(node);
       const highlightRadius = radius + 2;
       const isHighlight = hoveredNodeId.indexOf(node.id) !== -1;
-      if (isHighlight) {
-        // The highlight circle
+      if (!showTextOnly) {
+        if (isHighlight) {
+          // The highlight circle
+          ctx.beginPath();
+          ctx.arc(node.x, node.y, highlightRadius, 0, 2 * Math.PI, false);
+          ctx.fillStyle = COLORS.redNormal;
+          ctx.fill();
+        }
+        // The inside circle
         ctx.beginPath();
-        ctx.arc(node.x, node.y, highlightRadius, 0, 2 * Math.PI, false);
-        ctx.fillStyle = COLORS.redNormal;
+        ctx.arc(node.x, node.y, radius, 0, 2 * Math.PI, false);
+        if (hoveredNodeId.length > 0 && !isHighlight) {
+          ctx.fillStyle = 'rgba(0,0,0,0.3)';
+        } else {
+          ctx.fillStyle = getColor(node);
+        }
         ctx.fill();
       }
-      // The inside circle
-      ctx.beginPath();
-      ctx.arc(node.x, node.y, radius, 0, 2 * Math.PI, false);
-      if (hoveredNodeId.length > 0 && !isHighlight) {
-        ctx.fillStyle = 'rgba(0,0,0,0.3)';
-      } else {
-        ctx.fillStyle = getColor(node);
-      }
-      ctx.fill();
       if (showNodeText) {
-        if (autoHideNodeText && globalScale <= 0.5) return;
+        if (!showTextOnly && autoHideNodeText && globalScale <= 0.5) return;
         // Text
-        let fontSize = 8;
-        if (globalScale > 1) fontSize = 12 / globalScale;
+        // font size should be smaller than 24 but bigger than 12
+        let fontSize = Math.min(24, Math.max(12, radius * 2));
+        if (globalScale > 1) fontSize /= globalScale;
         ctx.font = `${fontSize}px Sans-Serif`;
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        ctx.fillStyle = 'black';
+        if (hoveredNodeId.length > 0 && !isHighlight) {
+          ctx.fillStyle = 'rgba(0,0,0,0.3)';
+        } else if (showTextOnly) {
+          ctx.fillStyle = getColor(node);
+        } else {
+          ctx.fillStyle = 'black';
+        }
         ctx.fillText(node[nodeTextKey], node.x, node.y);
       }
     },
@@ -165,6 +186,7 @@ const GraphSection = ({
       getRadius,
       getColor,
       showNodeText,
+      showTextOnly,
       nodeTextKey,
       autoHideNodeText,
     ],
@@ -260,6 +282,7 @@ GraphSection.propTypes = {
   showNodeLabel: PropTypes.bool.isRequired,
   showLinkLabel: PropTypes.bool.isRequired,
   showNodeText: PropTypes.bool.isRequired,
+  showTextOnly: PropTypes.bool.isRequired,
   showLinkDirection: PropTypes.bool.isRequired,
   nodeTextKey: PropTypes.string.isRequired,
   autoHideNodeText: PropTypes.bool.isRequired,
@@ -295,6 +318,7 @@ const mapStateToProps = state => {
   const showNodeLabel = selectShowNodeLabel(state);
   const showLinkLabel = selectShowLinkLabel(state);
   const showNodeText = selectShowNodeText(state);
+  const showTextOnly = selectShowTextOnly(state);
   const showLinkDirection = selectShowLinkDirection(state);
   const nodeTextKey = selectNodeTextKey(state);
   const autoHideNodeText = selectAutoHideNodeText(state);
@@ -315,6 +339,7 @@ const mapStateToProps = state => {
     showNodeLabel,
     showLinkLabel,
     showNodeText,
+    showTextOnly,
     showLinkDirection,
     nodeTextKey,
     autoHideNodeText,
