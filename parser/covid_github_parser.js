@@ -15,8 +15,8 @@ const nodes = featuresArr.map(node => {
   const caseNumber = nodeData.id.split('-')[1];
   return {
     case: Number(caseNumber),
-    confirmed: new Date(nodeData.confirmed),
-    discharged: new Date(nodeData.discharged),
+    confirmed: nodeData.confirmed,
+    discharged: nodeData.discharged,
     hospital: nodeData.hospital,
   };
 });
