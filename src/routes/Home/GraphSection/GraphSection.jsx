@@ -7,6 +7,7 @@ import throttle from 'lodash/throttle';
 // Actions
 import * as graphAction from '../../../actions/graph.action';
 // Components
+import GraphPopover from '../../../components/GraphPopover';
 import EditingTools, { ADD_LINK_MODE } from '../../../components/EditingTools';
 // Selectors
 import {
@@ -44,7 +45,6 @@ import {
 import { COLORS } from '../../../utils/color';
 // Styles
 import styles from './styles.scss';
-import GraphPopover from '../../../components/GraphPopover';
 
 const noOp = () => {};
 

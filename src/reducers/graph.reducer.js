@@ -6,9 +6,10 @@ import {
 } from '../actions/graph.action';
 import { SELECT_MODE } from '../components/EditingTools';
 
-const defaultPopupData = {
+export const defaultPopupData = {
   type: null,
   data: null,
+  position: { x: 0, y: 0 },
 };
 
 const initialState = {

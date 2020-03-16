@@ -43,6 +43,7 @@ import {
 import { setAlgoGraph } from './algo.action';
 import { showLoading, hideLoading } from './ui.action';
 import { changeNodeTextKey } from './setting.action';
+import { defaultPopupData } from '../reducers/graph.reducer';
 
 export const RESET_ALL = 'RESET_ALL';
 export const SET = 'GRAPH_SET';
@@ -114,7 +115,7 @@ export const downloadGraphFile = () => (_, getState) => {
 
 export const resetPopupData = throttle(
   () => dispatch => {
-    dispatch(set('popupData', { type: null, data: null }));
+    dispatch(set('popupData', defaultPopupData));
   },
   200,
 );
