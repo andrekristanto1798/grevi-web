@@ -178,7 +178,9 @@ const GraphSection = ({
         } else {
           ctx.fillStyle = 'black';
         }
-        ctx.fillText(node[nodeTextKey], node.x, node.y);
+        const nodeText = node[nodeTextKey];
+        const text = nodeText == null ? '' : nodeText;
+        ctx.fillText(text || '', node.x, node.y);
       }
     },
     [
