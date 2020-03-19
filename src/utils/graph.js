@@ -184,7 +184,7 @@ export const getShortestPathGraph = (
 export const extractSubgraph = (nodes, links, nodeId, numberOfHops) => {
   const graph = constructGraph(nodes, links);
   if (!graph.hasNode(nodeId))
-    throw new Error(`Error: nodeId (${nodeId}) does not exist`);
+    throw new Error(`nodeId (${nodeId}) does not exist`);
   const newNodesId = new Set([nodeId]);
   const newLinksId = new Set();
   function dfsWithHop(startingNode, hop, maxNumberOfHops) {

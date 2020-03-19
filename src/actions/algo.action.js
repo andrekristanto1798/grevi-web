@@ -114,7 +114,7 @@ export const applyExtractSubgraph = (nodeId, numberOfHops) => async (
       type: ALGO_APPLY,
       algo: ALGO_TYPE.EXTRACT_SUBGRAPH,
       graph,
-      error: '',
+      error: null,
     });
   } catch (error) {
     dispatch({
