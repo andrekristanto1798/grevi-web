@@ -25,6 +25,18 @@
     "node": ">=8",
     "npm": ">=3"
   },
+  "keywords": [
+    "graph",
+    "visualization",
+    "analysis",
+    "web",
+    "application",
+    "grevi",
+    "visualizer",
+    "d3",
+    "covid-19",
+    "grevi"
+  ],
   "dependencies": {
     "beautiful-react-hooks": "^0.20.1",
     "classnames": "^2.2.6",
