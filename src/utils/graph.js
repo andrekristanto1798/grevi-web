@@ -119,7 +119,7 @@ export const getNodeIdClusterMap = (nodes, links, count) => {
   let idx = 1;
   whisper.forEachCluster(cluster => {
     if (cluster == null) return;
-    const clusterName = `Cluster ${idx}`;
+    const clusterName = Number(idx);
     cluster.nodes.forEach(nodeId => {
       nodeMap[nodeId] = clusterName;
     });
