@@ -58,8 +58,8 @@ export const getNewLink = (linkList, source, target) => {
 export const isLinkDuplicate = (links, sourceId, targetId) => {
   const duplicatedLinks = links.filter(
     link =>
-      (getLinkSource(link) === sourceId && getLinkSource(link) === targetId) ||
-      (getLinkTarget(link) === sourceId && getLinkTarget(link) === targetId),
+      (getLinkSource(link) === sourceId && getLinkTarget(link) === targetId) ||
+      (getLinkTarget(link) === sourceId && getLinkSource(link) === targetId),
   );
 
   return duplicatedLinks.length > 0;

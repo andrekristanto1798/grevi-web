@@ -49,8 +49,6 @@ export const RESET_ALL = 'RESET_ALL';
 export const SET = 'GRAPH_SET';
 export const SET_GRAPH_NODES = 'SET_GRAPH_NODES';
 export const SET_GRAPH_LINKS = 'SET_GRAPH_LINKS';
-export const GRAPH_ADD_NODE = 'GRAPH_ADD_NODE';
-export const GRAPH_ADD_LINK = 'GRAPH_ADD_LINK';
 
 const set = (key, value) => ({ type: SET, key, value });
 const setGraphNodes = nodes => ({ type: SET_GRAPH_NODES, nodes });
@@ -165,7 +163,7 @@ export const hoverNode = node => dispatch => {
 };
 
 export const hoverNodes = nodes =>
-  set('hoveredNodeId', nodes.map(node => node.id));
+  set('hoveredNodeId', Array.isArray(nodes) ? nodes.map(node => node.id) : []);
 
 export const hoverLink = link => dispatch => {
   dispatch(set('hoveredLinkId', link ? link.id : null));
