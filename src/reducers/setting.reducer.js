@@ -1,7 +1,7 @@
 import { SETTING_SET } from '../actions/setting.action';
 import { RESET_ALL } from '../actions/graph.action';
 
-const initialState = {
+export const initialState = {
   showNodeLabel: true,
   showLinkLabel: true,
   showNodeText: true,

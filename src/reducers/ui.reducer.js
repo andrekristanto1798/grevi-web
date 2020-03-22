@@ -1,7 +1,7 @@
 import { UI_SET } from '../actions/ui.action';
 import { RESET_ALL } from '../actions/graph.action';
 
-const initialState = {
+export const initialState = {
   loading: false,
   tabIndex: 0,
 };

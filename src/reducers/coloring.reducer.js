@@ -5,7 +5,7 @@ import {
 } from '../actions/coloring.action';
 import { RESET_ALL } from '../actions/graph.action';
 
-const initialState = {
+export const initialState = {
   selectedKey: null,
   nodeIdValuesMap: {},
   valuesNodeMap: {},

@@ -5,7 +5,7 @@ import {
 } from '../actions/algo.action';
 import { RESET_ALL } from '../actions/graph.action';
 
-const initialState = {
+export const initialState = {
   algo: null,
   graph: null,
   error: null,

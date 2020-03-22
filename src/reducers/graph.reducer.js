@@ -12,7 +12,7 @@ export const defaultPopupData = {
   position: { x: 0, y: 0 },
 };
 
-const initialState = {
+export const initialState = {
   // Graph Data
   data: {
     nodes: [],

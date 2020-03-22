@@ -7,7 +7,7 @@ import {
 } from '../actions/radius.action';
 import { RESET_ALL } from '../actions/graph.action';
 
-const initialState = {
+export const initialState = {
   selectedKey: null,
   minRadius: 4,
   maxRadius: 18,
