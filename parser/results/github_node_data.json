@@ -3,1356 +3,4320 @@
         "case": 1,
         "confirmed": "2020-01-23",
         "discharged": "2020-02-19",
-        "hospital": "Singapore General Hospital"
+        "hospital": "Singapore General Hospital",
+        "nationality": "Chinese",
+        "age": 66,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 2,
         "confirmed": "2020-01-24",
         "discharged": "2020-02-07",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Chinese",
+        "age": 53,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 3,
         "confirmed": "2020-01-24",
         "discharged": "2020-02-21",
-        "hospital": "Singapore General Hospital"
+        "hospital": "Singapore General Hospital",
+        "nationality": "Chinese",
+        "age": 37,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 4,
         "confirmed": "2020-01-25",
         "discharged": "2020-02-12",
-        "hospital": "Sengkang General Hospital"
+        "hospital": "Sengkang General Hospital",
+        "nationality": "Chinese",
+        "age": 36,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 5,
         "confirmed": "2020-01-27",
         "discharged": "2020-02-18",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Chinese",
+        "age": 56,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 6,
         "confirmed": "2020-01-27",
         "discharged": "2020-02-20",
-        "hospital": "Changi General Hospital"
+        "hospital": "Changi General Hospital",
+        "nationality": "Chinese",
+        "age": 56,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 7,
         "confirmed": "2020-01-27",
         "discharged": "2020-02-04",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Chinese",
+        "age": 35,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 8,
         "confirmed": "2020-01-29",
         "discharged": "2020-02-18",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Chinese",
+        "age": 56,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 9,
         "confirmed": "2020-01-29",
         "discharged": "2020-02-23",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Chinese",
+        "age": 56,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 10,
         "confirmed": "2020-01-29",
         "discharged": "2020-02-09",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Chinese",
+        "age": 56,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 11,
         "confirmed": "2020-01-29",
         "discharged": "2020-02-10",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Chinese",
+        "age": 31,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 12,
         "confirmed": "2020-01-29",
         "discharged": "2020-02-12",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Chinese",
+        "age": 37,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 13,
         "confirmed": "2020-01-30",
         "discharged": "2020-02-09",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Chinese",
+        "age": 73,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 14,
         "confirmed": "2020-01-30",
         "discharged": "2020-02-17",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Chinese (Singapore Work Pass Holder)",
+        "age": 31,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 15,
         "confirmed": "2020-01-31",
         "discharged": "2020-02-16",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 47,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 16,
         "confirmed": "2020-01-31",
         "discharged": "2020-02-20",
-        "hospital": "Singapore General Hospital"
+        "hospital": "Singapore General Hospital",
+        "nationality": "Chinese",
+        "age": 38,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 17,
         "confirmed": "2020-01-31",
         "discharged": "2020-02-11",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 47,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 18,
         "confirmed": "2020-02-01",
         "discharged": "2020-02-27",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Chinese",
+        "age": 31,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 19,
         "confirmed": "2020-02-03",
         "discharged": "2020-02-22",
-        "hospital": " Singapore General Hospital"
+        "hospital": " Singapore General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 28,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 20,
         "confirmed": "2020-02-04",
         "discharged": "2020-02-29",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 48,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 21,
         "confirmed": "2020-02-04",
         "discharged": "2020-02-18",
-        "hospital": " Singapore General Hospital"
+        "hospital": " Singapore General Hospital",
+        "nationality": "Indonesian",
+        "age": 44,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 22,
         "confirmed": "2020-02-03",
         "discharged": "2020-02-09",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 41,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 23,
         "confirmed": "2020-02-03",
         "discharged": "2020-02-21",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 17,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 24,
         "confirmed": "2020-02-04",
         "discharged": "2020-02-15",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 32,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 25,
         "confirmed": "2020-02-04",
         "discharged": "2020-02-12",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 40,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 26,
         "confirmed": "2020-02-04",
         "discharged": "2020-02-09",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Chinese",
+        "age": 42,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 27,
         "confirmed": "2020-02-05",
         "discharged": "2020-02-21",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 45,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 28,
         "confirmed": "2020-02-05",
         "discharged": "2020-02-22",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 0,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 29,
         "confirmed": "2020-02-05",
         "discharged": "2020-02-12",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 41,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 30,
         "confirmed": "2020-02-06",
         "discharged": "2020-02-14",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 27,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 31,
         "confirmed": "2020-02-06",
         "discharged": "2020-02-17",
-        "hospital": "Changi General Hospital"
+        "hospital": "Changi General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 53,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 32,
         "confirmed": "2020-02-06",
         "discharged": "2020-02-19",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 42,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 33,
         "confirmed": "2020-02-06",
         "discharged": "2020-02-19",
-        "hospital": "Sengkang General Hospital"
+        "hospital": "Sengkang General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 39,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 34,
         "confirmed": "2020-02-07",
         "discharged": "2020-02-12",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 40,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 35,
         "confirmed": "2020-02-07",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 64,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 36,
         "confirmed": "2020-02-07",
         "discharged": "2020-02-11",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Permanent Resident",
+        "age": 38,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 37,
         "confirmed": "2020-02-07",
         "discharged": "2020-03-02",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 53,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 38,
         "confirmed": "2020-02-08",
         "discharged": "2020-02-18",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 52,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 39,
         "confirmed": "2020-02-08",
         "discharged": "2020-02-16",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 51,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 40,
         "confirmed": "2020-02-08",
         "discharged": "2020-02-12",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 36,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 41,
         "confirmed": "2020-02-08",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 71,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 42,
         "confirmed": "2020-02-08",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Bangladesh (Singapore Work Pass Holder)",
+        "age": 39,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 43,
         "confirmed": "2020-02-08",
         "discharged": "2020-03-07",
-        "hospital": "Sengkang General Hospital"
+        "hospital": "Sengkang General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 54,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 44,
         "confirmed": "2020-02-08",
         "discharged": "2020-02-19",
-        "hospital": "Khoo Teck Puat Hospital"
+        "hospital": "Khoo Teck Puat Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 37,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 45,
         "confirmed": "2020-02-10",
         "discharged": "2020-02-14",
-        "hospital": "KK Women’s and Children’s Hospital"
+        "hospital": "KK Women’s and Children’s Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 2,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 46,
         "confirmed": "2020-02-10",
         "discharged": "2020-02-24",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Permanent Resident",
+        "age": 35,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 47,
         "confirmed": "2020-02-10",
         "discharged": "2020-03-07",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Bangladesh (Singapore Work Pass Holder)",
+        "age": 39,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 48,
         "confirmed": "2020-02-11",
         "discharged": "2020-02-17",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 34,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 49,
         "confirmed": "2020-02-11",
         "discharged": "2020-02-26",
-        "hospital": "National University Hospital"
+        "hospital": "National University Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 46,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 50,
         "confirmed": "2020-02-12",
         "discharged": "2020-02-21",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 62,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 51,
         "confirmed": "2020-02-12",
         "discharged": "2020-02-21",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 48,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 52,
         "confirmed": "2020-02-12",
         "discharged": "2020-02-28",
-        "hospital": "Tan Tock Seng Hospital"
+        "hospital": "Tan Tock Seng Hospital",
+        "nationality": "Bangladesh (Singapore Work Pass Holder)",
+        "age": 37,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 53,
         "confirmed": "2020-02-12",
         "discharged": "2020-03-14",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 54,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 54,
         "confirmed": "2020-02-13",
         "discharged": "2020-03-01",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 55,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 55,
         "confirmed": "2020-02-13",
         "discharged": "2020-02-19",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 30,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 56,
         "confirmed": "2020-02-13",
         "discharged": "2020-02-26",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Bangladesh (Singapore Work Pass Holder)",
+        "age": 30,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 57,
         "confirmed": "2020-02-13",
         "discharged": "2020-02-21",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 26,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 58,
         "confirmed": "2020-02-13",
         "discharged": "2020-02-25",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 55,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 59,
         "confirmed": "2020-02-13",
         "discharged": "2020-02-26",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 61,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 60,
         "confirmed": "2020-02-13",
         "discharged": "2020-03-01",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 51,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 61,
         "confirmed": "2020-02-13",
         "discharged": "2020-03-04",
-        "hospital": "National University Hospital"
+        "hospital": "National University Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 57,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 62,
         "confirmed": "2020-02-13",
         "discharged": "2020-02-25",
-        "hospital": "Singapore General Hospital"
+        "hospital": "Singapore General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 44,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 63,
         "confirmed": "2020-02-14",
         "discharged": "2020-02-21",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 54,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 64,
         "confirmed": "2020-02-14",
         "discharged": "2020-02-23",
-        "hospital": "National University Hospital"
+        "hospital": "National University Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 50,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 65,
         "confirmed": "2020-02-14",
         "discharged": "2020-02-17",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 61,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 66,
         "confirmed": "2020-02-14",
         "discharged": "2020-02-20",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 28,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 67,
         "confirmed": "2020-02-14",
         "discharged": "2020-03-02",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 56,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 68,
         "confirmed": "2020-02-14",
         "discharged": "2020-02-29",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 79,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 69,
         "confirmed": "2020-02-14",
         "discharged": "2020-03-02",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Bangladesh (Singapore Work Pass Holder)",
+        "age": 26,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 70,
         "confirmed": "2020-02-15",
         "discharged": "2020-02-21",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 27,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 71,
         "confirmed": "2020-02-15",
         "discharged": "2020-03-05",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 25,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 72,
         "confirmed": "2020-02-15",
         "discharged": "2020-02-27",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Chinese (Singapore Work Pass Holder)",
+        "age": 40,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 73,
         "confirmed": "2020-02-15",
         "discharged": "2020-02-26",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 43,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 74,
         "confirmed": "2020-02-15",
         "discharged": "2020-03-07",
-        "hospital": "Alexandra Hospital"
+        "hospital": "Alexandra Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 29,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 75,
         "confirmed": "2020-02-16",
         "discharged": "2020-02-29",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 71,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 76,
         "confirmed": "2020-02-16",
         "discharged": "2020-02-18",
-        "hospital": "KK Women’s and Children’s Hospital"
+        "hospital": "KK Women’s and Children’s Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 1,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 77,
         "confirmed": "2020-02-16",
         "discharged": "2020-02-25",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 35,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 78,
         "confirmed": "2020-02-17",
         "discharged": "2020-02-27",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 57,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 79,
         "confirmed": "2020-02-17",
         "discharged": "2020-02-28",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Malaysian (Singapore Work Pass Holder)",
+        "age": 35,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 80,
         "confirmed": "2020-02-18",
         "discharged": "2020-02-27",
-        "hospital": "National University Hospital"
+        "hospital": "National University Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 38,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 81,
         "confirmed": "2020-02-18",
         "discharged": "2020-02-25",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 50,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 82,
         "confirmed": "2020-02-18",
         "discharged": "",
-        "hospital": "Ng Teng Fong General Hospital"
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 57,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 83,
         "confirmed": "2020-02-19",
         "discharged": "2020-02-21",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 54,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 84,
         "confirmed": "2020-02-19",
         "discharged": "2020-02-21",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 35,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 85,
         "confirmed": "2020-02-20",
         "discharged": "2020-03-07",
-        "hospital": "Khoo Teck Puat Hospital"
+        "hospital": "Khoo Teck Puat Hospital",
+        "nationality": "Chinese (Singapore Work Pass Holder)",
+        "age": 36,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 86,
         "confirmed": "2020-02-20",
         "discharged": "2020-03-07",
-        "hospital": "Ng Teng Fong General Hospital"
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 24,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 87,
         "confirmed": "2020-02-21",
         "discharged": "2020-02-24",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 32,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 88,
         "confirmed": "2020-02-21",
         "discharged": "2020-03-02",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 30,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 89,
         "confirmed": "2020-02-22",
         "discharged": "2020-02-28",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Permanent Resident",
+        "age": 41,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 90,
         "confirmed": "2020-02-23",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 75,
+        "death": "true",
+        "recovered": "false"
     },
     {
         "case": 91,
         "confirmed": "2020-02-22",
         "discharged": "2020-02-25",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 58,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 92,
         "confirmed": "2020-02-26",
         "discharged": "2020-03-11",
-        "hospital": "Sengkang General Hospital"
+        "hospital": "Sengkang General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 47,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 93,
         "confirmed": "2020-02-26",
         "discharged": "2020-03-07",
-        "hospital": "Ng Teng Fong General Hospital"
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 38,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 94,
         "confirmed": "2020-02-26",
         "discharged": "",
-        "hospital": "Singapore General Hospital"
+        "hospital": "Singapore General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 64,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 95,
         "confirmed": "2020-02-27",
         "discharged": "2020-03-14",
-        "hospital": "Ng Teng Fong General Hospital"
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 44,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 96,
         "confirmed": "2020-02-27",
         "discharged": "2020-03-07",
-        "hospital": "KK Women’s and Children’s Hospital"
+        "hospital": "KK Women’s and Children’s Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 12,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 97,
         "confirmed": "2020-02-28",
-        "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "discharged": "2020-03-19",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Permanent Resident",
+        "age": 44,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 98,
         "confirmed": "2020-02-28",
         "discharged": "2020-03-05",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Permanent Resident",
+        "age": 24,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 99,
         "confirmed": "2020-02-29",
-        "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "discharged": "2020-03-16",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 27,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 100,
         "confirmed": "2020-02-29",
-        "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "discharged": "2020-03-16",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Malaysian",
+        "age": 20,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 101,
         "confirmed": "2020-02-29",
-        "discharged": "",
-        "hospital": "Ng Teng Fong General Hospital"
+        "discharged": "2020-03-18",
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 61,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 102,
         "confirmed": "2020-02-29",
         "discharged": "2020-03-14",
-        "hospital": "Ng Teng Fong General Hospital"
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "Filipino (Singapore Work Pass Holder)",
+        "age": 41,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 103,
         "confirmed": "2020-03-01",
         "discharged": "2020-03-14",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 37,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 104,
         "confirmed": "2020-03-01",
-        "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "discharged": "2020-03-19",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Myanmar (Singapore Work Pass Holder)",
+        "age": 25,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 105,
         "confirmed": "2020-03-01",
-        "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "discharged": "2020-03-19",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 49,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 106,
         "confirmed": "2020-03-01",
         "discharged": "2020-03-11",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Japanese (Singapore Work Pass Holder)",
+        "age": 54,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 107,
         "confirmed": "2020-03-01",
         "discharged": "2020-03-06",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 68,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 108,
         "confirmed": "2020-03-02",
-        "discharged": "",
-        "hospital": "Ng Teng Fong General Hospital"
+        "discharged": "2020-03-20",
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "Filipino (Singapore Work Pass Holder)",
+        "age": 34,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 109,
         "confirmed": "2020-03-02",
         "discharged": "",
-        "hospital": "Singapore General Hospital"
+        "hospital": "Singapore General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 70,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 110,
         "confirmed": "2020-03-03",
         "discharged": "2020-03-07",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 33,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 111,
         "confirmed": "2020-03-03",
         "discharged": "2020-03-13",
-        "hospital": "National University Hospital"
+        "hospital": "National University Hospital",
+        "nationality": "Singapore Permanent Resident",
+        "age": 43,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 112,
         "confirmed": "2020-03-04",
         "discharged": "2020-03-09",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 62,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 113,
         "confirmed": "2020-03-04",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "French (Singapore Work Pass Holder)",
+        "age": 42,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 114,
         "confirmed": "2020-03-04",
-        "discharged": "",
-        "hospital": "National University Hospital"
+        "discharged": "2020-03-21",
+        "hospital": "National University Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 62,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 115,
         "confirmed": "2020-03-05",
         "discharged": "",
-        "hospital": "National University Hospital"
+        "hospital": "National University Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 62,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 116,
         "confirmed": "2020-03-05",
-        "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "discharged": "2020-03-21",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 50,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 117,
         "confirmed": "2020-03-05",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 52,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 118,
         "confirmed": "2020-03-05",
-        "discharged": "",
-        "hospital": "National University Hospital"
+        "discharged": "2020-03-18",
+        "hospital": "National University Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 33,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 119,
         "confirmed": "2020-03-05",
         "discharged": "",
-        "hospital": "Alexandra Hospital"
+        "hospital": "Alexandra Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 55,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 120,
         "confirmed": "2020-03-05",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 62,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 121,
         "confirmed": "2020-03-05",
-        "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "discharged": "2020-03-19",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 54,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 122,
         "confirmed": "2020-03-05",
-        "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "discharged": "2020-03-17",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 64,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 123,
         "confirmed": "2020-03-05",
-        "discharged": "",
-        "hospital": "Sengkang General Hospital"
+        "discharged": "2020-03-17",
+        "hospital": "Sengkang General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 47,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 124,
         "confirmed": "2020-03-06",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Permanent Resident",
+        "age": 37,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 125,
         "confirmed": "2020-03-06",
-        "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "discharged": "2020-03-19",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 65,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 126,
         "confirmed": "2020-03-05",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 77,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 127,
         "confirmed": "2020-03-05",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 64,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 128,
         "confirmed": "2020-03-06",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 70,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 129,
         "confirmed": "2020-03-06",
         "discharged": "",
-        "hospital": "Ng Teng Fong General Hospital"
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 68,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 130,
         "confirmed": "2020-03-06",
         "discharged": "",
-        "hospital": "Ng Teng Fong General Hospital"
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 66,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 131,
         "confirmed": "2020-03-06",
-        "discharged": "",
-        "hospital": "Ng Teng Fong General Hospital"
+        "discharged": "2020-03-17",
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 66,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 132,
         "confirmed": "2020-03-06",
-        "discharged": "",
-        "hospital": "National University Hospital"
+        "discharged": "2020-03-20",
+        "hospital": "National University Hospital",
+        "nationality": "Singapore Permanent Resident",
+        "age": 37,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 133,
         "confirmed": "2020-03-06",
-        "discharged": "",
-        "hospital": "National University Hospital"
+        "discharged": "2020-03-20",
+        "hospital": "National University Hospital",
+        "nationality": "Indonesian (Singapore Social Visit Pass Holder)",
+        "age": 62,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 134,
         "confirmed": "2020-03-06",
-        "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "discharged": "2020-03-19",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 56,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 135,
         "confirmed": "2020-03-06",
         "discharged": "2020-03-14",
-        "hospital": "Singapore General Hospital"
+        "hospital": "Singapore General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 40,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 136,
         "confirmed": "2020-03-06",
-        "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "discharged": "2020-03-19",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Italian (Singapore Work Pass Holder)",
+        "age": 36,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 137,
         "confirmed": "2020-03-06",
-        "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "discharged": "2020-03-21",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 60,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 138,
         "confirmed": "2020-03-06",
         "discharged": "2020-03-09",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 26,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 139,
         "confirmed": "2020-03-07",
         "discharged": "",
-        "hospital": "Ng Teng Fong General Hospital"
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 71,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 140,
         "confirmed": "2020-03-07",
         "discharged": "",
-        "hospital": "Ng Teng Fong General Hospital"
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 62,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 141,
         "confirmed": "2020-03-07",
         "discharged": "",
-        "hospital": "Ng Teng Fong General Hospital"
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 69,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 142,
         "confirmed": "2020-03-07",
         "discharged": "",
-        "hospital": "Ng Teng Fong General Hospital"
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 26,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 143,
         "confirmed": "2020-03-07",
-        "discharged": "",
-        "hospital": "National University Hospital"
+        "discharged": "2020-03-20",
+        "hospital": "National University Hospital",
+        "nationality": "Singapore Permanent Resident",
+        "age": 42,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 144,
         "confirmed": "2020-03-07",
-        "discharged": "",
-        "hospital": "Ng Teng Fong General Hospital"
+        "discharged": "2020-03-21",
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 58,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 145,
         "confirmed": "2020-03-08",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 67,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 146,
         "confirmed": "2020-03-08",
         "discharged": "2020-03-14",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 64,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 147,
         "confirmed": "2020-03-08",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Indonesian",
+        "age": 64,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 148,
         "confirmed": "2020-03-08",
         "discharged": "2020-03-11",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 67,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 149,
         "confirmed": "2020-03-08",
-        "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "discharged": "2020-03-16",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 62,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 150,
         "confirmed": "2020-03-08",
         "discharged": "2020-03-14",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Permanent Resident",
+        "age": 53,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 151,
         "confirmed": "2020-03-08",
         "discharged": "2020-03-08",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 51,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 152,
         "confirmed": "2020-03-08",
         "discharged": "",
-        "hospital": "Singapore General Hospital"
+        "hospital": "Singapore General Hospital",
+        "nationality": "Indonesian",
+        "age": 65,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 153,
         "confirmed": "2020-03-08",
         "discharged": "",
-        "hospital": "Singapore General Hospital"
+        "hospital": "Singapore General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 65,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 154,
         "confirmed": "2020-03-09",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "British",
+        "age": 52,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 155,
         "confirmed": "2020-03-09",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Malaysian (Singapore Work Pass holder)",
+        "age": 47,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 156,
         "confirmed": "2020-03-09",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Permanent Resident",
+        "age": 50,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 157,
         "confirmed": "2020-03-09",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Permanent Resident",
+        "age": 54,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 158,
         "confirmed": "2020-03-09",
         "discharged": "",
-        "hospital": "Ng Teng Fong General Hospital"
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 53,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 159,
         "confirmed": "2020-03-09",
         "discharged": "",
-        "hospital": "Ng Teng Fong General Hospital"
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 59,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 160,
         "confirmed": "2020-03-09",
         "discharged": "2020-03-14",
-        "hospital": "KK Women’s and Children’s Hospital"
+        "hospital": "KK Women’s and Children’s Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 5,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 161,
         "confirmed": "2020-03-09",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 73,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 162,
         "confirmed": "2020-03-09",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 28,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 163,
         "confirmed": "2020-03-09",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 27,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 164,
         "confirmed": "2020-03-10",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Permanent Resident",
+        "age": 57,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 165,
         "confirmed": "2020-03-10",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 30,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 166,
         "confirmed": "2020-03-10",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 55,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 167,
         "confirmed": "2020-03-10",
         "discharged": "",
-        "hospital": "Ng Teng Fong General Hospital"
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "Filipino (Singapore Work Pass holder)",
+        "age": 35,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 168,
         "confirmed": "2020-03-10",
-        "discharged": "",
-        "hospital": "Sengkang Hospital"
+        "discharged": "2020-03-20",
+        "hospital": "Sengkang Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 47,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 169,
         "confirmed": "2020-03-10",
         "discharged": "",
-        "hospital": "Khoo Teck Puat Hospital"
+        "hospital": "Khoo Teck Puat Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 40,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 170,
         "confirmed": "2020-03-10",
         "discharged": "",
-        "hospital": "Singapore General Hospital"
+        "hospital": "Singapore General Hospital",
+        "nationality": "Indonesian",
+        "age": 56,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 171,
         "confirmed": "2020-03-11",
-        "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "discharged": "2020-03-17",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 27,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 172,
         "confirmed": "2020-03-11",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Filipino (Singapore Work Pass holder)",
+        "age": 42,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 173,
         "confirmed": "2020-03-11",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 31,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 174,
         "confirmed": "2020-03-11",
-        "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "discharged": "2020-03-21",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 67,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 175,
         "confirmed": "2020-03-11",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 44,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 176,
         "confirmed": "2020-03-11",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "British",
+        "age": 37,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 177,
         "confirmed": "2020-03-11",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 26,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 178,
         "confirmed": "2020-03-11",
         "discharged": "",
-        "hospital": "Ng Teng Fong General Hospital"
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "Filipino (Singapore Work Pass holder)",
+        "age": 37,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 179,
         "confirmed": "2020-03-11",
-        "discharged": "",
-        "hospital": "National University Hospital"
+        "discharged": "2020-03-20",
+        "hospital": "National University Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 66,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 180,
         "confirmed": "2020-03-12",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 71,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 181,
         "confirmed": "2020-03-12",
         "discharged": "",
-        "hospital": "Gleneagles Hospital"
+        "hospital": "Gleneagles Hospital",
+        "nationality": "Indonesian",
+        "age": 83,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 182,
         "confirmed": "2020-03-12",
         "discharged": "",
-        "hospital": "Gleneagles Hospital"
+        "hospital": "Gleneagles Hospital",
+        "nationality": "Indonesian",
+        "age": 76,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 183,
         "confirmed": "2020-03-12",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 29,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 184,
         "confirmed": "2020-03-12",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Filipino (Singapore Work Pass Holder)",
+        "age": 35,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 185,
         "confirmed": "2020-03-12",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 34,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 186,
         "confirmed": "2020-03-12",
-        "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "discharged": "2020-03-21",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 64,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 187,
         "confirmed": "2020-03-12",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 48,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 188,
         "confirmed": "2020-03-12",
         "discharged": "",
-        "hospital": "Khoo Teck Phuat Hospital"
+        "hospital": "Khoo Teck Phuat Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 53,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 189,
         "confirmed": "2020-03-12",
-        "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "discharged": "2020-03-16",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Indian (Singapore Work Pass Holder)",
+        "age": 36,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 190,
         "confirmed": "2020-03-13",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 53,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 191,
         "confirmed": "2020-03-13",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Malaysian (Singapore Work Pass Holder)",
+        "age": 24,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 192,
         "confirmed": "2020-03-13",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "American",
+        "age": 32,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 193,
         "confirmed": "2020-03-13",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Malaysian (Singapore Work Pass Holder)",
+        "age": 26,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 194,
         "confirmed": "2020-03-13",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Chinese (Singapore Work Pass Holder)",
+        "age": 24,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 195,
         "confirmed": "2020-03-13",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 47,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 196,
         "confirmed": "2020-03-13",
-        "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "discharged": "2020-03-17",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 73,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 197,
         "confirmed": "2020-03-13",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 30,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 198,
         "confirmed": "2020-03-13",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 61,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 199,
         "confirmed": "2020-03-13",
-        "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "discharged": "2020-03-21",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 37,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 200,
         "confirmed": "2020-03-13",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 62,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 201,
         "confirmed": "2020-03-13",
-        "discharged": "",
-        "hospital": "Ng Teng Fong General Hospital"
+        "discharged": "2020-03-18",
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 52,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 202,
         "confirmed": "2020-03-13",
         "discharged": "",
-        "hospital": "Sengkang General Hospital"
+        "hospital": "Sengkang General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 44,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 203,
         "confirmed": "2020-03-13",
         "discharged": "",
-        "hospital": "Changi General Hospital"
+        "hospital": "Changi General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 36,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 204,
         "confirmed": "2020-03-13",
         "discharged": "",
-        "hospital": "Singapore General Hospital"
+        "hospital": "Singapore General Hospital",
+        "nationality": "American (Singapore Work Pass Holder)",
+        "age": 32,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 205,
         "confirmed": "2020-03-14",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Filipino (Singapore Long Term Visit Pass Holder)",
+        "age": 30,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 206,
         "confirmed": "2020-03-14",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "New Zeland (Singapore Long Term Visit Pass Holder)",
+        "age": 33,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 207,
         "confirmed": "2020-03-14",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 40,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 208,
         "confirmed": "2020-03-14",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 26,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 209,
         "confirmed": "2020-03-14",
         "discharged": "",
-        "hospital": "Singapore General Hospital"
+        "hospital": "Singapore General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 32,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 210,
         "confirmed": "2020-03-14",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "German (Singapore Long Term Visit Pass Holder)",
+        "age": 56,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 211,
         "confirmed": "2020-03-14",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Filipino (Singapore Long Term Visit Pass Holder)",
+        "age": 35,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 212,
         "confirmed": "2020-03-14",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Indonesian",
+        "age": 64,
+        "death": "true",
+        "recovered": "false"
     },
     {
         "case": 213,
         "confirmed": "2020-03-14",
         "discharged": "",
-        "hospital": "Sengkang General Hospital"
+        "hospital": "Sengkang General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 48,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 214,
         "confirmed": "2020-03-14",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 29,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 215,
         "confirmed": "2020-03-14",
         "discharged": "",
-        "hospital": "Singapore General Hospital"
+        "hospital": "Singapore General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 65,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 216,
         "confirmed": "2020-03-14",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 30,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 217,
         "confirmed": "2020-03-14",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Spanish (Singapore Long Term Pass Holder)",
+        "age": 22,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 218,
         "confirmed": "2020-03-14",
-        "discharged": "",
-        "hospital": "National University Hospital"
+        "discharged": "2020-03-20",
+        "hospital": "National University Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 55,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 219,
         "confirmed": "2020-03-15",
         "discharged": "",
-        "hospital": "Sengkang General Hospital"
+        "hospital": "Sengkang General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 30,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 220,
         "confirmed": "2020-03-15",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Permanent Resident",
+        "age": 53,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 221,
         "confirmed": "2020-03-15",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Filipino (Singapore Work Pass Holder)",
+        "age": 28,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 222,
         "confirmed": "2020-03-15",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "French (Singapore Work Pass Holder)",
+        "age": 41,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 223,
         "confirmed": "2020-03-15",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 60,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 224,
         "confirmed": "2020-03-15",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 50,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 225,
         "confirmed": "2020-03-15",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 63,
+        "death": "false",
+        "recovered": "true"
     },
     {
         "case": 226,
         "confirmed": "2020-03-15",
         "discharged": "",
-        "hospital": "National Centre for Infectious Diseases"
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Dutch",
+        "age": 49,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 227,
+        "confirmed": "2020-03-15",
+        "discharged": "",
+        "hospital": "National University Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 53,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 228,
+        "confirmed": "2020-03-15",
+        "discharged": "",
+        "hospital": "Changi General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 67,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 229,
+        "confirmed": "2020-03-15",
+        "discharged": "",
+        "hospital": "National University Hospital",
+        "nationality": "Singapore Permanent Resident",
+        "age": 26,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 230,
+        "confirmed": "2020-03-15",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 38,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 231,
+        "confirmed": "2020-03-15",
+        "discharged": "",
+        "hospital": "Singapore General Hospital",
+        "nationality": "Australian (Singapore Work Pass Holder)",
+        "age": 78,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 232,
+        "confirmed": "2020-03-15",
+        "discharged": "",
+        "hospital": "Singapore General Hospital",
+        "nationality": "Australian (Singapore Work Pass Holder)",
+        "age": 65,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 233,
+        "confirmed": "2020-03-16",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "British (Singapore Long Term Pass)",
+        "age": 61,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 234,
+        "confirmed": "2020-03-16",
+        "discharged": "",
+        "hospital": "Singapore General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 86,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 235,
+        "confirmed": "2020-03-16",
+        "discharged": "",
+        "hospital": "Singapore General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 31,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 236,
+        "confirmed": "2020-03-16",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 30,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 237,
+        "confirmed": "2020-03-16",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Indonesian (Singapore Work Pass Holder)",
+        "age": 36,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 238,
+        "confirmed": "2020-03-16",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Belgium",
+        "age": 83,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 239,
+        "confirmed": "2020-03-16",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "British (Singapore Work Pass Holder)",
+        "age": 28,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 240,
+        "confirmed": "2020-03-16",
+        "discharged": "",
+        "hospital": "National University Hospital",
+        "nationality": "Singapore Permanent Resident",
+        "age": 27,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 241,
+        "confirmed": "2020-03-16",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "British (Singapore Work Pass Holder)",
+        "age": 28,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 242,
+        "confirmed": "2020-03-16",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 64,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 243,
+        "confirmed": "2020-03-16",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 36,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 244,
+        "confirmed": "2020-03-16",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 53,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 245,
+        "confirmed": "2020-03-16",
+        "discharged": "",
+        "hospital": "Singapore General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 76,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 246,
+        "confirmed": "2020-03-16",
+        "discharged": "",
+        "hospital": "Singapore General Hospital",
+        "nationality": "Canadian",
+        "age": 39,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 247,
+        "confirmed": "2020-03-16",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 41,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 248,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Malaysian (Singapore Work Pass Holder)",
+        "age": 23,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 249,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Permanent Resident",
+        "age": 42,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 250,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "British (Singapore Work Pass Holder)",
+        "age": 28,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 251,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 59,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 252,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 66,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 253,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 24,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 254,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Permanent Resident",
+        "age": 43,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 255,
+        "confirmed": "2020-03-17",
+        "discharged": "2020-03-21",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Swedish (Singapore Work Pass holder)",
+        "age": 44,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 256,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Filipino (Singapore Work Pass holder)",
+        "age": 32,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 257,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National University Hospital",
+        "nationality": "French (Singapore Long Term Pass holder)",
+        "age": 19,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 258,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Indian",
+        "age": 47,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 259,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 30,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 260,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "Farrer Park Hospital",
+        "nationality": "Singapore Permanent Resident",
+        "age": 48,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 261,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "American (Singapore Work Pass Holder)",
+        "age": 30,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 262,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Indonesian",
+        "age": 20,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 263,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 52,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 264,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Indonesian",
+        "age": 41,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 265,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 25,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 266,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 63,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 267,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "Khoo Teck Puat Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 72,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 268,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "British",
+        "age": 64,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 269,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 19,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 270,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 62,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 271,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 29,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 272,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 65,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 273,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National University Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 69,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 274,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "American (Singapore Work Pass Holder)",
+        "age": 50,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 275,
+        "confirmed": "2020-03-17",
+        "discharged": "2020-03-21",
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 27,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 276,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 21,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 277,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "Changi General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 55,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 278,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "American",
+        "age": 48,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 279,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 71,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 280,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 21,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 281,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 46,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 282,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Swiss",
+        "age": 76,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 283,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 62,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 284,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 32,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 285,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Thai (Singapore Work Pass Holder)",
+        "age": 42,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 286,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "British (Singapore Work Pass Holder)",
+        "age": 54,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 287,
+        "confirmed": "2020-03-17",
+        "discharged": "",
+        "hospital": "Khoo Teck Puat Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 26,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 288,
+        "confirmed": "2020-03-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 71,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 289,
+        "confirmed": "2020-03-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 62,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 290,
+        "confirmed": "2020-03-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 69,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 291,
+        "confirmed": "2020-03-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Indian (Singapore Long Term Pass Holder)",
+        "age": 52,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 292,
+        "confirmed": "2020-03-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 64,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 293,
+        "confirmed": "2020-03-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "British (Singapore Work Pass Holder)",
+        "age": 30,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 294,
+        "confirmed": "2020-03-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Permanent Resident",
+        "age": 58,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 295,
+        "confirmed": "2020-03-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 55,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 296,
+        "confirmed": "2020-03-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Malaysian (Singapore Work Pass Holder)",
+        "age": 25,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 297,
+        "confirmed": "2020-03-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Indonesian (Singapore Work Pass Holder)",
+        "age": 31,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 298,
+        "confirmed": "2020-03-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 44,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 299,
+        "confirmed": "2020-03-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 29,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 300,
+        "confirmed": "2020-03-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "German (Singapore Work Pass Holder)",
+        "age": 28,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 301,
+        "confirmed": "2020-03-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 63,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 302,
+        "confirmed": "2020-03-18",
+        "discharged": "",
+        "hospital": "Khoo Teck Puat Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 49,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 303,
+        "confirmed": "2020-03-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Malaysian (Singapore Long Term Pass Holder)",
+        "age": 27,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 304,
+        "confirmed": "2020-03-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 27,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 305,
+        "confirmed": "2020-03-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 24,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 306,
+        "confirmed": "2020-03-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 56,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 307,
+        "confirmed": "2020-03-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 22,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 308,
+        "confirmed": "2020-03-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 59,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 309,
+        "confirmed": "2020-03-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 60,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 310,
+        "confirmed": "2020-03-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 58,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 311,
+        "confirmed": "2020-03-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 80,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 312,
+        "confirmed": "2020-03-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "French",
+        "age": 30,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 313,
+        "confirmed": "2020-03-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "British (Singapore Work Pass Holder)",
+        "age": 39,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 314,
+        "confirmed": "2020-02-18",
+        "discharged": "",
+        "hospital": "Khoo Teck Puat Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 58,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 315,
+        "confirmed": "2020-02-18",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 57,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 316,
+        "confirmed": "2020-02-18",
+        "discharged": "",
+        "hospital": "Changi General Hospital",
+        "nationality": "Malaysia (Singapore Work Pass Holder)",
+        "age": 25,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 317,
+        "confirmed": "2020-02-18",
+        "discharged": "",
+        "hospital": "Sengkang General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 29,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 318,
+        "confirmed": "2020-02-18",
+        "discharged": "",
+        "hospital": "Sengkang General Hospital",
+        "nationality": "China (Singapore Long Term Pass Holder)",
+        "age": 58,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 319,
+        "confirmed": "2020-02-18",
+        "discharged": "",
+        "hospital": "Sengkang General Hospital",
+        "nationality": "Philippines (Singapore Work Pass Holder)",
+        "age": 67,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 320,
+        "confirmed": "2020-02-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Permanent Resident",
+        "age": 34,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 321,
+        "confirmed": "2020-02-18",
+        "discharged": "",
+        "hospital": "National University Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 65,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 322,
+        "confirmed": "2020-02-18",
+        "discharged": "",
+        "hospital": "Alexandra Hospital",
+        "nationality": "Singapore Permanent Resident",
+        "age": 46,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 323,
+        "confirmed": "2020-02-18",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 24,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 324,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Brazil (Singapore Work Pass Holder)",
+        "age": 45,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 325,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Philippines (Singapore Work Pass Holder)",
+        "age": 38,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 326,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 33,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 327,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 38,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 328,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Permanent Resident",
+        "age": 63,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 329,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 64,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 330,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 67,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 331,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Permanent Resident",
+        "age": 49,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 332,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "US (Singapore Long Term Pass Holder)",
+        "age": 36,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 333,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Columbia (Singapore Long Term Pass Holder)",
+        "age": 48,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 334,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 32,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 335,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 57,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 336,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "Khoo Teck Puat Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 60,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 337,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National University Hospital",
+        "nationality": "Switzerland (Singapore Work Pass Holder)",
+        "age": 31,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 338,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 57,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 339,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 66,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 340,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 27,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 341,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Germany (Singapore Work Pass Holder)",
+        "age": 31,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 342,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 31,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 343,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Permanent Resident",
+        "age": 20,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 344,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 21,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 345,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "German (Singapore Work Pass Holder)",
+        "age": 30,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 346,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "Khoo Teck Puat Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 59,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 347,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "Khoo Teck Puat Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 27,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 348,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National University Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 51,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 349,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "Changi General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 21,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 350,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "Changi General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 61,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 351,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "Sengkang General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 51,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 352,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": " Singapore General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 43,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 353,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 23,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 354,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "Singapore General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 59,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 355,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Australian (Long Term Visit Pass holder)",
+        "age": 38,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 356,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Australian (Singapore Work Pass Holder)",
+        "age": 27,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 357,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "Mount Elizabeth Hospital",
+        "nationality": "German",
+        "age": 41,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 358,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Permanent Resident",
+        "age": 39,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 359,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National University Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 45,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 360,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 26,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 361,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 32,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 362,
+        "confirmed": "2020-02-19",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "German (Long Term Pass holder)",
+        "age": 45,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 363,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "Sengkang General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 49,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 364,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 52,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 365,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Netherlands (Singapore Work Pass holder)",
+        "age": 33,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 366,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 26,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 367,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 25,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 368,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Indonesian (Long Term Visit Pass holder)",
+        "age": 19,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 369,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 34,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 370,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Malaysia (Singapore Work Pass Holder)",
+        "age": 73,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 371,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 22,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 372,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 22,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 373,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 51,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 374,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 23,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 375,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 25,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 376,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Permanent Resident",
+        "age": 21,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 377,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National University Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 59,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 378,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "UK (Long Term Visit Pass holder)",
+        "age": 38,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 379,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Swedish (Singapore Work Pass holder)",
+        "age": 62,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 380,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "Singapore General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 34,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 381,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "Singapore General Hospital",
+        "nationality": "Singapore Permanent Resident",
+        "age": 27,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 382,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "Singapore General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 55,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 383,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 42,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 384,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "Singapore Citizen",
+        "age": 65,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 385,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "Changi General Hospital",
+        "nationality": "Singapore Citizen",
+        "age": 22,
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 386,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "Ng Teng Fong General Hospital",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 387,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National University Hospital",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 388,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "Sengkang General Hospital",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 389,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "KK Women’s and Children’s Hospital",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 390,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "KK Women’s and Children’s Hospital",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 391,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National University Hospital",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 392,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 393,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 394,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "Changi General Hospital",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 395,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 396,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "Sengkang General Hospital",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 397,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 398,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "Khoo Teck Puat Hospital",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 399,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 400,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 401,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 402,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "Mount Elizabeth Novena Hospital",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 403,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "Mount Elizabeth Hospital",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 404,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 405,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 406,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "Khoo Teck Puat Hospital",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 407,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 408,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National University Hospital",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 409,
+        "confirmed": "2020-02-20",
+        "discharged": "",
+        "hospital": "National University Hospital",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 410,
+        "confirmed": "2020-02-21",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 411,
+        "confirmed": "2020-02-21",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 412,
+        "confirmed": "2020-02-21",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 413,
+        "confirmed": "2020-02-21",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 414,
+        "confirmed": "2020-02-21",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 415,
+        "confirmed": "2020-02-21",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 416,
+        "confirmed": "2020-02-21",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 417,
+        "confirmed": "2020-02-21",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 418,
+        "confirmed": "2020-02-21",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 419,
+        "confirmed": "2020-02-21",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 420,
+        "confirmed": "2020-02-21",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 421,
+        "confirmed": "2020-02-21",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 422,
+        "confirmed": "2020-02-21",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 423,
+        "confirmed": "2020-02-21",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 424,
+        "confirmed": "2020-02-21",
+        "discharged": "",
+        "hospital": "Changi General Hospital",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 425,
+        "confirmed": "2020-02-21",
+        "discharged": "",
+        "hospital": "Changi General Hospital",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 426,
+        "confirmed": "2020-02-21",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 427,
+        "confirmed": "2020-02-21",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 428,
+        "confirmed": "2020-02-21",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 429,
+        "confirmed": "2020-02-21",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 430,
+        "confirmed": "2020-02-21",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 431,
+        "confirmed": "2020-02-21",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
+    },
+    {
+        "case": 432,
+        "confirmed": "2020-02-21",
+        "discharged": "",
+        "hospital": "National Centre for Infectious Diseases",
+        "nationality": "",
+        "age": "",
+        "death": "false",
+        "recovered": "true"
     }
 ]

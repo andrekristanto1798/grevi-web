@@ -40,7 +40,7 @@ const traverse = (parent, child) => {
     currentNode.gender = genderMap[genderDesc];
     // Add additional info from github node data
     const dataEl = nodeData[currentNode.case - 1];
-    currentNode = { ...dataEl, ...currentNode };
+    currentNode = { ...currentNode, ...dataEl };
   }
   if (currentNode.gp != null) {
     currentNode.gp = Number(currentNode.gp);

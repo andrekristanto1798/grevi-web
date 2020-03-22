@@ -18,6 +18,10 @@ const nodes = featuresArr.map(node => {
     confirmed: nodeData.confirmed,
     discharged: nodeData.discharged,
     hospital: nodeData.hospital,
+    nationality: nodeData.nationality,
+    age: nodeData.age,
+    death: nodeData.death ? 'true' : 'false',
+    recovered: !nodeData.death ? 'true' : 'false',
   };
 });
 

@@ -183,6 +183,1140 @@
     ]
   },
   {
+    "name": "IMPORTED CASES (FROM EUROPE)",
+    "children": [
+      {
+        "case": "124",
+        "name": "Singapore PR, female, 37",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-moh-case-update-mar-6-12509246"
+      },
+      {
+        "case": "132",
+        "name": "Singapore PR, female, 37",
+        "recovered": "1",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-mar-7-cases-12512420",
+        "children": [
+          {
+            "case": "143",
+            "name": "Singapore PR, male, 42",
+            "recovered": "1",
+            "gp": "7",
+            "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-cases-safra-jurong-singapore-12515592"
+          }
+        ]
+      },
+      {
+        "case": "154",
+        "name": "British national, male, 52",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid-19-cases-moh-mar-9-12518318"
+      },
+      {
+        "case": "165",
+        "name": "RSAF serviceman, male, 30",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-covid19-new-cases-safra-mar-10-12521660",
+        "children": [
+          {
+            "case": "200",
+            "name": "Singaporean, female, 62",
+            "gp": "7",
+            "url": "https://www.channelnewsasia.com/news/singapore/covid19-singapore-moh-update-mar-13-new-cases-12535314"
+          }
+        ]
+      },
+      {
+        "case": "171",
+        "name": "Singaporean, male, 27",
+        "recovered": "1",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
+      },
+      {
+        "case": "173",
+        "name": "RSAF serviceman, male, 31",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
+      },
+      {
+        "case": "175",
+        "name": "RSAF serviceman, male, 44",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
+      },
+      {
+        "case": "193",
+        "name": "Malaysian national, male, 26",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-singapore-moh-update-mar-13-new-cases-12535314"
+      },
+      {
+        "case": "194",
+        "name": "Chinese national, female, 24",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-singapore-moh-update-mar-13-new-cases-12535314"
+      },
+      {
+        "case": "207",
+        "name": "Singaporean, female, 40",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-singapore-health-march-14-12538392"
+      },
+      {
+        "case": "210",
+        "name": "German national, male, 56",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-singapore-health-march-14-12538392"
+      },
+      {
+        "case": "216",
+        "name": "Singaporean, male, 30",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-singapore-new-cases-imported-12539904"
+      },
+      {
+        "case": "217",
+        "name": "SMU exchange student, Spanish national, male, 22",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-smu-exchange-student-spain-flatmates-12543890"
+      },
+      {
+        "case": "220",
+        "name": "INSEAD dean, Singaporean PR, male, 53",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid-19-insead-asia-campus-dean-tests-positive-for-coronavirus-12542244"
+      },
+      {
+        "case": "226",
+        "name": "Dutch national, male, 49",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-singapore-new-cases-imported-12539904"
+      },
+      {
+        "case": "227",
+        "name": "Lighthouse Evangelism Church worker, male, 53",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-moh-17-new-cases-imported-covid-19-largest-increase-12542378",
+        "children": [
+          {
+            "case": "348",
+            "name": "Singaporean, female, 51",
+            "gp": "7",
+            "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+          }
+        ]
+      },
+      {
+        "case": "229",
+        "name": "Singapore PR, female, 26",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-moh-17-new-cases-imported-covid-19-largest-increase-12542378"
+      },
+      {
+        "case": "230",
+        "name": "Republic Poly and Singapore Poly adjunct teaching staff, Singaporean, female, 38",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-moh-17-new-cases-imported-covid-19-largest-increase-12542378",
+        "children": [
+          {
+            "case": "294",
+            "name": "Singapore PR, female, 58",
+            "gp": "7",
+            "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968",
+            "children": [
+              {
+                "case": "368",
+                "name": "Indonesian national, female, 19",
+                "gp": "7",
+                "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "case": "233",
+        "name": "British national, male, 61",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-moh-17-new-cases-imported-covid-19-largest-increase-12542378"
+      },
+      {
+        "case": "238",
+        "name": "Belgian national, female, 83",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-moh-17-new-cases-imported-covid-19-largest-increase-12542378"
+      },
+      {
+        "case": "239",
+        "name": "British national, male, 28",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-moh-17-new-cases-imported-covid-19-largest-increase-12542378"
+      },
+      {
+        "case": "240",
+        "name": "Singapore PR, male, 27",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-moh-17-new-cases-imported-covid-19-largest-increase-12542378"
+      },
+      {
+        "case": "241",
+        "name": "British national, male, 28",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-moh-17-new-cases-imported-covid-19-largest-increase-12542378"
+      },
+      {
+        "case": "243",
+        "name": "Singaporean, male, 36",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-moh-17-new-cases-imported-covid-19-largest-increase-12542378"
+      },
+      {
+        "case": "244",
+        "name": "Singaporean, male, 53",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-new-cases-singapore-moh-mar-17-12547614"
+      },
+      {
+        "case": "247",
+        "name": "Singaporean, male, 41",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-new-cases-singapore-moh-mar-17-12547614"
+      },
+      {
+        "case": "250",
+        "name": "British national, male, 28",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-new-cases-singapore-moh-mar-17-12547614"
+      },
+      {
+        "case": "253",
+        "name": "Singaporean, male, 24",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-new-cases-singapore-moh-mar-17-12547614"
+      },
+      {
+        "case": "254",
+        "name": "Singapore PR, female, 43",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-new-cases-singapore-moh-mar-17-12547614"
+      },
+      {
+        "case": "255",
+        "name": "Swedish national, male, 44",
+        "recovered": "1",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-new-cases-singapore-moh-mar-17-12547614"
+      },
+      {
+        "case": "257",
+        "name": "French national, male, 19",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-new-cases-singapore-moh-mar-17-12547614"
+      },
+      {
+        "case": "258",
+        "name": "Indian national, male, 47",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-new-cases-singapore-moh-mar-17-12547614"
+      },
+      {
+        "case": "262",
+        "name": "Indonesian national, female, 20",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-new-cases-singapore-moh-mar-17-12547614"
+      },
+      {
+        "case": "263",
+        "name": "Singaporean, female, 52",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-new-cases-singapore-moh-mar-17-12547614"
+      },
+      {
+        "case": "265",
+        "name": "Singaporean, female, 25",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-new-cases-singapore-moh-mar-17-12547614"
+      },
+      {
+        "case": "266",
+        "name": "Singaporean, male, 63",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-new-cases-singapore-moh-mar-17-12547614"
+      },
+      {
+        "case": "268",
+        "name": "British national, male, 64",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "269",
+        "name": "Singaporean, female, 19",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "270",
+        "name": "Singaporean, female, 62",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "271",
+        "name": "Singaporean, male, 29",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "272",
+        "name": "Singaporean, male, 65",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "276",
+        "name": "Singaporean, male, 21",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "278",
+        "name": "American national, female, 48",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "280",
+        "name": "Singaporean, female, 21",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "282",
+        "name": "Swiss national, male,76",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "286",
+        "name": "British national, male, 54",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "293",
+        "name": "British national, male, 30",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "296",
+        "name": "Malaysian national, female, 25",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "300",
+        "name": "German national, male, 28",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "301",
+        "name": "Singaporean, male, 63",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "304",
+        "name": "Singaporean, female, 27",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "306",
+        "name": "Singaporean, male, 56",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "309",
+        "name": "Singaporean, male, 60",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "312",
+        "name": "French national, male, 30",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "313",
+        "name": "British national, male, 39",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "315",
+        "name": "Singaporean, male, 57",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "317",
+        "name": "Singaporean, male, 29",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "320",
+        "name": "Singapore PR, male, 34",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "322",
+        "name": "Singapore PR, female, 46",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "323",
+        "name": "Singaporean, male, 24",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "324",
+        "name": "Brazilian national, male, 45",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "325",
+        "name": "Filipino national, male, 38",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "326",
+        "name": "Singaporean, male, 33",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "327",
+        "name": "Singaporean, female, 38",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "328",
+        "name": "Singapore PR, female, 63",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "331",
+        "name": "Singapore PR, female, 49",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "332",
+        "name": "American national, female, 36",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "337",
+        "name": "Swiss national, male, 31",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "341",
+        "name": "German national, male, 31",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "343",
+        "name": "Singapore PR, female, 20",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "344",
+        "name": "Singaporean, female, 21",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "347",
+        "name": "Singaporean, male, 27",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "349",
+        "name": "Singaporean, male, 21",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "352",
+        "name": "Singaporean, male, 43",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "354",
+        "name": "Singaporean, male, 59",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "355",
+        "name": "Australian national, male, 38",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "360",
+        "name": "Singaporean, male, 26",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "362",
+        "name": "German national, female, 45",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "363",
+        "name": "Singaporean, male, 49",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "365",
+        "name": "Dutch national, male, 33",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "366",
+        "name": "Singaporean, female, 26",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "371",
+        "name": "Singaporean, male, 22",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "372",
+        "name": "Singaporean, female, 22",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "373",
+        "name": "Singaporean, male, 51",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "374",
+        "name": "Singaporean, female, 23",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "376",
+        "name": "Singapore PR, female, 21",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "377",
+        "name": "Singaporean, male, 59",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "378",
+        "name": "UK national, male, 38",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "380",
+        "name": "Singaporean, male, 34",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "381",
+        "name": "Singapore PR, female, 27",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "382",
+        "name": "Singaporean, female, 55",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "383",
+        "name": "Singaporean, female, 42",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "385",
+        "name": "Singaporean, male, 22",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "387",
+        "name": "Swiss national, female, 30",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "390",
+        "name": "Singaporean, female, 35",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "393",
+        "name": "Singaporean, male, 21",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "397",
+        "name": "Irish national, male, 43",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "399",
+        "name": "Singaporean, female, 23",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "400",
+        "name": "Singaporean, male, 56",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "401",
+        "name": "Singaporean, male, 20",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "405",
+        "name": "Singaporean, male, 25",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "410",
+        "name": "Singaporean, female, 20",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "411",
+        "name": "Singaporean, male, 30",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "412",
+        "name": "Singaporean, female, 19",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "413",
+        "name": "Singaporean, male, 29",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "416",
+        "name": "Singaporean, male, 21",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "417",
+        "name": "French national, female, 18",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "420",
+        "name": "Singaporean, female, 21",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "421",
+        "name": "Singaporean, male, 23",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "423",
+        "name": "Singaporean, male, 24",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "428",
+        "name": "Singaporean, male, 22",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "429",
+        "name": "Singaporean, female, 31",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "431",
+        "name": "Singaporean, male, 58",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      }
+    ]
+  },
+  {
+    "name": "IMPORTED CASES (FROM NORTH AMERICA)",
+    "children": [
+      {
+        "case": "180",
+        "name": "Singaporean, male, 71",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid19-new-cases-mar-12-update-12531088"
+      },
+      {
+        "case": "192",
+        "name": "American national, male, 32",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-singapore-moh-update-mar-13-new-cases-12535314"
+      },
+      {
+        "case": "206",
+        "name": "New Zealand national, female, 33",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-singapore-health-march-14-12538392"
+      },
+      {
+        "case": "209",
+        "name": "SGH psychologist, Singaporean, female, 32",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-singapore-health-march-14-12538392"
+      },
+      {
+        "case": "231",
+        "name": "Australian national, male, 78",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-moh-17-new-cases-imported-covid-19-largest-increase-12542378"
+      },
+      {
+        "case": "232",
+        "name": "Australian national, female, 65",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-moh-17-new-cases-imported-covid-19-largest-increase-12542378"
+      },
+      {
+        "case": "249",
+        "name": "Singapore PR, male, 42",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-new-cases-singapore-moh-mar-17-12547614"
+      },
+      {
+        "case": "274",
+        "name": "American national, male, 50",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "277",
+        "name": "Singaporean, male, 55",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "281",
+        "name": "Singaporean, male, 46",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "284",
+        "name": "Singaporean, male, 32",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "295",
+        "name": "Singaporean, male, 55",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "308",
+        "name": "Singaporean, male, 59",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "333",
+        "name": "Colombian national, male, 48",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "334",
+        "name": "Singaporean, female, 32",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "375",
+        "name": "Singaporean, female, 25",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "408",
+        "name": "Singaporean, male, 27",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "409",
+        "name": "Australian national, female, 23",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "414",
+        "name": "Australian national, male, 37",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "418",
+        "name": "Singapore PR, male, 44",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "422",
+        "name": "Singaporean, female, 56",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "424",
+        "name": "Singaporean, male, 24",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "425",
+        "name": "Singaporean, female, 21",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "427",
+        "name": "Singaporean, male, 39",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      }
+    ]
+  },
+  {
+    "name": "IMPORTED CASES (FROM PHILIPPINES)",
+    "children": [
+      {
+        "case": "178",
+        "name": "Filipino national, male, 37",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710",
+        "children": [
+          {
+            "case": "167",
+            "name": "NTFGH nurse, Filipino national, female, 35",
+            "type": "imported",
+            "gp": "7",
+            "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
+          }
+        ]
+      },
+      {
+        "case": "205",
+        "name": "Filipino national, female, 30",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-singapore-health-march-14-12538392",
+        "children": [
+          {
+            "case": "256",
+            "name": "Filipino national, female, 32",
+            "gp": "7",
+            "url": "https://www.channelnewsasia.com/news/singapore/covid19-new-cases-singapore-moh-mar-17-12547614"
+          }
+        ]
+      },
+      {
+        "case": "259",
+        "name": "Singaporean, female, 30",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-new-cases-singapore-moh-mar-17-12547614"
+      },
+      {
+        "case": "279",
+        "name": "Singaporean, male, 71",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "299",
+        "name": "Singaporean, male, 29",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "307",
+        "name": "Singaporean, female, 22",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "319",
+        "name": "Filipino national, female, 67",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "339",
+        "name": "Singaporean, male, 66",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "340",
+        "name": "Singaporean, male, 27",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "394",
+        "name": "Filipino national, female, 66",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      }
+    ]
+  },
+  {
     "name": "IMPORTED CASES (OTHERS)",
     "children": [
       {
@@ -195,35 +1329,15 @@
       {
         "case": "123",
         "name": "SIA cabin crew, male, 47",
+        "recovered": "1",
         "type": "imported",
         "gp": "7",
         "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-moh-case-update-mar-6-12509246"
-      },
-      {
-        "case": "124",
-        "name": "Singapore PR, female, 37",
-        "type": "imported",
-        "gp": "7",
-        "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-moh-case-update-mar-6-12509246"
-      },
-      {
-        "case": "132",
-        "name": "Singapore PR, female, 37",
-        "type": "imported",
-        "gp": "7",
-        "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-mar-7-cases-12512420",
-        "children": [
-          {
-            "case": "143",
-            "name": "Singapore PR, male, 42",
-            "gp": "7",
-            "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-cases-safra-jurong-singapore-12515592"
-          }
-        ]
       },
       {
         "case": "136",
         "name": "Italian national, male, 36",
+        "recovered": "1",
         "type": "imported",
         "gp": "7",
         "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-mar-7-cases-12512420"
@@ -250,28 +1364,6 @@
         "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid-19-cases-moh-mar-9-12518318"
       },
       {
-        "case": "154",
-        "name": "British national, male, 52",
-        "type": "imported",
-        "gp": "7",
-        "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid-19-cases-moh-mar-9-12518318"
-      },
-      {
-        "case": "165",
-        "name": "RSAF serviceman, male, 30",
-        "type": "imported",
-        "gp": "7",
-        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-covid19-new-cases-safra-mar-10-12521660",
-        "children": [
-          {
-            "case": "200",
-            "name": "Singaporean, female, 62",
-            "gp": "7",
-            "url": "https://www.channelnewsasia.com/news/singapore/covid19-singapore-moh-update-mar-13-new-cases-12535314"
-          }
-        ]
-      },
-      {
         "case": "169",
         "name": "RSAF serviceman, male, 40",
         "type": "imported",
@@ -281,27 +1373,6 @@
       {
         "case": "170",
         "name": "Indonesian national, female, 56",
-        "type": "imported",
-        "gp": "7",
-        "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
-      },
-      {
-        "case": "171",
-        "name": "Singaporean, male, 27",
-        "type": "imported",
-        "gp": "7",
-        "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
-      },
-      {
-        "case": "173",
-        "name": "RSAF serviceman, male, 31",
-        "type": "imported",
-        "gp": "7",
-        "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
-      },
-      {
-        "case": "175",
-        "name": "RSAF serviceman, male, 44",
         "type": "imported",
         "gp": "7",
         "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
@@ -318,30 +1389,15 @@
         "name": "Singaporean, male, 26",
         "type": "imported",
         "gp": "7",
-        "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
-      },
-      {
-        "case": "178",
-        "name": "Filipino national, male, 37",
-        "type": "imported",
-        "gp": "7",
         "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710",
         "children": [
           {
-            "case": "167",
-            "name": "NTFGH nurse, Filipino national, female, 35",
-            "type": "imported",
+            "case": "353",
+            "name": "Singaporean, male, 23",
             "gp": "7",
-            "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
+            "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
           }
         ]
-      },
-      {
-        "case": "180",
-        "name": "Singaporean, male, 71",
-        "type": "imported",
-        "gp": "7",
-        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid19-new-cases-mar-12-update-12531088"
       },
       {
         "case": "181",
@@ -362,7 +1418,27 @@
         "name": "Singaporean, male, 29",
         "type": "imported",
         "gp": "7",
-        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid19-new-cases-mar-12-update-12531088"
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid19-new-cases-mar-12-update-12531088",
+        "children": [
+          {
+            "name": "MASJID AL MUTTAQIN",
+            "gp": "7",
+            "children": [
+              {
+                "case": "252",
+                "name": "Male, 66",
+                "gp": "7",
+                "url": "https://www.channelnewsasia.com/news/singapore/covid19-new-cases-singapore-moh-mar-17-12547614"
+              },
+              {
+                "case": "310",
+                "name": "Singaporean, male, 58",
+                "gp": "7",
+                "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+              }
+            ]
+          }
+        ]
       },
       {
         "case": "187",
@@ -381,6 +1457,7 @@
       {
         "case": "189",
         "name": "Indian national, male, 36",
+        "recovered": "1",
         "type": "imported",
         "gp": "7",
         "url": "https://www.channelnewsasia.com/news/singapore/covid19-singapore-moh-update-mar-13-new-cases-12535314"
@@ -388,27 +1465,6 @@
       {
         "case": "191",
         "name": "SIA cabin crew, Malaysian national, female, 24",
-        "type": "imported",
-        "gp": "7",
-        "url": "https://www.channelnewsasia.com/news/singapore/covid19-singapore-moh-update-mar-13-new-cases-12535314"
-      },
-      {
-        "case": "192",
-        "name": "American national, male, 32",
-        "type": "imported",
-        "gp": "7",
-        "url": "https://www.channelnewsasia.com/news/singapore/covid19-singapore-moh-update-mar-13-new-cases-12535314"
-      },
-      {
-        "case": "193",
-        "name": "Malaysian national, male, 26",
-        "type": "imported",
-        "gp": "7",
-        "url": "https://www.channelnewsasia.com/news/singapore/covid19-singapore-moh-update-mar-13-new-cases-12535314"
-      },
-      {
-        "case": "194",
-        "name": "Chinese national, female, 24",
         "type": "imported",
         "gp": "7",
         "url": "https://www.channelnewsasia.com/news/singapore/covid19-singapore-moh-update-mar-13-new-cases-12535314"
@@ -430,6 +1486,7 @@
       {
         "case": "199",
         "name": "GrabFood rider, Singaporean, male, 37",
+        "recovered": "1",
         "type": "imported",
         "gp": "7",
         "url": "https://www.channelnewsasia.com/news/singapore/covid19-singapore-moh-update-mar-13-new-cases-12535314"
@@ -458,61 +1515,32 @@
           {
             "case": "221",
             "name": "Preschool teacher, Filipino national, female, 28",
-            "type": "imported",
             "gp": "7",
-            "new": "1",
             "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-singapore-new-cases-imported-12539904"
           }
         ]
       },
       {
-        "case": "205",
-        "name": "Filipino national, female, 30",
-        "type": "imported",
-        "gp": "7",
-        "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-singapore-health-march-14-12538392"
-      },
-      {
-        "case": "206",
-        "name": "New Zealand national, female, 33",
-        "type": "imported",
-        "gp": "7",
-        "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-singapore-health-march-14-12538392"
-      },
-      {
-        "case": "207",
-        "name": "Singaporean, female, 40",
-        "type": "imported",
-        "gp": "7",
-        "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-singapore-health-march-14-12538392"
-      },
-      {
-        "case": "209",
-        "name": "SGH psychologist, Singaporean, female, 32",
-        "type": "imported",
-        "gp": "7",
-        "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-singapore-health-march-14-12538392"
-      },
-      {
-        "case": "210",
-        "name": "German national, male, 56",
-        "type": "imported",
-        "gp": "7",
-        "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-singapore-health-march-14-12538392"
-      },
-      {
         "case": "212",
         "name": "Indonesian national, male, 64",
         "type": "imported",
+        "death": "1",
         "gp": "7",
-        "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-singapore-health-march-14-12538392"
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-deaths-singapore-indonesian-12563036",
+        "children": [
+          {
+            "case": "289",
+            "name": "Singaporean, male, 62",
+            "gp": "7",
+            "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+          }
+        ]
       },
       {
         "case": "213",
         "name": "Singaporean, male, 48",
         "type": "imported",
         "gp": "7",
-        "new": "1",
         "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-singapore-new-cases-imported-12539904"
       },
       {
@@ -520,39 +1548,13 @@
         "name": "Singaporean, male, 65",
         "type": "imported",
         "gp": "7",
-        "new": "1",
-        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-singapore-new-cases-imported-12539904"
-      },
-      {
-        "case": "216",
-        "name": "Singaporean, male, 30",
-        "type": "imported",
-        "gp": "7",
-        "new": "1",
-        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-singapore-new-cases-imported-12539904"
-      },
-      {
-        "case": "217",
-        "name": "Spanish national, male, 22",
-        "type": "imported",
-        "gp": "7",
-        "new": "1",
-        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-singapore-new-cases-imported-12539904"
-      },
-      {
-        "case": "220",
-        "name": "Singaporean PR, male, 53",
-        "type": "imported",
-        "gp": "7",
-        "new": "1",
         "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-singapore-new-cases-imported-12539904"
       },
       {
         "case": "222",
-        "name": "French national, male, 41",
+        "name": "Works at Airbus Singapore, French national, male, 41",
         "type": "imported",
         "gp": "7",
-        "new": "1",
         "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-singapore-new-cases-imported-12539904"
       },
       {
@@ -560,7 +1562,6 @@
         "name": "Singaporean, male, 60",
         "type": "imported",
         "gp": "7",
-        "new": "1",
         "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-singapore-new-cases-imported-12539904"
       },
       {
@@ -568,16 +1569,245 @@
         "name": "Singaporean, male, 63",
         "type": "imported",
         "gp": "7",
-        "new": "1",
-        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-singapore-new-cases-imported-12539904"
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-singapore-new-cases-imported-12539904",
+        "children": [
+          {
+            "case": "364",
+            "name": "Singaporean, male, 52",
+            "gp": "7",
+            "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+          }
+        ]
       },
       {
-        "case": "226",
-        "name": "Dutch national, male, 49",
+        "case": "237",
+        "name": "Indonesian national, female, 36",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-moh-17-new-cases-imported-covid-19-largest-increase-12542378"
+      },
+      {
+        "case": "246",
+        "name": "Canadian national, male, 39",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-new-cases-singapore-moh-mar-17-12547614"
+      },
+      {
+        "case": "261",
+        "name": "American national, male, 30",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-new-cases-singapore-moh-mar-17-12547614"
+      },
+      {
+        "case": "264",
+        "name": "Indonesian national, female, 41",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-new-cases-singapore-moh-mar-17-12547614"
+      },
+      {
+        "case": "267",
+        "name": "Singaporean, female, 72",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968",
+        "children": [
+          {
+            "case": "287",
+            "name": "Singaporean, male, 26",
+            "gp": "7",
+            "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+          }
+        ]
+      },
+      {
+        "case": "285",
+        "name": "Thai national, female, 42",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "292",
+        "name": "Singaporean, female, 64",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "297",
+        "name": "Indonesian national, male, 31",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "298",
+        "name": "Singaporean, male, 44",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "316",
+        "name": "Malaysian national, male, 25",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "329",
+        "name": "Singaporean, male, 64",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "342",
+        "name": "Singaporean, male, 31",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "346",
+        "name": "Singaporean, male, 59",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "351",
+        "name": "Singaporean, male, 51",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382",
+        "children": [
+          {
+            "case": "388",
+            "name": "Singaporean, male, 40",
+            "gp": "7",
+            "new": "1",
+            "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+          }
+        ]
+      },
+      {
+        "case": "356",
+        "name": "Australian national, male, 27",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "357",
+        "name": "German national, male, 41",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "369",
+        "name": "Singaporean, male, 34",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "370",
+        "name": "Malaysian national, male, 73",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "379",
+        "name": "Swedish national, female, 30",
+        "type": "imported",
+        "gp": "7",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "389",
+        "name": "Russian national, female, 36",
         "type": "imported",
         "gp": "7",
         "new": "1",
-        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-singapore-new-cases-imported-12539904"
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "391",
+        "name": "Australian national, male, 53",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "392",
+        "name": "Singapore PR, male, 54",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "402",
+        "name": "Indonesian national, female, 22",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "403",
+        "name": "Indonesian national, male, 77",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "404",
+        "name": "Australian national, male, 28",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "407",
+        "name": "Spanish national, male, 25",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "415",
+        "name": "Indonesian national, female, 64",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "419",
+        "name": "Dutch national, male, 45",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "432",
+        "name": "UK national, female, 53",
+        "type": "imported",
+        "gp": "7",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
       }
     ]
   },
@@ -614,6 +1844,7 @@
       {
         "case": "114",
         "name": "Male, 62",
+        "recovered": "1",
         "gp": "9",
         "url": "https://www.channelnewsasia.com/news/singapore/covid19-moh-mar-5-patients-discharged-new-cases-12505112"
       },
@@ -626,6 +1857,7 @@
       {
         "case": "116",
         "name": "Female, 50",
+        "recovered": "1",
         "gp": "9",
         "url": "https://www.channelnewsasia.com/news/singapore/covid19-moh-mar-5-patients-discharged-new-cases-12505112"
       },
@@ -638,6 +1870,7 @@
       {
         "case": "118",
         "name": "Female, 33",
+        "recovered": "1",
         "gp": "9",
         "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-moh-case-update-mar-6-12509246"
       },
@@ -650,18 +1883,21 @@
       {
         "case": "121",
         "name": "Female, 54",
+        "recovered": "1",
         "gp": "9",
         "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-moh-case-update-mar-6-12509246"
       },
       {
         "case": "122",
         "name": "Female, 64",
+        "recovered": "1",
         "gp": "9",
         "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-moh-case-update-mar-6-12509246"
       },
       {
         "case": "125",
         "name": "Female, 65",
+        "recovered": "1",
         "gp": "9",
         "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-moh-case-update-mar-6-12509246"
       },
@@ -692,24 +1928,28 @@
       {
         "case": "131",
         "name": "Male, 66",
+        "recovered": "1",
         "gp": "9",
         "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-mar-7-cases-12512420"
       },
       {
         "case": "133",
         "name": "Indonesian national, female, 62",
+        "recovered": "1",
         "gp": "9",
         "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-mar-7-cases-12512420"
       },
       {
         "case": "134",
         "name": "Female, 56",
+        "recovered": "1",
         "gp": "9",
         "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-mar-7-cases-12512420"
       },
       {
         "case": "137",
         "name": "Male, 60",
+        "recovered": "1",
         "gp": "9",
         "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-mar-7-cases-12512420"
       },
@@ -732,16 +1972,34 @@
             "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-cases-safra-jurong-singapore-12515592",
             "children": [
               {
-                "case": "162",
-                "name": "Male, 28",
+                "name": "BOULDER+ GYM",
                 "gp": "9",
-                "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-covid19-new-cases-safra-mar-10-12521660"
-              },
-              {
-                "case": "163",
-                "name": "Female, 27",
-                "gp": "9",
-                "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-covid19-new-cases-safra-mar-10-12521660"
+                "children": [
+                  {
+                    "case": "162",
+                    "name": "Male, 28",
+                    "gp": "9",
+                    "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-covid19-new-cases-safra-mar-10-12521660"
+                  },
+                  {
+                    "case": "163",
+                    "name": "Female, 27",
+                    "gp": "9",
+                    "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-covid19-new-cases-safra-mar-10-12521660"
+                  },
+                  {
+                    "case": "305",
+                    "name": "Male, 24",
+                    "gp": "9",
+                    "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+                  },
+                  {
+                    "case": "345",
+                    "name": "German national, male, 30",
+                    "gp": "9",
+                    "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+                  }
+                ]
               },
               {
                 "case": "185",
@@ -757,10 +2015,15 @@
               },
               {
                 "case": "219",
-                "name": "Male, 30",
+                "name": "SCDF officer at Sengkang Fire Station, male, 30",
                 "gp": "9",
-                "new": "1",
                 "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-singapore-new-cases-imported-12539904"
+              },
+              {
+                "case": "236",
+                "name": "Female, 30",
+                "gp": "9",
+                "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-moh-17-new-cases-imported-covid-19-largest-increase-12542378"
               }
             ]
           }
@@ -769,8 +2032,42 @@
       {
         "case": "144",
         "name": "Home hairdresser, female, 58",
+        "recovered": "1",
         "gp": "9",
-        "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-cases-safra-jurong-singapore-12515592"
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-cases-safra-jurong-singapore-12515592",
+        "children": [
+          {
+            "name": "CHURCH OF SINGAPORE",
+            "cluster": "(BUKIT TIMAH)",
+            "gp": "9",
+            "children": [
+              {
+                "case": "208",
+                "name": "SGH medical social worker, female, 26",
+                "gp": "6",
+                "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-singapore-health-march-14-12538392"
+              },
+              {
+                "case": "214",
+                "name": "Male, 29",
+                "gp": "6",
+                "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-singapore-new-cases-imported-12539904"
+              },
+              {
+                "case": "235",
+                "name": "SGH medical social worker, female, 31",
+                "gp": "6",
+                "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-moh-17-new-cases-imported-covid-19-largest-increase-12542378"
+              },
+              {
+                "case": "283",
+                "name": "Female, 62",
+                "gp": "6",
+                "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+              }
+            ]
+          }
+        ]
       },
       {
         "case": "145",
@@ -795,6 +2092,7 @@
       {
         "case": "149",
         "name": "Male, 62",
+        "recovered": "1",
         "gp": "9",
         "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-cases-safra-jurong-singapore-12515592"
       },
@@ -863,48 +2161,66 @@
           {
             "case": "186",
             "name": "Male, 64",
+            "recovered": "1",
             "gp": "9",
-            "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid19-new-cases-mar-12-update-12531088"
+            "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid19-new-cases-mar-12-update-12531088",
+            "children": [
+              {
+                "case": "251",
+                "name": "Female, 59",
+                "gp": "9",
+                "url": "https://www.channelnewsasia.com/news/singapore/covid19-new-cases-singapore-moh-mar-17-12547614"
+              }
+            ]
           }
         ]
       },
       {
         "case": "174",
         "name": "Female, 67",
+        "recovered": "1",
         "gp": "9",
         "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
       },
       {
         "case": "179",
         "name": "Female, 66",
+        "recovered": "1",
         "gp": "9",
         "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid19-new-cases-mar-12-update-12531088"
       },
       {
         "case": "196",
         "name": "Female, 73",
+        "recovered": "1",
         "gp": "9",
         "url": "https://www.channelnewsasia.com/news/singapore/covid19-singapore-moh-update-mar-13-new-cases-12535314"
       },
       {
         "case": "201",
         "name": "Female, 52",
+        "recovered": "1",
         "gp": "9",
         "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-singapore-health-march-14-12538392"
       },
       {
         "case": "218",
         "name": "Female, 55",
+        "recovered": "1",
         "gp": "9",
-        "new": "1",
         "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-singapore-new-cases-imported-12539904"
       },
       {
         "case": "224",
         "name": "Male, 50",
         "gp": "9",
-        "new": "1",
         "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-singapore-new-cases-imported-12539904"
+      },
+      {
+        "case": "242",
+        "name": "Female, 64",
+        "gp": "9",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-moh-17-new-cases-imported-covid-19-largest-increase-12542378"
       }
     ]
   },
@@ -958,8 +2274,9 @@
           {
             "case": "90",
             "name": "Female, 75",
+            "death": "1",
             "gp": "2",
-            "url": "https://www.channelnewsasia.com/news/singapore/covid19-singapore-update-coronavirus-cases-feb-24-12463606",
+            "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-deaths-singapore-indonesian-12563036",
             "children": [
               {
                 "name": "CNY FAMILY GATHERING",
@@ -1326,6 +2643,7 @@
               {
                 "case": "101",
                 "name": "Male, 61",
+                "recovered": "1",
                 "gp": "8",
                 "url": "https://www.channelnewsasia.com/news/singapore/covid19-singapore-update-feb-29-coronavirus-12485012",
                 "children": [
@@ -1339,6 +2657,7 @@
                   {
                     "case": "108",
                     "name": "Filipino maid, female, 34",
+                    "recovered": "1",
                     "gp": "8",
                     "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid-19-cases-update-moh-mar-2-12491262"
                   }
@@ -1347,6 +2666,7 @@
               {
                 "case": "104",
                 "name": "Myanmar maid, female, 25",
+                "recovered": "1",
                 "gp": "8",
                 "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-covid-19-cases-update-moh-12487992"
               }
@@ -1364,6 +2684,7 @@
       {
         "case": "97",
         "name": "Female, 44",
+        "recovered": "1",
         "gp": "8",
         "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-cases-singapore-moh-update-covid-19-feb-28-12480290"
       },
@@ -1377,6 +2698,7 @@
       {
         "case": "105",
         "name": "Male, 49",
+        "recovered": "1",
         "gp": "8",
         "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-singapore-covid-19-cases-update-moh-12487992"
       },
@@ -1397,12 +2719,14 @@
       {
         "case": "99",
         "name": "Male, 27",
+        "recovered": "1",
         "gp": "8",
         "url": "https://www.channelnewsasia.com/news/singapore/covid19-singapore-update-feb-29-coronavirus-12485012"
       },
       {
         "case": "100",
         "name": "Malaysian national, male, 20",
+        "recovered": "1",
         "gp": "8",
         "url": "https://www.channelnewsasia.com/news/singapore/covid19-singapore-update-feb-29-coronavirus-12485012"
       }
@@ -1615,6 +2939,7 @@
       {
         "case": "168",
         "name": "Male, 47",
+        "recovered": "1",
         "gp": "6",
         "url": "https://www.channelnewsasia.com/news/singapore/singapore-covid19-new-cases-safra-jurong-mar-11-12526710"
       },
@@ -1645,19 +2970,224 @@
         "url": "https://www.channelnewsasia.com/news/singapore/covid19-singapore-moh-update-mar-13-new-cases-12535314"
       },
       {
-        "case": "208",
-        "name": "SGH medical social worker, female, 26",
+        "case": "228",
+        "name": "Male, 67",
         "gp": "6",
-        "url": "https://www.channelnewsasia.com/news/singapore/covid19-coronavirus-singapore-health-march-14-12538392",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-moh-17-new-cases-imported-covid-19-largest-increase-12542378"
+      },
+      {
+        "case": "234",
+        "name": "Male, 86",
+        "gp": "6",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-moh-17-new-cases-imported-covid-19-largest-increase-12542378",
         "children": [
           {
-            "case": "214",
-            "name": "Male, 29",
-            "gp": "6",
-            "new": "1",
-            "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-singapore-new-cases-imported-12539904"
+            "case": "311",
+            "name": "Singaporean, female, 80",
+            "gp": "7",
+            "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+          },
+          {
+            "case": "335",
+            "name": "Singaporean, male, 57",
+            "gp": "7",
+            "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
           }
         ]
+      },
+      {
+        "case": "245",
+        "name": "Male, 76",
+        "gp": "6",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-new-cases-singapore-moh-mar-17-12547614"
+      },
+      {
+        "case": "248",
+        "name": "Malaysian national, female, 23",
+        "gp": "6",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-new-cases-singapore-moh-mar-17-12547614",
+        "children": [
+          {
+            "case": "303",
+            "name": "Malaysian national, male, 27",
+            "gp": "7",
+            "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+          }
+        ]
+      },
+      {
+        "case": "260",
+        "name": "Singapore PR, female, 48",
+        "gp": "6",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-new-cases-singapore-moh-mar-17-12547614",
+        "children": [
+          {
+            "case": "291",
+            "name": "Indian national, male, 52",
+            "gp": "7",
+            "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+          }
+        ]
+      },
+      {
+        "case": "273",
+        "name": "Male, 69",
+        "gp": "6",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "275",
+        "name": "Male, 27",
+        "recovered": "1",
+        "gp": "6",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "288",
+        "name": "Male, 71",
+        "gp": "6",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "290",
+        "name": "Male, 69",
+        "gp": "6",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "302",
+        "name": "Female, 49",
+        "gp": "6",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-47-new-cases-imported-travel-self-isolation-overseas-12551968"
+      },
+      {
+        "case": "314",
+        "name": "Male, 58",
+        "gp": "6",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "318",
+        "name": "Chinese national, female, 58",
+        "gp": "6",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736",
+        "children": [
+          {
+            "case": "361",
+            "name": "Male, 32",
+            "gp": "6",
+            "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+          }
+        ]
+      },
+      {
+        "case": "321",
+        "name": "Female, 65",
+        "gp": "6",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736",
+        "children": [
+          {
+            "case": "359",
+            "name": "Female, 45",
+            "gp": "6",
+            "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+          }
+        ]
+      },
+      {
+        "case": "330",
+        "name": "Male, 67",
+        "gp": "6",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "336",
+        "name": "Male, 60",
+        "gp": "6",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736"
+      },
+      {
+        "case": "338",
+        "name": "Male, 57",
+        "gp": "6",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-32-new-cases-moh-update-coronavirus-12555736",
+        "children": [
+          {
+            "case": "367",
+            "name": "Male, 25",
+            "gp": "6",
+            "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+          }
+        ]
+      },
+      {
+        "case": "350",
+        "name": "Male, 61",
+        "gp": "6",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382",
+        "children": [
+          {
+            "case": "430",
+            "name": "Singaporean, female, 59",
+            "gp": "6",
+            "new": "1",
+            "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+          }
+        ]
+      },
+      {
+        "case": "358",
+        "name": "Singapore PR, female, 39",
+        "gp": "6",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "384",
+        "name": "Male, 65",
+        "gp": "6",
+        "url": "https://www.channelnewsasia.com/news/singapore/covid19-40-new-cases-most-imported-united-kingdom-12560382"
+      },
+      {
+        "case": "386",
+        "name": "Female, 64",
+        "gp": "6",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "395",
+        "name": "Male, 54",
+        "gp": "6",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "396",
+        "name": "Male, 46",
+        "gp": "6",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "398",
+        "name": "Singapore PR, Male, 57",
+        "gp": "6",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "406",
+        "name": "Female, 61",
+        "gp": "6",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
+      },
+      {
+        "case": "426",
+        "name": "Female, 55",
+        "gp": "6",
+        "new": "1",
+        "url": "https://www.channelnewsasia.com/news/singapore/coronavirus-covid-19-47-new-cases-total-432-12563332"
       }
     ]
   }
