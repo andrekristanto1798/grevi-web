@@ -43,7 +43,7 @@
     "d3": "^5.5.0",
     "gh-pages": "^2.2.0",
     "immutable": "^4.0.0-rc.12",
-    "lodash": "4.17.11",
+    "lodash": "4.17.19",
     "ngraph.centrality": "^2.0.0",
     "ngraph.cw": "^2.0.0",
     "ngraph.graph": "^19.0.3",
